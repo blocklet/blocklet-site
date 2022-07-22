@@ -1,0 +1,99 @@
+---
+name: Sidebar
+menus:
+  - text: 节点入门
+    link: /introduction
+    children:
+      - text: 节点功能概览
+        link: /introduction/overview
+      - text: 如何获取 Blocklet Server
+        link: /introduction/setup
+      - text: 配置并启动 Blocklet Server
+        link: /introduction/access
+  # - text: Blocklet Store
+  #   link: /store
+  #   children:
+  #     - text: What is Blocklet Store?
+  #       link: /store/what-is-store
+  #     - text: Install Blocklets from Store
+  #       link: /store/find-and-install
+  - text: 应用管理
+    link: /blocklet
+    children:
+      - text: 基本管理操作
+        link: /blocklet/basic-operations
+      - text: 环境变量管理
+        link: /blocklet/configuration
+  # - text: Log Viewer
+  #   link: /logs
+  #   children:
+  #     - text: Server Logs
+  #       link: /logs/server-logs
+  #     - text: Blocklet Logs
+  #       link: /logs/blocklet-logs
+  # - text: Team & Passport
+  #   link: /team
+  #   children:
+  #     - text: Members
+  #       link: /team/members
+  #     - text: Passports
+  #       link: /team/passports
+  - text: 设置
+    link: /settings
+    children:
+      # - text: Basic Settings
+      #   link: /settings/basic
+      # - text: Access Keys
+      #   link: /settings/access-keys
+      - text: 路由
+        link: /settings/router
+      # - text: Certificates
+      #   link: /settings/certificates
+      # - text: Integrations
+      #   link: /settings/integrations
+      # - text: About Page
+      #   link: /settings/about
+  - text: 节点部署指南
+    link: /deployment
+    children:
+      - text: 在 AWS 上部署
+        link: /deployment/from-aws-ami
+      - text: 运行在反向代理
+        link: /deployment/behind-reverse-proxy
+      - text: 部署最佳实践
+        link: /deployment/best-practice
+  - text: 应用开发者指南
+    link: /developer
+    children:
+      - text: Blocklet CLI 工具
+        link: /developer/blocklet-cli
+      - text: Blocklet 规范
+        link: /developer/blocklet-spec
+      - text: Blocklet SDK
+        link: /developer/blocklet-sdk
+      - text: Auth 服务
+        link: /developer/service-auth
+      - text: 向 DID Wallet 发送消息
+        link: /developer/service-notification
+      - text: 可组合的 Blocklet
+        link: /developer/composable-blocklet
+      - text: Blocklet 生命周期钩子
+        link: /developer/blocklet-scripts
+      - text: 打包 Blocklet
+        link: /developer/bundle-blocklets
+      - text: 发布 Blocklet
+        link: /developer/publish-blocklets
+  - text: 常见问题
+    link: /faq
+    children:
+      - text: 配置开发环境
+        link: /faq/setup-env
+      - text: 下载资源
+        link: /faq/resources
+      - text: 节点存储目录详解
+        link: /faq/storage-structure
+      - text: Docker 镜像源列表
+        link: /faq/with-docker
+      - text: 在 Codespaces 中开发 Blocklets
+        link: /faq/with-codespaces
+---

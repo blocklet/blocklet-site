@@ -1,0 +1,155 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: blocklet server init
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/ubuntu
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 80
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 24
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Initialize Blocklet Server
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 634
+    content: "\e[01;32mubuntu@ubuntu\e[00m:\e[01;34m~\e[00m$ "
+  - delay: 472
+    content: blocklet server init
+  - delay: 452
+    content: "\r\n"
+  - delay: 859
+    content: "\e[?25l\e[36m⠁\e[39m Fetching IP info..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[?25h\e[32m✔\e[39m Done!\r\n"
+  - delay: 9
+    content: "\e[32m?\e[39m \e[1mPlease name your Node\e[22m\e[0m \e[0m\e[2m(Blocklet Server [ubuntu]) \e[22m\e[44D\e[44C"
+  - delay: 744
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mPlease name your Node\e[22m\e[0m \e[0m\e[36mBlocklet Server [ubuntu]\e[39m\e[41D\e[41C\r\n"
+  - delay: 8
+    content: "\e[32m?\e[39m \e[1mGive a concise description of your node\e[22m\e[0m \e[0m\e[2m(Container of useful blocklets from Ar\r\ncBlock and its Developer Community) \e[22m\e[36D\e[36C"
+  - delay: 790
+    content: "\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mGive a concise description of your node\e[22m\e[0m \e[0m\e[36mContainer of useful blocklets from Arc\r\nBlock and its Developer Community\e[39m\e[33D\e[33C\r\n"
+  - delay: 7
+    content: "\e[?25l\e[32m?\e[39m \e[1mWhich IP do you want your node to serve on?\e[22m\e[0m \e[0m\e[2m(Use arrow keys)\e[22m\r\n\e[36m❯ 192.168.1.10\e[39m \r\n  183.209.45.82 \e[16D\e[16C"
+  - delay: 1478
+    content: "\e[2K\e[1A\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mWhich IP do you want your node to serve on?\e[22m\e[0m \e[0m\e[36m192.168.1.10\e[39m\e[58D\e[58C\r\n\e[?25h\e[32m?\e[39m \e[1mWhich port do you want your node to listen on?\e[22m\e[0m \e[0m\e[2m(8089) \e[22m\e[56D\e[56C"
+  - delay: 929
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mWhich port do you want your node to listen on?\e[22m\e[0m \e[0m\e[36m8089\e[39m\e[53D\e[53C\r\n\e[?25l\e[32m?\e[39m \e[1mChoose routing engine\e[22m\e[0m \e[0m\e[2m(Use arrow keys)\e[22m\r\n\e[36m❯ none\e[39m \r\n  nginx \e[8D\e[8C"
+  - delay: 763
+    content: "\e[2K\e[1A\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mChoose routing engine\e[22m\e[0m \e[0m\e[36mnone\e[39m\e[28D\e[28C\r\n\e[?25h\e[32m?\e[39m \e[1mWhere does your Node fetch blocklet from?\e[22m\e[0m \e[0m\e[2m(https://blocklet.arcblock.io) \e[22m\e[75D\e[75C"
+  - delay: 742
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mWhere does your Node fetch blocklet from?\e[22m\e[0m \e[0m\e[36mhttps://blocklet.arcblock.io\e[39m\e[72D\e[72C\r\n"
+  - delay: 6
+    content: "\e[32m?\e[39m \e[1mWhere do you want Blocklet Server to store data?\e[22m\e[0m \e[0m\e[2m(/home/ubuntu/.abtnode) \e[22m\e[68D\e[68C"
+  - delay: 749
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mWhere do you want Blocklet Server to store data?\e[22m\e[0m \e[0m\e[36m/home/ubuntu/.abtnode\e[39m\e[65D\e[65C\r\n"
+  - delay: 5
+    content: "\e[32m?\e[39m \e[1mWhere do you want to save config file?\e[22m\e[0m \e[0m\e[2m(/home/ubuntu/.abtnode.yml) \e[22m\e[69D\e[69C"
+  - delay: 717
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mWhere do you want to save config file?\e[22m\e[0m \e[0m\e[36m/home/ubuntu/.abtnode.yml\e[39m\e[66D\e[66C\r\n"
+  - delay: 34
+    content: "\e[32m✔\e[39m Blocklet Server configuration is successfully generated \e[36m/home/ubuntu/.abtnode.yml\e[39m\r\n\e[34mℹ\e[39m Now you can start your Blocklet Server with the following command\r\n\e[34mℹ\e[39m \e[36mabtnode start\e[39m\r\n\r\n\e[?25h"
+  - delay: 9
+    content: "\e]0;ubuntu@ubuntu:~\e\\\e]7;file://ubuntu/home/ubuntu\e\\\e]0;ubuntu@ubuntu: ~\a\e[01;32mubuntu@ubuntu\e[00m:\e[01;34m~\e[00m$ "
+  - delay: 2000
+    content: "\r"

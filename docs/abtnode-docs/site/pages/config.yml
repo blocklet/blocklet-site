@@ -1,0 +1,94 @@
+gitRepo: ArcBlock/abtnode-docs
+srcPath: src
+categories:
+  abtnode:
+    basePath: /
+    title: Blocklet Server
+    link: /
+    priority: 999
+    sidebar:
+      'null':
+        - /
+      Introduction:
+        url: /introduction
+        links:
+          - /introduction/overview
+          - /introduction/setup
+          - /introduction/access
+        locales:
+          zh: 节点入门
+      Blocklet Store:
+        url: /store
+        links:
+          - /store/what-is-store
+          - /store/find-and-install
+        locales:
+          zh: 应用市场
+      Blocklet Management:
+        url: /blocklet
+        links:
+          - /blocklet/basic-operations
+          - /blocklet/domains-urls
+          - /blocklet/components
+          - /blocklet/members
+          - /blocklet/passports
+          - /blocklet/configuration
+        locales:
+          zh: 应用管理
+      Log Viewer:
+        url: /logs
+        links:
+          - /logs/server-logs
+          - /logs/router-logs
+          - /logs/blocklet-logs
+      Team & Passport:
+        url: /team
+        links:
+          - /team/members
+          - /team/passports
+        locales:
+          zh: '其他功能'
+      Settings:
+        url: /settings
+        links:
+          - /settings/basic
+          - /settings/access-keys
+          - /settings/router
+          - /settings/certificates
+          - /settings/integrations
+          - /settings/about
+      DevOps Guide:
+        url: /deployment
+        links:
+          - /developer/server-cli
+          - /deployment/from-aws-ami
+          - /deployment/from-launcher
+          - /deployment/backup-restore
+          - /deployment/behind-reverse-proxy
+          - /deployment/best-practice
+        locales:
+          zh: '节点部署指南'
+      Developer Guide:
+        url: /developer
+        links:
+          - /developer/blocklet-cli
+          - /developer/blocklet-spec
+          - /developer/blocklet-sdk
+          - /developer/service-auth
+          - /developer/service-notification
+          - /developer/composable-blocklet
+          - /developer/blocklet-scripts
+          - /developer/bundle-blocklets
+          - /developer/publish-blocklets
+        locales:
+          zh: 应用开发者指南
+      FAQ:
+        url: /faq
+        links:
+          - /faq/setup-env
+          - /faq/resources
+          - /faq/storage-structure
+          - /faq/with-docker
+          - /faq/with-codespaces
+        locales:
+          zh: 常见问题
