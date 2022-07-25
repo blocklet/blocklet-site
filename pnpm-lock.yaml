@@ -7,7 +7,15 @@ importers:
 
   docs/abtnode-docs:
     specifiers:
-      '@xmark/cli': ^2.0.64
+      '@xmark/cli': ^2.1.6
+      '@xmark/theme-docs': ^2.1.6
+    dependencies:
+      '@xmark/cli': 2.1.6
+      '@xmark/theme-docs': 2.1.6
+
+  docs/blocklet-docs:
+    specifiers:
+      '@xmark/cli': ^2.1.6
       '@xmark/theme-docs': ^2.1.6
     dependencies:
       '@xmark/cli': 2.1.6
