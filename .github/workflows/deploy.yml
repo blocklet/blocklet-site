@@ -29,19 +29,35 @@ jobs:
           make github-init
           git checkout .
 
+      - name: Extract current version
+        id: get_version
+        run: |
+          CURRENT_VERSION=$(cat version | awk '{$1=$1;print}')
+          echo "CURRENT_VERSION=${CURRENT_VERSION}" >> $GITHUB_ENV
+
+      - name: Config Git
+        run: |
+          git config --local user.name "bot"
+          git config --local user.email "bot@arcblock.io"
+
+      - name: Bump Version
+        run: |
+          echo "publish version ${CURRENT_VERSION}"
+          lerna version ${CURRENT_VERSION} --exact --no-push --force-publish --yes
+
       - name: Deploy Product Site
         uses: blocklet/action-workflow@v1
         with:
-          skip-deps: false
+          skip-deps: true
           skip-bundle: false
           skip-upload: true
           skip-deploy: false
           skip-release: true
-          bundle-command: nr bundle
-          working-directory: packages/page-site
-          server-endpoint: ${{ secrets.AWS_NODE_ENDPOINT }}
-          server-access-key: ${{ secrets.AWS_NODE_ACCESS_KEY }}
-          server-access-secret: ${{ secrets.AWS_NODE_ACCESS_SECRET }}
+          bundle-command: npm run bundle
+          working-directory: website/blocklet-product
+          server-endpoint: ${{ secrets.STAGING_NODE_ENDPOINT }}
+          server-access-key: ${{ secrets.STAGING_NODE_ACCESS_KEY }}
+          server-access-secret: ${{ secrets.STAGING_NODE_ACCESS_SECRET }}
           slack-webhook: ${{ secrets.SLACK_WEBHOOK }}
 
       - name: Deploy Developer Site
@@ -52,11 +68,15 @@ jobs:
           skip-upload: true
           skip-deploy: false
           skip-release: true
-          deploy-app-did: z8iZuvjcXn3Lj1DXsaKkAPvL4y1nf5SSsUsXc
-          deploy-mount-point: docs
-          bundle-command: nr bundle
-          working-directory: packages/docs-site
-          server-endpoint: ${{ secrets.AWS_NODE_ENDPOINT }}
-          server-access-key: ${{ secrets.AWS_NODE_ACCESS_KEY }}
-          server-access-secret: ${{ secrets.AWS_NODE_ACCESS_SECRET }}
+          bundle-command: npm run bundle
+          working-directory: website/blocklet-developer
+          server-endpoint: ${{ secrets.STAGING_NODE_ENDPOINT }}
+          server-access-key: ${{ secrets.STAGING_NODE_ACCESS_KEY }}
+          server-access-secret: ${{ secrets.STAGING_NODE_ACCESS_SECRET }}
           slack-webhook: ${{ secrets.SLACK_WEBHOOK }}
+
+      - name: Push Version
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GIT_HUB_TOKEN }}
+          branch: ${{ github.ref }}
