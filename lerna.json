@@ -1,0 +1,13 @@
+{
+  "useWorkspaces": true,
+  "packages": [
+    "website/*"
+  ],
+  "npmClient": "yarn",
+  "command": {
+    "publish": {
+      "message": "[skip ci] %s"
+    }
+  },
+  "version": "0.1.0"
+}

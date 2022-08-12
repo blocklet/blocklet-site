@@ -1,12 +1,19 @@
 {
-  "name": "blocklet-docs",
-  "version": "1.0.0",
+  "private": true,
+  "name": "blocklet-sites",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
+  "workspaces": [
+    "website/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
 }

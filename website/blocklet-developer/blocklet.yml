@@ -1,0 +1,48 @@
+name: blocklet-developer-site
+title: Blocklet Developer Site
+description: Blocklet Developer Site
+keywords:
+  - blocklet
+  - blocklet-page
+  - docs
+group: static
+did: z8iZrq2YrLLWUz6X77bfFL4wBfZuEfXuj1R2m
+main: dist
+author:
+  name: LancelotLewis
+  email: lancelot_lewis@163.com
+repository:
+  type: git
+  url: git+https://github.com/blocklet/blocklet-docs.git
+specVersion: 1.1.1
+version: 0.1.1
+logo: logo.png
+files:
+  - logo.png
+  - screenshots
+interfaces:
+  - type: web
+    name: publicUrl
+    path: /
+    prefix: '*'
+    port: BLOCKLET_PORT
+    protocol: http
+community: ''
+documentation: ''
+homepage: ''
+license: ''
+payment:
+  price: []
+  share: []
+timeout:
+  start: 60
+requirements:
+  server: '>=1.8.0'
+  os: '*'
+  cpu: '*'
+scripts:
+  dev: npm run start
+environments: []
+capabilities: {}
+screenshots: []
+children: []
