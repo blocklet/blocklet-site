@@ -30,6 +30,7 @@ travis-init: install dep
 
 github-init:
 	@echo "Initialize software required for github (normally ubuntu software)"
+	@sudo npm install -g @blocklet/cli
   # don't need install lerna and yarn in github-action machine: https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md
   # @sudo npm install -g lerna yarn
 	@make dep
