@@ -1,7 +1,15 @@
 {
   "name": "blocklet-product-site",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "dev": "blocklet dev",
+    "start": "xmark start",
+    "build": "xmark build",
+    "clean": "rm -rf .blocklet",
+    "bundle": "npm run clean && npm run build && blocklet bundle --create-release",
+    "deploy": "npm run bundle && blocklet deploy .blocklet/bundle",
+    "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json"
+  },
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",

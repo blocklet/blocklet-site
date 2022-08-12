@@ -1,5 +1,8 @@
 name: Deploy
 
+env:
+  CACHE_VERSION: 20220802
+
 on:
   push:
     branches:
@@ -24,6 +27,17 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        id: node_modules-cache
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: publish-${{ runner.os }}-node-modules-${{env.CACHE_VERSION}}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            publish-${{ runner.os }}-node-modules-${{env.CACHE_VERSION}}
+
       - name: Install dependencies
         run: |
           make github-init
@@ -43,7 +57,7 @@ jobs:
       - name: Bump Version
         run: |
           echo "publish version ${CURRENT_VERSION}"
-          lerna version ${CURRENT_VERSION} --exact --no-push --force-publish --yes
+          lerna version ${CURRENT_VERSION} --exact --no-push --yes
 
       - name: Deploy Product Site
         uses: blocklet/action-workflow@v1
