@@ -4,7 +4,7 @@ description: Blocklet Developer portal and documentation
 keywords:
   - blocklet
 group: static
-did: z8iZygFaH6jotsW1Td8CXSYSdQst2GJL9cGZA
+did: z8iZrq2YrLLWUz6X77bfFL4wBfZuEfXuj1R2m
 main: dist
 author:
   name: linchen
@@ -44,3 +44,14 @@ capabilities:
   component: true
 screenshots: []
 children: []
+navigation:
+  - title:
+      en: Docs
+      zh: 文档
+    link: /docs
+  - title:
+      en: Framework
+      zh: 框架
+    link: https://www.blocklet.io
+  - title: GitHub
+    link: https://github.com/blocklet/blocklet-site
