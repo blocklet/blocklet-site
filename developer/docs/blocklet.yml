@@ -1,25 +1,22 @@
-name: blocklet-developer-site
-title: Blocklet Developer Site
-description: Blocklet Developer Site
+name: blocklet-developer-docs
+title: Blocklet Developer Docs
+description: Documentation for Blocklet Developers
 keywords:
   - blocklet
-  - blocklet-page
   - docs
 group: static
 did: z8iZrq2YrLLWUz6X77bfFL4wBfZuEfXuj1R2m
 main: dist
 author:
-  name: LancelotLewis
-  email: lancelot_lewis@163.com
+  name: linchen
+  email: linchen@arcblock.io
 repository:
   type: git
-  url: git+https://github.com/blocklet/blocklet-docs.git
+  url: git+https://github.com/blocklet/blocklet-site.git
 specVersion: 1.2.7
 version: 0.1.3
 logo: logo.png
-files:
-  - logo.png
-  - screenshots
+files: []
 interfaces:
   - type: web
     name: publicUrl

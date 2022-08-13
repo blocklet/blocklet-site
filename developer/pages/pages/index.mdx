@@ -1,0 +1,160 @@
+---
+layout: 'my-layout'
+blocks:
+  - name: SectionBlock
+    center: true
+    level: 1
+    logo: /logos/logo-ico.png
+    title: !md |
+      **Blocklet**
+    description: Decentralized apps are for everyone
+    classes:
+      description: text-md
+    actions:
+      name: SmartLink
+      to: https://launcher.staging.arcblock.io/purchase/
+      # base: docs
+      children:
+        name: Button
+        size: large
+        variant: outlined
+        color: primary
+        children: Launch
+        className: '!text-lg'
+  # - name: SectionFeatureList
+  #   align: top
+  #   list:
+  #     - title: !md |
+  #         **Quickly** Setup Blocklet DAPP
+  #       description: You don't need to learn and configure many blocklet server things, you can easily setup a Blocklet DAPP, and focus on the application logic.
+  #       icon: i-mdi:truck-fast
+  #       iconColor: '#1DC1C7'
+  #     - title: !md |
+  #         **Plenty** Of Templates
+  #       description: !md |
+  #         You can choose any Starter template, such as [React](https://reactjs.org), [Vue](https://vuejs.org), [Express](http://expressjs.com), [Next.js](https://nextjs.org), [Gatsby.js](https://www.gatsbyjs.org), and custom templates are available.
+  #       icon: i-mdi:puzzle
+  #       iconColor: '#1DC1C7'
+  #     - title: !md |
+  #         **Seamless** Integration With Blocklet Server
+  #       description: Built in all kinds of Blocklet Server functions, you can easily integrate your Blocklet DAPP.
+  #       icon: i-mdi:application-braces
+  #       iconColor: '#1DC1C7'
+  - name: SectionBlock
+    reverse: true
+    title:
+      name: div
+      className: font-bold text-4xl
+      children: Blocklet Server
+    description:
+      name: div
+      className: text-xl
+      children:
+        - !md |
+          Your decentralized server
+    actions:
+      name: SmartLink
+      to: https://launcher.staging.arcblock.io/purchase/
+      # base: docs
+      children:
+        name: Button
+        size: large
+        variant: outlined
+        color: primary
+        children: Launch
+        className: '!text-lg'
+    image: /images/server.png
+  # Blocklet
+  - name: SectionBlock
+    reverse: false
+    title:
+      name: div
+      className: font-bold text-4xl
+      children: Blocklet App
+    description:
+      name: div
+      className: text-xl
+      children:
+        - !md |
+          介绍去中心化应用, Blocklet Store
+    actions:
+      name: SmartLink
+      to: https://store.blocklet.dev
+      # base: docs
+      children:
+        name: Button
+        size: large
+        variant: outlined
+        color: primary
+        children: Visit
+        className: '!text-lg'
+    image: /images/store.png
+  # Blocklet
+  - name: SectionBlock
+    reverse: true
+    title:
+      name: div
+      className: font-bold text-4xl
+      children: Blocklet Component
+    description:
+      name: div
+      className: text-xl
+      children:
+        - !md |
+          介绍可组合性, 如何组合
+
+          罗列各种blocklet 的组件
+
+          连接至组件开发文档
+    actions:
+      name: SmartLink
+      to: https://store.blocklet.dev
+      # base: docs
+      children:
+        name: Button
+        size: large
+        variant: outlined
+        color: primary
+        children: Visit
+        className: '!text-lg'
+    image: /images/store.png
+  # developer
+  - name: SectionBlock
+    title:
+      name: div
+      className: font-bold text-4xl
+      children: Develop Blocklet
+    description:
+      name: div
+      className: text-xl
+      children:
+        - !md |
+          一句话介绍 Blocklet 开发
+    actions:
+      name: SmartLink
+      to: https://blocklet-developer-site-r2m-18-180-145-193.ip.abtnet.io/
+      # base: docs
+      children:
+        name: Button
+        size: large
+        variant: outlined
+        color: primary
+        children: 开始开发
+        className: '!text-lg'
+    image: /images/create-blocklet.gif
+  # 4
+  - name: SectionBlock
+    dark: true
+    title: '获取你的 Blocklet Server'
+    actions:
+      name: SmartLink
+      to: https://store.blocklet.dev
+      # base: docs
+      children:
+        name: Button
+        size: large
+        variant: contained
+        color: primary
+        children: Launch
+        className: '!text-lg'
+---

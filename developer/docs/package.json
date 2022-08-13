@@ -1,5 +1,5 @@
 {
-  "name": "blocklet-developer-site",
+  "name": "blocklet-developer-docs",
   "private": true,
   "scripts": {
     "dev": "blocklet dev",
@@ -11,8 +11,8 @@
     "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json"
   },
   "dependencies": {
-    "@xmark/cli": "^2.3.18",
-    "@xmark/theme-docs": "^2.3.18"
+    "@xmark/cli": "^2.3.23",
+    "@xmark/theme-docs": "^2.3.23"
   },
   "version": "0.1.3"
 }

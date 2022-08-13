@@ -7,6 +7,7 @@ layout: documentation
 Blocklets provide pluggable components for various user-oriented features by using the capabilities of the ArcBlock Platform. ArcBlock ecosystem partners have created numerous Blocklets to offer various features. Blocklet Store allows you to discover, purchase, and install Blocklets for your needs. It also serves as a product details document for an available Blocklet.
 
 ## What is Blocklet Store ?
+
 The Store is a digital catalog of Blocklets created by ArcBlock, ecosystem partners, and third-party vendors. These Blocklet are fetched from different Blocklet registries, analogous to development package registries like `npm registry`. Each of these Blocklets can offer out-of-box capabilities by using ArcBlock Platform. The Store allows you to filter and install Blocklets based on your selection criteria. The Blocklet details page servers as a product guide which shows all provided information.
 
 ![](./images/marketplace-2-en.png)
@@ -44,7 +45,7 @@ The installation process does not start the Blocklet. You have to access the Blo
 Blocklet server has the following 2 blocklet stores hosted by ArcBlock by default:
 
 1. [Official Store](https://store.blocklet.dev): It provides hosting for production-ready blocklets for the end-user.
-2. [Dev Store](https://dev.store.blocklet.dev): It provides sample/demo blocklets for developers to learn the blocklet framework.
+2. [Dev Store](https://dev.store.blocklet.dev): It provides sample/demo blocklets for developers to learn the Blocklet.
 
 ![](./images/registries.png)
 
