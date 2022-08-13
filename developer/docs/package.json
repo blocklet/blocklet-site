@@ -1,18 +1,20 @@
 {
-  "name": "blocklet-developer-site",
+  "name": "blocklet-developer-docs",
   "private": true,
   "scripts": {
     "dev": "blocklet dev",
+    "dev:child": "blocklet dev --component --app-did=z8iZrq2YrLLWUz6X77bfFL4wBfZuEfXuj1R2m --mount-point=/docs",
     "start": "xmark start",
     "build": "xmark build",
     "clean": "rm -rf .blocklet",
     "bundle": "npm run clean && npm run build && blocklet bundle --create-release",
     "deploy": "npm run bundle && blocklet deploy .blocklet/bundle",
+    "deploy:child": "npm run bundle && blocklet deploy .blocklet/bundle --app-did=z8iZrq2YrLLWUz6X77bfFL4wBfZuEfXuj1R2m --mount-point=/docs",
     "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json"
   },
   "dependencies": {
-    "@xmark/cli": "^2.3.18",
-    "@xmark/theme-docs": "^2.3.18"
+    "@xmark/cli": "^2.3.23",
+    "@xmark/theme-docs": "^2.3.23"
   },
   "version": "0.1.3"
 }

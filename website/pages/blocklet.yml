@@ -1,26 +1,21 @@
 name: blocklet-product-site
-title: Blocklet Product Site
-description: Blocklet Product Site
+title: Blocklet
+description: Blocklet introduction and documentation
 keywords:
   - blocklet
-  - xmark
 group: static
 did: z8iZygFaH6jotsW1Td8CXSYSdQst2GJL9cGZA
 main: dist
 author:
-  name: Linchen
-  email: linchen.1987@foxmail.com
+  name: linchen
+  email: linchen@arcblock.io
 repository:
   type: git
-  url: git+https://github.com/blocklet/create-blocklet.git
+  url: git+https://github.com/blocklet/blocklet-site.git
 specVersion: 1.2.7
-version: 0.1.3
+version: 0.1.4
 logo: logo.png
-files:
-  - logo.png
-  - README.md
-  - blocklet.md
-  - screenshots
+files: []
 interfaces:
   - type: web
     name: publicUrl
@@ -49,3 +44,20 @@ capabilities:
   component: true
 screenshots: []
 children: []
+navigation:
+  - title:
+      en: Docs
+      zh: 文档
+    link: /docs
+  - title:
+      en: Developers
+      zh: 开发者
+    link: https://developer.blocklet.io
+  - title:
+      en: Playground
+      zh: 试验场
+    items:
+      - title: React
+        link: /playground/react
+  - title: GitHub
+    link: https://github.com/blocklet/blocklet-site

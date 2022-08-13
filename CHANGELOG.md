@@ -1,3 +1,10 @@
+## 0.1.4 (August 14, 2022)
+
+- chore: update ci script
+- fix: blocklet developer site skeleton
+- fix: blocklet framework site skeleton
+- chore: reorganize sub sites
+
 ## 0.1.3 (August 14, 2022)
 
 - code: update project structure
