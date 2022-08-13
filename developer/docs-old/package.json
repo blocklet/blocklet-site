@@ -1,7 +1,7 @@
 {
   "name": "@arcblock/blocklet-docs-old",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "scripts": {
     "dev": "blocklet dev",
     "start": "xmark start",
