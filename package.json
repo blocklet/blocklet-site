@@ -9,7 +9,7 @@
     "developer/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update:deps": "npx -y taze -r -w && lerna bootstrap && npx yarn-deduplicate yarn.lock && yarn"
   },
   "keywords": [],
   "author": "",
