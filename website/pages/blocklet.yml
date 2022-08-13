@@ -44,3 +44,20 @@ capabilities:
   component: true
 screenshots: []
 children: []
+navigation:
+  - title:
+      en: Docs
+      zh: 文档
+    link: /docs
+  - title:
+      en: Developers
+      zh: 开发者
+    link: https://developer.blocklet.io
+  - title:
+      en: Playground
+      zh: 试验场
+    items:
+      - title: React
+        link: /playground/react
+  - title: GitHub
+    link: https://github.com/blocklet/blocklet-site

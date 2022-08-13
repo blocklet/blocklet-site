@@ -1,11 +1,11 @@
 name: blocklet-product-docs
-title: Blocklet Docs
+title: Docs
 description: Documentation for Blocklet Framework
 keywords:
   - blocklet
   - docs
 group: static
-did: z8iZrq2YrLLWUz6X77bfFL4wBfZuEfXuj1R2m
+did: z8iZuoM8Kr5Tfpe8kbLC9xqYfWrJSnuhxoFFk
 main: dist
 author:
   name: linchen

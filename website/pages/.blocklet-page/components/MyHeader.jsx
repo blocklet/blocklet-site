@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import CommonHeader from '@xmark/client/src/components/Header';
 import NavMenu from '@arcblock/ux/lib/NavMenu';
@@ -25,7 +25,6 @@ function Header({ meta, ...rest }) {
       // eslint-disable-next-line react/no-unstable-nested-components
       addons={(addons, { navigation }) => {
         const navItems = navigation.navItems || [];
-
         return (
           <>
             {navItems.length > 0 && (
