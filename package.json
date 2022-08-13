@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "workspaces": [
-    "website/*"
+    "website/*",
+    "developer/*"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

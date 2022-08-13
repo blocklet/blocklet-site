@@ -1,8 +1,5 @@
 {
   "useWorkspaces": true,
-  "packages": [
-    "website/*"
-  ],
   "npmClient": "yarn",
   "command": {
     "publish": {

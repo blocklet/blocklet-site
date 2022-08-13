@@ -1,0 +1,265 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: nvm install v12.18.3
+
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/ubuntu
+
+  # Export additional ENV variables
+  env:
+    recording: true
+
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 80
+
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 24
+
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+
+  # Quality
+  # 1 - 100
+  quality: 100
+
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Install Node.js
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+
+  # The size of the font
+  fontSize: 12
+
+  # The height of lines
+  lineHeight: 1
+
+  # The spacing between letters
+  letterSpacing: 0
+
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+
+# Records, feel free to edit them
+records:
+  - delay: 57
+    content: "\e[01;32mubuntu@ubuntu\e[00m:\e[01;34m~\e[00m$ "
+  - delay: 2547
+    content: nvm install v12.18.3
+  - delay: 773
+    content: "\r\n"
+  - delay: 4306
+    content: "Downloading and installing node v12.18.3...\r\n"
+  - delay: 1534
+    content: "Downloading https://nodejs.org/dist/v12.18.3/node-v12.18.3-linux-x64.tar.xz...  \r\n"
+  - delay: 144
+    content: "#=#=- #       #                                                                 \r"
+  - delay: 194
+    content: "#=O#-    #        #                                                             \r"
+  - delay: 201
+    content: "-#O=-#      #         #                                                         \r"
+  - delay: 174
+    content: "-=#=-   #       #         #                                                     \r"
+  - delay: 295
+    content: "-=O=#      #        #          #                                                \r"
+  - delay: 131
+    content: "-=O=- #       #         #           #                                           \r"
+  - delay: 403
+    content: "-=O=-    #        #          #            #                                     \r"
+  - delay: 197
+    content: "-=O=-       #         #           #            #                                \r"
+  - delay: 212
+    content: "\r                                                                            0.1%"
+  - delay: 200
+    content: "\r                                                                            0.2%"
+  - delay: 202
+    content: "\r                                                                            0.3%"
+  - delay: 204
+    content: "\r                                                                            0.4%"
+  - delay: 208
+    content: "\r                                                                            0.6%"
+  - delay: 195
+    content: "\r                                                                            0.6%"
+  - delay: 208
+    content: "\r                                                                            0.8%"
+  - delay: 191
+    content: "\r                                                                            0.9%"
+  - delay: 204
+    content: "\r                                                                            1.1%"
+  - delay: 212
+    content: "\r                                                                            1.2%"
+  - delay: 525
+    content: "\r                                                                            1.9%"
+  - delay: 137
+    content: "\r#                                                                           2.2%"
+  - delay: 301
+    content: "\r#                                                                           2.4%"
+  - delay: 95
+    content: "\r##                                                                          3.3%"
+  - delay: 103
+    content: "\r##                                                                          3.8%"
+  - delay: 99
+    content: "\r###                                                                         4.5%"
+  - delay: 100
+    content: "\r###                                                                         5.0%"
+  - delay: 102
+    content: "\r####                                                                        5.8%"
+  - delay: 99
+    content: "\r####                                                                        6.5%"
+  - delay: 101
+    content: "\r#####                                                                       7.6%"
+  - delay: 99
+    content: "\r######                                                                      8.4%"
+  - delay: 100
+    content: "\r######                                                                      9.5%"
+  - delay: 1013
+    content: "\r#######                                                                     9.8%"
+  - delay: 613
+    content: "\r#######                                                                    10.2%"
+  - delay: 194
+    content: "\r########                                                                   11.8%"
+  - delay: 107
+    content: "\r################                                                           22.8%"
+  - delay: 1065
+    content: "\r#################                                                          23.4%"
+  - delay: 643
+    content: "\r#################                                                          24.2%"
+  - delay: 204
+    content: "\r##################                                                         25.3%"
+  - delay: 1003
+    content: "\r#####################                                                      29.0%"
+  - delay: 371
+    content: "\r#####################                                                      29.2%"
+  - delay: 119
+    content: "\r#####################                                                      29.9%"
+  - delay: 1019
+    content: "\r###########################                                                37.8%"
+  - delay: 899
+    content: "\r###############################                                            42.8%"
+  - delay: 1087
+    content: "\r###############################                                            43.2%"
+  - delay: 472
+    content: "\r#################################                                          45.4%"
+  - delay: 106
+    content: "\r########################################                                   54.9%"
+  - delay: 100
+    content: "\r########################################                                   55.6%"
+  - delay: 1037
+    content: "\r########################################                                   55.8%"
+  - delay: 1549
+    content: "\r########################################                                   55.9%"
+  - delay: 406
+    content: "\r#############################################                              62.1%"
+  - delay: 403
+    content: "\r###############################################                            64.5%"
+  - delay: 203
+    content: "\r###############################################                            65.3%"
+  - delay: 204
+    content: "\r################################################                           65.9%"
+  - delay: 212
+    content: "\r################################################                           66.2%"
+  - delay: 244
+    content: "\r#################################################                          67.3%"
+  - delay: 172
+    content: "\r#################################################                          68.3%"
+  - delay: 195
+    content: "\r##################################################                         69.1%"
+  - delay: 239
+    content: "\r###################################################                        70.3%"
+  - delay: 98
+    content: "\r####################################################                       72.1%"
+  - delay: 104
+    content: "\r#####################################################                      73.1%"
+  - delay: 1064
+    content: "\r######################################################                     74.1%"
+  - delay: 942
+    content: "\r#######################################################                    75.9%"
+  - delay: 262
+    content: "\r########################################################                   76.8%"
+  - delay: 1013
+    content: "\r############################################################               82.5%"
+  - delay: 3339
+    content: "\r############################################################               82.7%"
+  - delay: 33
+    content: "\r######################################################################### 100.0%\r\n"
+  - delay: 15
+    content: "Computing checksum with sha256sum\r\n"
+  - delay: 97
+    content: "Checksums matched!\r\n"
+  - delay: 2160
+    content: "Now using node v12.18.3 (npm v6.14.6)\r\n"
+  - delay: 102
+    content: "Creating default alias: \e[0;32mdefault\e[0m \e[0;90m->\e[0m \e[0;32mv12.18.3\e[0m\r\n"
+  - delay: 10
+    content: "\e[01;32mubuntu@ubuntu\e[00m:\e[01;34m~\e[00m$ "
+  - delay: 2000
+    content: "\r"

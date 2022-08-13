@@ -41,6 +41,7 @@ blocks:
   #       icon: i-mdi:application-braces
   #       iconColor: '#1DC1C7'
   - name: SectionBlock
+    reverse: true
     title:
       name: div
       className: font-bold text-4xl
@@ -63,12 +64,13 @@ blocks:
         children: Launch
         className: '!text-lg'
     image: /images/server.png
+  # Blocklet
   - name: SectionBlock
-    reverse: true
+    reverse: false
     title:
       name: div
       className: font-bold text-4xl
-      children: Blocklet Store
+      children: Blocklet App
     description:
       name: div
       className: text-xl
@@ -87,7 +89,36 @@ blocks:
         children: Visit
         className: '!text-lg'
     image: /images/store.png
-  # 3 developer
+  # Blocklet
+  - name: SectionBlock
+    reverse: true
+    title:
+      name: div
+      className: font-bold text-4xl
+      children: Blocklet Component
+    description:
+      name: div
+      className: text-xl
+      children:
+        - !md |
+          介绍可组合性, 如何组合
+
+          罗列各种blocklet 的组件
+
+          连接至组件开发文档
+    actions:
+      name: SmartLink
+      to: https://store.blocklet.dev
+      # base: docs
+      children:
+        name: Button
+        size: large
+        variant: outlined
+        color: primary
+        children: Visit
+        className: '!text-lg'
+    image: /images/store.png
+  # developer
   - name: SectionBlock
     title:
       name: div

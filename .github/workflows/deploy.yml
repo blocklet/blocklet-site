@@ -68,7 +68,7 @@ jobs:
           skip-deploy: false
           skip-release: true
           bundle-command: npm run bundle
-          working-directory: website/blocklet-product
+          working-directory: website/pages
           server-endpoint: ${{ secrets.STAGING_NODE_ENDPOINT }}
           server-access-key: ${{ secrets.STAGING_NODE_ACCESS_KEY }}
           server-access-secret: ${{ secrets.STAGING_NODE_ACCESS_SECRET }}
@@ -83,7 +83,7 @@ jobs:
           skip-deploy: false
           skip-release: true
           bundle-command: npm run bundle
-          working-directory: website/blocklet-developer
+          working-directory: developer/docs
           server-endpoint: ${{ secrets.STAGING_NODE_ENDPOINT }}
           server-access-key: ${{ secrets.STAGING_NODE_ACCESS_KEY }}
           server-access-secret: ${{ secrets.STAGING_NODE_ACCESS_SECRET }}
