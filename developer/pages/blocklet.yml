@@ -46,12 +46,44 @@ screenshots: []
 children: []
 navigation:
   - title:
-      en: Docs
-      zh: 文档
-    link: /docs
+      en: Guides
+      zh: 指南
+    link: /docs/guides
   - title:
-      en: Framework
-      zh: 框架
+      en: ToolKit
+      zh: 工具箱
+    items:
+      - title: Blocklet CLI
+        link: /docs/toolkit/cli
+      - title: Blocklet SDK
+        link: /docs/toolkit/sdk
+      - title: Blocklet Page
+        link: https://pages.blocklet.io
+      - title: Blocklet UI
+        link: https://ui.blocklet.io
+      - title: Create Blocklet
+        link: https://www.createblocklet.dev
+      - title: GitHub Actions
+        link: /docs/toolkit/github-actions
+  - title:
+      en: Reference
+      zh: 参考
+    items:
+      - title: Blocklet Spec
+        link: /docs/reference/cli
+      - title: Blocklet Bundle
+        link: /docs/reference/sdk
+  - title:
+      en: Services
+      zh: 服务
+    items:
+      - title: Blocklet Store
+        link: https://store.blocklet.dev
+      - title: Blocklet Launcher
+        link: https://launcher.arcblock.io
+  - title:
+      en: Platform
+      zh: 平台
     link: https://www.blocklet.io
   - title: GitHub
     link: https://github.com/blocklet/blocklet-site
