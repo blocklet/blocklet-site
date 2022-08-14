@@ -1,3 +1,7 @@
+## 0.1.7 (August 15, 2022)
+
+- doc: update blocklet website
+
 ## 0.1.6 (August 14, 2022)
 
 - chore: update platform site nav
