@@ -1,0 +1,71 @@
+name: Deploy
+
+env:
+  CACHE_VERSION: 20220802
+
+on: workflow_dispatch
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    if: "! contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+          token: ${{ secrets.GIT_HUB_TOKEN }}
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        id: node_modules-cache
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: publish-${{ runner.os }}-node-modules-${{env.CACHE_VERSION}}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            publish-${{ runner.os }}-node-modules-${{env.CACHE_VERSION}}
+
+      - name: Install dependencies
+        run: |
+          make github-init
+          git checkout .
+
+      - name: Deploy Blocklet Site
+        uses: blocklet/action-workflow@v1
+        with:
+          skip-deps: true
+          skip-bundle: false
+          skip-upload: true
+          skip-deploy: false
+          skip-release: true
+          bundle-command: npm run bundle
+          working-directory: website/pages
+          server-endpoint: ${{ secrets.XMARK_NODE_ENDPOINT }}
+          server-access-key: ${{ secrets.XMARK_NODE_ACCESS_KEY }}
+          server-access-secret: ${{ secrets.XMARK_NODE_ACCESS_SECRET }}
+
+      - name: Deploy Blocklet Docs
+        uses: blocklet/action-workflow@v1
+        with:
+          skip-deps: true
+          skip-bundle: false
+          skip-upload: true
+          skip-deploy: false
+          skip-release: true
+          deploy-app-did: z8iZygFaH6jotsW1Td8CXSYSdQst2GJL9cGZA
+          deploy-mount-point: docs
+          bundle-command: npm run bundle
+          working-directory: website/docs
+          server-endpoint: ${{ secrets.XMARK_NODE_ENDPOINT }}
+          server-access-key: ${{ secrets.XMARK_NODE_ACCESS_KEY }}
+          server-access-secret: ${{ secrets.XMARK_NODE_ACCESS_SECRET }}
