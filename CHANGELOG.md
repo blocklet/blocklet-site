@@ -1,3 +1,7 @@
+## 0.1.8 (August 15, 2022)
+
+- fix: developer nav
+
 ## 0.1.7 (August 15, 2022)
 
 - chore: use github to host support
