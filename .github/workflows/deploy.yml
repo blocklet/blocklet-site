@@ -111,7 +111,7 @@ jobs:
           skip-upload: true
           skip-deploy: false
           skip-release: true
-          deploy-app-did: z8iZygFaH6jotsW1Td8CXSYSdQst2GJL9cGZA
+          deploy-app-did: z8iZrq2YrLLWUz6X77bfFL4wBfZuEfXuj1R2m
           deploy-mount-point: docs
           bundle-command: npm run bundle
           working-directory: developer/docs
