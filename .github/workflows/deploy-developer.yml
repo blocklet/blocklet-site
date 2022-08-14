@@ -1,4 +1,4 @@
-name: Deploy
+name: deploy-developer
 
 env:
   CACHE_VERSION: 20220802

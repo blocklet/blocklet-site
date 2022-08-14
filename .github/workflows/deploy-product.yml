@@ -1,4 +1,4 @@
-name: Deploy
+name: deploy-product
 
 env:
   CACHE_VERSION: 20220802
