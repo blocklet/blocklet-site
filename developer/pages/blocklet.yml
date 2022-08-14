@@ -57,6 +57,8 @@ navigation:
         link: /docs/toolkit/cli
       - title: Blocklet SDK
         link: /docs/toolkit/sdk
+      - title: Blocklet Server
+        link: /docs/toolkit/server
       - title: Blocklet Page
         link: https://pages.blocklet.io
       - title: Blocklet UI
@@ -82,8 +84,10 @@ navigation:
       - title: Blocklet Launcher
         link: https://launcher.arcblock.io
   - title:
-      en: Platform
-      zh: 平台
-    link: https://www.blocklet.io
-  - title: GitHub
-    link: https://github.com/blocklet/blocklet-site
+      en: Support
+      zh: 支持
+    items:
+      - title: Discussions
+        link: https://store.blocklet.dev
+      - title: Gitter
+        link: https://gitter.im/ArcBlock/community
