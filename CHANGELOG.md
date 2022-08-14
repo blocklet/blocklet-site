@@ -1,3 +1,8 @@
+## 0.1.6 (August 14, 2022)
+
+- chore: update platform site nav
+- chore: update developer site nav
+
 ## 0.1.5 (August 14, 2022)
 
 - fix: deploy root id setting
