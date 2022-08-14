@@ -87,7 +87,7 @@ navigation:
       en: Support
       zh: 支持
     items:
-      - title: Discussions
-        link: https://store.blocklet.dev
-      - title: Gitter
-        link: https://gitter.im/ArcBlock/community
+      - title: Join the Discussion
+        link: https://github.com/orgs/blocklet/discussions
+      - title: Report a Bug
+        link: https://github.com/blocklet/support/issues
