@@ -1,3 +1,7 @@
+## 0.1.5 (August 14, 2022)
+
+- fix: deploy root id setting
+
 ## 0.1.4 (August 14, 2022)
 
 - chore: update ci script
