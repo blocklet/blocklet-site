@@ -1,3 +1,7 @@
+## 0.1.14 (August 15, 2022)
+
+- docs: update content of blocklet developer doc
+
 ## 0.1.13 (August 15, 2022)
 
 - chore: update xmark and cleanup page theme
