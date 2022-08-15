@@ -1,3 +1,7 @@
+## 0.1.11 (August 15, 2022)
+
+- fix: blocklet developer site title
+
 ## 0.1.10 (August 15, 2022)
 
 - doc: update blocklet website
