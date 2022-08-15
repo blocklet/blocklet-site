@@ -1,6 +1,10 @@
+## 0.1.8 (August 15, 2022)
+
+- fix: developer nav
+
 ## 0.1.7 (August 15, 2022)
 
-- doc: update blocklet website
+- chore: use github to host support
 
 ## 0.1.6 (August 14, 2022)
 
