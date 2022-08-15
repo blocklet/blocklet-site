@@ -1,11 +1,14 @@
 {
   "useWorkspaces": true,
   "npmClient": "yarn",
-  "packages": ["website/*", "developer/*"],
+  "packages": [
+    "website/*",
+    "developer/*"
+  ],
   "command": {
     "publish": {
       "message": "[skip ci] %s"
     }
   },
-  "version": "0.1.8"
+  "version": "0.1.9"
 }
