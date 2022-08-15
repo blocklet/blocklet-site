@@ -4,6 +4,8 @@ description: Upload Blocklet To Blocklet Store
 layout: documentation
 ---
 
+> <p style={{color:"red"}}>TODO: this page should be updated</p>
+
 ## Publish Steps
 
 1. Make sure your blocklet can be bundled and deployed to your local Blocklet Server

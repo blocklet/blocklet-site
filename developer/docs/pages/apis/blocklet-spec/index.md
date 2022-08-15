@@ -4,6 +4,8 @@ description: Blocklet Specification
 layout: documentation
 ---
 
+> <p style={{color:"red"}}>TODO: this page should be updated</p>
+
 > The following only lists the configurations that developers need to care about. For the complete documentation, see [github.com/blocklet/blocklet-specification](https://github.com/blocklet/blocklet-specification/blob/main/docs/meta. md)
 
 ```yml

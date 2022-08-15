@@ -4,6 +4,7 @@ description: 将 Blocklet 打包
 layout: documentation
 ---
 
+> <p style={{color:"red"}}>TODO: this page should be updated</p>
 
 Blocklets needs to be bundled before they can deployed to a running Blocklet Server instance. Blocklet bundling is very similar to bundling a typical web application, here are the steps to bundle your javascript blocklets.
 
@@ -117,7 +118,7 @@ import axios from 'axios';
 axios.defaults.baseURL = '';
 axios.defaults.timeout = 200000;
 
-axios.interceptors.request.use(config => {
+axios.interceptors.request.use((config) => {
   const prefix = window.blocklet ? window.blocklet.prefix : window.env.apiPrefix;
   config.baseURL = prefix || '';
 

@@ -4,6 +4,8 @@ description: Blocklet Server
 layout: documentation
 ---
 
+> <p style={{color:"red"}}>TODO: this page should be updated</p>
+
 ## What is Blocklet Server?
 
 Blocklet Server is the runtime platform environment for Blocklet applications. It provides the foundation for modular Blocklets and brings a number of out-of-the-box features to Blocklets:

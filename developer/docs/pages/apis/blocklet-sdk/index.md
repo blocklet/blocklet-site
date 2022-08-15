@@ -4,6 +4,8 @@ description: Blocklet SDK
 layout: documentation
 ---
 
+> <p style={{color:"red"}}>TODO: this page should be updated</p>
+
 # @blocklet/sdk
 
 Blocklet SDK for blocklet developer

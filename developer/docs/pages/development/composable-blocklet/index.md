@@ -3,6 +3,9 @@ title: Composable Blocklet
 description: Composable Blocklet
 layout: documentation
 ---
+
+> <p style={{color:"red"}}>TODO: this page should be updated</p>
+
 Combine different blocklets to form a more powerful blocklet.
 
 ## Demo
@@ -37,9 +40,11 @@ The service configuration of Parent blocklet and Child blocklet are independent,
 > For the specific configuration method of services, see [https://github.com/blocklet/blocklet-specification/blob/main/docs/meta.md](https://github.com/blocklet/blocklet-specification/blob/main/docs/meta.md)
 
 ### Parent blocklet services
+
 - Parent blocklet services are configured in `interface.services` in parent blocklet.yml
 
 ### Child blocklet services
+
 - Child blocklet services are configured in `interface.services` in child blocklet.yml
 - When `children.mountPoints.services` is configured in parent blocklet.yml, it will be merged with child blocklet.yml `interface.services`
 
@@ -77,6 +82,7 @@ interfaces:
 ```
 
 Then the services of child blocklet are:
+
 - s1 (from parent `children.mountPoints.services`)
 - s2 (from parent `children.mountPoints.services`)
 - s3 (from child `interface.services`)

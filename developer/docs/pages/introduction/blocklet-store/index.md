@@ -4,6 +4,8 @@ description: Blocklet Store
 layout: documentation
 ---
 
+> <p style={{color:"red"}}>TODO: this page should be updated</p>
+
 Blocklets provide pluggable components for various user-oriented features by using the capabilities of the ArcBlock Platform. ArcBlock ecosystem partners have created numerous Blocklets to offer various features. Blocklet Store allows you to discover, purchase, and install Blocklets for your needs. It also serves as a product details document for an available Blocklet.
 
 ## What is Blocklet Store ?

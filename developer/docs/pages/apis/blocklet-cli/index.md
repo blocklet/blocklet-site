@@ -4,7 +4,7 @@ description: Blocklet CLI
 layout: documentation
 ---
 
-> <p style={{color:"red"}}>This page is outdated and must be updated</p>
+> <p style={{color:"red"}}>TODO: this page should be updated</p>
 
 Blocklet Server provides `blocklet` command-line tool for controlling and administering Blocklets. Use the following syntax to run `blocklet` commands from your terminal:
 

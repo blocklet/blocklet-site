@@ -4,11 +4,12 @@ description: Auth Service
 layout: documentation
 ---
 
-> <p style={{color:"red"}}>This page is outdated and must be updated</p>
+> <p style={{color:"red"}}>TODO: this page should be updated</p>
 
 Blocklet Server provides generic auth service for Blocklets.
 
 Auth service provides the following capabilities
+
 - Get user identity
 - Get user permissions
 - Intercept unlogged requests (do not intercept by default)
@@ -16,6 +17,7 @@ Auth service provides the following capabilities
 - Set invite login and open login (default is open login)
 
 ## Getting Started
+
 [static-demo-blocklet](https://github.com/blocklet/html-2048-sample) is an html5 game that can be run on Blocklet Server. The following will introduce how to make a static-demo-blocklet that is only accessible after login.
 
 0. Prerequisites: Install and run Blocklet Server v1.7.0 or higher locally
@@ -24,7 +26,7 @@ Auth service provides the following capabilities
 
 2. Open `blocklet.yml` in the project root directory, find the interface whose name is publicUrl, and add the Auth configuration
 
-``` yml
+```yml
 interfaces:
   - type: web
     name: publicUrl
@@ -78,6 +80,7 @@ Congratulations!
 [https://github.com/blocklet/auth-demo](https://github.com/blocklet/auth-demo): Implement login, logout, display user information, authentication and authorization functions based on Auth Service
 
 ## Configure the Auth service
+
 All blocklets are installed with Auth capabilities. You can also configure the Auth service in `blocklet.yml`
 
 e.g.
@@ -116,6 +119,7 @@ interfaces:
   - default: https://web.abtwallet.io
 
 ## Set accessible after login
+
 After setting the login access, the Auth service will automatically intercept requests that are not logged in, and jump to the login page
 
 ```yml
@@ -150,8 +154,8 @@ After setting the Auth Service automatic interception, you need to bind the corr
 
 ![](./images/permissions.png)
 
-
 ## Set invitation login or open login
+
 Configure invitation login or open login via `invitedUserOnly`
 
 ```yml

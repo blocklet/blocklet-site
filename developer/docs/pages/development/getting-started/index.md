@@ -4,6 +4,8 @@ description: Getting Started
 layout: documentation
 ---
 
+> <p style={{color:"red"}}>TODO: this page should be updated</p>
+
 This section will show you how to quickly create a Blocklet.
 
 ## Dependency Preparation
@@ -27,12 +29,12 @@ Select `webapp` and enter
 Select `react`, then enter your name and email
 ![](./images/step-4.png)
 
-
 At this point, a Blocklet project has been created.
 
 ## Start development
 
 Go to the project directory and execute the following command to install the project dependencies.
+
 ```bash
 npm i
 # yarn
@@ -40,6 +42,7 @@ npm i
 ```
 
 Next, execute the following command to access the development preview.
+
 ```bash
 npm run dev
 # yarn dev
