@@ -51,7 +51,7 @@ blocks:
           任何人都可以在自己的 Blocklet Server 安装云应用程序
     image: /cloud.png
     background:
-      color: '#fbfbfb'
+      color: '#ffffff'
     actions:
       name: SmartLink
       to: https://store.blocklet.dev
@@ -64,6 +64,23 @@ blocks:
         className: '!text-lg'
   - name: SectionBlock
     reverse: true
+    title:
+      name: div
+      className: font-bold text-4xl
+      children: 一切都是去中心化的
+    description:
+      name: div
+      className: text-xl
+      children:
+        - !md |
+          在 Blocklet 生态中，一切都是去中心化的
+
+          甚至连 Blocklet Launcher 和 Blocklet 商店也是去中心化的
+    image: /decentralize.png
+    background:
+      color: '#ffffff'
+  - name: SectionBlock
+    reverse: false
     title:
       name: div
       className: font-bold text-4xl
