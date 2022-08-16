@@ -1,3 +1,7 @@
+## 0.1.15 (August 16, 2022)
+
+- docs: update doc: blocklet meta
+
 ## 0.1.14 (August 15, 2022)
 
 - docs: update content of blocklet developer doc
