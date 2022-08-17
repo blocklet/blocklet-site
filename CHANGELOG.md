@@ -1,3 +1,7 @@
+## 0.1.17 (August 17, 2022)
+
+- docs: polish blocklet introduction doc
+
 ## 0.1.16 (August 17, 2022)
 
 - docs: update introduction doc
