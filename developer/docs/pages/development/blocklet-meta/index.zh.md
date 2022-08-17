@@ -76,12 +76,12 @@ Blocklet 对外提供的访问入口在 `interfaces` 中声明
 
 Blocklet 有两种类型
 
-- 纯静态: 只包含静态资源。启动时，纯静态的 Blocklet 将被 Blocklet Server 内置的静态资源服务来 serve
-- DPP: 这类 Blocklet 本身包含后端服务（也可以同时包含静态资源），启动时，DPP 类型的 Blocklet 将在 Blocklet Server 分配的端口号启动服务
+- 纯静态: 只包含静态资源。启动时，纯静态的 Blocklet 将被 Blocklet Server 内置的静态资源服务托管
+- DAPP: 这类 Blocklet 本身包含后端服务（也可以同时包含静态资源），启动时，DAPP 类型的 Blocklet 将在 Blocklet Server 分配的端口号启动服务
 
 通过 `group` 指定 Blocklet 类型，通过 `main` 指定 Blocklet 启动入口
 
-DPP 类型的 Blocklet 需要通过 `scripts.dev` 指定 Blocklet 开发环境启动入口
+DAPP 类型的 Blocklet 需要通过 `scripts.dev` 指定 Blocklet 开发环境启动入口
 
 纯静态类型：
 
@@ -90,7 +90,7 @@ group: static
 main: www
 ```
 
-DPP 类型：
+DAPP 类型：
 
 ```yml
 group: dapp
