@@ -1,6 +1,6 @@
 ---
-title: Blocklet
-description: Blocklet
+title: Blocklet 介绍
+description: Blocklet 介绍
 layout: documentation
 ---
 
@@ -32,7 +32,7 @@ Blocklet Service 是 Blocklet Server 为 Blocklet 提供的一系列服务，Blo
 - 域名：每个 Blocklet 可通过独一无二的 DID Domain 访问
 - 身份验证服务：基于 DID 的身份验证服务
 - 权限管理服务：基于 DID Passport 和 RBAC 的权限管理服务
-- 消息通知服务：Blocklet 可以通过消息通知服务方便发送消息给 DID 钱包
+- 消息通知服务：Blocklet 可以给 DID 钱包发送消息
 
 ## 什么是 Blocklet 商店？
 

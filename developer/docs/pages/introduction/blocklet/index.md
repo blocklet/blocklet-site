@@ -1,6 +1,6 @@
 ---
-title: Blocklet
-description: Blocklet
+title: Blocklet Introduction
+description: Blocklet Introduction
 layout: documentation
 ---
 
@@ -32,7 +32,7 @@ Blocklet Service is a series of services provided by Blocklet Server for Blockle
 - Domain: Each Blocklet can be accessed through a unique DID Domain
 - Authentication Service: DID based Authentication Service
 - Access Management Service: Access Management Service based on DID Passport and RBAC
-- Notification Service: Blocklet can easily send messages to DID wallets through the Notification Service
+- Notification service: Blocklet can send messages to DID wallet
 
 ## What is Blocklet Store?
 
