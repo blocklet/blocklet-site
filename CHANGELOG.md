@@ -1,3 +1,7 @@
+## 0.1.16 (August 17, 2022)
+
+- docs: update introduction doc
+
 ## 0.1.15 (August 16, 2022)
 
 - docs: update doc: blocklet meta
