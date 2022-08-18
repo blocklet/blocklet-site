@@ -13,7 +13,7 @@ repository:
   type: git
   url: git+https://github.com/blocklet/blocklet-site.git
 specVersion: 1.2.7
-version: 0.1.19
+version: 0.1.20
 logo: logo.png
 files: []
 interfaces:
@@ -48,17 +48,21 @@ navigation:
   - title:
       en: Guides
       zh: 指南
-    link: /docs
+    link:
+      en: /docs/en
+      zh: /docs/zh
   - title:
       en: ToolKit
       zh: 工具箱
     items:
       - title: Blocklet CLI
-        link: /docs/toolkit/cli
+        link:
+          en: /docs/en/apis/blocklet-cli
+          zh: /docs/zh/apis/blocklet-cli
       - title: Blocklet SDK
-        link: /docs/toolkit/sdk
-      - title: Blocklet Server
-        link: /docs/toolkit/server
+        link:
+          en: /docs/en/apis/blocklet-sdk
+          zh: /docs/zh/apis/blocklet-sdk
       - title: Blocklet Page
         link: https://pages.blocklet.io
       - title: Blocklet UI
@@ -66,15 +70,21 @@ navigation:
       - title: Create Blocklet
         link: https://www.createblocklet.dev
       - title: GitHub Actions
-        link: /docs/toolkit/github-actions
+        link:
+          en: /docs/en/apis/blocklet-actions
+          zh: /docs/zh/apis/blocklet-actions
   - title:
       en: Reference
       zh: 参考
     items:
       - title: Blocklet Spec
-        link: /docs/reference/cli
+        link:
+          en: /docs/en/apis/blocklet-spec
+          zh: /docs/zh/apis/blocklet-spec
       - title: Blocklet Bundle
-        link: /docs/reference/sdk
+        link:
+          en: docs/en/deployment/bundle
+          zh: docs/zh/deployment/bundle
   - title:
       en: Services
       zh: 服务
