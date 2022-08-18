@@ -79,7 +79,6 @@ themeConfig:
           - text: DID Connect Demo
             link: /samples/did-connect-demo
       - text: API
-        link: /apis
         items:
           - text: Blocklet Meta
             link: /apis/blocklet-spec
@@ -168,7 +167,6 @@ themeConfig:
           - text: DID Connect Demo
             link: /samples/did-connect-demo
       - text: API
-        link: /apis
         items:
           - text: Blocklet Meta
             link: /apis/blocklet-spec
