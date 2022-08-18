@@ -1,3 +1,7 @@
+## 0.1.18 (August 18, 2022)
+
+- docs: update blocklet developer docs
+
 ## 0.1.17 (August 17, 2022)
 
 - docs: polish blocklet introduction doc
