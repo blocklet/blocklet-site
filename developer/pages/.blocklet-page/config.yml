@@ -1,4 +1,9 @@
 name: Blocklet Developer Portal
 title: Blocklet Developer Portal
 description: This is Blocklet Developer Site, powered by Blocklet Page
+theme: arcblock
 github: https://github.com/blocklet/blocklet-site
+themeConfig:
+  colors:
+    primary: '#1DC1C7'
+    secondary: '#F0FDFF'

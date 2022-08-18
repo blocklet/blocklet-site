@@ -1,4 +1,9 @@
 name: Blocklet
 title: Blocklet
 description: This is Blocklet Site, powered by Blocklet Page
+theme: arcblock
 github: https://github.com/blocklet/blocklet-site
+themeConfig:
+  colors:
+    primary: '#1DC1C7'
+    secondary: '#F0FDFF'

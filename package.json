@@ -15,6 +15,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lerna": "^5.4.2"
+    "lerna": "^5.4.3"
   }
 }

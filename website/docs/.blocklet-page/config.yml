@@ -1,5 +1,9 @@
-name: DID Connect Docs
-title: DID Connect Docs
-description: This is DID Connect Docs Site, powered by Blocklet Page
+name: Blocklet Server Docs
+title: Blocklet Server Docs
+description: This is Blocklet Server Site, powered by Blocklet Page
 theme: docs
 github: https://github.com/blocklet/blocklet-site
+themeConfig:
+  colors:
+    primary: '#1DC1C7'
+    secondary: '#F0FDFF'
