@@ -1,3 +1,7 @@
+## 0.1.19 (August 18, 2022)
+
+- feat(ui): update theme
+
 ## 0.1.18 (August 18, 2022)
 
 - docs: update blocklet developer docs
