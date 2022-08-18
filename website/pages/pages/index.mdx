@@ -3,8 +3,9 @@ layout: 'my-layout'
 blocks:
   - name: SectionHero
     title: !md |
-      **Blocklet**
-    description: Decentralized apps are for everyone
+      **Decentralized Apps anyone can setup in seconds**
+    description: !md |
+      Get dependable uptime with our 99.99% SLA, simple security tools with the **blockchain** and **cloud computing** powered decentralized apps, called **Blocklet**.
     actions:
       name: SmartLink
       to: https://launcher.staging.arcblock.io/purchase/
@@ -15,32 +16,50 @@ blocks:
         color: primary
         children: Launch
         className: '!text-lg'
+  - name: SectionBulletList
+    center: true
+    list:
+      - title: Easy to setup
+        description: !md |
+          Anyone can setup their own apps with no technical skills required.
+          - cool as shit
+          - fast as dog
+        icon: i-mdi:compare
+      - title: Secured
+        description: Secured like a shit, no one can break it.
+        icon: i-mdi:code-tags
+      - title: You are 100% in control
+        description: You can use it privately or shared across groups, no matter it's a DAO or just family and friends.
+        icon: i-mdi:account-check-outline
+
   - name: SectionBlock
     reverse: true
+    badge: EASY TO USE
     title:
       name: div
       className: font-bold text-4xl
       children: !md |
-        What is Blocklet
+        Blocklet taks decentrailization to the next level
     description:
       name: div
       className: text-xl
       children:
         - !md |
-          Blocklet is a platform that changing what cloud services can do
+          - Blocklet is a platform that changing what cloud services can do
 
-          Blocklet is the next generation of decentralized cloud services
+          - Blocklet is the next generation of decentralized cloud services
 
-          Blocklet enables everyone to have their own cloud server
+          - Blocklet enables everyone to have their own cloud server
     image: /blocklet.png
     background:
       color: '#ffffff'
   - name: SectionBlock
     reverse: false
+    badge: EASY TO EXPLORE
     title:
       name: div
       className: font-bold text-4xl
-      children: Welcome to the cloud
+      children: The apps you love from a place you can trust.
     description:
       name: div
       className: text-xl
@@ -49,7 +68,7 @@ blocks:
           Cloud computing is no longer just for developers
 
           Anyone can install cloud applications on their Blocklet Server
-    image: /cloud.png
+    image: https://www.apple.com/v/app-store/b/images/overview/privacy_security__c7ffaiitglg2_large_2x.jpg
     background:
       color: '#ffffff'
     actions:
@@ -64,6 +83,7 @@ blocks:
         className: '!text-lg'
   - name: SectionBlock
     reverse: true
+    badge: COST EFFECTIVE
     title:
       name: div
       className: font-bold text-4xl
@@ -77,55 +97,6 @@ blocks:
 
           Even the Blocklet Launcher and Blocklet Store are decentralized
     image: /decentralize.png
-    background:
-      color: '#ffffff'
-  - name: SectionBlock
-    reverse: false
-    title:
-      name: div
-      className: font-bold text-4xl
-      children: Assemble apps like Lego
-    description:
-      name: div
-      className: text-xl
-      children:
-        - !md |
-          Assemble other apps together, build your own, and enjoy assembly to the fullest
-    image: /component.png
-    background:
-      color: '#ffffff'
-  - name: SectionBlock
-    reverse: true
-    title:
-      name: div
-      className: font-bold text-4xl
-      children: Your identity is in your control
-    description:
-      name: div
-      className: text-xl
-      children:
-        - !md |
-          Blocklet uses the official recommendation standard DID announced by the W3C for authentication
-
-          Your identity will not be controlled by the platform
-    image: /did.png
-    background:
-      color: '#ffffff'
-  - name: SectionBlock
-    reverse: false
-    title:
-      name: div
-      className: font-bold text-4xl
-      children: Your data is in your control
-    description:
-      name: div
-      className: text-xl
-      children:
-        - !md |
-          All your data will be kept in your own DID Storage
-
-          Your data will not be controlled by the platform
-    image: /data.jpeg
     background:
       color: '#ffffff'
   - name: SectionBlock
