@@ -1,3 +1,7 @@
+## 0.1.21 (August 18, 2022)
+
+- chore: update navigation
+
 ## 0.1.20 (August 18, 2022)
 
 - feat: update navigation
