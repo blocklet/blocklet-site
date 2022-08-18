@@ -1,3 +1,7 @@
+## 0.1.22 (August 19, 2022)
+
+- chore: update xmark
+
 ## 0.1.21 (August 18, 2022)
 
 - chore: update navigation
