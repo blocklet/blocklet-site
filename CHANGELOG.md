@@ -1,3 +1,8 @@
+## 0.1.23 (August 19, 2022)
+
+- fix: link in navigation is lost
+- chore: bump deps to latest
+
 ## 0.1.22 (August 19, 2022)
 
 - chore: update xmark
