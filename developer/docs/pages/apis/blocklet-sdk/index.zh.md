@@ -4,11 +4,9 @@ description: Blocklet SDK
 layout: documentation
 ---
 
-# @blocklet/sdk
+Blocklet SDK for blocklet developer
 
-面当开发者的 Blocklet SDK 文档
-
-## 安装
+## Install
 
 ```shell
 yarn add @blocklet/sdk
@@ -20,80 +18,74 @@ or
 npm install @blocklet/sdk
 ```
 
-## Auth SDK
+## Auth
 
-### 用法
+### Get Client
 
 ```javascript
-import Auth from '@blocklet/sdk/service/auth';
+const { AuthService } = require('@blocklet/sdk');
 
-const client = new Auth();
-
-const userDid = 'xxxxxxxx';
-
-const { user } = await client.getUser(userDid);
+const client = new AuthService();
 ```
 
-### API
-
-#### client.getUser(did)
+### client.getUser(did)
 
 Get user by user did
 
 - _@param_ **did** `string`
 - _@return_ `{ code, user }`
 
-#### client.getUsers()
+### client.getUsers()
 
 Get all users of the team
 
 - _@return_ `{ code, users }`
 
-#### client.getPermissionsByRole(role)
+### client.getPermissionsByRole(role)
 
 Get all permissions of a role
 
 - _@param_ **role** `string`
 - _@return_ `{ code, permissions }`
 
-#### client.getRoles()
+### client.getRoles()
 
 Get all roles of the team
 
 - _@return_ `{ code, roles }`
 
-#### client.createRole(\{ name, title, description \})
+### client.createRole(\{ name, title, description \})
 
 - _@param_ **name** `string` the key of the role, should be unique
 - _@param_ **title** `string`
 - _@param_ **description** `string`
 - _@return_ `{ code, role }`
 
-#### client.updateRole(name, \{ title, description \})
+### client.updateRole(name, \{ title, description \})
 
 - _@param_ **name** `string` the key of the role
 - _@param_ **title** `string`
 - _@param_ **description** `string`
 - _@return_ `{ code, role }`
 
-#### client.deleteRole(name, \{ title, description \})
+### client.deleteRole(name, \{ title, description \})
 
 - _@param_ **name** `string` the key of the role
 - _@return_ `{ code }`
 
-#### client.grantPermissionForRole(role, permission)
+### client.grantPermissionForRole(role, permission)
 
 - _@param_ **role** `string` the name of the role
 - _@param_ **permission** `string` the name of the permission
 - _@return_ `{ code }`
 
-#### client.revokePermissionFromRole(role, permission)
+### client.revokePermissionFromRole(role, permission)
 
 - _@param_ **role** `string` the name of the role
 - _@param_ **permission** `string` the name of the permission
 - _@return_ `{ code }`
 
-#### client.updatePermissionsForRole(role, permissions)
+### client.updatePermissionsForRole(role, permissions)
 
 Full update permissions of a role
 
@@ -101,45 +93,49 @@ Full update permissions of a role
 - _@param_ **permissions** `array<string>` name of the permissions
 - _@return_ `{ code, role }`
 
-#### client.hasPermission(role, permission)
+### client.hasPermission(role, permission)
 
 - _@param_ **role** `string` the name of the role
 - _@param_ **permission** `string` the name of the permission
 - _@return_ `{ code, result }`
   - **result** `boolean`
 
-#### client.getPermissions()
+### client.getPermissions()
 
 Get all permissions of the team
 
 - _@return_ `{ code, permissions }`
 
-#### client.createPermission(\{ name, title, description \})
+### client.createPermission(\{ name, title, description \})
 
 - _@param_ **name** `Permission` the key of the permission, should be unique
   - format: `<action>_<resource>`. e.g. `query_article`, `mutate_user`
 - _@param_ **description** `string`
 - _@return_ `{ code, role }`
 
-#### client.updatePermission(name, \{ title, description \})
+### client.updatePermission(name, \{ title, description \})
 
 - _@param_ **name** `string` the key of the role
 - _@param_ **title** `string`
 - _@param_ **description** `string`
 - _@return_ `{ code }`
 
-#### client.deletePermission(name, \{ title, description \})
+### client.deletePermission(name, \{ title, description \})
 
 - _@param_ **name** `string` the key of the permission
 - _@return_ `{ code }`
 
-## Notification SDK
-
-### 用法
+## Notification
 
 ```javascript
-import Notification from '@blocklet/sdk/service/notification';
+const { NotificationService: Notification } = require('@blocklet/sdk');
+```
 
+### sendToUser(receiver, notification)
+
+Send notification to an account
+
+```javascript
 const userDid = 'xxxxxxxx';
 
 const notification = {
@@ -173,18 +169,37 @@ await Notification.sendToUser([userDid, anotherUserDid], notification);
 await Notification.sendToUser([userDid, anotherUserDid], [notification, anotherNotification]);
 ```
 
-### API
+- **notification** [Notification](#Type:%20Notification)
+- **receiver** `string | array<string>` required
 
-#### notification.sendToUser(receiver, notification)
+### broadcast(notification, options)
 
-向 DID 发送消息
+Broadcast notification to a channel
 
-- **receiver** `string | array<string>` 必填
-- **notification** `object | array<object>` 必填
+```javascript
+const notification = {
+  title: 'xxx',
+  body: 'xxx',
+};
+
+await Notification.broadcast(notification);
+await Notification.broadcast(notification, { socketDid: 'did' });
+```
+
+- **notification** [Notification](#Type:%20Notification)
+- **options**
+  - **socketDid**: `String` send notification to a specific socket by socketDid
+  - **socketId**: `String` send notification to a specific socket by socketId
+  - **channel**: `String` send notification to which channel (Default: app public channel)
+  - **event**: `String` send notification to which event (Default: 'message')
+
+### Type: Notification
+
+- **notification** `object | array<object>` required
   - **notification.title** `string`
   - **notification.body** `string`
   - **notification.attachments** `array<object>`
-    - **attachment.type** `enum` 'asset', 'vc', 'token' 必填
+    - **attachment.type** `enum` 'asset', 'vc', 'token' required
     - **attachment.data** `object`
       - _type: text_
         - **type** `string`
@@ -203,25 +218,46 @@ await Notification.sendToUser([userDid, anotherUserDid], [notification, anotherN
         - **chainHost** `string`
         - **decimal** `integer`
   - **notification.actions** `array<object>`
-    - **name** `string` 必填
+    - **name** `string` required
     - **title** `string`
     - **color** `string`
     - **bgColor** `string`
     - **link** `string` uri
 
-## WalletAuthenticator SDK
+### on()
 
-### 用法
+Listen for system notification
 
 ```javascript
-import { WalletAuthenticator } from '@blocklet/sdk';
-
-const authenticator = new WalletAuthenticator();
+Notification.on('hi', () => {});
 ```
 
-## WalletHandler SDK
+### off()
 
-### 用法
+Cancel listening for system messages
+
+```javascript
+const handler = () => {};
+
+Notification.on('hi', handler);
+Notification.off('hi', handler);
+```
+
+### System Events
+
+#### 'hi'
+
+When the client joins the app public channel
+
+```js
+Notification.on('hi', ({ sender: { socketId, did } }) => {});
+```
+
+- **sender** `object`
+  - **sender.socketId** `string`
+  - **sender.did** `string`
+
+## DID Connect
 
 ```javascript
 import AuthStorage from '@arcblock/did-auth-storage-nedb';
@@ -244,14 +280,12 @@ const handlers = new WalletHandlers({
 });
 ```
 
-## Database SDK
+## Database
 
-用于开发 Blocklet 的数据库，它是 [nedb](https://www.github.com/Arcblock/nedb) 的包装器。
-提供一种更简单的方式来使用 nedb。 只需使用`new Database([dbName])`，或者你可以传递一个对象选项作为第二个参数来创建一个数据库作为原始 nedb 方式`new Database([dbName], [options])`
+A database library for develop blocklet, it's a wrapper of [nedb](https://www.github.com/Arcblock/nedb).
+Supply a simpler way to use nedb. Just use `new Database([dbName])`, or you can pass a object option as second parameter to create a database as origin nedb way `new Database([dbName], [options])`
 
-提供 full-promise 支持。
-
-### 用法
+Supply full-promise support.
 
 ```javascript
 import { Database } from '@blocklet/sdk';
@@ -275,34 +309,28 @@ import { Database } from '@blocklet/sdk';
 })();
 ```
 
-## getWallet
-
-### 用法
+## Wallet
 
 ```javascript
-import { getWallet } from '@blocklet/sdk';
+const { getWallet } = require('@blocklet/sdk');
 
-// blocklet wallet is an instance of @ocap/wallet
-const blockletWallet = getWallet();
+// wallet is an instance of @ocap/wallet const { wallet } = env;
+const wallet = getWallet();
+const { address, secretKey, publicKey } = wallet;
 ```
 
-## env
-
-### 用法
+## Environments
 
 ```javascript
 import { env } from '@blocklet/sdk';
 
-const { name, description, isComponent, dataDir, cacheDir } = env;
+const { appId, appName, appDescription, appUrl, isComponent, dataDir, cacheDir } = env;
 
-// wallet is an instance of @ocap/wallet
-const { wallet } = env;
-const { address, secretKey, publicKey } = wallet;
+const { getWebEndpoint, getChildWebEndpoint, getParentWebEndpoint, getComponentMountPoints, getComponentMountPoint } =
+  env;
 ```
 
-## middlewares
-
-### 用法
+## Middlewares
 
 ```javascript
 import express from 'express';
@@ -315,26 +343,26 @@ app.get('/', middlewares.user(), (req, res) => {
 });
 
 app.get('/auth1', middlewares.auth(), (req, res) => {
-  // 如果用户未连接，将返回 401
+  // will return 401 if user is not connected
 });
 
 app.get('/auth2', middlewares.auth({ roles: ['admin', 'owner'] }), (req, res) => {
-  // 如果用户未连接，将返回 401
-  // 如果用户角色既不是 admin 也不是 owner，将返回 403
+  // will return 401 if user is not connected
+  // will return 403 if user role is neither owner nor admin
 });
 
 app.get('/auth2', middlewares.auth({ permissions: ['mutate_data', 'query_data'] }), (req, res) => {
-  // 如果用户未连接，将返回 401
-  // 如果用户权限中既没有 mutate_data 也没有 query_data ，将返回 403
+  // will return 401 if user is not connected
+  // will return 403 if neither 'mutate_data' nor 'query data' in user permissions
 });
 
 app.get(
   '/auth3',
   middlewares.auth({ roles: ['admin', 'owner'], permissions: ['mutate_data', 'query_data'] }),
   (req, res) => {
-    // 如果用户未连接，将返回 401
-    // 如果用户角色既不是 admin 也不是 owner，将返回 403
-    // 如果用户权限中既没有 mutate_data 也没有 query_data ，将返回 403
+    // will return 401 if user is not connected
+    // will return 403 if user role is neither owner nor admin
+    // will return 403 if neither 'mutate_data' nor 'query data' in user permissions
   }
 );
 ```
