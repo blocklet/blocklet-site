@@ -1,3 +1,7 @@
+## 0.1.25 (August 23, 2022)
+
+- doc: update doc of blocklet sdk usage
+
 ## 0.1.24 (August 23, 2022)
 
 - doc: update doc of blocklet sdk
