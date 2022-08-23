@@ -1,6 +1,6 @@
 ---
-title: Auth Service
-description: Auth Service
+title: User and Passport
+description: User and Passport
 layout: documentation
 ---
 
