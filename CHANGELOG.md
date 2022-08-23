@@ -1,3 +1,7 @@
+## 0.1.24 (August 23, 2022)
+
+- doc: update doc of blocklet sdk
+
 ## 0.1.23 (August 19, 2022)
 
 - fix: link in navigation is lost
