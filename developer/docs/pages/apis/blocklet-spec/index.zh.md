@@ -17,7 +17,7 @@ did: z8iZrkWYbi3JU3AP9NHJQbBUdrgiRbeorauqf
 
 **通常不应该手动修改 `did`, 应该通过 `create-blocklet` 初始化项目时自动生成 `name` 和 `did`.**
 
-上到 Blocklet Store 时，相同的 DID 表示相同的 Bloklet.
+上传到 Blocklet Store 时，相同的 DID 表示相同的 Bloklet.
 
 将 Blocklet 安装到 Blocklet Server 时，相同的 DID 表示相同的 Bloklet.
 
@@ -86,7 +86,7 @@ logo: logo.png
 图片介绍，会展示在 store 的介绍页中
 
 ```yml
-screenshots: # 图片介绍，会展示在 store 的介绍页中
+screenshots:
   - 0.png
   - 1.png
   - 2.png
@@ -228,6 +228,8 @@ capabilities:
 
 ## Children
 
+Demo: [Component Demo](https://github.com/blocklet/component-demo/blob/main/blocklet.yml)
+
 ```yml
 children: # 通常不需要手动维护，通过 `blocklet add/remove` 维护即可
   - name: xxx # 人类可读的 ID (必填)
@@ -242,8 +244,6 @@ children: # 通常不需要手动维护，通过 `blocklet add/remove` 维护即
     title: xxx # 名称
     description: xxx # 描述
 ```
-
-Demo: [Component Demo](https://github.com/blocklet/component-demo/blob/main/blocklet.yml)
 
 #### 配置 Source
 
@@ -376,13 +376,39 @@ background:
 
 ## Types
 
-- dapp
-- static
-- gateway
+通过 `group` 和 `main` 配置 Blocklet 的类型和启动入口
+
+Blocklet 有三种类型
+
+### Type: Dapp
+
+包含后端服务的 Blocklet
+
+```yml
+group: dapp
+main: api/index.js # 启动文件
+```
+
+### Type: Static
+
+只包含静态 Web 资源的 Blocklet
+
+```yml
+group: static
+main: dist # 静态资源的路径，需要确保 dist/index.html 存在
+```
+
+### Type: Gateway
+
+这类 Blocklet 本身不会包含任何代码和服务，只会将其他 Blocklet 组合在一起
+
+```yml
+group: gateway
+```
 
 ## Others
 
 ```yml
 timeout:
-  start: 启动超时时间
+  start: 60 # 启动超时时间。单位：秒。默认时间： 1 分钟。
 ```

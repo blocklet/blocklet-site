@@ -94,6 +94,8 @@ themeConfig:
             link: https://pages.blocklet.io/docs/intro
           - text: DID Connect
             link: https://www.didconnect.io/docs/intro
+          - text: Create Blocklet
+            link: https://www.createblocklet.dev/docs/intro
       - text: FAQ
         link: /faq
     zh:
@@ -182,5 +184,7 @@ themeConfig:
             link: https://pages.blocklet.io/docs/intro
           - text: DID Connect
             link: https://www.didconnect.io/docs/intro
+          - text: Create Blocklet
+            link: https://www.createblocklet.dev/docs/intro
       - text: FAQ
         link: /faq
