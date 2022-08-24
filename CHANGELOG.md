@@ -1,3 +1,40 @@
+## 0.1.29 (August 24, 2022)
+
+- docs: fix link in doc
+
+## 0.1.28 (August 24, 2022)
+
+- docs: polish blocklet sdk api doc
+
+## 0.1.27 (August 24, 2022)
+
+- fix: some i18n and link
+
+## 0.1.26 (August 23, 2022)
+
+- docs: update doc of blocklet spec
+
+## 0.1.25 (August 23, 2022)
+
+- doc: update doc of blocklet sdk usage
+
+## 0.1.24 (August 23, 2022)
+
+- doc: update doc of blocklet sdk
+
+## 0.1.23 (August 19, 2022)
+
+- fix: link in navigation is lost
+- chore: bump deps to latest
+
+## 0.1.22 (August 19, 2022)
+
+- chore: update xmark
+
+## 0.1.21 (August 18, 2022)
+
+- chore: update navigation
+
 ## 0.1.20 (August 18, 2022)
 
 - feat: update navigation

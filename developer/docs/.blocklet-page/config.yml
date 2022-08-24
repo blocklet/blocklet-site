@@ -33,10 +33,10 @@ themeConfig:
             link: /development/blocklet-page-app
           - text: Composite App
             link: /development/composable-blocklet
-          - text: Access Control & Passports
-            link: /development/service-auth
+          - text: User & Passports
+            link: /development/user-and-passport
           - text: Notification
-            link: /development/service-notification
+            link: /development/notification
           - text: Using Blocklet SDK
             link: /development/blocklet-sdk-usage
           - text: Using Blocklet UI
@@ -94,22 +94,24 @@ themeConfig:
             link: https://pages.blocklet.io/docs/intro
           - text: DID Connect
             link: https://www.didconnect.io/docs/intro
+          - text: Create Blocklet
+            link: https://www.createblocklet.dev/docs/intro
       - text: FAQ
         link: /faq
     zh:
-      - text: Introduction
+      - text: 介绍
         items:
           - text: Blocklet
             link: /introduction/blocklet
-      - text: Prerequisites
+      - text: 先决条件
         items:
           - text: DID Wallet
             link: /prerequisites/wallet
           - text: Blocklet Server
             link: /prerequisites/server
-      - text: Develop Blocklet
+      - text: 开发 Blocklet
         items:
-          - text: Getting Started
+          - text: 入门
             link: /development/getting-started
           - text: Blocklet Meta
             link: /development/blocklet-meta
@@ -121,15 +123,15 @@ themeConfig:
             link: /development/blocklet-page-app
           - text: Composite App
             link: /development/composable-blocklet
-          - text: Access Control & Passports
-            link: /development/service-auth
-          - text: Notification
-            link: /development/service-notification
-          - text: Using Blocklet SDK
+          - text: 用户和通行证
+            link: /development/user-and-passport
+          - text: 消息通知
+            link: /development/notification
+          - text: 使用 Blocklet SDK
             link: /development/blocklet-sdk-usage
-          - text: Using Blocklet UI
+          - text: 使用 Blocklet UI
             link: /development/blocklet-ui-usage
-      - text: 'Components In-Depth'
+      - text: '深入组件'
         items:
           - text: Core concepts
             link: /components/core-concepts
@@ -137,7 +139,7 @@ themeConfig:
             link: /components/develop-component
           - text: Develop a composite app
             link: /components/develop-composite-app
-      - text: Deployment
+      - text: 部署
         items:
           - text: Bundle Blocklet
             link: /deployment/bundle
@@ -147,7 +149,7 @@ themeConfig:
             link: /deployment/upload
           - text: Using Github Actions
             link: /deployment/github-actions
-      - text: Samples
+      - text: 示例
         link: /samples
         items:
           - text: Simple HTML Demo
@@ -182,5 +184,7 @@ themeConfig:
             link: https://pages.blocklet.io/docs/intro
           - text: DID Connect
             link: https://www.didconnect.io/docs/intro
+          - text: Create Blocklet
+            link: https://www.createblocklet.dev/docs/intro
       - text: FAQ
         link: /faq

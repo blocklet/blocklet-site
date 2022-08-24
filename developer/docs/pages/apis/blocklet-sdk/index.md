@@ -4,10 +4,6 @@ description: Blocklet SDK
 layout: documentation
 ---
 
-> <p style={{color:"red"}}>TODO: this page should be updated</p>
-
-# @blocklet/sdk
-
 Blocklet SDK for blocklet developer
 
 ## Install
@@ -22,80 +18,84 @@ or
 npm install @blocklet/sdk
 ```
 
-## Auth SDK
-
-### Usage
+## Wallet
 
 ```javascript
-import Auth from '@blocklet/sdk/service/auth';
+const { getWallet } = require('@blocklet/sdk');
 
-const client = new Auth();
-
-const userDid = 'xxxxxxxx';
-
-const { user } = await client.getUser(userDid);
+// wallet is an instance of @ocap/wallet
+const wallet = getWallet();
+const { address, secretKey, publicKey } = wallet;
 ```
 
-### API
+## Auth
 
-#### client.getUser(did)
+### Get Client
+
+```javascript
+const { AuthService } = require('@blocklet/sdk');
+
+const client = new AuthService();
+```
+
+### client.getUser(did)
 
 Get user by user did
 
 - _@param_ **did** `string`
 - _@return_ `{ code, user }`
 
-#### client.getUsers()
+### client.getUsers()
 
 Get all users of the team
 
 - _@return_ `{ code, users }`
 
-#### client.getPermissionsByRole(role)
+### client.getPermissionsByRole(role)
 
 Get all permissions of a role
 
 - _@param_ **role** `string`
 - _@return_ `{ code, permissions }`
 
-#### client.getRoles()
+### client.getRoles()
 
 Get all roles of the team
 
 - _@return_ `{ code, roles }`
 
-#### client.createRole(\{ name, title, description \})
+### client.createRole(\{ name, title, description \})
 
 - _@param_ **name** `string` the key of the role, should be unique
 - _@param_ **title** `string`
 - _@param_ **description** `string`
 - _@return_ `{ code, role }`
 
-#### client.updateRole(name, \{ title, description \})
+### client.updateRole(name, \{ title, description \})
 
 - _@param_ **name** `string` the key of the role
 - _@param_ **title** `string`
 - _@param_ **description** `string`
 - _@return_ `{ code, role }`
 
-#### client.deleteRole(name, \{ title, description \})
+### client.deleteRole(name, \{ title, description \})
 
 - _@param_ **name** `string` the key of the role
 - _@return_ `{ code }`
 
-#### client.grantPermissionForRole(role, permission)
+### client.grantPermissionForRole(role, permission)
 
 - _@param_ **role** `string` the name of the role
 - _@param_ **permission** `string` the name of the permission
 - _@return_ `{ code }`
 
-#### client.revokePermissionFromRole(role, permission)
+### client.revokePermissionFromRole(role, permission)
 
 - _@param_ **role** `string` the name of the role
 - _@param_ **permission** `string` the name of the permission
 - _@return_ `{ code }`
 
-#### client.updatePermissionsForRole(role, permissions)
+### client.updatePermissionsForRole(role, permissions)
 
 Full update permissions of a role
 
@@ -103,45 +103,49 @@ Full update permissions of a role
 - _@param_ **permissions** `array<string>` name of the permissions
 - _@return_ `{ code, role }`
 
-#### client.hasPermission(role, permission)
+### client.hasPermission(role, permission)
 
 - _@param_ **role** `string` the name of the role
 - _@param_ **permission** `string` the name of the permission
 - _@return_ `{ code, result }`
   - **result** `boolean`
 
-#### client.getPermissions()
+### client.getPermissions()
 
 Get all permissions of the team
 
 - _@return_ `{ code, permissions }`
 
-#### client.createPermission(\{ name, title, description \})
+### client.createPermission(\{ name, title, description \})
 
 - _@param_ **name** `Permission` the key of the permission, should be unique
   - format: `<action>_<resource>`. e.g. `query_article`, `mutate_user`
 - _@param_ **description** `string`
 - _@return_ `{ code, role }`
 
-#### client.updatePermission(name, \{ title, description \})
+### client.updatePermission(name, \{ title, description \})
 
 - _@param_ **name** `string` the key of the role
 - _@param_ **title** `string`
 - _@param_ **description** `string`
 - _@return_ `{ code }`
 
-#### client.deletePermission(name, \{ title, description \})
+### client.deletePermission(name, \{ title, description \})
 
 - _@param_ **name** `string` the key of the permission
 - _@return_ `{ code }`
 
-## Notification SDK
-
-### Usage
+## Notification
 
 ```javascript
-import Notification from '@blocklet/sdk/service/notification';
+const { NotificationService: Notification } = require('@blocklet/sdk');
+```
 
+### sendToUser(receiver, notification)
+
+Send notification to an account
+
+```javascript
 const userDid = 'xxxxxxxx';
 
 const notification = {
@@ -175,13 +179,32 @@ await Notification.sendToUser([userDid, anotherUserDid], notification);
 await Notification.sendToUser([userDid, anotherUserDid], [notification, anotherNotification]);
 ```
 
-### API
-
-#### notification.sendToUser(receiver, notification)
-
-Send notification to an account
-
+- **notification** [Notification](#Type:%20Notification)
 - **receiver** `string | array<string>` required
+
+### broadcast(notification, options)
+
+Broadcast notification to a channel
+
+```javascript
+const notification = {
+  title: 'xxx',
+  body: 'xxx',
+};
+
+await Notification.broadcast(notification);
+await Notification.broadcast(notification, { socketDid: 'did' });
+```
+
+- **notification** [Notification](#Type:%20Notification)
+- **options**
+  - **socketDid**: `String` send notification to a specific socket by socketDid
+  - **socketId**: `String` send notification to a specific socket by socketId
+  - **channel**: `String` send notification to which channel (Default: app public channel)
+  - **event**: `String` send notification to which event (Default: 'message')
+
+### Type: Notification
+
 - **notification** `object | array<object>` required
   - **notification.title** `string`
   - **notification.body** `string`
@@ -211,19 +234,40 @@ Send notification to an account
     - **bgColor** `string`
     - **link** `string` uri
 
-## WalletAuthenticator SDK
+### on()
 
-### Usage
+Listen for system notification
 
 ```javascript
-import { WalletAuthenticator } from '@blocklet/sdk';
-
-const authenticator = new WalletAuthenticator();
+Notification.on('hi', () => {});
 ```
 
-## WalletHandler SDK
+### off()
 
-### Usage
+Cancel listening for system messages
+
+```javascript
+const handler = () => {};
+
+Notification.on('hi', handler);
+Notification.off('hi', handler);
+```
+
+### System Events
+
+#### 'hi'
+
+When the client joins the app public channel
+
+```js
+Notification.on('hi', ({ sender: { socketId, did } }) => {});
+```
+
+- **sender** `object`
+  - **sender.socketId** `string`
+  - **sender.did** `string`
+
+## DID Connect
 
 ```javascript
 import AuthStorage from '@arcblock/did-auth-storage-nedb';
@@ -246,14 +290,12 @@ const handlers = new WalletHandlers({
 });
 ```
 
-## Database SDK
+## Database
 
 A database library for develop blocklet, it's a wrapper of [nedb](https://www.github.com/Arcblock/nedb).
 Supply a simpler way to use nedb. Just use `new Database([dbName])`, or you can pass a object option as second parameter to create a database as origin nedb way `new Database([dbName], [options])`
 
 Supply full-promise support.
-
-### Usage
 
 ```javascript
 import { Database } from '@blocklet/sdk';
@@ -277,34 +319,18 @@ import { Database } from '@blocklet/sdk';
 })();
 ```
 
-## getWallet
-
-### Usage
-
-```javascript
-import { getWallet } from '@blocklet/sdk';
-
-// blocklet wallet is an instance of @ocap/wallet
-const blockletWallet = getWallet();
-```
-
-## env
-
-### Usage
+## Environment
 
 ```javascript
 import { env } from '@blocklet/sdk';
 
-const { name, description, isComponent, dataDir, cacheDir } = env;
+const { appId, appName, appDescription, appUrl, isComponent, dataDir, cacheDir } = env;
 
-// wallet is an instance of @ocap/wallet
-const { wallet } = env;
-const { address, secretKey, publicKey } = wallet;
+const { getWebEndpoint, getChildWebEndpoint, getParentWebEndpoint, getComponentMountPoints, getComponentMountPoint } =
+  env;
 ```
 
-## middlewares
-
-### Usage
+## Middlewares
 
 ```javascript
 import express from 'express';

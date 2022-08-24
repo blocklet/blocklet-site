@@ -1,12 +1,13 @@
 ---
-title: Auth 服务
-description: Auth 服务
+title: 用户和通行证
+description: 用户和通行证
 layout: documentation
 ---
 
 Blocklet Server 为 Blocklet 提供了通用 Auth 服务。
 
 Auth 服务提供以下能力
+
 - 获取用户身份
 - 获取用户权限
 - 拦截未登录的请求（默认不拦截）
@@ -14,6 +15,7 @@ Auth 服务提供以下能力
 - 设置邀请登录和开放登录（默认为开放登录）
 
 ## 入门
+
 [static-demo-blocklet](https://github.com/blocklet/html-2048-sample) 是一个可以运行在 Blocklet Server 上的 html5 游戏。下面将介绍如何制作一个只允许登录后可访问的 static-demo-blocklet.
 
 0. 前置条件: 本地安装并且运行 v1.7.0 以上版本的 Blocklet Server
@@ -22,7 +24,7 @@ Auth 服务提供以下能力
 
 2. 打开项目根目录下 `blocklet.yml`, 找到 name 为 publicUrl 的 interface, 并添加 Auth 配置
 
-``` yml
+```yml
 interfaces:
   - type: web
     name: publicUrl
@@ -76,6 +78,7 @@ linchen@LinkdeMacBook-Pro html-2048-sample % blocklet deploy .blocklet/bundle
 [https://github.com/blocklet/auth-demo](https://github.com/blocklet/auth-demo): 使用 Auth 服务实现了登录，登出，显示用户信息，认证，授权功能
 
 ## 配置 Auth 服务
+
 所有 blocklet 安装后即具备了 Auth 能力. 你也可以在 `blocklet.yml` 中配置 Auth 服务
 
 e.g.
@@ -113,7 +116,8 @@ interfaces:
 - webWalletUrl: 通过 Auth 服务登录时的 Web Wallet 地址
   - default: https://web.abtwallet.io
 
-## 设置登录可访问
+## 设置登录可访问 
+
 设置登录可访问后，Auth 服务会自动拦截未登录的请求, 并跳转到登录页
 
 ```yml
@@ -127,7 +131,7 @@ interfaces:
           blockUnauthenticated: true
 ```
 
-## 设置授权可访问
+## 设置授权可访问 
 
 After setting authorized access, Auth Service automatically intercepts unauthorized requests
 
@@ -146,8 +150,8 @@ interfaces:
 
 ![](./images/permissions.png)
 
-
 ## 设置邀请登录和开放登录
+
 通过 `invitedUserOnly` 配置邀请登录和开放登录
 
 ```yml
