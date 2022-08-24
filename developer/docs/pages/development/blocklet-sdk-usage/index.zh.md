@@ -7,11 +7,11 @@ Blocklet SDK 为开发者提供 Blocklet 与 Blocklet Service 之间的接口，
 
 ## APP Wallet
 
-见 [Blocklet SDK: Wallet]('/apis/blocklet-sdk##Wallet')
+见 [Blocklet SDK: Wallet](/apis/blocklet-sdk#Wallet)
 
 ## DID Connect
 
-见 [Blocklet SDK: DID Connect](/apis/blocklet-sdk##DID%20Connect)
+见 [Blocklet SDK: DID Connect](/apis/blocklet-sdk#DID%20Connect)
 
 ## 用户和权限
 

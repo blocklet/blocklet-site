@@ -319,7 +319,7 @@ import { Database } from '@blocklet/sdk';
 })();
 ```
 
-## Environments
+## Environment
 
 ```javascript
 import { env } from '@blocklet/sdk';

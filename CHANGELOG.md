@@ -1,3 +1,7 @@
+## 0.1.29 (August 24, 2022)
+
+- docs: fix link in doc
+
 ## 0.1.28 (August 24, 2022)
 
 - docs: polish blocklet sdk api doc

@@ -147,7 +147,7 @@ interfaces:
     prefix: '*' # Blocklet is mounted prefix
 ```
 
-## Environments
+## Environment
 
 runtime environment variables
 

@@ -7,11 +7,11 @@ Blocklet SDK provides the interface between Blocklet and Blocklet Service for de
 
 ## APP Wallet
 
-See [Blocklet SDK: Wallet](/apis/blocklet-sdk##Wallet)
+See [Blocklet SDK: Wallet](/apis/blocklet-sdk#Wallet)
 
 ## DID Connect
 
-See [Blocklet SDK: DID Connect](/apis/blocklet-sdk##DID%20Connect)
+See [Blocklet SDK: DID Connect](/apis/blocklet-sdk#DID%20Connect)
 
 ## User and Permissions
 
