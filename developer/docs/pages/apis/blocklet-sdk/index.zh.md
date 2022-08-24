@@ -18,6 +18,16 @@ or
 npm install @blocklet/sdk
 ```
 
+## Wallet
+
+```javascript
+const { getWallet } = require('@blocklet/sdk');
+
+// wallet is an instance of @ocap/wallet
+const wallet = getWallet();
+const { address, secretKey, publicKey } = wallet;
+```
+
 ## Auth
 
 ### Get Client
@@ -307,16 +317,6 @@ import { Database } from '@blocklet/sdk';
   const data2 = await db2.find().paginate(1, 10);
   const data2Extra = await db2.extraFn();
 })();
-```
-
-## Wallet
-
-```javascript
-const { getWallet } = require('@blocklet/sdk');
-
-// wallet is an instance of @ocap/wallet const { wallet } = env;
-const wallet = getWallet();
-const { address, secretKey, publicKey } = wallet;
 ```
 
 ## Environments
