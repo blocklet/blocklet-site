@@ -131,7 +131,7 @@ interfaces:
     services:
       - name: auth # Auth service for this access interface
         config:
-          whoCanAccess: all # Who can access
+          whoCanAccess: all # Who can access (Can be modified dynamically after app installed)
           blockUnauthenticated: false # Whether to automatically intercept unauthenticated requests and jump to the login page
           blockUnauthorized: false # Whether to automatically intercept unauthorized requests
           allowSwitchProfile: true # Whether to support switching profiles

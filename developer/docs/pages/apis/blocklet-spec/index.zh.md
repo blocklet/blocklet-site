@@ -131,7 +131,7 @@ interfaces:
     services:
       - name: auth # 该访问接口的 Auth 服务
         config:
-          whoCanAccess: all # 谁可以访问
+          whoCanAccess: all # 谁可以访问 (可以在应用安装后动态修改)
           blockUnauthenticated: false # 是否自动拦截未登录的请求, 并跳转到登录页
           blockUnauthorized: false # 是否自动拦截未授权的请求
           allowSwitchProfile: true # 是否支持切换 Profile

@@ -7,17 +7,17 @@ Blocklet SDK provides the interface between Blocklet and Blocklet Service for de
 
 ## APP Wallet
 
-See [Blocklet SDK: Wallet]('/apis/blocklet-sdk##Wallet')
+See [Blocklet SDK: Wallet](/apis/blocklet-sdk##Wallet)
 
 ## DID Connect
 
-See [Blocklet SDK: DID Connect]('/apis/blocklet-sdk##DID%20Connect')
+See [Blocklet SDK: DID Connect](/apis/blocklet-sdk##DID%20Connect)
 
 ## User and Permissions
 
-Get user information and manage user permissions [Blocklet SDK: Auth]('/apis/blocklet-sdk#Auth')
+Get user information and manage user permissions [Blocklet SDK: Auth](/apis/blocklet-sdk#Auth)
 
-Obtain the identity of the request through middleware, perform permission management and interception: [Blocklet SDK: Middleware]('/apis/blocklet-sdk#Middleware')
+Obtain the identity of the request through middleware, perform permission management and interception: [Blocklet SDK: Middleware](/apis/blocklet-sdk#Middleware)
 
 ## Notification
 
@@ -25,16 +25,16 @@ After the DID Wallet interacts with the Blocklet, it will automatically establis
 
 Blocklet can also listen the messages sent by the system.
 
-See [Blocklet SDK: Notification]('/apis/blocklet-sdk#Notification')
+See [Blocklet SDK: Notification](/apis/blocklet-sdk#Notification)
 
 ## Database
 
 Blocklet SDK provides a file-based database, which is a wrapper around [nedb](https://www.github.com/Arcblock/nedb).
 
-See [Blocklet SDK: Database]('/apis/blocklet-sdk#Database')
+See [Blocklet SDK: Database](/apis/blocklet-sdk#Database)
 
 ## Environment and Configuration
 
 Get the configuration information of the Blocklet and the configuration information of the component
 
-See [Blocklet SDK: Environment]('/apis/blocklet-sdk#Environment')
+See [Blocklet SDK: Environment](/apis/blocklet-sdk#Environment)

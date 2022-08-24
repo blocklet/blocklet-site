@@ -4,13 +4,13 @@ description: Blocklet Meta
 layout: documentation
 ---
 
-## 什么是 Blocklet Meta
+## What is Blocklet Meta
 
-Blocklet Meta 描述了 Blocklet 的基本信息一些配置信息。
+Blocklet Meta describes the basic information of Blocklet and some configuration information.
 
-Blocklet Meta 在 `blocklet.yml` 中描述。
+Blocklet Meta is described in `blocklet.yml`.
 
-本文介绍 Blocklet 运行所需必要配置，完整的配置文档见 [Blocklet Meta](/apis/blocklet-spec)
+This page introduces the necessary configuration for Blocklet to run. For the complete configuration document, see [Blocklet Meta](/apis/blocklet-spec)
 
 ## DID
 
@@ -19,40 +19,40 @@ name: example
 did: z8iZrkWYbi3JU3AP9NHJQbBUdrgiRbeorauqf
 ```
 
-Bloklet DID 表示 Blocklet 打包后的 Bundle ID，通过 `name` 和 `did` 指定。
+Bloklet DID represents the Bundle ID after the Blocklet is packaged, specified by `name` and `did`.
 
-`name` 为人类可读的 ID, `did` 通过 `name` 派生。唯一的 `name` 派生出唯一的 `did`.
+`name` is a human readable ID, `did` is derived from `name`. Unique `name` derives unique `did`.
 
-**通常不应该手动修改 `did`, 应该通过 `create-blocklet` 初始化项目时自动生成 `name` 和 `did`.**
+**In general, `did` should not be modified manually, `name` and `did` should be automatically generated when the project is initialized via `create-blocklet`.**
 
-上到 Blocklet Store 时，相同的 DID 表示相同的 Bloklet.
+When going to the Blocklet Store, the same DID means the same Bloklet.
 
-将 Blocklet 安装到 Blocklet Server 时，相同的 DID 表示相同的 Bloklet.
+When installing a Blocklet to the Blocklet Server, the same DID represents the same Bloklet.
 
-## 版本
+## Version
 
 ```yml
 version: 1.0.0
 ```
 
-通过 `version` 中指定 Blocklet 版本。
+Specify the Blocklet version via `version`.
 
-升级 Blocklet 时，可通过 `blocklet version` 命令修改 `blocklet.yml` 中的 `version`
+When upgrading Blocklet, the `version` in `blocklet.yml` can be modified by the `blocklet version` command
 
-## 名称和描述
+## name and description
 
 ```yml
 title: Example APP
 description: Demo blocklet that shows how to configure Blocklet Meta
 ```
 
-Blocklet 名称和描述通过 `title` 和 `description` 表示。
+Blocklet names and descriptions are represented by `title` and `description`.
 
-`title` 和 `description` 将呈现在页面中，对用户可见。
+`title` and `description` will be rendered in the page and visible to the user.
 
-更多的配置见 [Blocklet Meta: Infomation](/apis/blocklet-spec#Infomation)
+For more configuration see [Blocklet Meta: Infomation](/apis/blocklet-spec#Infomation)
 
-## 访问入口
+## access entry
 
 ```yml
 interfaces:
@@ -64,39 +64,39 @@ interfaces:
     protocol: http
 ```
 
-Blocklet 对外提供的访问入口在 `interfaces` 中声明
+The access entry provided by Blocklet externally is declared in `interfaces`
 
-**通常不需要手动修改 `interfaces`, 使用 `create-blocklet` 初始化项目时自动生成的 `interfaces` 即可.**
+**No need to manually modify `interfaces`, just use the `interfaces` automatically generated when the project is initialized with `create-blocklet`.**
 
-每一个 Blocklet 必须声明且只能声明一个 Web 访问入口。
+Each blocklet must declare and only one Web access entry.
 
-`interfaces` 更多配置见 [Blocklet Meta: Interfaces](/apis/blocklet-spec#Interfaces)
+`interfaces` For more configuration see [Blocklet Meta: Interfaces](/apis/blocklet-spec#Interfaces)
 
-## Blocklet 类型
+## Blocklet types
 
-Blocklet 有两种类型
+There are two types of Blocklets
 
-- 纯静态: 只包含静态资源。启动时，纯静态的 Blocklet 将被 Blocklet Server 内置的静态资源服务来 serve
-- DPP: 这类 Blocklet 本身包含后端服务（也可以同时包含静态资源），启动时，DPP 类型的 Blocklet 将在 Blocklet Server 分配的端口号启动服务
+- Pure Static: Contains only static resources. At startup, a purely static Blocklet will be served by the static resource service built into the Blocklet Server
+- DPP: This type of Blocklet itself contains back-end services (and can also contain static resources at the same time). When starting, the DPP type Blocklet will start the service at the port number assigned by the Blocklet Server
 
-通过 `group` 指定 Blocklet 类型，通过 `main` 指定 Blocklet 启动入口
+Specify the Blocklet type through `group`, and specify the Blocklet startup entry through `main`
 
-DPP 类型的 Blocklet 需要通过 `scripts.dev` 指定 Blocklet 开发环境启动入口
+Blocklets of DPP type need to specify the blocklet development environment startup entry through `scripts.dev`
 
-纯静态类型：
+Pure static type:
 
 ```yml
 group: static
 main: www
 ```
 
-DPP 类型：
+DPP type:
 
 ```yml
-group: dapp
+group: dapps
 main: index.js
 scripts:
   dev: npm run dev
 ```
 
-更多的类型见 [Blocklet Meta: Type](/apis/blocklet-spec#Types)
+For more types see [Blocklet Meta: Type](/apis/blocklet-spec#Types)
