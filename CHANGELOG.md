@@ -1,3 +1,7 @@
+## 0.1.27 (August 24, 2022)
+
+- fix: some i18n and link
+
 ## 0.1.26 (August 23, 2022)
 
 - docs: update doc of blocklet spec
