@@ -1,3 +1,7 @@
+## 0.1.34 (August 26, 2022)
+
+- chore: update xmark
+
 ## 0.1.33 (August 25, 2022)
 
 - polish developer site
