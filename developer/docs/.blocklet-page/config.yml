@@ -33,7 +33,7 @@ themeConfig:
             link: /development/blocklet-page-app
           - text: Composite App
             link: /development/composable-blocklet
-          - text: User & Passports
+          - text: User & Passport
             link: /development/user-and-passport
           - text: Notification
             link: /development/notification

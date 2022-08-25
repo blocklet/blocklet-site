@@ -4,171 +4,131 @@ description: User and Passport
 layout: documentation
 ---
 
-> <p style={{color:"red"}}>TODO: this page should be updated</p>
+Blocklet Auth Service provides DID-based authentication and Passport-based access control for Blocklets.
 
-Blocklet Server provides generic auth service for Blocklets.
-
-Auth service provides the following capabilities
+Developers can obtain authentication and access control capabilities by configuration or API, without having to implement them from scratch.
 
 - Get user identity
 - Get user permissions
-- Intercept unlogged requests (do not intercept by default)
-- Intercept unauthorised requests (do not intercept by default)
-- Set invite login and open login (default is open login)
+- Set who can access
+- Block unauthenticated requests
+- Block unauthorised requests
 
-## Getting Started
+You can experience the above functions through [Auth Demo](/samples/auth-demo)
 
-[static-demo-blocklet](https://github.com/blocklet/html-2048-sample) is an html5 game that can be run on Blocklet Server. The following will introduce how to make a static-demo-blocklet that is only accessible after login.
+## Configure Blocklet Auth Service
 
-0. Prerequisites: Install and run Blocklet Server v1.7.0 or higher locally
-
-1. Download the project source code [html-2048-sample](https://github.com/blocklet/html-2048-sample)
-
-2. Open `blocklet.yml` in the project root directory, find the interface whose name is publicUrl, and add the Auth configuration
+Configured in the Web Interface declared in `blocklet.yml`
 
 ```yml
+# blocklet.yml
+
 interfaces:
   - type: web
-    name: publicUrl
-    path: /
-    prefix: '*'
-    port: BLOCKLET_PORT
-    protocol: tcp
-+   services:
-+     - name: 'auth'
-+       config:
-+         blockUnauthenticated: true
-```
-
-3. Execute `blocklet bundle` in the project root directory. After successful execution, you will see the successfully created blocklet bundle in `.blocklet/bundle`.
-
-```
-linchen@LinkdeMacBook-Pro html-2048-sample % blocklet bundle
-
-ℹ Bundling in zip mode for blocklet static-demo-blocklet...
-
-✔ Creating blocklet bundle in .blocklet/bundle... Done in 0.018s
-✔ Blocklet static-demo-blocklet@1.1.21 is successfully bundled!
-```
-
-4. Execute `blocklet deploy .blocklet/bundle` in the project root directory to publish the blocklet bundle to the locally running Blocklet Server.
-
-```
-linchen@LinkdeMacBook-Pro html-2048-sample % blocklet deploy .blocklet/bundle
-ℹ Try to deploy blocklet from /Users/linchen/code/blocklet/html-2048-sample/.blocklet/bundle to Local Blocklet Server
-ℹ Node did from config zNKqGAvUzcCowxtNA5r5gKQYUm2hR4X2SE2o
-ℹ Load config from /Users/linchen/code/arcblock/andata/.abtnode/abtnode.yml
-✔ Blocklet static-demo-blocklet@1.1.21 was successfully deployed!
-```
-
-5. Start Static Demo in Blocklet Server dashboard
-
-![](./images/static-demo-1.png)
-
-6. When you visit Static Demo, you will see the login page, which means that Static Demo already has the Auth capability.
-
-![](./images/static-demo-2.png)
-
-7. After the login is successful, you will successfully see the game page. At this point, you will see the information of the logged-in user in the Blocklet Server dashboard.
-
-![](./images/static-demo-3.png)
-
-Congratulations!
-
-## Demo
-
-[https://github.com/blocklet/auth-demo](https://github.com/blocklet/auth-demo): Implement login, logout, display user information, authentication and authorization functions based on Auth Service
-
-## Configure the Auth service
-
-All blocklets are installed with Auth capabilities. You can also configure the Auth service in `blocklet.yml`
-
-e.g.
-
-```yml
-interfaces:
-  - type: web
-    name: publicUrl
-    # ... other interface config
     services:
-      - name: 'auth'
+      - name: auth # Auth service for this access interface
         config:
-          invitedUserOnly: no
-          profileFields:
+          whoCanAccess: all # Who can access (can be dynamically modified after the app is installed)
+          blockUnauthenticated: false # Whether to automatically intercept unauthenticated requests and jump to the login page (default: false)
+          blockUnauthorized: false # Whether to automatically block unauthorized requests (default: false)
+          allowSwitchProfile: true # Whether to support switching profiles (default: true)
+          profileFields: # Information to provide when logging in
             - fullName
             - email
             - avatar
-          webWalletUrl: https://web.abtwallet.io
-          ignoreUrls:
-            - /public/**
-          blockUnauthenticated: false
-          blockUnauthorized: false
+          ignoreUrls: [] # Which interfaces allow any request to access
 ```
 
-- invitedUserOnly: Is only invited users are allowed to login?
-  - default: no
-- profileFields: What info do you want user to provide when login?
-  - default: [fullName, email, avatar]
-- blockUnauthenticated: Do you want Auth Service block unauthenticated requests for you?
-  - default: true
-- blockUnauthorized: Do you want Auth Service block unauthorized requests for you?
-  - default: false
-- ignoreUrls: Which URLs do not need to be protected?
-  - default: none
-- webWalletUrl: The URL of your preferred web wallet instance
-  - default: https://web.abtwallet.io
+## Login
 
-## Set accessible after login
+Users can login to Blocklet without registration
 
-After setting the login access, the Auth service will automatically intercept requests that are not logged in, and jump to the login page
+### Add the login component to the page
 
-```yml
-interfaces:
-  - type: web
-    name: xxxx
-    # ... other interface config
-    services:
-      - name: 'auth'
-        config:
-          blockUnauthenticated: true
+```js
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import React from 'react';
+
+import { createAuthServiceSessionContext } from '@arcblock/did-connect/lib/Session';
+import Header from '@blocklet/ui-react/lib/Header';
+
+const { SessionProvider } = createAuthServiceSessionContext();
+
+const theme = createTheme();
+export default function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <SessionProvider>
+        <Header />
+      </SessionProvider>
+    </ThemeProvider>
+  );
+}
 ```
 
-## Set accessible after authorization
+More: [Blocklet UI](/development/blocklet-ui-usage)
 
-After enabling Auth Service, Auth Service will **not** automatically intercept unauthorized requests. Blocklet needs to handle it by itself.
+### Use default login page
 
-If Blocklet wants Auth Service to automatically intercept unauthorized requests, you can do the following configuration:
+When `blockUnauthenticated` is set to `true`, unauthenticated requests will be automatically blocked to the default login page
 
-```yml
-interfaces:
-  - type: web
-    name: xxxx
-    # ... other interface config
-    services:
-      - name: 'auth'
-        config:
-          blockUnauthorized: true
-```
+### View Users
 
-After setting the Auth Service automatic interception, you need to bind the corresponding interface permissions for the user in the Blocklet Server dashboard.（The permission control of Blocklet Server is based on [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control)）
+After a user logs into the Blocklet, Blocklet Auth Service records the user's identity.
 
-![](./images/permissions.png)
+Developers can query user information through Blocklet SDK
 
-## Set invitation login or open login
+- [getUser()](</apis/blocklet-sdk#client.getUser(did)>)
+- [getUsers()](</apis/blocklet-sdk#client.getUsers()>)
+- [getOwner()](</apis/blocklet-sdk#client.getOwner()>)
 
-Configure invitation login or open login via `invitedUserOnly`
+## User Permissions and Passports
 
-```yml
-interfaces:
-  - type: web
-    name: xxxx
-    # ... other interface config
-    services:
-      - name: 'auth'
-        config:
-          invitedUserOnly: yes
-```
+Blocklet Auth Service uses role-based access control [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control)
 
-- invitedUserOnly
-  - no: Open login (default)
-  - yes: Only log in via invitation link
+Different from the traditional permission control system, the user's role is not stored in the server, but in the user's own wallet.
+
+The way Blocklet grants user roles is by issuing a passport to the user, which records the user's role. The user provides the corresponding passport when logging in to obtain the right to operate the resource.
+
+Developers can create roles and manage their permissions through [Blocklet SDK](/apis/blocklet-sdk#Auth).
+
+Creating a role creates a passport.
+
+Blocklet consumers can issue and manage passports for users in the Blocklet console.
+
+Blocklet has 4 default passports (developer does not need to create via API to use)
+
+- `owner`: Only Blocklet owners will get this passport. The Blocklet owner is the one who installed and started the Blocklet for the first time.
+- `admin`: It is recommended to issue this passport to the administrator of the Blocklet
+- `member`: It is recommended to issue secondary passports to internal members of the Blocklet
+- `guest`: Usually no passport is required for the guest, this passport can be issued if required
+
+## Access control
+
+### Set who can access
+
+Developers specify who can access by `whoCanAccess` in `blocklet.yml`
+
+- `all`: Accessible to everyone
+- `owner`: Only blocklet owner can access
+- `invited`: Only invited people (internal members) can access
+
+> This configuration can be modified by the application owner
+
+### Forbid unlogin requests
+
+Method 1: When `blockUnauthenticated` is set to `true`, unlogged requests will be automatically intercepted to the default login page
+
+Method 2: Implement in code, see [Middleware](/apis/blocklet-sdk#Middlewares)
+
+### Forbid unauthorised requests
+
+#### Only allow specified roles to access
+
+Implemented in code, see [Middleware](/apis/blocklet-sdk#Middlewares)
+
+#### Only allow access with specified permissions
+
+Method 1: When `blockUnauthorized` is set to `true`, unauthorised requests will be automatically blocked
+
+Method 2: Implement in code, see [Middleware](/apis/blocklet-sdk#Middlewares)

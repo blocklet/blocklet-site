@@ -45,11 +45,40 @@ Get user by user did
 - _@param_ **did** `string`
 - _@return_ `{ code, user }`
 
+### client.getOwner()
+
+Get owner of the app
+
+- _@param_ **did** `string`
+- _@return_ `{ code, user }`
+
 ### client.getUsers()
 
-Get all users of the team
+Get all users of the app
 
-- _@return_ `{ code, users }`
+- _@param_ **paging** `Object`
+  - **paging.pageSize** ``
+  - **paging.page** ``
+- _@param_ **query** `Object`
+  - **query.role** `String` Match users by role name
+    - `$none`: Match users which does not have a role
+  - **query.approved** `Boolean` Match users by approved
+  - **query.search** `String` Match users by did or fullName
+- _@param_ **sort** `Object`
+  - **sort.createdAt** `Number`
+  - **sort.updatedAt** `Number`
+  - **sort.lastLoginAt** `Number`
+  - > `-1`: The latest time is at first. `1`: The latest time is at last.
+- _@return_ `{ code, users, paging }`
+
+```
+Paging {
+  total: number of users
+  pageSize: number of users per page
+  pageCount: number of page
+  page: current page number
+}
+```
 
 ### client.getPermissionsByRole(role)
 
@@ -60,7 +89,7 @@ Get all permissions of a role
 
 ### client.getRoles()
 
-Get all roles of the team
+Get all roles of the app
 
 - _@return_ `{ code, roles }`
 
@@ -112,7 +141,7 @@ Full update permissions of a role
 
 ### client.getPermissions()
 
-Get all permissions of the team
+Get all permissions of the app
 
 - _@return_ `{ code, permissions }`
 
