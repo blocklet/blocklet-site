@@ -1,3 +1,7 @@
+## 0.1.32 (August 25, 2022)
+
+- docs: update doc of user and passport
+
 ## 0.1.29 (August 24, 2022)
 
 - docs: fix link in doc
