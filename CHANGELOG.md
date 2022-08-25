@@ -1,3 +1,7 @@
+## 0.1.33 (August 25, 2022)
+
+- polish developer site
+
 ## 0.1.32 (August 25, 2022)
 
 - docs: update doc of user and passport
