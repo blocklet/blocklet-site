@@ -96,6 +96,9 @@ screenshots:
 
 Blocklet price
 
+- `price`: Specify the token address and quantity
+- `shared`: How the revenue is shared. Usually you don't need to define it yourself, the system will by default distribute Blocklet revenue to developers and stores according to 7:3
+
 ```yml
 payment:
   price: # can specify multiple currencies

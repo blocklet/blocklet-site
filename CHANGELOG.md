@@ -1,3 +1,7 @@
+## 0.1.36 (September 02, 2022)
+
+- docs: update api: blocklet meta: price
+
 ## 0.1.35 (August 26, 2022)
 
 - chore: update xmark

@@ -96,6 +96,9 @@ screenshots:
 
 Blocklet 价格
 
+- `price`: 指定 token 地址和数量
+- `shared`: 收益如何分成。通常不需要自己定义，系统会默认将 Blocklet 收益按照 7:3 分给开发者和商店
+
 ```yml
 payment:
   price: # 可以指定多个币种
