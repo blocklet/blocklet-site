@@ -97,14 +97,14 @@ screenshots:
 Blocklet 价格
 
 - `price`: 指定 token 地址和数量
-- `shared`: 收益如何分成。通常不需要自己定义，系统会默认将 Blocklet 收益按照 7:3 分给开发者和商店
+- `shared`: 收益如何分成。**通常不需要自己定义**，系统会默认将 Blocklet 收益按照 7:3 分给开发者和商店
 
 ```yml
 payment:
-  price: # 可以指定多个币种
+  price: # 只能指定 1 个币种
     - address: z35n6UoHSi9MED4uaQy6ozFgKPaZj2UKrurBG # token address
       value: 8 # 价格
-  share: # 分成
+  share: # 通常不需要自己定义
     - name: Bob # 账号别名
       address: z1QUDFzp6wKhLFjV4sG1ACY3J3ePcknrviy # 账号 DID
       value: 0.7 # 分成比例

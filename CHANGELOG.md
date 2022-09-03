@@ -1,3 +1,7 @@
+## 0.1.37 (September 03, 2022)
+
+- docs: update api: blocklet meta: price
+
 ## 0.1.36 (September 02, 2022)
 
 - docs: update api: blocklet meta: price
