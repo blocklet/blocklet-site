@@ -324,27 +324,31 @@ const handlers = new WalletHandlers({
 A database library for develop blocklet, it's a wrapper of [nedb](https://www.github.com/Arcblock/nedb).
 Supply a simpler way to use nedb. Just use `new Database([dbName])`, or you can pass a object option as second parameter to create a database as origin nedb way `new Database([dbName], [options])`
 
-Supply full-promise support.
+Supply full-promise and typescript support.
 
 ```javascript
 import { Database } from '@blocklet/sdk';
 
+// Quick start
 (async () => {
-  const db1 = new Database('db1');
-  const data1 = await db1.find().skip(1).limit(10);
+  const db = new Database('demo.db');
+  const inserted = await db.insert({ key: 'value' });
+  const docs = await db.find({});
+  const paginated = await db.cursor({}).skip(1).limit(10);
+})();
 
+// Extend with class
+(async () => {
   class MyDatabase extends Database {
-    constructor(name) {
-      super(name);
-    }
-
     async extraFn() {
       return 'extra';
     }
   }
-  const db2 = new MyDatabase('db2');
-  const data2 = await db2.find().paginate(1, 10);
-  const data2Extra = await db2.extraFn();
+  const db = new MyDatabase('demo.db');
+  const inserted = await db.insert({ key: 'value' });
+  const docs = await db.find({});
+  const paginated = await db.cursor({}).skip(1).limit(10);
+  const extra = await db.extraFn();
 })();
 ```
 
