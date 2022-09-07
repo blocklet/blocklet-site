@@ -1,3 +1,7 @@
+## 0.1.38 (September 08, 2022)
+
+- chore: update deps and database docs
+
 ## 0.1.37 (September 03, 2022)
 
 - docs: update api: blocklet meta: price
