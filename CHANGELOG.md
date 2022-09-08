@@ -1,3 +1,7 @@
+## 0.1.40 (September 08, 2022)
+
+- chore: update deps
+
 ## 0.1.39 (September 08, 2022)
 
 - chore: update blocklet meta: componentPrice
