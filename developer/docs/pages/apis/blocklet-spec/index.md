@@ -113,6 +113,36 @@ payment:
       value: 0.3 # split ratio
 ```
 
+#### Component price
+
+Component Price refers to the selling price of the Blocklet when it is combined
+
+- `type`:
+  - Fixed price: `fixed`
+  - Divide proportionally: `percentage`
+- `value`
+  - When type is fixed, it refers to the selling price
+  - When type is percentage, it refers to the percentage
+- `parentPriceRange` the price range of the parent component
+
+```yml
+payment:
+  componentPrice:
+    - parentPriceRange: # The price range of the parent component
+        - 0
+        - 10
+      type: fixed
+      value: 2 # fixed price
+    - parentPriceRange:
+        - 10
+        - 20
+      type: percentage
+      value: 0.2 # divide proportionally
+    # When parentPriceRange is not specified, it indicates the default division method
+    - type: fixed
+      value: 4
+```
+
 ## Files
 
 Which files need to be packaged into the bundle

@@ -113,6 +113,36 @@ payment:
       value: 0.3 # 分成比例
 ```
 
+#### 组件价格
+
+组件价格指 Blocklet 被组合时的售价
+
+- `type`:
+  - 固定价格: `fixed`
+  - 按比例分成: `percentage`
+- `value`
+  - 当 type 为 fixed 时，指售价
+  - 当 type 为 percentage 时，指分成比例
+- `parentPriceRange` 父组件的价格区间
+
+```yml
+payment:
+  componentPrice:
+    - parentPriceRange: # 父组件的价格区间
+        - 0
+        - 10
+      type: fixed
+      value: 2 # 固定售价
+    - parentPriceRange:
+        - 10
+        - 20
+      type: percentage
+      value: 0.2 # 按比例分成
+    # 当不指定 parentPriceRange 时，表示默认的分成方式
+    - type: fixed
+      value: 4
+```
+
 ## Files
 
 需要将哪些文件打包到 bundle 中
