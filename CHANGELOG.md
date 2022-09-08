@@ -1,3 +1,7 @@
+## 0.1.42 (September 08, 2022)
+
+- fix: mdx can't use `{` & `}` directly
+
 ## 0.1.41 (September 08, 2022)
 
 - chore: update blocklet sdk: issuerPassportToUser
