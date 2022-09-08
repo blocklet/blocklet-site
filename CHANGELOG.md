@@ -1,3 +1,7 @@
+## 0.1.44 (September 08, 2022)
+
+- fix: database usage in blocklet sdk
+
 ## 0.1.43 (September 08, 2022)
 
 - fix: blocklet sdk: passport
