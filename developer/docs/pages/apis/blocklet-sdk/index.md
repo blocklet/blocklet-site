@@ -118,7 +118,7 @@ Get all roles of the app
 - _@param_ **role** `string` the key of the role. e.g. `owner`, `admin`, `member`
 - _@return_ `{ code, user }`
 
-### client.enableUserPassport(\{ userDid, role \})
+### client.enableUserPassport(\{ userDid, passportId \})
 
 set passport status to `valid`
 
@@ -126,7 +126,7 @@ set passport status to `valid`
 - _@param_ **passportId** `string` passportId (get from user.passports)
 - _@return_ `{ code, user }`
 
-### client.revokeUserPassport(\{ userDid, role \})
+### client.revokeUserPassport(\{ userDid, passportId \})
 
 set passport status to `revoked`
 
