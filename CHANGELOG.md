@@ -1,3 +1,7 @@
+## 0.1.41 (September 08, 2022)
+
+- chore: update blocklet sdk: issuerPassportToUser
+
 ## 0.1.40 (September 08, 2022)
 
 - chore: update deps

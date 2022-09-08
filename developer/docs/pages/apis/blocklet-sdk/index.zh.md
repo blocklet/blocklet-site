@@ -112,6 +112,28 @@ Get all roles of the app
 - _@param_ **name** `string` the key of the role
 - _@return_ `{ code }`
 
+### client.issuePassportToUser({ userDid, role })
+
+- _@param_ **userDid** `string`
+- _@param_ **role** `string` the key of the role. e.g. `owner`, `admin`, `member`
+- _@return_ `{ code, user }`
+
+### client.enableUserPassport({ userDid, role })
+
+set passport status to `valid`
+
+- _@param_ **userDid** `string`
+- _@param_ **passportId** `string` passportId (get from user.passports)
+- _@return_ `{ code, user }`
+
+### client.revokeUserPassport({ userDid, role })
+
+set passport status to `revoked`
+
+- _@param_ **userDid** `string`
+- _@param_ **passportId** `string` passportId (get from user.passports)
+- _@return_ `{ code, user }`
+
 ### client.grantPermissionForRole(role, permission)
 
 - _@param_ **role** `string` the name of the role
