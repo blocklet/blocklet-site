@@ -356,7 +356,7 @@ import { Database } from '@blocklet/sdk';
   const db = new Database('demo.db');
   const inserted = await db.insert({ key: 'value' });
   const docs = await db.find({});
-  const paginated = await db.cursor({}).skip(1).limit(10);
+  const paginated = await db.cursor({}).skip(1).limit(10).exec();
 })();
 
 // Extend with class
@@ -369,7 +369,7 @@ import { Database } from '@blocklet/sdk';
   const db = new MyDatabase('demo.db');
   const inserted = await db.insert({ key: 'value' });
   const docs = await db.find({});
-  const paginated = await db.cursor({}).skip(1).limit(10);
+  const paginated = await db.cursor({}).skip(1).limit(10).exec();
   const extra = await db.extraFn();
 })();
 ```
