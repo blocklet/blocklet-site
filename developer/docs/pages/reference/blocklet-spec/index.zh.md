@@ -202,16 +202,17 @@ environments:
 scripts:
   dev: npm run start # 执行 `blocklet dev` 时实际执行的指令
   preInstall: node hooks/pre-install.js # 安装前的 hook
-  preDeploy: node hooks/pre-deploy.js # 部署前的 hook (以部署方式安装 `blocklet deploy`)
   postInstall: node hooks/post-install.js # 安装后的 hook
   preStart: node hooks/pre-start.js # 启动前的 hook
+  postStart: node hooks/post-start.js # 启动后的 hook
   preStop: node hooks/pre-stop.js # 停止前的 hook
   preUninstall: node hooks/pre-uninstall.js # 删除前的 hook
+  preConfig: node/hooks/pre-config.js # 配置前的 hook
 ```
 
 ![blocklet lifecycle](./images/blocklet-lifecycle-hooks.png)
 
-Blocklet Server 提供了 hook 功能用来在执行生命周期的过程中做一些事情。目前包含：`pre-deploy, post-install, pre-start, pre-stop, pre-install, pre-uninstall` 这几个 Hook.
+Blocklet Server 提供了 hook 功能用来在执行生命周期的过程中做一些事情。目前包含：`pre-install, post-install, pre-start, post-start, pre-stop, pre-uninstall, pre-config` 这几个 Hook.
 
 比如，某个 Blocklet 对于运行的机器有硬件要求：内存不能低于 1G，可用磁盘容量不能低于 500 MB。这个时候就可以利用 pre-install hook 来检测目标机器是否已满足需求，如果满足，正常安装，否则抛出错误消息，并终止安装。
 

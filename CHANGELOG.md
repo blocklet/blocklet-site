@@ -1,3 +1,7 @@
+## 0.1.46 (September 13, 2022)
+
+- docs: develop blocklet
+
 ## 0.1.45 (September 13, 2022)
 
 - docs: refactor navigation

@@ -202,16 +202,17 @@ Configuring Blocklet Hook Directives
 scripts:
   dev: npm run start # The command actually executed when `blocklet dev` is executed
   preInstall: node hooks/pre-install.js # hooks before installation
-  preDeploy: node hooks/pre-deploy.js # pre-deployment hooks (install `blocklet deploy` in deployment mode)
   postInstall: node hooks/post-install.js # hook after installation
   preStart: node hooks/pre-start.js # hook before startup
   preStop: node hooks/pre-stop.js # hook before stop
   preUninstall: node hooks/pre-uninstall.js # Hook before deletion
+  postStart: node hooks/post-start.js # 启动后的 hook
+  preConfig: node/hooks/pre-config.js # 配置前的 hook
 ```
 
 ![blocklet lifecycle](./images/blocklet-lifecycle-hooks.png)
 
-Blocklet Server provides hook functionality to do something during the execution life cycle. Currently includes: `pre-deploy, post-install, pre-start, pre-stop, pre-install, pre-uninstall` These Hooks.
+Blocklet Server provides hook functionality to do something during the execution life cycle. Currently includes: `pre-install, post-install, pre-start, post-start, pre-stop, pre-uninstall, pre-config` These Hooks.
 
 For example, a blocklet has hardware requirements for the machine to run on: the memory cannot be less than 1G, and the available disk capacity cannot be less than 500 MB. At this time, you can use the pre-install hook to detect whether the target machine has met the requirements, if so, install it normally, otherwise throw an error message and terminate the installation.
 
