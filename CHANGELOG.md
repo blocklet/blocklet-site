@@ -1,3 +1,7 @@
+## 0.1.45 (September 13, 2022)
+
+- docs: refactor navigation
+
 ## 0.1.44 (September 08, 2022)
 
 - fix: database usage in blocklet sdk

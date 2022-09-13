@@ -3,5 +3,5 @@ layout: empty
 hide: true
 blocks:
   name: Redirect
-  url: /welcome
+  url: /guide/create
 ---

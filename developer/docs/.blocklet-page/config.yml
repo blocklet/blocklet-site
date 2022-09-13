@@ -9,56 +9,68 @@ themeConfig:
     secondary: '#F0FDFF'
   sidebar:
     en:
-      - text: Introduction
+      - text: Welcome
+        link: /welcome
+      - text: Quick Start
         items:
-          - text: Blocklet
-            link: /introduction/blocklet
-      - text: Prerequisites
-        items:
-          - text: DID Wallet
+          - text: Setup DID Wallet
             link: /prerequisites/wallet
-          - text: Blocklet Server
+          - text: Setup Blocklet Server
             link: /prerequisites/server
-      - text: Develop Blocklet
+          - text: Create your first blocklet
+            link: /guide/getting-started
+      - text: How to Guides
         items:
-          - text: Getting Started
-            link: /development/getting-started
-          - text: Blocklet Meta
-            link: /development/blocklet-meta
-          - text: Frontend-Only App
-            link: /development/frontend-only-app
-          - text: Fullstack App
-            link: /development/fullstack-app
-          - text: Blocklet Page App
-            link: /development/blocklet-page-app
-          - text: Composite App
-            link: /development/composable-blocklet
-          - text: User & Passport
-            link: /development/user-and-passport
-          - text: Notification
-            link: /development/notification
-          - text: Using Blocklet SDK
-            link: /development/blocklet-sdk-usage
-          - text: Using Blocklet UI
-            link: /development/blocklet-ui-usage
-      - text: 'Components In-Depth'
+          - text: Create Blocklet
+            link: /guide/create
+          - text: Develop Blocklet
+            link: /guide/develop
+          - text: User and Passport
+            link: /guide/auth
+          - text: Communicate with DID Wallet
+            link: /guide/notification
+          - text: Blocklet Storage
+            link: /guide/storage
+          - text: Create Composite Blocklet
+            link: /guide/composite-blocklet
+          - text: Blocklet Component
+            link: /guide/component
+          - text: Build blocklet for profit
+            link: /guide/profit
+          - text: Bundle your blocklet
+            link: /guide/bundle
+          - text: Publish your blocklet to the world
+            link: /guide/publish
+          - text: Deploy blocklet directly to the server
+            link: /guide/deploy
+          - text: Read/Write blockchain in blocklet
+            link: /guide/blockchain
+      - text: Reference Guides
         items:
-          - text: Core concepts
-            link: /components/core-concepts
-          - text: Develop a component
-            link: /components/develop-component
-          - text: Develop a composite app
-            link: /components/develop-composite-app
-      - text: Deployment
-        items:
-          - text: Bundle Blocklet
-            link: /deployment/bundle
-          - text: Deploy Blocklet To Blocklet Server
-            link: /deployment/deploy
-          - text: Publish Blocklet To Blocklet Store
-            link: /deployment/upload
-          - text: Using Github Actions
-            link: /deployment/github-actions
+          - text: blocklet.yml
+            link: /reference/blocklet-spec
+          - text: Blocklet SDK
+            link: /reference/blocklet-sdk
+          - text: Blocklet CLI
+            link: /reference/blocklet-cli
+          - text: Blocklet UI
+            link: /reference/blocklet-ui
+          - text: Blocklet Actions
+            link: /reference/blocklet-actions
+          - text: Security
+            link: /reference/security
+          - text: Performance
+            link: /reference/performance
+          - text: Known Issues or Limitations
+            link: /reference/known-issues
+          - text: Setup Blocklet Server
+            link: /reference/blocklet-server-setup
+          - text: Blocklet Page
+            link: https://pages.blocklet.io/docs/intro
+          - text: DID Connect
+            link: https://www.didconnect.io/docs/intro
+          - text: Create Blocklet
+            link: https://www.createblocklet.dev/docs/intro
       - text: Samples
         link: /samples
         items:
@@ -78,77 +90,83 @@ themeConfig:
             link: /samples/component-demo
           - text: DID Connect Demo
             link: /samples/did-connect-demo
-      - text: API
+      - text: Conceptual Guides
         items:
-          - text: Blocklet Meta
-            link: /apis/blocklet-spec
+          - text: Blocklet
+            link: /concept/blocklet
+          - text: Blocklet Lifecycle
+            link: /concept/lifecycle
+          - text: Blocklet Composition
+            link: /concept/component
+          - text: Blocklet Server Architecture
+            link: /concept/server-architecture
+          - text: Blocklet Server Routing
+            link: /concept/server-routing
+          - text: Access Control
+            link: /concept/access-control
+    zh:
+      - text: 欢迎
+        link: /welcome
+      - text: 快速开始
+        items:
+          - text: Setup DID Wallet
+            link: /prerequisites/wallet
+          - text: Setup Blocklet Server
+            link: /prerequisites/server
+          - text: Create your first blocklet
+            link: /guide/getting-started
+      - text: 操作指南
+        items:
+          - text: Create Blocklet
+            link: /guide/create
+          - text: Develop Blocklet
+            link: /guide/develop
+          - text: User and Passport
+            link: /guide/auth
+          - text: Communicate with DID Wallet
+            link: /guide/notification
+          - text: Blocklet Storage
+            link: /guide/storage
+          - text: Create Composite Blocklet
+            link: /guide/composite-blocklet
+          - text: Blocklet Component
+            link: /guide/component
+          - text: Build blocklet for profit
+            link: /guide/profit
+          - text: Bundle your blocklet
+            link: /guide/bundle
+          - text: Publish your blocklet to the world
+            link: /guide/publish
+          - text: Deploy blocklet directly to the server
+            link: /guide/deploy
+          - text: Read/Write blockchain in blocklet
+            link: /guide/blockchain
+      - text: 参考指南
+        items:
+          - text: blocklet.yml
+            link: /reference/blocklet-spec
           - text: Blocklet SDK
-            link: /apis/blocklet-sdk
+            link: /reference/blocklet-sdk
           - text: Blocklet CLI
-            link: /apis/blocklet-cli
+            link: /reference/blocklet-cli
           - text: Blocklet UI
-            link: /apis/blocklet-ui
+            link: /reference/blocklet-ui
           - text: Blocklet Actions
-            link: /apis/blocklet-actions
+            link: /reference/blocklet-actions
+          - text: Security
+            link: /reference/security
+          - text: Performance
+            link: /reference/performance
+          - text: Known Issues or Limitations
+            link: /reference/known-issues
+          - text: Setup Blocklet Server
+            link: /reference/blocklet-server-setup
           - text: Blocklet Page
             link: https://pages.blocklet.io/docs/intro
           - text: DID Connect
             link: https://www.didconnect.io/docs/intro
           - text: Create Blocklet
             link: https://www.createblocklet.dev/docs/intro
-      - text: FAQ
-        link: /faq
-    zh:
-      - text: 介绍
-        items:
-          - text: Blocklet
-            link: /introduction/blocklet
-      - text: 先决条件
-        items:
-          - text: DID Wallet
-            link: /prerequisites/wallet
-          - text: Blocklet Server
-            link: /prerequisites/server
-      - text: 开发 Blocklet
-        items:
-          - text: 入门
-            link: /development/getting-started
-          - text: Blocklet Meta
-            link: /development/blocklet-meta
-          - text: Frontend-Only App
-            link: /development/frontend-only-app
-          - text: Fullstack App
-            link: /development/fullstack-app
-          - text: Blocklet Page App
-            link: /development/blocklet-page-app
-          - text: Composite App
-            link: /development/composable-blocklet
-          - text: 用户和通行证
-            link: /development/user-and-passport
-          - text: 消息通知
-            link: /development/notification
-          - text: 使用 Blocklet SDK
-            link: /development/blocklet-sdk-usage
-          - text: 使用 Blocklet UI
-            link: /development/blocklet-ui-usage
-      - text: '深入组件'
-        items:
-          - text: Core concepts
-            link: /components/core-concepts
-          - text: Develop a component
-            link: /components/develop-component
-          - text: Develop a composite app
-            link: /components/develop-composite-app
-      - text: 部署
-        items:
-          - text: Bundle Blocklet
-            link: /deployment/bundle
-          - text: Deploy Blocklet To Blocklet Server
-            link: /deployment/deploy
-          - text: Publish Blocklet To Blocklet Store
-            link: /deployment/upload
-          - text: Using Github Actions
-            link: /deployment/github-actions
       - text: 示例
         link: /samples
         items:
@@ -168,23 +186,17 @@ themeConfig:
             link: /samples/component-demo
           - text: DID Connect Demo
             link: /samples/did-connect-demo
-      - text: API
+      - text: 概念指南
         items:
-          - text: Blocklet Meta
-            link: /apis/blocklet-spec
-          - text: Blocklet SDK
-            link: /apis/blocklet-sdk
-          - text: Blocklet CLI
-            link: /apis/blocklet-cli
-          - text: Blocklet UI
-            link: /apis/blocklet-ui
-          - text: Blocklet Actions
-            link: /apis/blocklet-actions
-          - text: Blocklet Page
-            link: https://pages.blocklet.io/docs/intro
-          - text: DID Connect
-            link: https://www.didconnect.io/docs/intro
-          - text: Create Blocklet
-            link: https://www.createblocklet.dev/docs/intro
-      - text: FAQ
-        link: /faq
+          - text: Blocklet
+            link: /concept/blocklet
+          - text: Blocklet Lifecycle
+            link: /concept/lifecycle
+          - text: Blocklet Composition
+            link: /concept/component
+          - text: Blocklet Server Architecture
+            link: /concept/server-architecture
+          - text: Blocklet Server Routing
+            link: /concept/server-routing
+          - text: Access Control
+            link: /concept/access-control
