@@ -1,3 +1,7 @@
+## 0.1.49 (September 14, 2022)
+
+- chore: update doc skeleton
+
 ## 0.1.48 (September 14, 2022)
 
 - docs: Create Composite Blocklet
