@@ -1,6 +1,10 @@
+## 0.1.48 (September 14, 2022)
+
+- docs: Create Composite Blocklet
+
 ## 0.1.47 (September 14, 2022)
 
-
+- docs: Communicate with DID Wallet
 
 ## 0.1.46 (September 13, 2022)
 

@@ -127,9 +127,9 @@ themeConfig:
             link: /guide/notification
           - text: Blocklet Storage
             link: /guide/storage
-          - text: Create Composite Blocklet
+          - text: 创建组合 Blocklet
             link: /guide/composite-blocklet
-          - text: Blocklet Component
+          - text: Blocklet 组件
             link: /guide/component
           - text: Build blocklet for profit
             link: /guide/profit

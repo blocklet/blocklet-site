@@ -1,6 +1,6 @@
 ---
-title: Blocklet Component
-description: Blocklet Component
+title: Blocklet 组件
+description: Blocklet 组件
 layout: documentation
 ---
 
