@@ -81,6 +81,32 @@ KEY_1=value1
 
 > blocklet 安装后，使用者可以在 blocklet 管理面板中配置环境变量
 
+## 在页面中获取 blocklet 信息
+
+你可以通过请求 blocklet 的 `__meta__.js` 接口获取 blocklet 信息
+
+> 通过 Create Blocklet 创建的 blocklet 项目提供开箱即用的环境，你可以通过 window.blocklet 获取应用信息
+
+```js
+// 应用 ID
+window.blocklet.appId
+
+// 应用版本
+window.blocklet.version
+
+// 应用名称
+window.blocklet.appName
+
+// 应用描述
+window.blocklet.appDescription
+
+// 应用 Url
+window.blocklet.appUrl
+
+// 共享的环境变量
+window.blocklet.<shared env>
+```
+
 ## Blocklet Scripts
 
 Blocklet Server 提供了 hook 功能用来在执行生命周期的过程中做一些事情。目前包含 `pre-install, post-install, pre-start, post-start, pre-stop, pre-uninstall, pre-config` 这几个 Hook.

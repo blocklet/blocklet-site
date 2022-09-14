@@ -81,6 +81,32 @@ KEY_1=value1
 
 > After the blocklet is installed, users can configure environment variables in the blocklet admin panel
 
+## Get blocklet information in the page
+
+You can get blocklet information by requesting the blocklet's `__meta__.js` interface
+
+> The blocklet project created by Create Blocklet provides an out-of-the-box environment, and you can get application information through window.blocklet
+
+```js
+// application ID
+window.blocklet.appId
+
+// application version
+window.blocklet.version
+
+// Application Name
+window.blocklet.appName
+
+// application description
+window.blocklet.appDescription
+
+// application URL
+window.blocklet.appUrl
+
+// shared environment variables
+window.blocklet.<shared env>
+```
+
 ## Blocklet Scripts
 
 Blocklet Server provides hook functionality to do something during the execution life cycle. Currently includes `pre-install, post-install, pre-start, post-start, pre-stop, pre-uninstall, pre-config` these Hooks.

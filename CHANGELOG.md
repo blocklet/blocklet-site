@@ -1,3 +1,7 @@
+## 0.1.50 (September 14, 2022)
+
+- docs: Blocklet Component
+
 ## 0.1.49 (September 14, 2022)
 
 - chore: update doc skeleton
