@@ -1,3 +1,7 @@
+## 0.1.56 (September 16, 2022)
+
+- docs: access control
+
 ## 0.1.55 (September 15, 2022)
 
 - docs: Known Issues
