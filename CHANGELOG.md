@@ -1,3 +1,7 @@
+## 0.1.54 (September 15, 2022)
+
+- docs: Blocklet CLI
+
 ## 0.1.53 (September 15, 2022)
 
 - docs: Deploy blocklet directly to the server

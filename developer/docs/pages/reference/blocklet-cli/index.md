@@ -4,9 +4,7 @@ description: Blocklet CLI
 layout: documentation
 ---
 
-> <p style={{color:"red"}}>TODO: this page should be updated</p>
-
-Blocklet Server provides `blocklet` command-line tool for controlling and administering Blocklets. Use the following syntax to run `blocklet` commands from your terminal:
+Blocklet CLI provides `blocklet` command-line tool for controlling and administering Blocklets. Use the following syntax to run `blocklet` commands from your terminal:
 
 ```bash
 blocklet [options] [command]
@@ -14,47 +12,57 @@ blocklet [options] [command]
 
 You can use the `-h` or `--help` to determine the full list of supported commands.
 
-### Version
+## Version
 
-Shows the current Blocklet Server version.
+Shows the current Blocklet CLI version.
 
 ```bash
 $ blocklet -V
 1.4.4
 ```
 
-### Initialize
+## Create Blocklet Project
 
-Bootstraps an empty Blocklet. The command prompts user for Blocklet parameters and generates a YAML configuration.
+Bootstraps an Blocklet project. The command use [create-blocklet](https://www.createblocklet.dev/docs/intro) to generate a project.
 
 ```bash
-$ blocklet init
-This utility will walk you through create such files and folders(if not exists):
-- blocklet.yml
-- blocklet.md
-- screenshots/
-
-It only covers common items, if you want to check all items, please visit:
-https://github.com/ArcBlock/blocklets#keyinfo-blockletjson
-
-Press ^C to quit.
-? blocklet name, case INSENSITIVE: first
-? Please write concise description: Blocklet Server blocklet project
-? What's the group of the blocklet? static
-? What's the entry point of the blocklet? .
-? What's the public interface of the blocklet? /
-? What's the admin interface of the blocklet?
-? What's the config interface of the blocklet?
-? What's the documentation interface of the blocklet?
-? Is this OK: Yes
-✔ Meta file /home/arcblock/b1/blocklet.yml was created
-✔ Doc file blocklet.md was created
-✔ Screenshots dir screenshots/ was created
+$ blocklet create
 ```
 
-Optionally you can invoke the command with `-y` option to generate Blocklet with default values
+## Development a blocklet
 
-### Meta
+### Develop
+
+Develop blocklet from current directory
+
+```bash
+blocklet dev
+```
+
+Open the browser after blocklet had been started
+
+```bash
+blocklet dev --open
+```
+
+Develop blocklet as a component
+
+```bash
+blocklet dev --app-id <blocklet-app-id> --mount-point /xxx
+```
+
+- `blocklet-app-id` can be viewed in the blocklet details page
+- `mount-point` the mount point of the component
+
+### Exec script
+
+Execute script in blocklet running context
+
+```bash
+blocklet exec <script>
+```
+
+## Meta
 
 This is an informational command which prints meta information for a Blocklet.
 
@@ -62,46 +70,86 @@ This is an informational command which prints meta information for a Blocklet.
 $ blocklet meta
 ```
 
-### Development
+## Manage children in blocklet.yml
 
-Often you would like to deploy Blocklets to validate their behaviours. The command provides support to _Launch_, _start_ and _remove_ blocklets under development.
+### Add
+
+Add component to blocklet.yml
 
 ```bash
-$ blocklet dev install
-ℹ Try to dev blocklet from /home/arcblock/b1
-ℹ Node did from config zNKhyzGJfngmBvwQiwHtBinUNiwL2SE85yAE
-ℹ Load config from /data/abtnode/.abtnode/abtnode.yml
-✔ Blocklet first@1.1.0 was successfully installed
+Usage: blocklet add <name> --store <store> --title <title> --mount-point <mount-point>
 ```
 
+- `name`: the id of the component in the store
+- `--store`: which store the component is in
+- `--title`: you can customize different names for components
+- `--mount-point`: the mount point of the component. If you fill in '/my-prefix', then all requests prefixed with it will be forwarded to the configured component
+
+You can see the command to add a component in the component details page of any store. For example, if you want to add DID Comments, you can go to its [details page](https://store.blocklet.dev/blocklets/z8ia1WEiBZ7hxURf6LwH21Wpg99vophFwSJdu) Find the command `blocklet add did-comments --store=https://store.blocklet.dev`
+
+### Remove
+
+Remove component from blocklet.yml
+
 ```bash
-$ blocklet dev start
-ℹ Try to dev blocklet from /home/arcblock/b1
-ℹ Node did from config zNKhyzGJfngmBvwQiwHtBinUNiwL2SE85yAE
-ℹ Load config from /data/abtnode/.abtnode/abtnode.yml
-
-
-2021-08-05T13:47:43: Static blocklet ready on port 8091 from /home/arcblock/b1
-✔ Blocklet first@1.1.0 was successfully started
-
-ℹ You can access with the following URL
-
-- http://127.0.0.1
-
-ℹ Note that your blocklet is running in development in Blocklet Server,
-ℹ To run it in production mode, you can use blocklet bundle and then blocklet deploy.
+blocklet remove <name>
 ```
 
+## Config Blocklet CLI
+
+### Config
+
+Manage the configuration for Blocklet CLI
+
 ```bash
-$ blocklet dev remove
-ℹ Try to dev blocklet from /home/arcblock/b1
-ℹ Node did from config zNKhyzGJfngmBvwQiwHtBinUNiwL2SE85yAE
-ℹ Load config from /data/abtnode/.abtnode/a
+blocklet config set [key] [value]    # Set config value
+blocklet config get [key]            # Get config value
+blocklet config delete [key]         # Delete config value
+blocklet config list              # List config value
+```
+
+你可为配置项设置不同的 profile
+
+```bash
+blocklet config set key value # set key in default profile
+blocklet config set key value1  --profile profile1 # set key in profile1
+blocklet config set key value2  --profile profile2 # set key in profile2
+
+blocklet config get key # get key in default prifle
+blocklet config get key --profile profile1 # get key in default prifle1
+blocklet config get key --profile profile2 # get key in default prifle2
+```
+
+### Connect
+
+Connect to blocklet store. This command will set store configuration by `blocklet config`
+
+```bash
+blocklet connect <store-url>
+```
+
+Set store configuration to specific profile
+
+```bash
+blocklet connect <store-url> --profile <profile>
+```
+
+After executing the command, the component information will be removed from `blocklet.yml`.
+
+## Build and Publish your blocklet
+
+### Update Version
+
+Bumps up the Blocklet version for next changes.
+
+```bash
+$ blocklet version  1.1.0
+✔ Blocklet version bumped to 1.1.0
 ```
 
 ### Bundle
 
-Packages the Blocklet for Blocklet Server deployment.
+Packages the Blocklet.
 
 ```bash
 $ blocklet bundle
@@ -114,60 +162,41 @@ $ blocklet bundle
 
 ### Deploy
 
-Deploys a blocklet from the local folder to Blocklet Server.
+Deploys a blocklet from the local folder to remote Blocklet Server.
 
 ```bash
-$ blocklet deploy .
-ℹ Node did from config zNKhyzGJfngmBvwQiwHtBinUNiwL2SE85yAE
-ℹ Load config from /data/abtnode/.abtnode/abtnode.yml
-ℹ Try to deploy blocklet from /home/arcblock/b1 to http://127.0.0.1:8089
-ℹ Name: first
-ℹ DID: z8iZqE2Ce7Tec6JrzJU4Wv1QbzbLnmJwJAeEQ
-ℹ Version: 1.0.0
-ℹ Added Files: 4
-  -  blocklet.yml
-  -  blocklet.md
-  -  .blocklet/bundle/blocklet.yml
-  -  .blocklet/bundle/blocklet.md
-✔ Uploading first... Done in 0.44s
-✔ Blocklet first@1.0.0 was successfully deployed to http://127.0.0.1:8089
+$ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx --access-secret xxxxxx
 ```
 
-### Update Version
+- blocklet-bundle-folder: 使用 [blocklet bundle](/guide/bundle) 构建后的目录，如果当前你在项目根目录，则是 `./blocklet/bundle`.
+- `--endpoint`: server 的地址，以 /admin 结尾。比如，你本地的 Blocklet Server 的地址是 `http://127.0.0.1/admin`
+- `--access-key`: 在 Blocklet Server 创建的 Access Key
+- `--access-secret`: 在 Blocklet Server 创建的 Access Secret
 
-Bumps up the Blocklet version for next changes.
+Deploys a blocklet from the local folder to local Blocklet Server.
 
 ```bash
-$ blocklet version  1.1.0
-✔ Blocklet version bumped to 1.1.0
+$ blocklet deploy <blocklet-bundle-folder>
 ```
 
-### Publish
-
-Publish the blocklet release to store, see the detail in [publish blocklet](../publish-blocklets)
+Deploys a component from the local folder to Blocklet Server.
 
 ```bash
-blocklet publish [options] [metafile]
+$ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx --access-secret xxxxxx --app-id <blocklet-app-id> --mount-point /xxx`
 ```
 
-### Blocklet Server Migration
+- `--app-id`: 应用的 AppID, 可在 blocklet 详情页中查看
+- `--mount-point`: 组件的挂载点
 
-The migrate command updates Blocklet meta information for the latest Blocklet Server version
+### Upload
+
+Upload the blocklet release to store, see the detail in [publish blocklet](../publish)
 
 ```bash
-$ blocklet migrate
-ℹ Try migrating blocklet meta from /home/arcblock/b1
+blocklet upload [options] [metafile]
 ```
 
-### Blocklet Server Configuration
-
-Manage the Blocklet Server configuration files
-
-```bash
-blocklet config [options] [key] [value]
-```
-
-### Help
+## Help
 
 The help command is useful to determine information for a particular command. Optionally you can also pass the `-h` option to the sub-command for the same purpose.
 

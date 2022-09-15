@@ -55,6 +55,8 @@ themeConfig:
             link: /reference/blocklet-sdk
           - text: Blocklet CLI
             link: /reference/blocklet-cli
+          - text: Blocklet Server CLI
+            link: /reference/blocklet-server-cli
           - text: Blocklet UI
             link: /reference/blocklet-ui
           - text: Blocklet Actions
@@ -153,6 +155,8 @@ themeConfig:
             link: /reference/blocklet-sdk
           - text: Blocklet CLI
             link: /reference/blocklet-cli
+          - text: Blocklet Server CLI
+            link: /reference/blocklet-server-cli
           - text: Blocklet UI
             link: /reference/blocklet-ui
           - text: Blocklet Actions
