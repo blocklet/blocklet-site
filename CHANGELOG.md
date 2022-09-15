@@ -1,3 +1,7 @@
+## 0.1.51 (September 15, 2022)
+
+- docs: Build blocklet for profit
+
 ## 0.1.50 (September 14, 2022)
 
 - docs: Blocklet Component
