@@ -45,6 +45,8 @@ themeConfig:
             link: /guide/deploy
           - text: Read/Write blockchain in blocklet
             link: /guide/blockchain
+          - text: Operation and maintenance your blocklet
+            link: /guide/operation
       - text: Reference Guides
         items:
           - text: blocklet.yml
@@ -141,6 +143,8 @@ themeConfig:
             link: /guide/deploy
           - text: Read/Write blockchain in blocklet
             link: /guide/blockchain
+          - text: Operation and maintenance your blocklet
+            link: /guide/operation
       - text: 参考指南
         items:
           - text: blocklet.yml

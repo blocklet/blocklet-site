@@ -1,3 +1,7 @@
+## 0.1.53 (September 15, 2022)
+
+- docs: Deploy blocklet directly to the server
+
 ## 0.1.52 (September 15, 2022)
 
 - docs: Publish your blocklet to the world
