@@ -1,3 +1,7 @@
+## 0.1.55 (September 15, 2022)
+
+- docs: Known Issues
+
 ## 0.1.54 (September 15, 2022)
 
 - docs: Blocklet CLI
