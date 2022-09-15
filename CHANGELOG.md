@@ -1,3 +1,7 @@
+## 0.1.52 (September 15, 2022)
+
+- docs: Publish your blocklet to the world
+
 ## 0.1.51 (September 15, 2022)
 
 - docs: Build blocklet for profit

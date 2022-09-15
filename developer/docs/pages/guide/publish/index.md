@@ -4,33 +4,27 @@ description: Publish your blocklet to the world
 layout: documentation
 ---
 
-- Publish to multiple stores
-- Self-hosted store
-- Host with github release
-- Other hosting options?
+## Publish to Blocklet Store
 
-> <p style={{color:"red"}}>TODO: this page should be updated</p>
+1. Register as a developer from Blocklet Store
+   - Blocklet Store is decentralized
+   - Arcblock provides 2 official Store: [blocklet store](https://store.blocklet.dev/) and [blocklet store(dev)](https://dev.store.blocklet.dev/)
+   - You can setup a self-hosted store refer to [Host Blocklet Store](https://store.blocklet.io/docs/en/host/launch-store)
+   - You need to apply for a developer first, after the administrator has approved, you can proceed to the next step
+2. Create a new access key
+   - Use `blocklet connect <store-url>` command to create and access key from store
+3. Bundle your blocklet
+   - Refer to [Bundle your blocklet](/guide/bundle)
+4. Upload your blocklet
+   - Use `blocklet upload` to upload your blocklet bundle to store
+5. Login to the uploaded Blocklet Store, you can see the uploaded Blocklet in the "My Blocklet" page in Admin Dashboard
+6. The uploaded Blocklet is still in the "draft" status, click the "publish" button to publish
 
-## Publish Steps
+## Publish to multiple stores
 
-1. Make sure your blocklet can be bundled and deployed to your local Blocklet Server
-2. Register as a developer from [blocklet store](https://store.blocklet.dev/) or [blocklet store(dev)](https://dev.store.blocklet.dev/)
-   - Need to apply for a developer first, after the administrator has approved, you can proceed to the next step
-3. Go to the access key page, create a new access key
-4. Configure the host to publish blocklet store related configuration
-   - Use `blocklet config set store [storeUrl]` command to configure the target Blocklet Store
-   - Use `blocklet config set accessToken [accessToken]` command to configure the access key (access key is obtained from the administrator in the management console)
-5. Develop a blocklet and upload it
-   - Recommended to use [create-blocklet](https://www.npmjs.com/package/create-blocklet) tool to quickly create a blocklet
-   - Usually, before `blocklet upload` you need to bundle the blocklet
-6. Login to the uploaded Blocklet Store, you can see the uploaded Blocklet in the "Blocklet" page
-7. The uploaded Blocklet is still in the "draft" status, click the "publish" button to publish
-8. Verify in the store: [blocklet store](https://store.blocklet.dev/) or [blocklet store(dev)](https://dev.store.blocklet.dev/)
-9. Verify in the market: install your Blocklet to your Blocklet Server
+- Use `blocklet connect <store-url> --profile <profile>` to save access token of different stores
+- Use `blocklet upload --profile <profile>` to upload your blocklet bundle to multiple stores
 
-## Publish Config
+<!-- ## Host with github release -->
 
-![](./images/publish-blocklets-1.png)
-
-- `publishConfig`: define the directory which will be published.
-- `files`: define the files which will be published.
+<!-- ## Other hosting options? -->
