@@ -380,9 +380,17 @@ import { Database } from '@blocklet/sdk';
 import { env } from '@blocklet/sdk';
 
 const { appId, appName, appDescription, appUrl, isComponent, dataDir, cacheDir } = env;
+```
 
-const { getWebEndpoint, getChildWebEndpoint, getParentWebEndpoint, getComponentMountPoints, getComponentMountPoint } =
-  env;
+## Component
+
+```javascript
+import { Component } from '@blocklet/sdk';
+
+Component.getParentWebEndpoint();
+Component.getChildWebEndpoint(name);
+Component.getComponentWebEndpoint(name);
+Component.call({ name, path, data });
 ```
 
 ## Middlewares
