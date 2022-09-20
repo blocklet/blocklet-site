@@ -20,22 +20,22 @@ interfaces:
   - type: web
     name: publicUrl
     path: /
-    prefix: '*'
+    prefix: "*"
     port: BLOCKLET_PORT
     protocol: http
-community: ''
-documentation: ''
-homepage: ''
-license: ''
+community: ""
+documentation: ""
+homepage: ""
+license: ""
 payment:
   price: []
   share: []
 timeout:
   start: 60
 requirements:
-  server: '>=1.8.0'
-  os: '*'
-  cpu: '*'
+  server: ">=1.8.0"
+  os: "*"
+  cpu: "*"
 scripts:
   dev: npm run start
 environments: []
@@ -59,10 +59,6 @@ navigation:
         link:
           en: /docs/en/reference/blocklet-sdk
           zh: /docs/zh/reference/blocklet-sdk
-      - title: Blocklet UI
-        link:
-          en: /docs/en/reference/blocklet-actions
-          zh: /docs/zh/reference/blocklet-actions
       - title: Blocklet CLI
         link:
           en: /docs/en/reference/blocklet-cli
@@ -71,6 +67,10 @@ navigation:
         link:
           en: /docs/en/reference/blocklet-server-cli
           zh: /docs/zh/reference/blocklet-server-cli
+      - title: Blocklet UI
+        link:
+          en: /docs/en/reference/blocklet-ui
+          zh: /docs/zh/reference/blocklet-ui
       - title: GitHub Actions
         link:
           en: /docs/en/reference/blocklet-actions
