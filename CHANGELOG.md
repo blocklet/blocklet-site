@@ -1,3 +1,7 @@
+## 0.1.59 (September 20, 2022)
+
+- fix: blocklet ui link
+
 ## 0.1.58 (September 20, 2022)
 
 - fix: broken links and sidebar i18n
