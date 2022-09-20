@@ -78,9 +78,9 @@ After a user logs into the Blocklet, Blocklet Auth Service records the user's id
 
 Developers can query user information through Blocklet SDK
 
-- [getUser()](</apis/blocklet-sdk#client.getUser(did)>)
-- [getUsers()](</apis/blocklet-sdk#client.getUsers()>)
-- [getOwner()](</apis/blocklet-sdk#client.getOwner()>)
+- [getUser()](</reference/blocklet-sdk#client.getUser(did)>)
+- [getUsers()](</reference/blocklet-sdk#client.getUsers()>)
+- [getOwner()](</reference/blocklet-sdk#client.getOwner()>)
 
 ## User Permissions and Passports
 
@@ -90,7 +90,7 @@ Different from the traditional permission control system, the user's role is not
 
 The way Blocklet grants user roles is by issuing a passport to the user, which records the user's role. The user provides the corresponding passport when logging in to obtain the right to operate the resource.
 
-Developers can create roles and manage their permissions through [Blocklet SDK](/apis/blocklet-sdk#Auth).
+Developers can create roles and manage their permissions through [Blocklet SDK](/reference/blocklet-sdk#Auth).
 
 Creating a role creates a passport.
 
@@ -119,16 +119,16 @@ Developers specify who can access by `whoCanAccess` in `blocklet.yml`
 
 Method 1: When `blockUnauthenticated` is set to `true`, unlogged requests will be automatically intercepted to the default login page
 
-Method 2: Implement in code, see [Middleware](/apis/blocklet-sdk#Middlewares)
+Method 2: Implement in code, see [Middleware](/reference/blocklet-sdk#Middlewares)
 
 ### Forbid unauthorised requests
 
 #### Only allow specified roles to access
 
-Implemented in code, see [Middleware](/apis/blocklet-sdk#Middlewares)
+Implemented in code, see [Middleware](/reference/blocklet-sdk#Middlewares)
 
 #### Only allow access with specified permissions
 
 Method 1: When `blockUnauthorized` is set to `true`, unauthorised requests will be automatically blocked
 
-Method 2: Implement in code, see [Middleware](/apis/blocklet-sdk#Middlewares)
+Method 2: Implement in code, see [Middleware](/reference/blocklet-sdk#Middlewares)

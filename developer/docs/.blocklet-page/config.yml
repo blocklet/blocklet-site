@@ -5,8 +5,8 @@ theme: docs
 github: https://github.com/blocklet/blocklet-site
 themeConfig:
   colors:
-    primary: '#1DC1C7'
-    secondary: '#F0FDFF'
+    primary: "#1DC1C7"
+    secondary: "#F0FDFF"
   sidebar:
     en:
       - text: Welcome
@@ -75,6 +75,20 @@ themeConfig:
             link: https://www.didconnect.io/docs/intro
           - text: Create Blocklet
             link: https://www.createblocklet.dev/docs/intro
+      - text: Conceptual Guides
+        items:
+          - text: Blocklet
+            link: /concept/blocklet
+          - text: Blocklet Lifecycle
+            link: /concept/lifecycle
+          - text: Blocklet Composition
+            link: /concept/component
+          - text: Blocklet Server Architecture
+            link: /concept/server-architecture
+          - text: Blocklet Server Routing
+            link: /concept/server-routing
+          - text: Access Control
+            link: /concept/access-control
       - text: Samples
         link: /samples
         items:
@@ -94,87 +108,87 @@ themeConfig:
             link: /samples/component-demo
           - text: DID Connect Demo
             link: /samples/did-connect-demo
-      - text: Conceptual Guides
-        items:
-          - text: Blocklet
-            link: /concept/blocklet
-          - text: Blocklet Lifecycle
-            link: /concept/lifecycle
-          - text: Blocklet Composition
-            link: /concept/component
-          - text: Blocklet Server Architecture
-            link: /concept/server-architecture
-          - text: Blocklet Server Routing
-            link: /concept/server-routing
-          - text: Access Control
-            link: /concept/access-control
     zh:
       - text: 欢迎
         link: /welcome
       - text: 快速开始
         items:
-          - text: Setup DID Wallet
+          - text: 安装 DID Wallet
             link: /prerequisites/wallet
-          - text: Setup Blocklet Server
+          - text: 安装 Blocklet Server
             link: /prerequisites/server
-          - text: Create your first blocklet
+          - text: 创建第一个应用
             link: /guide/getting-started
       - text: 操作指南
         items:
-          - text: Create Blocklet
+          - text: 创建应用
             link: /guide/create
-          - text: Develop Blocklet
+          - text: 开发应用
             link: /guide/develop
-          - text: User and Passport
+          - text: 用户和通行证
             link: /guide/auth
-          - text: Communicate with DID Wallet
+          - text: 和 DID Wallet 通信
             link: /guide/notification
-          - text: Blocklet Storage
+          - text: 存储应用状态
             link: /guide/storage
-          - text: 创建组合 Blocklet
+          - text: 创建组合型应用
             link: /guide/composite-blocklet
-          - text: Blocklet 组件
+          - text: 开发组件
             link: /guide/component
-          - text: Build blocklet for profit
+          - text: 开发付费应用
             link: /guide/profit
-          - text: Bundle your blocklet
+          - text: 应用打包
             link: /guide/bundle
-          - text: Publish your blocklet to the world
+          - text: 发布应用
             link: /guide/publish
-          - text: Deploy blocklet directly to the server
+          - text: 部署应用到节点
             link: /guide/deploy
-          - text: Read/Write blockchain in blocklet
+          - text: 读写区块链数据
             link: /guide/blockchain
-          - text: Operation and maintenance your blocklet
+          - text: 应用管理和维护
             link: /guide/operation
       - text: 参考指南
         items:
           - text: blocklet.yml
             link: /reference/blocklet-spec
-          - text: Blocklet SDK
+          - text: Blocklet 开发套件
             link: /reference/blocklet-sdk
-          - text: Blocklet CLI
+          - text: Blocklet 命令行
             link: /reference/blocklet-cli
-          - text: Blocklet Server CLI
+          - text: 节点命令行
             link: /reference/blocklet-server-cli
           - text: Blocklet UI
             link: /reference/blocklet-ui
-          - text: Blocklet Actions
+          - text: GitHub Action
             link: /reference/blocklet-actions
-          - text: Security
+          - text: 安全最佳实践
             link: /reference/security
-          - text: Performance
+          - text: 性能最佳实践
             link: /reference/performance
-          - text: Known Issues or Limitations
+          - text: 已知问题
             link: /reference/known-issues
-          - text: Setup Blocklet Server
+          - text: 获得节点的其他方法
             link: /reference/blocklet-server-setup
-          - text: Blocklet Page
+          - text: Blocklet Pages
             link: https://pages.blocklet.io/docs/intro
           - text: DID Connect
             link: https://www.didconnect.io/docs/intro
           - text: Create Blocklet
             link: https://www.createblocklet.dev/docs/intro
+      - text: 概念指南
+        items:
+          - text: 理解 Blocklet
+            link: /concept/blocklet
+          - text: 理解 Blocklet 生命周期
+            link: /concept/lifecycle
+          - text: 理解组合型 Blocklet
+            link: /concept/component
+          - text: 节点架构概述
+            link: /concept/server-architecture
+          - text: 节点请求流转
+            link: /concept/server-routing
+          - text: 权限控制模型
+            link: /concept/access-control
       - text: 示例
         link: /samples
         items:
@@ -194,17 +208,3 @@ themeConfig:
             link: /samples/component-demo
           - text: DID Connect Demo
             link: /samples/did-connect-demo
-      - text: 概念指南
-        items:
-          - text: Blocklet
-            link: /concept/blocklet
-          - text: Blocklet Lifecycle
-            link: /concept/lifecycle
-          - text: Blocklet Composition
-            link: /concept/component
-          - text: Blocklet Server Architecture
-            link: /concept/server-architecture
-          - text: Blocklet Server Routing
-            link: /concept/server-routing
-          - text: Access Control
-            link: /concept/access-control

@@ -10,7 +10,7 @@ Blocklet Meta 描述了 Blocklet 的基本信息一些配置信息。
 
 Blocklet Meta 在 `blocklet.yml` 中描述。
 
-本文介绍 Blocklet 运行所需必要配置，完整的配置文档见 [Blocklet Meta](/apis/blocklet-spec)
+本文介绍 Blocklet 运行所需必要配置，完整的配置文档见 [Blocklet Meta](/reference/blocklet-spec)
 
 ## DID
 
@@ -50,7 +50,7 @@ Blocklet 名称和描述通过 `title` 和 `description` 表示。
 
 `title` 和 `description` 将呈现在页面中，对用户可见。
 
-更多的配置见 [Blocklet Meta: Infomation](/apis/blocklet-spec#Infomation)
+更多的配置见 [Blocklet Meta: Infomation](/reference/blocklet-spec#Infomation)
 
 ## 访问入口
 
@@ -70,7 +70,7 @@ Blocklet 对外提供的访问入口在 `interfaces` 中声明
 
 每一个 Blocklet 必须声明且只能声明一个 Web 访问入口。
 
-`interfaces` 更多配置见 [Blocklet Meta: Interfaces](/apis/blocklet-spec#Interfaces)
+`interfaces` 更多配置见 [Blocklet Meta: Interfaces](/reference/blocklet-spec#Interfaces)
 
 ## Blocklet 类型
 
@@ -99,4 +99,4 @@ scripts:
   dev: npm run dev
 ```
 
-更多的类型见 [Blocklet Meta: Type](/apis/blocklet-spec#Types)
+更多的类型见 [Blocklet Meta: Type](/reference/blocklet-spec#Types)

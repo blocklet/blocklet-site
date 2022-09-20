@@ -10,7 +10,7 @@ Blocklet Meta describes the basic information of Blocklet and some configuration
 
 Blocklet Meta is described in `blocklet.yml`.
 
-This page introduces the necessary configuration for Blocklet to run. For the complete configuration document, see [Blocklet Meta](/apis/blocklet-spec)
+This page introduces the necessary configuration for Blocklet to run. For the complete configuration document, see [Blocklet Meta](/reference/blocklet-spec)
 
 ## DID
 
@@ -50,7 +50,7 @@ Blocklet names and descriptions are represented by `title` and `description`.
 
 `title` and `description` will be rendered in the page and visible to the user.
 
-For more configuration see [Blocklet Meta: Infomation](/apis/blocklet-spec#Infomation)
+For more configuration see [Blocklet Meta: Infomation](/reference/blocklet-spec#Infomation)
 
 ## access entry
 
@@ -70,7 +70,7 @@ The access entry provided by Blocklet externally is declared in `interfaces`
 
 Each blocklet must declare and only one Web access entry.
 
-`interfaces` For more configuration see [Blocklet Meta: Interfaces](/apis/blocklet-spec#Interfaces)
+`interfaces` For more configuration see [Blocklet Meta: Interfaces](/reference/blocklet-spec#Interfaces)
 
 ## Blocklet types
 
@@ -99,4 +99,4 @@ scripts:
   dev: npm run dev
 ```
 
-For more types see [Blocklet Meta: Type](/apis/blocklet-spec#Types)
+For more types see [Blocklet Meta: Type](/reference/blocklet-spec#Types)
