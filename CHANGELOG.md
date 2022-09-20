@@ -1,3 +1,7 @@
+## 0.1.58 (September 20, 2022)
+
+- fix: broken links and sidebar i18n
+
 ## 0.1.57 (September 16, 2022)
 
 - docs: blocklet concept
