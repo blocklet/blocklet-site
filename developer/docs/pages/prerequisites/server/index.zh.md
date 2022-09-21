@@ -39,7 +39,7 @@ v16.15.0
 
 ## 第二步：安装 Blocklet CLI
 
-## NPM
+### NPM
 
 ```bash
 npm install -g @blocklet/cli
@@ -50,7 +50,7 @@ added 1318 packages, and audited 1319 packages in 2m
   run `npm fund` for details
 ```
 
-## YARN
+### YARN
 
 ```bash
 yarn global add @blocklet/cli
@@ -64,7 +64,7 @@ success Installed "@blocklet/cli@1.8.22" with binaries:
 ✨  Done in 98.71s.
 ```
 
-## PNPM
+### PNPM
 
 ```bash
 pnpm add -g @blocklet/cli

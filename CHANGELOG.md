@@ -1,3 +1,7 @@
+## 0.1.61 (September 21, 2022)
+
+- chore: polish doc
+
 ## 0.1.60 (September 21, 2022)
 
 - docs: update setup local blocklet server
