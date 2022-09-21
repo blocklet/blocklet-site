@@ -43,7 +43,14 @@ capabilities:
   clusterMode: false
   component: true
 screenshots: []
-children: []
+children:
+  - name: meilisearch
+    mountPoint: /meilisearch
+    source:
+      store:
+        - https://test.store.blocklet.dev
+      name: meilisearch
+      version: latest
 navigation:
   - title:
       en: Guides

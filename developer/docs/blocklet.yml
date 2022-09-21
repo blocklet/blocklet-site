@@ -39,6 +39,7 @@ requirements:
   cpu: '*'
 scripts:
   dev: npm run start
+  postStart: node hooks/post-start.js
 environments: []
 capabilities:
   clusterMode: false
