@@ -1,30 +1,106 @@
 ---
-title: '启动 Blocklet Server '
-description: '启动 Blocklet Server'
+title: '在本机启动 Blocklet Server '
+description: '在本机启动 Blocklet Server'
 layout: 'documentation'
 ---
 
-目前，只能在 [Linux] 和 [macOS] 安装。如果你想使用别的操作系统比如 Windows，你可以使用虚拟机，不过需要确保 ABT 钱包可以访问到你的虚拟机 IP 地址。
+Blocklet Server 是 Blocklet 的运行环境，开发 Blocklet 前你需要在本机启动 Blocklet Server。
 
-## 第一步：安装 [Node.js]
+## 支持平台
 
-我们推荐使用 [nvm] 安装 [Node.js], 执行下面命令，即可安装 [nvm]：
+目前只能在 _Linux(Ubuntu)_ 或 _macOS_ 安装 Blocklet Server。
+
+## 第一步：安装 Node.js
+
+**Node.js 最低版本要求: v14**
+
+### 使用 nvm 安装 Node.js
+
+我们推荐使用 [nvm] 安装 Node.js, 执行下面命令，即可安装 [nvm]
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh)"
 ```
 
-Blocklet Server 会在第一时间适配 Node.js LTS 版本, 所以我们推荐安装 LTS 版本 Node.js.
-
 ```bash
 nvm install --lts
 ```
 
-> 只要安装完 [Node.js]，[npm] 也会被自动安装完成。
->
-> 你可以通过运行命令 `nvm install-latest-npm` 安装最新的 [Node.js]
+### 从官方文档安装 Node.js
 
-## 第二步：安装 Nginx
+你也可以从官网 https://nodejs.org/ 安装 Node.js
+
+**检测是否安装成功：**
+
+```bash
+node -v
+v16.15.0
+```
+
+## 第二步：安装 Blocklet CLI
+
+## NPM
+
+```bash
+npm install -g @blocklet/cli
+
+added 1318 packages, and audited 1319 packages in 2m
+
+161 packages are looking for funding
+  run `npm fund` for details
+```
+
+## YARN
+
+```bash
+yarn global add @blocklet/cli
+yarn global v1.22.18
+[1/4] 🔍  Resolving packages...
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+[4/4] 🔨  Building fresh packages...
+success Installed "@blocklet/cli@1.8.22" with binaries:
+      - blocklet
+✨  Done in 98.71s.
+```
+
+## PNPM
+
+```bash
+pnpm add -g @blocklet/cli
+
+Packages: +1022
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1321, reused 1247, downloaded 74, added 151, done
+.pnpm/core-js@3.25.2/node_modules/core-js: Running postinstall script, done in 74ms
+.pnpm/ursa-optional@0.10.2/node_modules/ursa-optional: Running install script, done in 4.6s
+.pnpm/@root+acme@3.1.0/node_modules/@root/acme: Running postinstall script, done in 120ms
+.pnpm/@abtnode+cli@1.8.22/node_modules/@abtnode/cli: Running postinstall script, done in 1s
+
+/Users/linchen/Library/pnpm/global/5:
++ @blocklet/cli 1.8.22
+
+The integrity of 4316 files was checked. This might have caused installation to take longer.
+```
+
+**检测是否安装成功：**
+
+```bash
+blocklet -V
+
+                 Powered By
+     _             ____  _            _
+    / \   _ __ ___| __ )| | ___   ___| | __
+   / _ \ | '__/ __|  _ \| |/ _ \ / __| |/ /
+  / ___ \| | | (__| |_) | | (_) | (__|   <
+ /_/   \_\_|  \___|____/|_|\___/ \___|_|\_\
+
+            Blocklet CLI v1.8.22
+
+1.8.22
+```
+
+## 第三步：安装 Nginx
 
 我们推荐使用 Nginx 作为 Blocklet Server 的网关
 
@@ -41,17 +117,16 @@ nvm install --lts
 
 - 参考: https://www.nginx.com/resources/wiki/start/topics/tutorials/install/
 
-## 第三步：安装并初始化 DID 钱包
-
-见 [获取 DID 钱包](/prerequisites/wallet)
-
-## 第四步：安装 Blocklet CLI
-
-使用 [npm] 执行下面命令即可安装 Blocklet CLI ：
+**检测是否安装成功：**
 
 ```bash
-npm install -g @blocklet/cli
+nginx -v
+nginx version: nginx/1.21.6
 ```
+
+## 第四步：安装并初始化 DID 钱包
+
+见 [获取 DID 钱包](/prerequisites/wallet)
 
 ## 第五步：创建并启动 Blocklet Server
 
@@ -129,8 +204,4 @@ Secure URLs (Recommended):
 
 您可以通过执行 `blocklet server stop` 命令来停止 blocklet 服务器。
 
-[linux]: https://www.linux.org
-[macos]: https://www.apple.com/macos
 [nvm]: https://github.com/nvm-sh/nvm
-[node.js]: https://nodejs.org
-[npm]: https://www.npmjs.com

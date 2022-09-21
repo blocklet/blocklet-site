@@ -5,8 +5,8 @@ theme: docs
 github: https://github.com/blocklet/blocklet-site
 themeConfig:
   colors:
-    primary: "#1DC1C7"
-    secondary: "#F0FDFF"
+    primary: '#1DC1C7'
+    secondary: '#F0FDFF'
   sidebar:
     en:
       - text: Welcome
@@ -15,7 +15,7 @@ themeConfig:
         items:
           - text: Setup DID Wallet
             link: /prerequisites/wallet
-          - text: Setup Blocklet Server
+          - text: Setup Local Blocklet Server
             link: /prerequisites/server
           - text: Create your first blocklet
             link: /guide/getting-started
@@ -115,7 +115,7 @@ themeConfig:
         items:
           - text: 安装 DID Wallet
             link: /prerequisites/wallet
-          - text: 安装 Blocklet Server
+          - text: 在本机启动 Blocklet Server
             link: /prerequisites/server
           - text: 创建第一个应用
             link: /guide/getting-started

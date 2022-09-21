@@ -1,3 +1,7 @@
+## 0.1.60 (September 21, 2022)
+
+- docs: update setup local blocklet server
+
 ## 0.1.59 (September 20, 2022)
 
 - fix: blocklet ui link

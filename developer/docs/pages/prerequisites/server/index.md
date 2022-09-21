@@ -1,72 +1,147 @@
 ---
-title: 'Blocklet Server Setup'
-description: 'Blocklet Server Setup'
+title: 'Setup Local Blocklet Server'
+description: 'Setup Local Blocklet Server'
 layout: 'documentation'
 ---
 
-Currently, Blocklet Server can only be installed on [Linux] and [macOS]. If you want to use another operating system such as Windows, you can use a virtual machine, but you need to make sure that the ABT Wallet can access your virtual machine IP address.
+Blocklet Server 是 Blocklet 的运行环境，开发 Blocklet 前你需要在本机启动 Blocklet Server。
 
-## Step 1: Install [Node.js]
+## 支持平台
 
-We recommend using [nvm] to install [Node.js], execute the following command to install [nvm]:
+目前只能在 _Linux(Ubuntu)_ 或 _macOS_ 安装 Blocklet Server。
+
+## 第一步：安装 Node.js
+
+**Node.js 最低版本要求: v14**
+
+### 使用 nvm 安装 Node.js
+
+我们推荐使用 [nvm] 安装 Node.js, 执行下面命令，即可安装 [nvm]
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh)"
 ```
 
-Blocklet Server will adapt to the Node.js LTS version at the first time, so we recommend installing the LTS version of Node.js.
-
 ```bash
 nvm install --lts
 ```
 
-> Once [Node.js] is installed, [npm] will also be installed automatically.
->
-> You can install the latest [Node.js] by running the command `nvm install-latest-npm`
+### 从官方文档安装 Node.js
 
-## Step 2: Install Nginx
+你也可以从官网 https://nodejs.org/ 安装 Node.js
 
-We recommend using Nginx as the gateway for Blocklet Server
+**检测是否安装成功：**
 
-> If you can't install Nginx, you can skip this step and use Blocklet Server's built-in gateway
+```bash
+node -v
+v16.15.0
+```
 
-**Nginx version: >= 1.18.0**
+## 第二步：安装 Blocklet CLI
 
-**Install on Mac (using Homebrew)**
-
-- `brew install nginx`
-- Reference: https://formulae.brew.sh/formula/nginx
-
-**Installation on Linux**
-
-- Reference: https://www.nginx.com/resources/wiki/start/topics/tutorials/install/
-
-## Step 3: Install and initialize the DID wallet
-
-See [Get DID Wallet](/prerequisites/wallet)
-
-## Step 4: Install Blocklet CLI
-
-The Blocklet CLI can be installed by executing the following command using [npm]:
+## NPM
 
 ```bash
 npm install -g @blocklet/cli
+
+added 1318 packages, and audited 1319 packages in 2m
+
+161 packages are looking for funding
+  run `npm fund` for details
 ```
 
-## Step 5: Create and start Blocklet Server
+## YARN
 
-After installing the Blocklet CLI, you can use an empty directory to store the configuration and initialize the Blocklet Server.
+```bash
+yarn global add @blocklet/cli
+yarn global v1.22.18
+[1/4] 🔍  Resolving packages...
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+[4/4] 🔨  Building fresh packages...
+success Installed "@blocklet/cli@1.8.22" with binaries:
+      - blocklet
+✨  Done in 98.71s.
+```
 
-1. Run `mkdir -p ~/blocklet-server-data && cd ~/blocklet-server-data` command to enter the directory. `~/blocklet-server-data` can be replaced with any other directory
+## PNPM
 
-2. Run the `blocklet server init` command to initialize the Blocklet Server
+```bash
+pnpm add -g @blocklet/cli
 
-   - > After executing the initialization command, the system will confirm the directory in which you want to store the configuration. After confirmation, your Blocklet Server configuration will be automatically generated.
+Packages: +1022
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1321, reused 1247, downloaded 74, added 151, done
+.pnpm/core-js@3.25.2/node_modules/core-js: Running postinstall script, done in 74ms
+.pnpm/ursa-optional@0.10.2/node_modules/ursa-optional: Running install script, done in 4.6s
+.pnpm/@root+acme@3.1.0/node_modules/@root/acme: Running postinstall script, done in 120ms
+.pnpm/@abtnode+cli@1.8.22/node_modules/@abtnode/cli: Running postinstall script, done in 1s
 
-3. Execute `blocklet server start` to start the Blocklet Server
+/Users/linchen/Library/pnpm/global/5:
++ @blocklet/cli 1.8.22
+
+The integrity of 4316 files was checked. This might have caused installation to take longer.
+```
+
+**检测是否安装成功：**
+
+```bash
+blocklet -V
+
+                 Powered By
+     _             ____  _            _
+    / \   _ __ ___| __ )| | ___   ___| | __
+   / _ \ | '__/ __|  _ \| |/ _ \ / __| |/ /
+  / ___ \| | | (__| |_) | | (_) | (__|   <
+ /_/   \_\_|  \___|____/|_|\___/ \___|_|\_\
+
+            Blocklet CLI v1.8.22
+
+1.8.22
+```
+
+## 第三步：安装 Nginx
+
+我们推荐使用 Nginx 作为 Blocklet Server 的网关
+
+> 如果你无法安装 Nginx, 可以跳过此步骤，使用 Blocklet Server 的内置网关
+
+**Nginx 版本: >= 1.18.0**
+
+**在 Mac 上安装 (使用 Homebrew)**
+
+- `brew install nginx`
+- 参考: https://formulae.brew.sh/formula/nginx
+
+**在 Linux 上安装**
+
+- 参考: https://www.nginx.com/resources/wiki/start/topics/tutorials/install/
+
+**检测是否安装成功：**
+
+```bash
+nginx -v
+nginx version: nginx/1.21.6
+```
+
+## 第四步：安装并初始化 DID 钱包
+
+见 [获取 DID 钱包](/prerequisites/wallet)
+
+## 第五步：创建并启动 Blocklet Server
+
+安装 Blocklet CLI 后，您可以使用一个空目录存储配置并初始化 Blocklet Server。
+
+1. 运行 `mkdir -p ~/blocklet-server-data && cd ~/blocklet-server-data` 命令进入目录。 可以将 `~/blocklet-server-data` 替换为任何其他目录
+
+2. 运行 `blocklet server init` 命令初始化 Blocklet Server
+
+- > 执行初始化命令后，系统将确认您要存储配置的目录。确认后，系统将自动生成您的 Blocklet Server 配置。
+
+3. 执行 `blocklet server start` 启动 Blocklet Server
 
 <details>
-<summary>Example of output</summary>
+<summary>输出示例</summary>
 
 ```
 linchen@LinkdeMacBook-Pro demo % blocklet server init
@@ -102,35 +177,31 @@ Secure URLs (Recommended):
 
 </details>
 
-## Access Blocklet Server
+## 访问 Blocklet Server
 
-After Blocklet Server starts successfully. You will see the URL of the Blocklet Server in the terminal
+Blocklet Server 启动成功后。 您会在 terminal 中看到 Blocklet Server 的 URL
 
 ```
 HTTP URLs:
 
 - http://192.168.3.28/admin/
-- http://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.did.abtnet.io/admin/
+- http://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.did.abtnet.io/admin/
 
 Secure URLs (Recommended):
 
 - https://192-168-3-28.ip.abtnet.io/admin/
 ```
 
-- **(Recommended)** `http://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.did.abtnet.io/admin/`: Access via DID Domain
-- **(Recommended)** `https://192-168-3-28.ip.abtnet.io/admin/`: Access via IP Echo Domain
-- (Not Recommended) `http://192.168.3.28/admin/` access via IP
+- **(推荐)** `http://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.did.abtnet.io/admin/`: 通过 DID Domain 访问
+- **(推荐)** `https://192-168-3-28.ip.abtnet.io/admin/`: 通过 IP Echo Domain 访问
+- (不推荐) `http://192.168.3.28/admin/` 通过 IP 访问
 
-> Note: Please replace `192.168.3.28` with your local network IP
+> 注意：请将替换 `192.168.3.28` 为您的本地网络 IP
 >
-> Note: Please do not use the localhost or 127.0.0.1 addresses to access the Blocklet server. You will not be able to connect it using DID wallet.
+> 注意：请不要使用 localhost 或 127.0.0.1 地址访问 Blocklet 服务器。 您将无法使用 DID 钱包连接它。
 
-## Stop Blocklet Server
+## 停止 Blocklet Server
 
-You can stop the blocklet server by executing the `blocklet server stop` command.
+您可以通过执行 `blocklet server stop` 命令来停止 blocklet 服务器。
 
-[linux]: https://www.linux.org
-[macos]: https://www.apple.com/macos
 [nvm]: https://github.com/nvm-sh/nvm
-[node.js]: https://nodejs.org
-[npm]: https://www.npmjs.com
