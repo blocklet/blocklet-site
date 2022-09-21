@@ -78,9 +78,9 @@ export default function App() {
 
 开发者可通过 Blocklet SDK 查询用户信息
 
-- [getUser()](</reference/blocklet-sdk#client.getUser(did)>)
-- [getUsers()](</reference/blocklet-sdk#client.getUsers()>)
-- [getOwner()](</reference/blocklet-sdk#client.getOwner()>)
+- [getUser()](/reference/blocklet-sdk#getUser)
+- [getUsers()](/reference/blocklet-sdk#getUsers)
+- [getOwner()](/reference/blocklet-sdk#getOwner)
 
 ## 用户权限和通行证
 

@@ -33,26 +33,32 @@ const { address, secretKey, publicKey } = wallet;
 ### Get Client
 
 ```javascript
-const { AuthService } = require('@blocklet/sdk');
+const { Auth } = require('@blocklet/sdk');
 
-const client = new AuthService();
+const client = new Auth();
 ```
 
-### client.getUser(did)
+### getUser
+
+`client.getUser(did)`
 
 Get user by user did
 
 - _@param_ **did** `string`
 - _@return_ `{ code, user }`
 
-### client.getOwner()
+### getOwner
+
+`client.getOwner()`
 
 Get owner of the app
 
 - _@param_ **did** `string`
 - _@return_ `{ code, user }`
 
-### client.getUsers()
+### getUsers
+
+`client.getUsers()`
 
 Get all users of the app
 
@@ -80,45 +86,59 @@ Paging {
 }
 ```
 
-### client.getPermissionsByRole(role)
+### getPermissionsByRole
+
+`client.getPermissionsByRole(role)`
 
 Get all permissions of a role
 
 - _@param_ **role** `string`
 - _@return_ `{ code, permissions }`
 
-### client.getRoles()
+### getRoles
+
+`client.getRoles()`
 
 Get all roles of the app
 
 - _@return_ `{ code, roles }`
 
-### client.createRole(\{ name, title, description \})
+### createRole
+
+`client.createRole({ name, title, description })`
 
 - _@param_ **name** `string` the key of the role, should be unique
 - _@param_ **title** `string`
 - _@param_ **description** `string`
 - _@return_ `{ code, role }`
 
-### client.updateRole(name, \{ title, description \})
+### updateRole
+
+`client.updateRole(name, { title, description })`
 
 - _@param_ **name** `string` the key of the role
 - _@param_ **title** `string`
 - _@param_ **description** `string`
 - _@return_ `{ code, role }`
 
-### client.deleteRole(name, \{ title, description \})
+### deleteRole
+
+`client.deleteRole(name, { title, description })`
 
 - _@param_ **name** `string` the key of the role
 - _@return_ `{ code }`
 
-### client.issuePassportToUser(\{ userDid, role \})
+### issuePassportToUser
+
+`client.issuePassportToUser({ userDid, role })`
 
 - _@param_ **userDid** `string`
 - _@param_ **role** `string` the key of the role. e.g. `owner`, `admin`, `member`
 - _@return_ `{ code, user }`
 
-### client.enableUserPassport(\{ userDid, passportId \})
+### enableUserPassport
+
+`client.enableUserPassport({ userDid, passportId })`
 
 set passport status to `valid`
 
@@ -126,7 +146,9 @@ set passport status to `valid`
 - _@param_ **passportId** `string` passportId (get from user.passports)
 - _@return_ `{ code, user }`
 
-### client.revokeUserPassport(\{ userDid, passportId \})
+### revokeUserPassport
+
+`client.revokeUserPassport({ userDid, passportId })`
 
 set passport status to `revoked`
 
@@ -134,19 +156,25 @@ set passport status to `revoked`
 - _@param_ **passportId** `string` passportId (get from user.passports)
 - _@return_ `{ code, user }`
 
-### client.grantPermissionForRole(role, permission)
+### grantPermissionForRole
+
+`client.grantPermissionForRole(role, permission)`
 
 - _@param_ **role** `string` the name of the role
 - _@param_ **permission** `string` the name of the permission
 - _@return_ `{ code }`
 
-### client.revokePermissionFromRole(role, permission)
+### revokePermissionFromRole
+
+`client.revokePermissionFromRole(role, permission)`
 
 - _@param_ **role** `string` the name of the role
 - _@param_ **permission** `string` the name of the permission
 - _@return_ `{ code }`
 
-### client.updatePermissionsForRole(role, permissions)
+### updatePermissionsForRole
+
+`client.updatePermissionsForRole(role, permissions)`
 
 Full update permissions of a role
 
@@ -154,34 +182,44 @@ Full update permissions of a role
 - _@param_ **permissions** `array<string>` name of the permissions
 - _@return_ `{ code, role }`
 
-### client.hasPermission(role, permission)
+### hasPermission
+
+`client.hasPermission(role, permission)`
 
 - _@param_ **role** `string` the name of the role
 - _@param_ **permission** `string` the name of the permission
 - _@return_ `{ code, result }`
   - **result** `boolean`
 
-### client.getPermissions()
+### getPermissions
+
+`client.getPermissions()`
 
 Get all permissions of the app
 
 - _@return_ `{ code, permissions }`
 
-### client.createPermission(\{ name, title, description \})
+### createPermission
+
+`client.createPermission({ name, title, description })`
 
 - _@param_ **name** `Permission` the key of the permission, should be unique
   - format: `<action>_<resource>`. e.g. `query_article`, `mutate_user`
 - _@param_ **description** `string`
 - _@return_ `{ code, role }`
 
-### client.updatePermission(name, \{ title, description \})
+### updatePermission
+
+`client.updatePermission(name, { title, description })`
 
 - _@param_ **name** `string` the key of the role
 - _@param_ **title** `string`
 - _@param_ **description** `string`
 - _@return_ `{ code }`
 
-### client.deletePermission(name, \{ title, description \})
+### deletePermission
+
+`client.deletePermission(name, { title, description })`
 
 - _@param_ **name** `string` the key of the permission
 - _@return_ `{ code }`
@@ -189,10 +227,12 @@ Get all permissions of the app
 ## Notification
 
 ```javascript
-const { NotificationService: Notification } = require('@blocklet/sdk');
+const { Notification: Notification } = require('@blocklet/sdk');
 ```
 
-### sendToUser(receiver, notification)
+### sendToUser
+
+`Notification.sendToUser(receiver, notification)`
 
 Send notification to an account
 
@@ -230,10 +270,12 @@ await Notification.sendToUser([userDid, anotherUserDid], notification);
 await Notification.sendToUser([userDid, anotherUserDid], [notification, anotherNotification]);
 ```
 
-- **notification** [Notification](#Type:%20Notification)
+- **notification** [Notification](#Notification%20Type)
 - **receiver** `string | array<string>` required
 
-### broadcast(notification, options)
+### broadcast
+
+`Notification.broadcast(notification, options)`
 
 Broadcast notification to a channel
 
@@ -247,14 +289,14 @@ await Notification.broadcast(notification);
 await Notification.broadcast(notification, { socketDid: 'did' });
 ```
 
-- **notification** [Notification](#Type:%20Notification)
+- **notification** [Notification](#Notification%20Type)
 - **options**
   - **socketDid**: `String` send notification to a specific socket by socketDid
   - **socketId**: `String` send notification to a specific socket by socketId
   - **channel**: `String` send notification to which channel (Default: app public channel)
   - **event**: `String` send notification to which event (Default: 'message')
 
-### Type: Notification
+### Notification Type
 
 - **notification** `object | array<object>` required
   - **notification.title** `string`
@@ -285,7 +327,9 @@ await Notification.broadcast(notification, { socketDid: 'did' });
     - **bgColor** `string`
     - **link** `string` uri
 
-### on()
+### on
+
+`Notification.on()`
 
 Listen for system notification
 
@@ -293,7 +337,9 @@ Listen for system notification
 Notification.on('hi', () => {});
 ```
 
-### off()
+### off
+
+`Notification.off()`
 
 Cancel listening for system messages
 
@@ -379,18 +425,178 @@ import { Database } from '@blocklet/sdk';
 ```javascript
 import { env } from '@blocklet/sdk';
 
-const { appId, appName, appDescription, appUrl, isComponent, dataDir, cacheDir } = env;
+const {
+  appId, // the id of the app
+  appName, // the title of the app, used to display to user
+  appDescription, // the description of the app
+  appUrl, // the web url of the app
+  isComponent, // the blocklet is running as an app or a component
+  dataDir, // the data dir of the blocklet
+  cacheDir, // the cache dir of the blocklet
+} = env;
 ```
 
 ## Component
 
 ```javascript
 import { Component } from '@blocklet/sdk';
+```
 
-Component.getParentWebEndpoint();
-Component.getChildWebEndpoint(name);
-Component.getComponentWebEndpoint(name);
-Component.call({ name, path, data });
+### getParentWebEndpoint
+
+`Component.getParentWebEndpoint()`
+
+- _@return_ endpoint of parent component. e.g. `http://127.0.0.1:5678`
+
+### getChildWebEndpoint
+
+`Component.getChildWebEndpoint(name)`
+
+- _@param_ **name** `string` the name of **component instance** defined in parent's blocklet.yml
+
+  If blocklet.yml is
+
+  ```
+  children
+    - name: component-1
+      source:
+        store: xxx
+        name: xxx
+        version: xxx
+  ```
+
+  the blocklet should use like this: `Component.getChildWebEndpoint('component-1')`
+
+- _@return_ endpoint of child component. e.g. `http://127.0.0.1:5678`
+
+### getComponentWebEndpoint
+
+`Component.getComponentWebEndpoint(name)`
+
+Get endpoint of first-level component of app
+
+- _@param_ **name** `string` the name or title or did of the **component bundle**
+
+  If the blocklet.yml of component is
+
+  ```
+  did: did1
+  name: demo-blocklet
+  title: Demo Blocklet
+  ```
+
+  the blocklet should use like this:
+
+  ```
+  Component.getComponentWebEndpoint('did1')
+  Component.getComponentWebEndpoint('demo-blocklet')
+  Component.getComponentWebEndpoint('Demo Blocklet')
+  ```
+
+- _@return_ endpoint of the first-level component. e.g. `http://127.0.0.1:5678`
+
+### getComponentMountPoint
+
+`Component.getComponentMountPoint(name)`
+
+Get mount point of first-level component of app
+
+- _@param_ **name** `string` the name or title or did of the **component bundle**
+
+  If the blocklet.yml of component is
+
+  ```
+  did: did1
+  name: demo-blocklet
+  title: Demo Blocklet
+  ```
+
+  the blocklet should use like this:
+
+  ```
+  Component.getComponentMountPoint('did1')
+  Component.getComponentMountPoint('demo-blocklet')
+  Component.getComponentMountPoint('Demo Blocklet')
+  ```
+
+- _@return_ mount point of the first-level component. e.g. `/abc`
+
+### call
+
+Communicate with child component or parent component safely
+
+`Component.call({ name, path, data })`
+
+- _@param_ **name** `string`
+  - parent call child by set `name` to **component instance** defined in parent's blocklet.yml
+  - parent call child by set `name` to empty
+- _@param_ **path** `string` the http api. e.g. `/api/xxx`
+  - blocklet must use **POST** for the api
+- _@param_ **data** `object` the payload
+- _@return_ `object` the response of axios https://github.com/axios/axios#response-schema
+
+e.g.
+
+parent:
+
+```yml
+children:
+  - name: component1
+    source:
+      store: xxx
+      name: bundle-component-1
+      version: xxx
+```
+
+```js
+import { Component, middlewares } from '@blocklet/sdk';
+
+const app = express();
+
+app.post(
+  '/api/parent',
+
+  // You should use verifySig middleware to prevent unknown request
+  middlewares.component.verifySig,
+
+  (req, res) => {
+    // req.body is { msg: "ping from child" } if the request is from component1
+
+    res.json({ msg: 'pong from parent' });
+  }
+);
+
+// data: { msg: 'pong from child' }
+const { data } = await Component.call({
+  name: 'component1',
+  path: '/api/child',
+  data: { msg: 'ping from parent' },
+});
+```
+
+bundle-component-1:
+
+```js
+const app = express();
+
+app.post(
+  '/api/child',
+
+  // You should use verifySig middleware to prevent unknown request
+  middlewares.component.verifySig,
+
+  (req, res) => {
+    // req.body is { msg: "ping from parent" } if the request is from parent
+
+    res.json({ msg: 'pong from child' });
+  }
+);
+
+// data: { msg: 'pong from parent' }
+const { data } = await Component.call({
+  path: '/api/parent',
+  data: 'ping from child',
+});
 ```
 
 ## Middlewares
@@ -428,4 +634,9 @@ app.get(
     // will return 403 if neither 'mutate_data' nor 'query data' in user permissions
   }
 );
+
+app.post('/component-private-api', middlewares.component.verifySig, (req, res) => {
+  // will return 400 if sig not found in req
+  // will return 401 if verify sig failed
+});
 ```

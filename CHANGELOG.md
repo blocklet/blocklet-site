@@ -1,3 +1,7 @@
+## 0.1.62 (September 21, 2022)
+
+- docs: update blocklet sdk
+
 ## 0.1.61 (September 21, 2022)
 
 - chore: polish doc

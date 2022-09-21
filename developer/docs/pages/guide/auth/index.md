@@ -78,9 +78,9 @@ After a user logs into the Blocklet, Blocklet Auth Service records the user's id
 
 Developers can query user information through Blocklet SDK
 
-- [getUser()](</reference/blocklet-sdk#client.getUser(did)>)
-- [getUsers()](</reference/blocklet-sdk#client.getUsers()>)
-- [getOwner()](</reference/blocklet-sdk#client.getOwner()>)
+- [getUser()](/reference/blocklet-sdk#getUser)
+- [getUsers()](/reference/blocklet-sdk#getUsers)
+- [getOwner()](/reference/blocklet-sdk#getOwner)
 
 ## User Permissions and Passports
 
