@@ -1,3 +1,9 @@
+## 0.1.63 (September 22, 2022)
+
+- chore: update docs-site welcome page
+- feat: add DocsSearchBar in docs-site
+- chore: update deps
+
 ## 0.1.62 (September 21, 2022)
 
 - docs: update blocklet sdk
