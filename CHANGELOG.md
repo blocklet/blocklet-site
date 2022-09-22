@@ -1,3 +1,7 @@
+## 0.1.66 (September 23, 2022)
+
+- chore: bump xmark to latest
+
 ## 0.1.65 (September 22, 2022)
 
 - chore: update deps
