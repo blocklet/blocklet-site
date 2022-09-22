@@ -1,3 +1,7 @@
+## 0.1.64 (September 22, 2022)
+
+- chore: docs add hooks in blocklet.yml
+
 ## 0.1.63 (September 22, 2022)
 
 - chore: update docs-site welcome page
