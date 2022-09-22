@@ -3,6 +3,11 @@ title: Blocklet Developer Portal
 description: This is Blocklet Developer Docs Site, powered by Blocklet Page
 theme: docs
 github: https://github.com/blocklet/blocklet-site
+plugins:
+  - resolve: '@xmark/plugin-docs-indexer'
+optimizeDeps:
+  include:
+    - docs-searchbar.js
 themeConfig:
   colors:
     primary: '#1DC1C7'
