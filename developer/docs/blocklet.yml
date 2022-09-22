@@ -16,7 +16,8 @@ repository:
 specVersion: 1.2.7
 version: 0.1.63
 logo: logo.png
-files: []
+files:
+  - hooks/post-start.js
 interfaces:
   - type: web
     name: publicUrl
