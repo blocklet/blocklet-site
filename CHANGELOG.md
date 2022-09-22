@@ -1,3 +1,7 @@
+## 0.1.65 (September 22, 2022)
+
+- chore: update deps
+
 ## 0.1.64 (September 22, 2022)
 
 - chore: docs add hooks in blocklet.yml

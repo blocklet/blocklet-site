@@ -866,10 +866,10 @@
   resolved "https://registry.yarnpkg.com/@hutson/parse-repository-url/-/parse-repository-url-3.0.2.tgz#98c23c950a3d9b6c8f0daed06da6c3af06981340"
   integrity sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==
 
-"@iconify-json/ion@^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@iconify-json/ion/-/ion-1.1.3.tgz#3ede9ed225478c1a360158fc7ec579a89e183de2"
-  integrity sha512-s7uPWzfogdVw5rkWhBnAWG29SO3f1+AfOsHiJIQDPZwkSsNnES2omIC7PFbDuTIGCgCHZna59aq2AQIf7pdc7w==
+"@iconify-json/ion@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@iconify-json/ion/-/ion-1.1.4.tgz#97d134dcc174ed9268e92a4bb69adaae105aea8e"
+  integrity sha512-30sOiE7OIboJXCFqIUfyAcskE49pEUjPyQs2Pl35o4lBXKZ46Jy3RzD+atkWBVz6ftlvTk9jE/qFi2mZ+gk78g==
   dependencies:
     "@iconify/types" "*"
 
@@ -2224,10 +2224,10 @@
   resolved "https://registry.yarnpkg.com/@react-dnd/shallowequal/-/shallowequal-2.0.0.tgz#a3031eb54129f2c66b2753f8404266ec7bf67f0a"
   integrity sha512-Pc/AFTdwZwEKJxFJvlxrSmGe/di+aAOBn60sremrpLo6VI/6cmiUYNNwlI5KNYttg7uypzA3ILPMPgxB2GYZEg==
 
-"@remix-run/router@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.0.0.tgz#a2189335a5f6428aa904ccc291988567018b6e01"
-  integrity sha512-SCR1cxRSMNKjaVYptCzBApPDqGwa3FGdjVHc+rOToocNPHQdIYLZBfv/3f+KvYuXDkUGVIW9IAzmPNZDRL1I4A==
+"@remix-run/router@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.0.1.tgz#88d7ac31811ab0cef14aaaeae2a0474923b278bc"
+  integrity sha512-eBV5rvW4dRFOU1eajN7FmYxjAIVz/mRHgUE9En9mBn6m3mulK3WTR5C3iQhL9MZ14rWAq+xOlEaCkDiW0/heOg==
 
 "@rollup/plugin-yaml@^3.1.0":
   version "3.1.0"
@@ -2743,10 +2743,10 @@
   dependencies:
     elliptic "^6.5.2"
 
-"@xmark/cli@^2.4.48":
-  version "2.4.48"
-  resolved "https://registry.yarnpkg.com/@xmark/cli/-/cli-2.4.48.tgz#440b8a938a5bb60d15bb51deb927df2f49f0f0e8"
-  integrity sha512-5NiZh00e2wT06FNLCWLK/vkmR3KLpyrS7jI895Pb60RvfORbWqOKxHEp02e1jTABFFYMa0rjHeFq63emnm6MdQ==
+"@xmark/cli@^2.4.50":
+  version "2.4.50"
+  resolved "https://registry.yarnpkg.com/@xmark/cli/-/cli-2.4.50.tgz#b5a90fdc3d03c14c5814aef602beb840d6b02af5"
+  integrity sha512-oFFqzx6cdVWSApO+Gn/05+K8782UzY+llV2kC3c91I/N9nG3qhrv1ohVIpgNbhYmGSj3f/8gvV7bOu3J1aUhAA==
   dependencies:
     "@antfu/utils" "^0.5.2"
     "@arcblock/ux" "^2.4.29"
@@ -2754,8 +2754,8 @@
     "@mdx-js/rollup" "^2.1.3"
     "@rollup/plugin-yaml" "^3.1.0"
     "@vitejs/plugin-react" "^2.1.0"
-    "@xmark/client" "2.4.48"
-    "@xmark/utils" "2.4.48"
+    "@xmark/client" "2.4.50"
+    "@xmark/utils" "2.4.50"
     change-case "^4.1.2"
     debug "^4.3.4"
     escape-string-regexp "^5.0.0"
@@ -2789,26 +2789,26 @@
     unist-util-visit "^4.1.1"
     unocss "^0.45.22"
     vite "^3.1.3"
-    vite-plugin-blocklet "^0.4.50"
+    vite-plugin-blocklet "^0.4.52"
     vite-plugin-svgr "^2.2.1"
     yaml "2.1.1"
     yargs "^17.5.1"
 
-"@xmark/client@2.4.48", "@xmark/client@^2.4.48":
-  version "2.4.48"
-  resolved "https://registry.yarnpkg.com/@xmark/client/-/client-2.4.48.tgz#dfad356776753c5e901b85ba6547d631affe1ab1"
-  integrity sha512-MN246i030EoABJGGTVn/DfdY9+YqzbxqWb6VQi6xe28XsMzL3yjwDP+pLLIf+wULXCNKmFYl34CCJTRiVMBfBw==
+"@xmark/client@2.4.50", "@xmark/client@^2.4.50":
+  version "2.4.50"
+  resolved "https://registry.yarnpkg.com/@xmark/client/-/client-2.4.50.tgz#e0928b937c6419171036a4d9a1bb414ef4b440b5"
+  integrity sha512-DSY/6r4nyLMq7v9UVLZYdE3f3J3dcBRgDT2/3iJLEnpGvsWlGMqfTzRi4g1NXQBdMin6LhOAntCDrAYOSB/+NQ==
   dependencies:
     "@arcblock/did-connect" "^2.4.29"
     "@arcblock/ux" "^2.4.29"
     "@blocklet/ui-react" "^2.4.29"
     "@emotion/react" "^11.10.4"
     "@emotion/styled" "^11.10.4"
-    "@iconify-json/ion" "^1.1.3"
+    "@iconify-json/ion" "^1.1.4"
     "@iconify-json/mdi" "^1.1.33"
     "@mdx-js/react" "^2.1.3"
     "@mui/material" "^5.10.6"
-    "@xmark/utils" "2.4.48"
+    "@xmark/utils" "2.4.50"
     ahooks "^3.7.1"
     clsx "^1.2.1"
     defu "^6.1.0"
@@ -2822,14 +2822,14 @@
     react-dom "^18.2.0"
     react-error-boundary "^3.1.4"
     react-helmet "^6.1.0"
-    react-router-dom "^6.4.0"
+    react-router-dom "^6.4.1"
     ufo "^0.8.5"
     unocss "^0.45.22"
 
-"@xmark/plugin-docs-indexer@^2.4.48":
-  version "2.4.48"
-  resolved "https://registry.yarnpkg.com/@xmark/plugin-docs-indexer/-/plugin-docs-indexer-2.4.48.tgz#4ac4044e780b4263464c65b332fb7149b9e675d4"
-  integrity sha512-2MsHFhLdqsh902rAx5215ooZfBrsTg090cexMKQy4YiTP3B24tM/8gAEB84wG6sO7oPO6I/yTH2hCA7+DLTMdg==
+"@xmark/plugin-docs-indexer@^2.4.50":
+  version "2.4.50"
+  resolved "https://registry.yarnpkg.com/@xmark/plugin-docs-indexer/-/plugin-docs-indexer-2.4.50.tgz#76d2febe471c8781bbea14d0c1e5a34a27c613d4"
+  integrity sha512-lAIMvdrgwBQ6ipvfTWq4MARDwnuxAQ0akAwofmYj1Kh4vHzx36cIz8GpLcYHhn5YkOzR+u+RHbNbemksmkTBBQ==
   dependencies:
     "@blocklet/sdk" "^1.8.23"
     "@emotion/react" "^11.10.4"
@@ -2843,10 +2843,10 @@
     pathe "^0.3.8"
     react "^18.2.0"
 
-"@xmark/theme-arcblock@^2.4.48":
-  version "2.4.48"
-  resolved "https://registry.yarnpkg.com/@xmark/theme-arcblock/-/theme-arcblock-2.4.48.tgz#14892c3b35f35a31dd3639d50932e670fa7b1c2e"
-  integrity sha512-9UM6NUwATRuZAeJqPEQMUb417afSe0BqgN8CddhlWNw4YSbFpHg1cJRO0ufGiDThmjxuL2xySE8VdmzsOUjbQg==
+"@xmark/theme-arcblock@^2.4.50":
+  version "2.4.50"
+  resolved "https://registry.yarnpkg.com/@xmark/theme-arcblock/-/theme-arcblock-2.4.50.tgz#04eb31a8e20ebd5581b6680ba2bb6d839ff11b6b"
+  integrity sha512-C4u7c9qV2T4tw5LcdhlqV4YAo0uHwtm7N+9+0j2IiII/iZ6SAfO00LFO4C5iLgrPXh4xfURpp/5w6DbX/Apk7w==
   dependencies:
     "@arcblock/did-connect" "^2.4.29"
     "@arcblock/ux" "^2.4.29"
@@ -2856,43 +2856,42 @@
     "@iconify-json/uim" "^1.1.2"
     "@mui/material" "^5.10.6"
     "@popperjs/core" "^2.11.6"
-    "@xmark/client" "2.4.48"
-    "@xmark/utils" "2.4.48"
+    "@xmark/client" "2.4.50"
+    "@xmark/utils" "2.4.50"
     ahooks "^3.7.1"
     clsx "^1.2.1"
     pathe "^0.3.8"
     prop-types "^15.8.1"
     react "^18.2.0"
     react-popper "^2.3.0"
-    react-router-dom "^6.4.0"
+    react-router-dom "^6.4.1"
     ufo "^0.8.5"
 
-"@xmark/theme-docs@^2.4.48":
-  version "2.4.48"
-  resolved "https://registry.yarnpkg.com/@xmark/theme-docs/-/theme-docs-2.4.48.tgz#3b18ea38ef74558d624d872079c331ded0827215"
-  integrity sha512-31X73lhd9r8XAErGNusH4npYhZCv913RHa/06E8TBa2UfW3SJ/1Xx5zL9BwINK6DJ/UDc3MgcwvBbfLhnrue+g==
+"@xmark/theme-docs@^2.4.50":
+  version "2.4.50"
+  resolved "https://registry.yarnpkg.com/@xmark/theme-docs/-/theme-docs-2.4.50.tgz#e4e4dec33644aa497c6a7365c3c95f792c436234"
+  integrity sha512-9erz1N5q212EFaqR7b/XjXyvabp/w6gkfyy8UcGOajngUjLNLxYdS+JcUXJBJBBijmZr12GYovjliK2EBodxXw==
   dependencies:
     "@arcblock/ux" "^2.4.29"
     "@emotion/react" "^11.10.4"
     "@emotion/styled" "^11.10.4"
     "@fontsource/lato" "^4.5.9"
     "@mui/material" "^5.10.6"
-    "@xmark/client" "2.4.48"
+    "@xmark/client" "2.4.50"
     ahooks "^3.7.1"
     clsx "^1.2.1"
-    dayjs "^1.11.5"
     is-uri "^1.2.4"
     lodash "^4.17.21"
     pathe "^0.3.8"
     prop-types "^15.8.1"
     react "^18.2.0"
-    react-router-dom "^6.4.0"
+    react-router-dom "^6.4.1"
     zx "7.0.8"
 
-"@xmark/utils@2.4.48":
-  version "2.4.48"
-  resolved "https://registry.yarnpkg.com/@xmark/utils/-/utils-2.4.48.tgz#ac1754a40e16d47d2840ec5bd1315551fe35f011"
-  integrity sha512-981xtKT3hq4Lc3za79Gtk7ormCMjdYqfoPL9lZt6Z9QikNRsl+Ie7puaUb4BCCl9wSCZLa5Ae3gH/9pY2XIDug==
+"@xmark/utils@2.4.50":
+  version "2.4.50"
+  resolved "https://registry.yarnpkg.com/@xmark/utils/-/utils-2.4.50.tgz#e47dab8d045a8602994c52c64c625fb18305bedf"
+  integrity sha512-au9kT8Ln3v7bTNx8QsDTj6oE6MzN1624UPw9YKFe5owJFiXIr9IZW6Dnm+gZ6OYnm1HFcO7xYSGvVgYCHMk55A==
   dependencies:
     base-x "^4.0.0"
     hast-util-from-html "^1.0.0"
@@ -4067,7 +4066,7 @@ dateformat@^3.0.0:
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
 
-dayjs@^1.11.4, dayjs@^1.11.5, dayjs@^1.9.1:
+dayjs@^1.11.4, dayjs@^1.9.1:
   version "1.11.5"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.5.tgz#00e8cc627f231f9499c19b38af49f56dc0ac5e93"
   integrity sha512-CAdX5Q3YW3Gclyo5Vpqkgpj8fSdLQcRuzfX6mC6Phy0nfJ0eGYOeS7m4mt2plDWLAtA4TqTakvbboHvUxfe4iA==
@@ -8890,19 +8889,20 @@ react-refresh@^0.14.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
-react-router-dom@^6.3.0, react-router-dom@^6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.4.0.tgz#a7d7c394c9e730b045cdd4f5d6c2d1ccb9e26947"
-  integrity sha512-4Aw1xmXKeleYYQ3x0Lcl2undHR6yMjXZjd9DKZd53SGOYqirrUThyUb0wwAX5VZAyvSuzjNJmZlJ3rR9+/vzqg==
+react-router-dom@^6.3.0, react-router-dom@^6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.4.1.tgz#99c9b7c4967890701c888517475aa5d54d25760e"
+  integrity sha512-MY7NJCrGNVJtGp8ODMOBHu20UaIkmwD2V3YsAOUQoCXFk7Ppdwf55RdcGyrSj+ycSL9Uiwrb3gTLYSnzcRoXww==
   dependencies:
-    react-router "6.4.0"
+    "@remix-run/router" "1.0.1"
+    react-router "6.4.1"
 
-react-router@6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.4.0.tgz#68449c23dc893fc7a57db068c19987be1de72edb"
-  integrity sha512-B+5bEXFlgR1XUdHYR6P94g299SjrfCBMmEDJNcFbpAyRH1j1748yt9NdDhW3++nw1lk3zQJ6aOO66zUx3KlTZg==
+react-router@6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.4.1.tgz#dd9cc4dfa264751d143a4b6c9d4faa60ab3ce26c"
+  integrity sha512-OJASKp5AykDWFewgWUim1vlLr7yfD4vO/h+bSgcP/ix8Md+LMHuAjovA74MQfsfhQJGGN1nHRhwS5qQQbbBt3A==
   dependencies:
-    "@remix-run/router" "1.0.0"
+    "@remix-run/router" "1.0.1"
 
 react-shadow@^19.0.3:
   version "19.0.3"
@@ -10589,10 +10589,10 @@ vfile@^5.0.0:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite-plugin-blocklet@^0.4.50:
-  version "0.4.50"
-  resolved "https://registry.yarnpkg.com/vite-plugin-blocklet/-/vite-plugin-blocklet-0.4.50.tgz#d5990198f9efb4852ce002d36b787e40277cf3f6"
-  integrity sha512-oxrlrskbNcD/4EnP09dgqc7mH8+i2KpyxvAdUVJLE2GgATz72Jc+7dITEBxdaKm2ZzfLkLDYUErV2lR1ontcMA==
+vite-plugin-blocklet@^0.4.52:
+  version "0.4.52"
+  resolved "https://registry.yarnpkg.com/vite-plugin-blocklet/-/vite-plugin-blocklet-0.4.52.tgz#a87667d08f112250ce3e9bc9aee37301f881daae"
+  integrity sha512-a6K9QtSqRCHT/TWHCb9bfsRkCzNLRDaR6GqU6I389Hlu1+XHD5Xh7T4IY39ljjfeM6GSYg2LCLa+tyCBH+THKw==
   dependencies:
     "@arcblock/did" "^1.17.19"
     "@ocap/mcrypto" "^1.17.19"
