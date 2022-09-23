@@ -115,16 +115,16 @@
     semver "^7.3.7"
     tweetnacl-sealedbox-js "^1.2.0"
 
-"@arcblock/did-connect@^2.4.29":
-  version "2.4.29"
-  resolved "https://registry.yarnpkg.com/@arcblock/did-connect/-/did-connect-2.4.29.tgz#3bc7b3908586b90d4632df8bd260e930dea0c9cb"
-  integrity sha512-e+ZnkyODPfAx080PRsDEwl+q0drhp1H8iFPIM9evwxOYiF+wNlwiKvw1RuRu10XY3jOQpbmphhFjgn6QRQAfdQ==
+"@arcblock/did-connect@^2.4.30":
+  version "2.4.30"
+  resolved "https://registry.yarnpkg.com/@arcblock/did-connect/-/did-connect-2.4.30.tgz#bf5a4ce2e7287b980f0816eb7b0cc2e318441402"
+  integrity sha512-5gyVGaiDf/kZ4Ue2VaToR8ECdzHbRFdqC+MfDTimKy5P7OBQFMvH0RwRk7B9VYlqjnqsqUgVskdQan2Y2qa2aw==
   dependencies:
     "@arcblock/did-motif" "^1.1.10"
     "@arcblock/event-client" "^1.6.3"
-    "@arcblock/icons" "^2.4.29"
-    "@arcblock/react-hooks" "^2.4.29"
-    "@arcblock/ux" "^2.4.29"
+    "@arcblock/icons" "^2.4.30"
+    "@arcblock/react-hooks" "^2.4.30"
+    "@arcblock/ux" "^2.4.30"
     "@emotion/react" "^11.10.0"
     "@emotion/styled" "^11.10.0"
     "@fontsource/lato" "^4.5.9"
@@ -209,10 +209,10 @@
     amp-message "~0.1.2"
     axon "^2.0.3"
 
-"@arcblock/icons@^2.4.29":
-  version "2.4.29"
-  resolved "https://registry.yarnpkg.com/@arcblock/icons/-/icons-2.4.29.tgz#493dc6a8508a977c9d6bab1b69fccdca3afa68a1"
-  integrity sha512-1qxSkLnu5119sbqiNadifh5Deq7RjTkxQJUV/TnUbXjf+U1kuC86UInTSmrzq6WSfcb8kEhJqp7/3CXKTu2DBg==
+"@arcblock/icons@^2.4.30":
+  version "2.4.30"
+  resolved "https://registry.yarnpkg.com/@arcblock/icons/-/icons-2.4.30.tgz#58dce75f3e5868ec86a4afdf1d23c1ac86e1a2f7"
+  integrity sha512-wkfBwFjp0dCzJKtMDOYYFGYqcT0vhvy2BPD9bv8ebpIgBUjPHuBdcOGgkoIlS9PmEoPX+zOK2hhi8bkERfxe0Q==
 
 "@arcblock/jwt@1.17.19", "@arcblock/jwt@^1.17.19":
   version "1.17.19"
@@ -226,10 +226,10 @@
     json-stable-stringify "^1.0.1"
     semver "^7.3.7"
 
-"@arcblock/react-hooks@^2.4.29":
-  version "2.4.29"
-  resolved "https://registry.yarnpkg.com/@arcblock/react-hooks/-/react-hooks-2.4.29.tgz#5c0bbe5102e6b0dd7daad197dec815692925e50d"
-  integrity sha512-Z8KQYZkxCLas7283x/Kp3WpQaH9Fpy04tYNRT3ErIBd/KYvStyMRzXAcc6/Rd4QktPxwxjLyTbL5s7AJ4T2Elg==
+"@arcblock/react-hooks@^2.4.30":
+  version "2.4.30"
+  resolved "https://registry.yarnpkg.com/@arcblock/react-hooks/-/react-hooks-2.4.30.tgz#6209fb1bd6c1f8619e32d105c907b23d4043afa0"
+  integrity sha512-fNJbxFouqocWoPPH4LReixpMbhIu6+hea9Pb/1KN9US/QI2aI0/+ReGEeZ9PpGzlI3gizAhel6bNF+0C1zJgcg==
   dependencies:
     core-js "^3.24.1"
     event-target-shim "^5.0.1"
@@ -246,13 +246,13 @@
     lodash.get "^4.4.2"
     lodash.set "^4.3.2"
 
-"@arcblock/ux@^2.4.29":
-  version "2.4.29"
-  resolved "https://registry.yarnpkg.com/@arcblock/ux/-/ux-2.4.29.tgz#b681684773a4c50852418f21a50731c03de4f6b3"
-  integrity sha512-YJdelw0oUPPHJRMZ6TXNOTO1d7JtGLgEiJTPWGgrWXLQsmZCYa3X5op4kR7GJu4+br0heKwafok+TtmaAqwrqg==
+"@arcblock/ux@^2.4.30":
+  version "2.4.30"
+  resolved "https://registry.yarnpkg.com/@arcblock/ux/-/ux-2.4.30.tgz#d187e8e9eb150f8b472edb19a9160c8dbb39706b"
+  integrity sha512-K8zhvxybxq+iBK1NvQyLF5P2HP4f0XNrKF8dPFrrFJJFpcNl05qp6t+l2e+VuyJNgoCCBErytrHuinlcCSDTeQ==
   dependencies:
-    "@arcblock/icons" "^2.4.29"
-    "@arcblock/react-hooks" "^2.4.29"
+    "@arcblock/icons" "^2.4.30"
+    "@arcblock/react-hooks" "^2.4.30"
     "@babel/plugin-syntax-dynamic-import" "^7.8.3"
     "@emotion/react" "^11.10.0"
     "@emotion/styled" "^11.10.0"
@@ -635,13 +635,13 @@
     lru-cache "^6.0.0"
     url-join "^4.0.1"
 
-"@blocklet/ui-react@^2.4.29":
-  version "2.4.29"
-  resolved "https://registry.yarnpkg.com/@blocklet/ui-react/-/ui-react-2.4.29.tgz#91a6fb854f835d6f08dea2d8facfaa0f8ef56c66"
-  integrity sha512-GK3rCg+0fM+ndeUod5AsFdSkmgqNm3umanqTZ7WRc15Y/TeSAXMiXxHxo82Gf/nox4LRqw2rI5wUFZztAsGH3A==
+"@blocklet/ui-react@^2.4.30":
+  version "2.4.30"
+  resolved "https://registry.yarnpkg.com/@blocklet/ui-react/-/ui-react-2.4.30.tgz#f7c5bc9e25f82189ddd042ddbe9ec69defe20be5"
+  integrity sha512-3Rbcq6oKCEEW9k1oNxBDRobMcKDGMxTA2SJcnf/wyKjLRNMkRLFFMgzrXQ63thi2WIhN3sucQk5jWMzAiZO8YA==
   dependencies:
-    "@arcblock/did-connect" "^2.4.29"
-    "@arcblock/ux" "^2.4.29"
+    "@arcblock/did-connect" "^2.4.30"
+    "@arcblock/ux" "^2.4.30"
     "@emotion/react" "^11.10.0"
     "@emotion/styled" "^11.10.0"
     "@iconify/iconify" "^2.2.1"
@@ -2743,19 +2743,19 @@
   dependencies:
     elliptic "^6.5.2"
 
-"@xmark/cli@^2.4.52":
-  version "2.4.52"
-  resolved "https://registry.yarnpkg.com/@xmark/cli/-/cli-2.4.52.tgz#90061bf4a4b8ef4197587c32cc543c201d17f5e1"
-  integrity sha512-kYXiphgsTqVlE4RM1KFQUhTxKlE7O2Aoy86LA66UuA2IyC/FHUq62KTsUz4stIBIPxtD5+8GQb2sgFA79wiDIw==
+"@xmark/cli@^2.4.54":
+  version "2.4.55"
+  resolved "https://registry.yarnpkg.com/@xmark/cli/-/cli-2.4.55.tgz#e4e144adbb554b3fddc6253e7ddced23a2af57ac"
+  integrity sha512-c5KMbtVZQ/g/3F1n7ST6GZ/9pUJo5Czzjr8FlqEXCTEF+M5Gt9zlesXnlE9Gcv0JCeY4oJ4ZCNpfMbO/aZ2RWw==
   dependencies:
     "@antfu/utils" "^0.5.2"
-    "@arcblock/ux" "^2.4.29"
+    "@arcblock/ux" "^2.4.30"
     "@mdx-js/react" "^2.1.3"
     "@mdx-js/rollup" "^2.1.3"
     "@rollup/plugin-yaml" "^3.1.0"
     "@vitejs/plugin-react" "^2.1.0"
-    "@xmark/client" "2.4.52"
-    "@xmark/utils" "2.4.52"
+    "@xmark/client" "2.4.55"
+    "@xmark/utils" "2.4.55"
     change-case "^4.1.2"
     debug "^4.3.4"
     escape-string-regexp "^5.0.0"
@@ -2794,21 +2794,21 @@
     yaml "2.1.1"
     yargs "^17.5.1"
 
-"@xmark/client@2.4.52", "@xmark/client@^2.4.52":
-  version "2.4.52"
-  resolved "https://registry.yarnpkg.com/@xmark/client/-/client-2.4.52.tgz#c7bdd77c283dbdd51b2c861b74f7e33e0f7cf6ac"
-  integrity sha512-hbjq2WQvDcyRdwYqZRTiBBcAiPFGYGAgdkPs/9npOqCJyTALzRShV7897JpSfShDF3oVMWpTkgJgNtF66n8lQw==
+"@xmark/client@2.4.55", "@xmark/client@^2.4.54":
+  version "2.4.55"
+  resolved "https://registry.yarnpkg.com/@xmark/client/-/client-2.4.55.tgz#e0332cd1db623cbf1926dbe551276107b6b734d0"
+  integrity sha512-IfuXf6K9DxATjO2aBXQj5yiJF7G7dvGJamNf/gwiSR9cjDYN+WBuMmLm9pg5542Pi/jpPr7pVUmF1tMqYocZuw==
   dependencies:
-    "@arcblock/did-connect" "^2.4.29"
-    "@arcblock/ux" "^2.4.29"
-    "@blocklet/ui-react" "^2.4.29"
+    "@arcblock/did-connect" "^2.4.30"
+    "@arcblock/ux" "^2.4.30"
+    "@blocklet/ui-react" "^2.4.30"
     "@emotion/react" "^11.10.4"
     "@emotion/styled" "^11.10.4"
     "@iconify-json/ion" "^1.1.4"
     "@iconify-json/mdi" "^1.1.33"
     "@mdx-js/react" "^2.1.3"
     "@mui/material" "^5.10.6"
-    "@xmark/utils" "2.4.52"
+    "@xmark/utils" "2.4.55"
     ahooks "^3.7.1"
     clsx "^1.2.1"
     defu "^6.1.0"
@@ -2826,10 +2826,10 @@
     ufo "^0.8.5"
     unocss "^0.45.22"
 
-"@xmark/plugin-docs-indexer@^2.4.52":
-  version "2.4.52"
-  resolved "https://registry.yarnpkg.com/@xmark/plugin-docs-indexer/-/plugin-docs-indexer-2.4.52.tgz#5ec71d9c31607f2f2351f052156aa7d9a3c95429"
-  integrity sha512-Ag2n+OcWHgMvNoO5pREifXC9tt87Ey/7P2gD2ADk/w8vQs2m5jr8ToPPZh/VbeueUR6wpQiTcfybgf6yfwJdYA==
+"@xmark/plugin-docs-indexer@^2.4.54":
+  version "2.4.55"
+  resolved "https://registry.yarnpkg.com/@xmark/plugin-docs-indexer/-/plugin-docs-indexer-2.4.55.tgz#42539187eaf1826da3aca1744152557c88025409"
+  integrity sha512-OptTOvcnwRTRuADq9iZw6HLGtLvfVQ8S+rgnyh5rfTmqzGNw8urYI9xj+8t5RH3P2vzRsaPzbDVpfmRdLVo6ww==
   dependencies:
     "@blocklet/sdk" "^1.8.24"
     "@emotion/react" "^11.10.4"
@@ -2843,21 +2843,21 @@
     pathe "^0.3.8"
     react "^18.2.0"
 
-"@xmark/theme-arcblock@^2.4.52":
-  version "2.4.52"
-  resolved "https://registry.yarnpkg.com/@xmark/theme-arcblock/-/theme-arcblock-2.4.52.tgz#fa46f83f55f80033ebcbe113b0192f1aa2e156f4"
-  integrity sha512-pwNBcjMefHE5zWKQFO9AhlRJsxuOUXENbK4Tz/QOcwa4e246TqB21L7BN89cSRDxJiu9jicFdH1xvUOt8dj8iw==
+"@xmark/theme-arcblock@^2.4.54":
+  version "2.4.55"
+  resolved "https://registry.yarnpkg.com/@xmark/theme-arcblock/-/theme-arcblock-2.4.55.tgz#3ef79254c86ea02ee03fa855e382f6ed17883cae"
+  integrity sha512-jIYTRpnvfgxdjm/86QkBUEPFLevuMzdtDUX5PzEA4qEfGSaSH138OSiSqAexlXwfawJBexqU7vOSgGxbd02MFQ==
   dependencies:
-    "@arcblock/did-connect" "^2.4.29"
-    "@arcblock/ux" "^2.4.29"
+    "@arcblock/did-connect" "^2.4.30"
+    "@arcblock/ux" "^2.4.30"
     "@emotion/react" "^11.10.4"
     "@emotion/styled" "^11.10.4"
     "@fontsource/lato" "^4.5.9"
     "@iconify-json/uim" "^1.1.2"
     "@mui/material" "^5.10.6"
     "@popperjs/core" "^2.11.6"
-    "@xmark/client" "2.4.52"
-    "@xmark/utils" "2.4.52"
+    "@xmark/client" "2.4.55"
+    "@xmark/utils" "2.4.55"
     ahooks "^3.7.1"
     clsx "^1.2.1"
     pathe "^0.3.8"
@@ -2867,17 +2867,17 @@
     react-router-dom "^6.4.1"
     ufo "^0.8.5"
 
-"@xmark/theme-docs@^2.4.52":
-  version "2.4.52"
-  resolved "https://registry.yarnpkg.com/@xmark/theme-docs/-/theme-docs-2.4.52.tgz#e8d8c41cdc7549c1fc07446f5872292e90436512"
-  integrity sha512-6hH+GL8BP84IoexvsnZkZ2E+WvFk7s0jZnRpkQvwKIVyzERQoqpa2F+236V6gPlvx1FuijKqiN7d6Vf/4VIaKg==
+"@xmark/theme-docs@^2.4.54":
+  version "2.4.55"
+  resolved "https://registry.yarnpkg.com/@xmark/theme-docs/-/theme-docs-2.4.55.tgz#5de0e76f7d47a2181d9da13edb3408c4f804f370"
+  integrity sha512-pt9j9EVMe9p8cTXC5iJqIB+A8AcDz+UCGT0CKYDVihma7MgX4kc4xuL0ZepYWKLOA23KWCvilI8VeLcPSIDISQ==
   dependencies:
-    "@arcblock/ux" "^2.4.29"
+    "@arcblock/ux" "^2.4.30"
     "@emotion/react" "^11.10.4"
     "@emotion/styled" "^11.10.4"
     "@fontsource/lato" "^4.5.9"
     "@mui/material" "^5.10.6"
-    "@xmark/client" "2.4.52"
+    "@xmark/client" "2.4.55"
     ahooks "^3.7.1"
     clsx "^1.2.1"
     is-uri "^1.2.4"
@@ -2888,10 +2888,10 @@
     react-router-dom "^6.4.1"
     zx "7.0.8"
 
-"@xmark/utils@2.4.52":
-  version "2.4.52"
-  resolved "https://registry.yarnpkg.com/@xmark/utils/-/utils-2.4.52.tgz#75e365f45d92f08df5a9eaffd53bab17751b292f"
-  integrity sha512-lLatgxwUionTopU/gCCMPEHGUFN8L009PwyMMwEMMsKcE6WUxoZ5r0ZfidtnmV0Xw0CLeDI8ytKgc7o279l3cw==
+"@xmark/utils@2.4.55":
+  version "2.4.55"
+  resolved "https://registry.yarnpkg.com/@xmark/utils/-/utils-2.4.55.tgz#d03278f28291070a7312b080f027f2864a43977a"
+  integrity sha512-3Mow6EWXCmipVSqVMcoJmKY7JU98Wqxl7+zqsdr7O6bZOl73QavF55Pr3qNdTAtka28gOroNDJTXoa2OQT6+DQ==
   dependencies:
     base-x "^4.0.0"
     hast-util-from-html "^1.0.0"
