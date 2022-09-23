@@ -8,6 +8,7 @@ layout: documentation
 - Bunding mode: zip, webpack
 - Bundling under mono-repo mode
 - Bundling assets? [blocklet.md](http://blocklet.md/), [changelog.md](http://changelog.md/)
+- Bundling under pnpm: node-linker = hoisted, shamefully-hoist=true
 
 ### Logo
 
