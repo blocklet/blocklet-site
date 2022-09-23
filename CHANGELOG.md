@@ -1,3 +1,8 @@
+## 0.1.67 (September 23, 2022)
+
+- chore: update deps
+- fix: page build error
+
 ## 0.1.66 (September 23, 2022)
 
 - chore: bump xmark to latest
