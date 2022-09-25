@@ -15,7 +15,7 @@ Blocklet UI 目前主要提供了 Header, Footer 和 Dashboard 三个组件，He
 
 ## Blocklet UI 与 Blocklet Meta
 
-前面提到了 Blocklet UI 组件的渲染依赖于 Blocklet 运行时信息，即 Blocklet Meta，那么 Blocklet Meta 的来源于哪 ？答案是 blocklet.yml。blocklet.yml 配置对于 Blocklet 来说是必不可少的，它用来描述 Blocklet 的元数据，甚至可以影响 Blocklet 的运行行为。当一个 Blocklet 被部署到 Blocklet Server 上时，后者会解析前者的 blocklet.yml 配置，并将该信息 (Blocklet Meta) 存储到某个地方，当我们访问这个 Blocklet 时，Blocklet Server 会将 Blocklet Meta 嵌入到 Blocklet 应用中，因此，在 Blocklet 程序中可以访问 Blocklet Meta。
+前面提到了 Blocklet UI 组件的渲染依赖于 Blocklet 运行时信息，即 Blocklet Meta，那么 Blocklet Meta 的来源是什么 ？答案是 blocklet.yml。blocklet.yml 配置对于 Blocklet 来说是必不可少的，它用来描述 Blocklet 的元数据，甚至可以影响 Blocklet 的运行行为。当一个 Blocklet 被部署到 Blocklet Server 上时，后者会解析前者的 blocklet.yml 配置，并将该信息 (Blocklet Meta) 存储到某个地方，当我们访问这个 Blocklet 时，Blocklet Server 会将 Blocklet Meta 嵌入到 Blocklet 应用中，因此，在 Blocklet 程序中可以访问 Blocklet Meta。
 
 Blocklet Meta 中包含的数据非常多，Blocklet UI 只关心其中与用户界面相关的数据，比如：
 
