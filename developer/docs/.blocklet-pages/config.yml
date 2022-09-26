@@ -4,18 +4,18 @@ description: This is Blocklet Developer Docs Site, powered by Blocklet Page
 theme: docs
 github: https://github.com/blocklet/blocklet-site
 plugins:
-  - resolve: '@xmark/plugin-docs-indexer'
+  - resolve: "@xmark/plugin-docs-indexer"
 optimizeDeps:
   include:
     - docs-searchbar.js
 themeConfig:
   colors:
-    primary: '#1DC1C7'
-    secondary: '#F0FDFF'
+    primary: "#1DC1C7"
+    secondary: "#F0FDFF"
   sidebar:
     en:
       - text: Welcome
-        link: /welcome
+        link: /
       - text: Quick Start
         items:
           - text: Setup DID Wallet
@@ -75,11 +75,11 @@ themeConfig:
           - text: Setup Blocklet Server
             link: /reference/blocklet-server-setup
           - text: Blocklet Page
-            link: https://pages.blocklet.io/docs/intro
+            link: https://pages.blocklet.io/docs
           - text: DID Connect
-            link: https://www.didconnect.io/docs/intro
+            link: https://www.didconnect.io/docs
           - text: Create Blocklet
-            link: https://www.createblocklet.dev/docs/intro
+            link: https://www.createblocklet.dev/docs
       - text: Conceptual Guides
         items:
           - text: Blocklet
@@ -115,7 +115,7 @@ themeConfig:
             link: /samples/did-connect-demo
     zh:
       - text: 欢迎
-        link: /welcome
+        link: /
       - text: 快速开始
         items:
           - text: 安装 DID Wallet
@@ -175,11 +175,11 @@ themeConfig:
           - text: 获得节点的其他方法
             link: /reference/blocklet-server-setup
           - text: Blocklet Pages
-            link: https://pages.blocklet.io/docs/intro
+            link: https://pages.blocklet.io/docs
           - text: DID Connect
-            link: https://www.didconnect.io/docs/intro
+            link: https://www.didconnect.io/docs
           - text: Create Blocklet
-            link: https://www.createblocklet.dev/docs/intro
+            link: https://www.createblocklet.dev/docs
       - text: 概念指南
         items:
           - text: 理解 Blocklet
