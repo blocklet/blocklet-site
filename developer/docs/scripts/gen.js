@@ -22,6 +22,9 @@ sidebar.zh.forEach((x, i) => {
     : [{ p: path.join(outDir, x.link), t: [sidebar.en[i].text, x.text] }];
 
   files.forEach(({ p, t }) => {
+    if (p.indexOf(':') > 0) {
+      return;
+    }
     if (fs.existsSync(p)) {
       return;
     }
