@@ -24,9 +24,11 @@ Blocklet Meta 中包含的数据非常多，Blocklet UI 只关心其中与用户
 - appName  
   Blocklet 应用的名称
 - appLogo  
-  Blocklet 应用的 logo (URL)
+  Blocklet 应用的 Logo (URL)
 - navigation  
-  导航菜单数据，可以用于配置 header、footer 以及 dashboard 中的导航菜单
+  导航菜单数据，可以用于配置 Header、Footer 以及 Dashboard 中的导航菜单
+
+进一步了解 Blocklet Meta 请参考[这里](/reference/blocklet-spec)。
 
 ## 安装
 
@@ -40,7 +42,7 @@ yarn add @blocklet/ui-react
 
 ## Header 组件
 
-header 是网页中必不可少的重要元素，它出现在网页的顶部区域，一般用于显示品牌信息，提供应用导航。
+Header 是网页中必不可少的重要元素，它出现在网页的顶部区域，一般用于显示品牌信息，提供应用导航。
 
 ### 使用
 
@@ -57,9 +59,9 @@ function App() {
 }
 ```
 
-在 Blocklet 应用中使用 `<Header />` 可以为页面渲染一个标准化的 header 元素 (下图)。它包含的元素有:
+在 Blocklet 应用中使用 `<Header />` 可以为页面渲染一个标准化的 Header 元素 (下图)。它包含的元素有:
 
-- 应用 logo
+- 应用 Logo
 - 应用名称
 - 应用 DID
 - 导航菜单
@@ -68,11 +70,11 @@ function App() {
 
 ![](./images/header.png)
 
-<p align="center">Fig.1 - header</p>
+<p align="center">Fig.1 - Header</p>
 
 ### 配置导航菜单
 
-Blocklet UI Header 在运行时会读取 blocklet.yml 中的 navigation 配置并渲染一个导航菜单。上图 (Fig.1) 中的导航菜单就是 header 基于下面的 navigation 配置渲染而成。
+Blocklet UI Header 在运行时会读取 blocklet.yml 中的 navigation 配置并渲染一个导航菜单。上图 (Fig.1) 中的导航菜单就是 Header 基于下面的 navigation 配置渲染而成。
 navigation 配置由 1 个或多个条目组成，在这里一个条目代表一个菜单项，菜单项的主要属性有：
 
 - title: 菜单项的标题文本，支持多语言
@@ -81,13 +83,13 @@ navigation 配置由 1 个或多个条目组成，在这里一个条目代表一
   - iconify: `<prefix>:<icon-name>`
   - image url
 - section: 菜单项所出现的位置，可以配置多个值 (数组形式), 目前支持以下几种 section:
-  - header: header 区域的导航菜单
-  - footer: footer 区域的导航菜单
-  - social: footer 社交媒体图标相关的链接
-  - bottom: footer 底部区域相关链接，比如法律法规、隐私政策 等链接
+  - header: Header 区域的导航菜单
+  - footer: Footer 区域的导航菜单
+  - social: Footer 社交媒体图标相关的链接
+  - bottom: Footer 底部区域相关链接，比如法律法规、隐私政策 等链接
   - dashboard: 管理控制台中侧边栏中的导航菜单
   - sessionManager: Session Manager 中的菜单
-- role: 允许菜单项被访问的用户角色，可以配置多个值
+- role: 允许菜单项被访问的用户角色，可以配置 1 个或多个值，每个值应该与 Blocklet Server Passport 对应，Blocklet Server 内置的 Passport 有 owner、admin、member 和 guest，进一步了解请参考 [User and Passport](/guide/auth)
 - items: 子菜单 (支持嵌套)
 
 ```yaml
@@ -98,7 +100,7 @@ navigation:
       zh: 首页
     link: '/'
     icon: mdi:home
-    section: header
+    section: header # This menu item will be displayed in Header Navigation
   - title:
       en: Discuss
       zh: 讨论
@@ -114,7 +116,7 @@ navigation:
   - title: Test
     icon: mdi:alpha-t-box
     section: header
-    items:
+    items: # Sub navigation menu
       - title: Sub1
         link: https://store.blocklet.dev
       - title: Sub2
@@ -125,7 +127,7 @@ navigation:
 
 ### 定制 Session Manager 菜单
 
-Blocklet UI Header 组件在渲染时会检测上下文中是否存在 Session Context, 如果存在, 会在 header 的 addons 区域 (header 最右侧的区域) 渲染一个 Session Manager。Session Manager 主要提供用户登录、用户注销、切换 profile、切换 passport 等功能，参考下图。
+Blocklet UI Header 组件在渲染时会检测上下文中是否存在 Session Context, 如果存在, 会在 Header 的 Addons 区域 (Header 最右侧的区域) 渲染一个 Session Manager。Session Manager 主要提供用户登录、用户注销、切换 profile、切换 passport 等功能，参考下图。
 
 ![](./images/session-manager.png)
 
@@ -152,7 +154,7 @@ navigation:
 
 ## Footer 组件
 
-footer 是指网页最底部的内容部分。它通常包含品牌介绍、应用导航、版权声明、隐私政策链接、社交媒体图标 等信息。
+Footer 是指网页最底部的内容部分。它通常包含品牌介绍、应用导航、版权声明、隐私政策链接、社交媒体图标 等信息。
 
 ### 使用
 
@@ -183,7 +185,7 @@ Blocklet UI 目前支持 标准布局 和 简单布局，并根据 Blocklet 运�
 
 标准布局中包含的重要元素有：
 
-- Logo
+- 应用 Logo
 - 导航
 - 社交媒体图标
 - 版权声明
@@ -193,6 +195,7 @@ Blocklet UI 目前支持 标准布局 和 简单布局，并根据 Blocklet 运�
 
 ```yaml
 # blocklet.yml
+# Navigation links in footer
 navigation:
   - title:
       en: PRODUCT
@@ -205,7 +208,7 @@ navigation:
         link: https://www.arcblock.io/en/platform
         icon: mdi:home
     # ...
-  - title:
+  # Social media icons in footer
   - icon: mdi:twitter
     link: https://github.com
     section: social
@@ -218,6 +221,7 @@ navigation:
   - icon: mdi:wechat
     link: https://github.com
     section: social
+  # Utility links in footer
   - title: Terms of Service
     link: https://www.arcblock.io/en/termsofuse
     section: bottom
@@ -234,7 +238,7 @@ navigation:
 
 ## Dashboard 组件
 
-Dashboard 组件用于搭建管理控制台页面，主要包含 header、footer、side nav、main content 几个部分，其中前 3 个部分由 Blocklet UI Dashboard 组件根据 Blocklet 运行时数据自动渲染，应用的业务功能页面会显示在 main content (主内容区) 区域。
+Dashboard 组件用于搭建管理控制台页面，主要包含 Header、Footer、Side Nav、Main Content 几个部分，其中前 3 个部分由 Blocklet UI Dashboard 组件根据 Blocklet 运行时数据自动渲染，应用的业务功能页面会显示在 main content (主内容区) 区域。
 
 ### 使用
 
@@ -254,7 +258,7 @@ function App() {
 
 ![](./images/dashboard.png)
 
-<p align="center">Fig.4 - dashboard</p>
+<p align="center">Fig.4 - Dashboard</p>
 
 ### 配置导航菜单
 
@@ -262,11 +266,12 @@ Dashboard 导航菜单的配置方式与 Header 组件相似，不同之处是�
 
 ```yaml
 # blocklet.yml
+# Navigation menu items in Dashboard Side Nav
 navigation:
   - title: Profile
     link: '/profile'
     icon: charm:person
-    section: dashboard
+    section: dashboard # This menu item will be displayed in Dashboard Side Nav
   - title: Account
     link: '/account'
     icon: material-symbols:settings-outline
@@ -275,14 +280,14 @@ navigation:
     link: '/appearance'
     icon: la:paint-brush
     section: dashboard
-    role: owner
+    role: owner # Only owner can access this menu item
   - title: Notification
     link: '/notification'
     icon: ri:notification-2-line
     section: dashboard
   - title: Access
     icon: fluent:accessibility-16-regular
-    items:
+    items: # Grouped menu items
       - title: Billing and plans
         link: '/billing-and-plans'
         icon: ant-design:credit-card-outlined
@@ -329,7 +334,7 @@ navigation:
       - title: Sponsorship log
         link: '/sponsorship-log'
         icon: ph:scroll
-        role:
+        role: # User with developer or owner roles can access this menu item
           - developer
           - owner
     section: dashboard
@@ -337,11 +342,11 @@ navigation:
 
 ### 定制 Session Manager 菜单
 
-与 Header 组件一样，Dashboard 组件会在 header 区域自动渲染一个 Session Manager，Session Manager 的菜单也可以通过 blocklet.yml navigation 进行配置，配置方式参考上面 header 章节。
+与 Header 组件一样，Dashboard 组件会在 Header 区域自动渲染一个 Session Manager，Session Manager 的菜单也可以通过 blocklet.yml navigation 进行配置，配置方式参考上面 Header 章节。
 
 ## Header 内置 Addons
 
-Blocklet UI Header (包括 Dashboard 中的 Header) 右侧部分是 addons 区域，用于放置常用的功能按钮，因为语言选择器 (LocaleSelector) 和会话管理器 (SessionManager) 使用频率很高，所以 Blocklet UI Header 将它们作为内置 addons 进行渲染，默认情况下，Blocklet UI Header 只要检测到 Locale Context (或 Session Context)，就会自动在 addons 区域渲染 LocaleSelector (或 SessionManager)。
+Blocklet UI Header (包括 Dashboard 中的 Header) 右侧部分是 Addons 区域，用于放置常用的功能按钮，因为语言选择器 (LocaleSelector) 和会话管理器 (SessionManager) 使用频率很高，所以 Blocklet UI Header 将它们作为内置 addons 进行渲染，默认情况下，Blocklet UI Header 只要检测到 Locale Context (或 Session Context)，就会自动在 addons 区域渲染 LocaleSelector (或 SessionManager)。
 
 因此，如果你的 Blocklet 应用依赖于多语言和用户体系，需要在应用入口处提供 LocaleProvider 和 SessionProvider，在真实的 Blocklet 应用中通常会使用下面的代码片段:
 
