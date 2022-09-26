@@ -1,3 +1,7 @@
+## 0.1.69 (September 26, 2022)
+
+- chore: update deps
+
 ## 0.1.68 (September 26, 2022)
 
 - docs: Blocklet UI
