@@ -19,7 +19,7 @@ Blocklet UI 目前主要提供了 Header, Footer 和 Dashboard 三个组件，He
 
 Blocklet Meta 中包含的数据非常多，Blocklet UI 只关心其中与用户界面相关的数据，比如：
 
-- did  
+- appId  
   Blocklet 的唯一标识，一个 DID 地址
 - appName  
   Blocklet 应用的名称
