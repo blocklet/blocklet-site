@@ -1,6 +1,6 @@
 ---
-title: 'Setup Local Blocklet Server'
-description: 'Setup Local Blocklet Server'
+title: '在本机启动 Blocklet Server '
+description: '在本机启动 Blocklet Server'
 layout: 'documentation'
 ---
 
@@ -43,44 +43,18 @@ v16.15.0
 
 ```bash
 npm install -g @blocklet/cli
-
-added 1318 packages, and audited 1319 packages in 2m
-
-161 packages are looking for funding
-  run `npm fund` for details
 ```
 
 ### YARN
 
 ```bash
 yarn global add @blocklet/cli
-yarn global v1.22.18
-[1/4] 🔍  Resolving packages...
-[2/4] 🚚  Fetching packages...
-[3/4] 🔗  Linking dependencies...
-[4/4] 🔨  Building fresh packages...
-success Installed "@blocklet/cli@1.8.22" with binaries:
-      - blocklet
-✨  Done in 98.71s.
 ```
 
 ### PNPM
 
 ```bash
 pnpm add -g @blocklet/cli
-
-Packages: +1022
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Progress: resolved 1321, reused 1247, downloaded 74, added 151, done
-.pnpm/core-js@3.25.2/node_modules/core-js: Running postinstall script, done in 74ms
-.pnpm/ursa-optional@0.10.2/node_modules/ursa-optional: Running install script, done in 4.6s
-.pnpm/@root+acme@3.1.0/node_modules/@root/acme: Running postinstall script, done in 120ms
-.pnpm/@abtnode+cli@1.8.22/node_modules/@abtnode/cli: Running postinstall script, done in 1s
-
-/Users/linchen/Library/pnpm/global/5:
-+ @blocklet/cli 1.8.22
-
-The integrity of 4316 files was checked. This might have caused installation to take longer.
 ```
 
 **检测是否安装成功：**
