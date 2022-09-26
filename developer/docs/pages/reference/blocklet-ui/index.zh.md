@@ -100,7 +100,7 @@ navigation:
       zh: 首页
     link: '/'
     icon: mdi:home
-    section: header # This menu item will be displayed in Header Navigation
+    section: header # 表示该条目会出现在 Header 导航菜单中
   - title:
       en: Discuss
       zh: 讨论
@@ -116,7 +116,7 @@ navigation:
   - title: Test
     icon: mdi:alpha-t-box
     section: header
-    items: # Sub navigation menu
+    items: # 子菜单
       - title: Sub1
         link: https://store.blocklet.dev
       - title: Sub2
@@ -208,7 +208,7 @@ navigation:
         link: https://www.arcblock.io/en/platform
         icon: mdi:home
     # ...
-  # Social media icons in footer
+  # Footer 中社交媒体图标
   - icon: mdi:twitter
     link: https://github.com
     section: social
@@ -221,7 +221,7 @@ navigation:
   - icon: mdi:wechat
     link: https://github.com
     section: social
-  # Utility links in footer
+  # Footer 底部链接
   - title: Terms of Service
     link: https://www.arcblock.io/en/termsofuse
     section: bottom
@@ -271,7 +271,7 @@ navigation:
   - title: Profile
     link: '/profile'
     icon: charm:person
-    section: dashboard # This menu item will be displayed in Dashboard Side Nav
+    section: dashboard # 该条目会出现在 Dashboard 侧边栏导航菜单中
   - title: Account
     link: '/account'
     icon: material-symbols:settings-outline
@@ -280,14 +280,14 @@ navigation:
     link: '/appearance'
     icon: la:paint-brush
     section: dashboard
-    role: owner # Only owner can access this menu item
+    role: owner # 只有 owner 角色的用户才可以访问该条目
   - title: Notification
     link: '/notification'
     icon: ri:notification-2-line
     section: dashboard
   - title: Access
     icon: fluent:accessibility-16-regular
-    items: # Grouped menu items
+    items: # 分组菜单
       - title: Billing and plans
         link: '/billing-and-plans'
         icon: ant-design:credit-card-outlined
@@ -334,7 +334,7 @@ navigation:
       - title: Sponsorship log
         link: '/sponsorship-log'
         icon: ph:scroll
-        role: # User with developer or owner roles can access this menu item
+        role: # 拥有 developer 或 owner 的用户可以访问该条目
           - developer
           - owner
     section: dashboard
