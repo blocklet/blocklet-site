@@ -1,3 +1,10 @@
+## 0.1.70 (September 27, 2022)
+
+- chore: update xmark
+- chore: add platform overview doc
+- chore: update welcome doc
+- chore: polish quick start doc
+
 ## 0.1.69 (September 26, 2022)
 
 - chore: update deps
