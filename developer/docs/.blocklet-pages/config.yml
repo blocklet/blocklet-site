@@ -84,6 +84,8 @@ themeConfig:
             link: https://www.createblocklet.dev/docs
       - text: Conceptual Guides
         items:
+          - text: Platform Overview
+            link: /conceptual/overview
           - text: Blocklet
             link: /conceptual/blocklet
           - text: Blocklet Lifecycle
@@ -188,6 +190,8 @@ themeConfig:
             link: https://www.createblocklet.dev/docs
       - text: 概念指南
         items:
+          - text: 平台概览
+            link: /conceptual/overview
           - text: 理解 Blocklet
             link: /conceptual/blocklet
           - text: 理解 Blocklet 生命周期
