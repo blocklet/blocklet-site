@@ -14,7 +14,7 @@ layout: documentation
 2. Create a new access key
    - Use `blocklet connect <store-url>` command to create and access key from store
 3. Bundle your blocklet
-   - Refer to [Bundle your blocklet](/guide/bundle)
+   - Refer to [Bundle your blocklet](/how-to/bundle)
 4. Upload your blocklet
    - Use `blocklet upload` to upload your blocklet bundle to store
 5. Login to the uploaded Blocklet Store, you can see the uploaded Blocklet in the "My Blocklet" page in Admin Dashboard

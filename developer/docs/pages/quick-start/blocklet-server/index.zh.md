@@ -1,6 +1,6 @@
 ---
-title: 'Setup Local Blocklet Server'
-description: 'Setup Local Blocklet Server'
+title: '在本机启动 Blocklet Server '
+description: '在本机启动 Blocklet Server'
 layout: 'documentation'
 ---
 
@@ -100,7 +100,7 @@ nginx version: nginx/1.21.6
 
 ## 第四步：安装并初始化 DID 钱包
 
-见 [获取 DID 钱包](/prerequisites/wallet)
+见 [获取 DID 钱包](/quick-start/wallet)
 
 ## 第五步：创建并启动 Blocklet Server
 

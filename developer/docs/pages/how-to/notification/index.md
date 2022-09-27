@@ -8,7 +8,7 @@ layout: documentation
 
 Before the Blocklet communicates with the wallet, a Websocket connection needs to be established. There are two ways for Blocklet to establish a Websocket connection with the DID Wallet:
 
-**Method 1**: After the DID Wallet logs in to the Blocklet through the [Auth service](/guide/auth) provided by the Blocklet Service, it automatically establishes a Weboscket connection with the Blocklet.
+**Method 1**: After the DID Wallet logs in to the Blocklet through the [Auth service](/how-to/auth) provided by the Blocklet Service, it automatically establishes a Weboscket connection with the Blocklet.
 
 **Method 2**: After DID Wallet connects to Blocklet through Blocklet using the DID Connect service implemented by [Blocklet SDK](/reference/blocklet-sdk#DID%20Connect), it automatically establishes a Weboscket connection with Blocklet.
 

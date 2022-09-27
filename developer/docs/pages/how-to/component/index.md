@@ -4,11 +4,11 @@ description: Blocklet Component
 layout: documentation
 ---
 
-This article describes how to develop a Blocklet component. For how to develop a composite Blocklet, see [Creating a Composite Blocklet](/guide/composite-blocklet)
+This article describes how to develop a Blocklet component. For how to develop a composite Blocklet, see [Creating a Composite Blocklet](/how-to/composite-blocklet)
 
 ## Develop a component
 
-The way to develop a component is basically the same as [Develop an application](/guide/develop), when developing a component, you need to add `--app-id` and optional `--mount-point` parameters to the `blocklet dev` command
+The way to develop a component is basically the same as [Develop an application](/how-to/develop), when developing a component, you need to add `--app-id` and optional `--mount-point` parameters to the `blocklet dev` command
 
 `blocklet dev --app-id <blocklet-app-id> --mount-point /xxx`
 

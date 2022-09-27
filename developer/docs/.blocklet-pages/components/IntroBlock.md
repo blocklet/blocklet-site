@@ -1,18 +1,21 @@
 ---
 name: CardList
 type: simple
-iconColor: "#c2c9d6"
-gap: 1
+style:
+  maxWidth: 960px
+iconColor: '#c2c9d6'
+col: 2
+gap: 2
 align: left
 list:
   - icon: i-mdi:gesture-two-double-tap
     title: Quick Start
     description: Quickly understand the related matters of the Blocklet platform development
-    link: /prerequisites/wallet
+    link: /quick-start/wallet
   - icon: i-mdi:television-guide
     title: How To Guides
     description: Learn the various operations of the Blocklet platform
-    link: /guide/create
+    link: /how-to/create
   - icon: i-mdi:comment-quote-outline
     title: Reference Guides
     description: Learn the detailed development guide for the Blocklet platform
@@ -24,5 +27,5 @@ list:
   - icon: i-mdi:chart-tree
     title: Conceptual Guides
     description: Learn about the relevant concept of the blocklet platform
-    link: /concept/blocklet
+    link: /conceptual/blocklet
 ---

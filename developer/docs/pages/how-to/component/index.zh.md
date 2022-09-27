@@ -4,11 +4,11 @@ description: Blocklet 组件
 layout: documentation
 ---
 
-本文介绍如何开发一个 Blocklet 组件，关于如何开发一个组合型 Blocklet, 见 [创建组合 Blocklet](/guide/composite-blocklet)
+本文介绍如何开发一个 Blocklet 组件，关于如何开发一个组合型 Blocklet, 见 [创建组合 Blocklet](/how-to/composite-blocklet)
 
 ## 开发组件
 
-开发组件和 [开发应用](/guide/develop) 的方式基本相同，在开发组件时，需要为 `blocklet dev` 命令添加 `--app-id` 和 可选的 `--mount-point` 参数
+开发组件和 [开发应用](/how-to/develop) 的方式基本相同，在开发组件时，需要为 `blocklet dev` 命令添加 `--app-id` 和 可选的 `--mount-point` 参数
 
 `blocklet dev --app-id <blocklet-app-id> --mount-point /xxx`
 

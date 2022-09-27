@@ -8,7 +8,7 @@ layout: documentation
 
 Blocklet 和钱包通信前，需要建立 Websocket 连接。Blocklet 有两种方式 和 DID 钱包建立 Websocket 连接：
 
-**方式 1**: DID 钱包通过 Blocklet Service 提供的 [Auth 服务](/guide/auth) 登录 Blocklet 后，自动和 Blocklet 建立 Weboscket 连接。
+**方式 1**: DID 钱包通过 Blocklet Service 提供的 [Auth 服务](/how-to/auth) 登录 Blocklet 后，自动和 Blocklet 建立 Weboscket 连接。
 
 **方式 2**: DID 钱包通过 Blocklet 使用 [Blocklet SDK](/reference/blocklet-sdk#DID%20Connect) 自己实现的 DID Connect 服务连接至 Blocklet 后，自动和 Blocklet 建立 Weboscket 连接。
 

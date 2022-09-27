@@ -19,13 +19,13 @@ Blocklet UI 目前主要提供了 Header, Footer 和 Dashboard 三个组件，He
 
 Blocklet Meta 中包含的数据非常多，Blocklet UI 只关心其中与用户界面相关的数据，比如：
 
-- appId  
+- appId
   Blocklet 的唯一标识，一个 DID 地址
-- appName  
+- appName
   Blocklet 应用的名称
-- appLogo  
+- appLogo
   Blocklet 应用的 Logo (URL)
-- navigation  
+- navigation
   导航菜单数据，可以用于配置 Header、Footer 以及 Dashboard 中的导航菜单
 
 进一步了解 Blocklet Meta 请参考[这里](/reference/blocklet-spec)。
@@ -89,7 +89,7 @@ navigation 配置由 1 个或多个条目组成，在这里一个条目代表一
   - bottom: Footer 底部区域相关链接，比如法律法规、隐私政策 等链接
   - dashboard: 管理控制台中侧边栏中的导航菜单
   - sessionManager: Session Manager 中的菜单
-- role: 允许菜单项被访问的用户角色，可以配置 1 个或多个值，每个值应该与 Blocklet Server Passport 对应，Blocklet Server 内置的 Passport 有 owner、admin、member 和 guest，进一步了解请参考 [User and Passport](/guide/auth)
+- role: 允许菜单项被访问的用户角色，可以配置 1 个或多个值，每个值应该与 Blocklet Server Passport 对应，Blocklet Server 内置的 Passport 有 owner、admin、member 和 guest，进一步了解请参考 [User and Passport](/how-to/auth)
 - items: 子菜单 (支持嵌套)
 
 ```yaml

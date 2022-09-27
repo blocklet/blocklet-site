@@ -168,7 +168,7 @@ Deploys a blocklet from the local folder to remote Blocklet Server.
 $ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx --access-secret xxxxxx
 ```
 
-- blocklet-bundle-folder: 使用 [blocklet bundle](/guide/bundle) 构建后的目录，如果当前你在项目根目录，则是 `./blocklet/bundle`.
+- blocklet-bundle-folder: 使用 [blocklet bundle](/how-to/bundle) 构建后的目录，如果当前你在项目根目录，则是 `./blocklet/bundle`.
 - `--endpoint`: server 的地址，以 /admin 结尾。比如，你本地的 Blocklet Server 的地址是 `http://127.0.0.1/admin`
 - `--access-key`: 在 Blocklet Server 创建的 Access Key
 - `--access-secret`: 在 Blocklet Server 创建的 Access Secret
