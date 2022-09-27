@@ -3,42 +3,34 @@ layout: Documentation
 title: Setup DID Wallet
 ---
 
-## Why do I need a DID Wallet?
+## Why do I need DID Wallet?
 
-DID Wallet is a decentralized wallet that can be used to manage not only digital assets (Token, NFT, etc.) but also decentralized identity (DID for short).
+[DID Wallet](https://didwallet.io) is an decentralized app that's used to manage digital assets(such as [token](https://chain.abtnet.io/docs/en/conceptual/tokens) and [NFT](https://chain.abtnet.io/docs/en/conceptual/nfts)) and [decentralized identities](https://chain.abtnet.io/docs/en/conceptual/did).
 
-If you are a developer who is ready to make a splash in the Blocklet world, then DID Wallet is an essential tool to have on hand. In the Blocklet world, from having a Blocklet Server to starting a new Blocklet development debugging, every step requires the participation of DID Wallet.
+DID Wallet is required in the blocklet development workflow to accomplish the following tasks:
 
-When starting a Blocklet Server, you need to use the DID Wallet to participate in the initialization process of the new Blocklet Server, and will save a Blocklet Server owner credentials in your DID Wallet.
+- Manage your decentralized identities when talking with blocklets
+- Receive and present blocklet server passport
+- Receive and present blocklet owner passport
+- Receive and spend blockchain tokens, NFTs
+- Authorize other dangerous operations for blocklet and server
 
-When developing a Blocklet, you need to use the DID Wallet to participate in the Blocklet development process, including logging into a Blocklet that requires authorization, debugging various DID Connect requests during Blocklet development, and so on.
+## Platforms supported by DID Wallet?
 
-In addition, in the Blocklet world, everything corresponds to a unique DID, e.g.
-
-- A Blocklet waiting to be installed in the Store
-- A Blocklet Server that is up and running
-- A Blocklet instance running inside the Blocklet Server
-- A pass to control various access rights
-- ...
-
-In daily development, you need a tool to help you manage these DIDs easily, DID Wallet is such a tailor-made tool.
-
-## What platforms does DID Wallet support?
-
-DID Wallet currently fully supports the following platforms for download or access.
+DID Wallet currently fully supports the following platforms:
 
 - [Android](https://play.google.com/store/apps/details?id=com.arcblock.wallet.app.product)
 - [iOS](https://apps.apple.com/app/id1460083542)
-- [Browser](https://web.abtwallet.io/)
-- Browser plug-in ([Chrome version](https://chrome.google.com/webstore/detail/did-wallet/ibjflpbmadchofnbpppegdbnifdgincp))
+- [Browser WebApp](https://web.abtwallet.io/), modern browsers such as Chrome, Safari, Edge and Firefox
+- [Browser Extension](https://chrome.google.com/webstore/detail/did-wallet/ibjflpbmadchofnbpppegdbnifdgincp)), only Chrome is supported now
 
-For details on how to download and install, please go to: [How to download DID Wallet?](https://support.didwallet.io/en/howToDownload)
+DID Wallet on the web platform are mostly used by developers because they provide a shorter feedback loop.
 
-## How to initialize DID Wallet?
+## How to setup DID Wallet?
 
-There are two ways to initialize a DID Wallet.
+There are two ways to setup a DID Wallet.
 
-- [How to create a new wallet](https://support.didwallet.io/en/howToInitWallet)
-- [How to restore an old wallet](https://support.didwallet.io/en/howToRecoverWallet)
+- [Create a new wallet](https://support.didwallet.io/en/howToInitWallet)
+- [Restore from a backup](https://support.didwallet.io/en/howToRecoverWallet)
 
-After initializing the wallet, the wallet will generate 3 default DIDs by default, and each future interaction with the blocklet will generate a new DID, for more information please go to: [Why wallet has multiple addresses?](https://support.didwallet.io/en/whyMultiAddresses)
+After setup the wallet, you will get 3 default accounts by default, and DID Wallet will generate a new DID whenever you are using with a new blocklet, for more information please refer: [Why multiple accounts?](https://support.didwallet.io/en/whyMultiAddresses)

@@ -3,42 +3,34 @@ layout: Documentation
 title: 设置 DID 钱包
 ---
 
-## 为什么需要 DID Wallet？
+## 为什么我需要 DID 钱包？
 
-DID Wallet 是一款去中心化钱包，他不但可以用来管理数字资产（Token，NFT 等），也可以用来管理去中心化身份（Decentralized Identity，后面简称 DID）。
+[DID Wallet](https://didwallet.io)是一个去中心化的应用程序，用来管理数字资产（如[token](https://chain.abtnet.io/docs/en/conceptual/tokens)和[NFT](https://chain.abtnet.io/docs/en/conceptual/nfts)）和[去中心化的身份](https://chain.abtnet.io/docs/en/conceptual/did)。
 
-如果你是一个准备在 Blocklet 世界大展手脚的开发者，那么 DID Wallet 更是必不可少的随身利器。在 Blocklet 世界里，从拥有一个 Blocklet Server，到开始一个全新的 Blocklet 开发调试，每一步都需要 DID Wallet 的参与。
+DID Wallet 在区块链开发工作流程中需要完成以下任务。
 
-在启动一个 Blocklet Server 的时候，你需要使用 DID Wallet 参与完成全新 Blocklet Server 的初始化过程，并会在你的 DID Wallet 保存一张 Blocklet Server 的拥有者凭证。
+- 在与区块小程序对话时，管理你的去中心化身份
+- 接收并出示区块链服务器护照
+- 接收并出示区块链所有者护照
+- 接收和花费区块链代币，NFTs
+- 授权区块链和服务器的其他危险操作
 
-在开发一个 Blocklet 的时候，你需要使用 DID Wallet 参与 Blocklet 的开发过程，包括登录进一个需要授权的 Blocklet，调试 Blocklet 开发过程中的各种 DID Connect 请求等。
+## DID 钱包所支持的平台？
 
-另外，在 Blocklet 世界里，任何东西都对应着一个独一无二的 DID，比如：
-
-- 一个在 Store 里面等待被安装的 Blocklet
-- 一个启动起来的 Blocklet Server
-- 一个运行在 Blocklet Server 里面的 Blocklet 实例
-- 一张张控制各种访问权限的通行证
-- …
-
-日常开发中，你需要一个工具方便的帮助你管理这些 DID，DID Wallet 正是这样一个量身打造的工具。
-
-## DID Wallet 支持哪些平台?
-
-DID Wallet 目前全面支持下面几个平台的下载或访问：
+DID Wallet 目前完全支持以下平台。
 
 - [安卓](https://play.google.com/store/apps/details?id=com.arcblock.wallet.app.product)
 - [iOS](https://apps.apple.com/app/id1460083542)
-- [浏览器](https://web.abtwallet.io/)
-- 浏览器插件 ([Chrome 版本](https://chrome.google.com/webstore/detail/did-wallet/ibjflpbmadchofnbpppegdbnifdgincp))
+- [浏览器 WebApp](https://web.abtwallet.io/)，仅支持现代浏览器，如 Chrome、Safari、Edge 和 Firefox
+- [浏览器扩展](https://chrome.google.com/webstore/detail/did-wallet/ibjflpbmadchofnbpppegdbnifdgincp)，目前仅支持 Chrome 版本
 
-具体下载安装方式请前往：[如何下载 DID 钱包?](https://support.didwallet.io/zh/howToDownload)
+WEB 端的 DID 钱包通常被开发人员青睐，因为他们提供了一个更短的反馈循环。
 
-## 如何初始化 DID Wallet？
+## 如何设置 DID 钱包？
 
-初始化 DID Wallet 的方式有两种：
+有两种方法来设置 DID 钱包。
 
-- [如何创建一个新钱包](https://support.didwallet.io/zh/howToInitWallet)
-- [如何恢复一个旧钱包](https://support.didwallet.io/zh/howToRecoverWallet)
+- [创建新钱包](https://support.didwallet.io/en/howToInitWallet)
+- [从备份中恢复](https://support.didwallet.io/en/howToRecoverWallet)
 
-初始化钱包之后，钱包会默认生成 3 个默认的 DID ，未来每一次和 blocklet 交互都会产生一个新的 DID，更多介绍请前往：[钱包为什么有多个地址?](https://support.didwallet.io/zh/whyMultiAddresses)
+设置钱包后，你将得到 3 个默认账户，每当你使用一个新的区块链时，DID 钱包将生成一个新的 DID，更多信息请参考。[为什么有多个账户？](https://support.didwallet.io/en/whyMultiAddresses)
