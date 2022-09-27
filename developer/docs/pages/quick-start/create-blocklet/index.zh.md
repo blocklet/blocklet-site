@@ -1,6 +1,6 @@
 ---
-title: 快速上手
-description: 快速上手
+title: 创建第一个应用
+description: 几分钟内创建和运行你的第一个应用
 layout: 'documentation'
 ---
 
@@ -27,12 +27,12 @@ layout: 'documentation'
 选择 `react`，后面再输入自己的名称和邮箱即可
 ![](./images/step-4.png)
 
-
 至此，一个 Blocklet 项目已经创建完毕。
 
 ## 启动开发
 
 进入到项目的目录中，执行以下命令安装项目依赖：
+
 ```bash
 npm i
 # yarn
@@ -40,6 +40,7 @@ npm i
 ```
 
 接着执行以下命令进入开发预览：
+
 ```bash
 npm run dev
 # yarn dev

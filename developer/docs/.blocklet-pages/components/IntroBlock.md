@@ -10,22 +10,46 @@ align: left
 list:
   - icon: i-mdi:gesture-two-double-tap
     title: Quick Start
-    description: Quickly understand the related matters of the Blocklet platform development
-    link: /quick-start/wallet
-  - icon: i-mdi:television-guide
-    title: How To Guides
-    description: Learn the various operations of the Blocklet platform
-    link: /how-to/create
-  - icon: i-mdi:comment-quote-outline
-    title: Reference Guides
-    description: Learn the detailed development guide for the Blocklet platform
-    link: /reference/blocklet-spec
-  - icon: i-mdi:cards-playing-diamond-multiple
-    title: Samples
-    description: View various official examples
-    link: /samples
+    description: !md |
+      Environment setup and get your first blocklet project up and running within minutes
+
+      - [Setup Node.js](/quick-start/nodejs)
+      - [Setup DID Wallet](/quick-start/did-wallet)
+      - [Setup Blocklet CLI](/quick-start/blocklet-server)
+      - [Create your first blocklet](/quick-start/create-blocklet)
+      - [Frequently asked questions](/faq)
   - icon: i-mdi:chart-tree
     title: Conceptual Guides
-    description: Learn about the relevant concept of the blocklet platform
-    link: /conceptual/blocklet
+    description: !md |
+      Big-picture explanations of higher-level blocklet platform concepts. Most useful for building understanding of a particular topic.
+
+      - [Platform Overview](/conceptual/overview)
+      - [Core Blocklet Concepts](/conceptual/blocklet)
+      - [Blocklet Lifecycle](/conceptual/lifecycle)
+      - [Blocklet Composition](/conceptual/composition)
+      - [Blocklet Server Architecture](/conceptual/server-architecture)
+      - [Blocklet Routing Layer](/conceptual/server-routing)
+      - [Access Control](/conceptual/access-control)
+  - icon: i-mdi:television-guide
+    title: How To Guides
+    description: !md |
+      Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.
+
+      - [Create](/how-to/create) and [develop](/how-to/develop) your blocklet
+      - [Manage users](/how-to/auth) and [talk with DID Wallet](/how-to/notification)
+      - [Create component](/how-to/component) and [compose blocklets together](/how-to/composite-blocklet)
+      - [Bundle](/how-to/bundle) and [deploy](/how-to/deploy) your blocklet
+      - [Publish](/how-to/publish) your blocklet for fun and [profit](/how-to/profit)
+      - Put blocklet storage [locally](/how-to/storage) or [on blockchain](/how-to/blockchain)
+  - icon: i-mdi:comment-quote-outline
+    title: Reference Guides
+    description: !md |
+      Nitty-gritty technical descriptions of how blocklet works. Most useful when you need detailed information about APIs of the blocklet toolkit.
+
+      - [Define blocklet in blocklet.yml](/reference/blocklet-spec)
+      - [Blocklet SDK](/reference/blocklet-sdk)
+      - [Blocklet UI](/reference/blocklet-ui)
+      - [Blocklet CLI](/reference/blocklet-cli) and [Server CLI](/reference/blocklet-server-cli)
+      - [Automate with Blocklet Actions](/reference/blocklet-actions)
+      - [Security](/reference/security), [performance](/reference/performance) and [limitations](/reference/known-issues)
 ---

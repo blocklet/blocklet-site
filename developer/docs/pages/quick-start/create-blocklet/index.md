@@ -1,6 +1,6 @@
 ---
-title: Getting Started
-description: Getting Started
+title: Create first blocklet
+description: Get your first blocklet up and running in minutes
 layout: documentation
 ---
 

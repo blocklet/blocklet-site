@@ -25,7 +25,7 @@ themeConfig:
           - text: Install Blocklet Server
             link: /quick-start/blocklet-server
           - text: Create your first blocklet
-            link: /how-to/getting-started
+            link: /quick-start/create-blocklet
       - text: How to Guides
         items:
           - text: Create Blocklet
@@ -86,7 +86,7 @@ themeConfig:
         items:
           - text: Platform Overview
             link: /conceptual/overview
-          - text: Blocklet
+          - text: Understanding Blocklet
             link: /conceptual/blocklet
           - text: Blocklet Lifecycle
             link: /conceptual/lifecycle
@@ -131,7 +131,7 @@ themeConfig:
           - text: 安装 Blocklet Server
             link: /quick-start/blocklet-server
           - text: 创建第一个应用
-            link: /how-to/getting-started
+            link: /quick-start/create-blocklet
       - text: 操作指南
         items:
           - text: 创建应用
