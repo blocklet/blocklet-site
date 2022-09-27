@@ -21,15 +21,14 @@ list:
   - icon: i-mdi:chart-tree
     title: Conceptual Guides
     description: !md |
-      Big-picture explanations of higher-level blocklet platform concepts. Most useful for building understanding of a particular topic.
+      Big-picture explanations of higher-level blocklet concepts. Most useful for building understanding of a particular topic.
 
-      - [Platform Overview](/conceptual/overview)
-      - [Core Blocklet Concepts](/conceptual/blocklet)
-      - [Blocklet Lifecycle](/conceptual/lifecycle)
-      - [Blocklet Composition](/conceptual/composition)
-      - [Blocklet Server Architecture](/conceptual/server-architecture)
-      - [Blocklet Routing Layer](/conceptual/server-routing)
-      - [Access Control](/conceptual/access-control)
+      - [Platform overview](/conceptual/overview)
+      - [Core blocklet concepts](/conceptual/blocklet)
+      - [Blocklet lifecycle](/conceptual/lifecycle)
+      - [Blocklet composition](/conceptual/composition)
+      - [Blocklet server architecture](/conceptual/server-architecture)
+      - [Blocklet routing layer](/conceptual/server-routing) and [access control model](/conceptual/access-control)
   - icon: i-mdi:television-guide
     title: How To Guides
     description: !md |
@@ -44,7 +43,7 @@ list:
   - icon: i-mdi:comment-quote-outline
     title: Reference Guides
     description: !md |
-      Nitty-gritty technical descriptions of how blocklet works. Most useful when you need detailed information about APIs of the blocklet toolkit.
+      Nitty-gritty technical descriptions of how blocklet works. Most useful when you need detailed information about APIs of components in the blocklet toolkit.
 
       - [Define blocklet in blocklet.yml](/reference/blocklet-spec)
       - [Blocklet SDK](/reference/blocklet-sdk)
