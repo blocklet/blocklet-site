@@ -91,7 +91,7 @@ themeConfig:
           - text: Blocklet Lifecycle
             link: /conceptual/lifecycle
           - text: Blocklet Composition
-            link: /conceptual/component
+            link: /conceptual/composition
           - text: Blocklet Server Architecture
             link: /conceptual/server-architecture
           - text: Blocklet Server Routing
@@ -197,7 +197,7 @@ themeConfig:
           - text: 理解 Blocklet 生命周期
             link: /conceptual/lifecycle
           - text: 理解组合型 Blocklet
-            link: /conceptual/component
+            link: /conceptual/composition
           - text: 节点架构概述
             link: /conceptual/server-architecture
           - text: 节点请求流转
