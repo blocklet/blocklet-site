@@ -1,3 +1,10 @@
+## 0.1.72 (September 27, 2022)
+
+- chore: update deps
+- fix: docs "/how-to/create" locale link
+- chore: add docs "/reference/blocklet-actions"
+- chore: add docs "/how-to/create"
+
 ## 0.1.71 (September 27, 2022)
 
 - docs: rename children to components in meta

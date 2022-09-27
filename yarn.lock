@@ -2749,10 +2749,10 @@
   dependencies:
     elliptic "^6.5.2"
 
-"@xmark/cli@^2.4.61":
-  version "2.4.61"
-  resolved "https://registry.yarnpkg.com/@xmark/cli/-/cli-2.4.61.tgz#d769883ed635c5bf43a29ba85eddeab6213d1185"
-  integrity sha512-XFYGy/ACn4Cfxf2ZwJq5buc3xtedqArvYPiEWv1OZkucxoNpUiQ0EyAWQm3lYjU8f03e2hCgQm4yUEv8jOhbiQ==
+"@xmark/cli@^2.4.62":
+  version "2.4.62"
+  resolved "https://registry.yarnpkg.com/@xmark/cli/-/cli-2.4.62.tgz#d1c26570e905eb96d5a3a582801f98e733f2e45a"
+  integrity sha512-IxihDEjR2S1SjMy/t9681UpoB/3/qs7AybiJxXHX593kz2QZmOcyFM5ZGhlhs2K+U7fimLtBgLAndB75gZoZqA==
   dependencies:
     "@antfu/utils" "^0.5.2"
     "@arcblock/ux" "^2.4.32"
@@ -2760,8 +2760,8 @@
     "@mdx-js/rollup" "^2.1.3"
     "@rollup/plugin-yaml" "^3.1.0"
     "@vitejs/plugin-react" "^2.1.0"
-    "@xmark/client" "2.4.61"
-    "@xmark/utils" "2.4.61"
+    "@xmark/client" "2.4.62"
+    "@xmark/utils" "2.4.62"
     change-case "^4.1.2"
     debug "^4.3.4"
     escape-string-regexp "^5.0.0"
@@ -2800,10 +2800,10 @@
     yaml "2.1.1"
     yargs "^17.5.1"
 
-"@xmark/client@2.4.61", "@xmark/client@^2.4.61":
-  version "2.4.61"
-  resolved "https://registry.yarnpkg.com/@xmark/client/-/client-2.4.61.tgz#39d1e1a658a548d06e85031574a0ca94810697e7"
-  integrity sha512-G698SPPSTfeRaKpaKUOEw7R090TdmF8LsKPDiR+KMVJXmdYM9HcFeS7nc3gQw89rSmsGqx9uxz9vQrPRAZS5qg==
+"@xmark/client@2.4.62", "@xmark/client@^2.4.62":
+  version "2.4.62"
+  resolved "https://registry.yarnpkg.com/@xmark/client/-/client-2.4.62.tgz#f08de00a4b9e39d5048523c267e32a5036b22e62"
+  integrity sha512-ke5XWOKsJOrGulCbMLGIQymVBjKRDrHq5JZbXf9ZO1jcWsbwWQZ/wJ32m69fvboxI2PK25xfBytW6v8ZvJbECg==
   dependencies:
     "@arcblock/did-connect" "^2.4.32"
     "@arcblock/ux" "^2.4.32"
@@ -2814,7 +2814,7 @@
     "@iconify-json/mdi" "^1.1.33"
     "@mdx-js/react" "^2.1.3"
     "@mui/material" "^5.10.6"
-    "@xmark/utils" "2.4.61"
+    "@xmark/utils" "2.4.62"
     ahooks "^3.7.1"
     clsx "^1.2.1"
     defu "^6.1.0"
@@ -2832,10 +2832,10 @@
     ufo "^0.8.5"
     unocss "^0.45.23"
 
-"@xmark/plugin-docs-indexer@^2.4.61":
-  version "2.4.61"
-  resolved "https://registry.yarnpkg.com/@xmark/plugin-docs-indexer/-/plugin-docs-indexer-2.4.61.tgz#71082f4863dd453ffe056dbfcbb553cc1f6aec31"
-  integrity sha512-CmQW6oBYLsDwVVR//NqV+lcPSS+5nVCIangqLj4nmQIJn5INpy1RXPj+vSRCg1YbdtCDQnHVCbxYF8rCQoSBTA==
+"@xmark/plugin-docs-indexer@^2.4.62":
+  version "2.4.62"
+  resolved "https://registry.yarnpkg.com/@xmark/plugin-docs-indexer/-/plugin-docs-indexer-2.4.62.tgz#cc41001134a42d0c07edd85348ac5ac1fd3cbff5"
+  integrity sha512-Qyv9vWYeysNEOWDZxQBoZFQcNU4EHqKzgKZ+NssGj2JcwJJa9SJTSfn5AN+1mkHvEpf884Vi79KQLwW71Jz8Qw==
   dependencies:
     "@blocklet/sdk" "^1.8.24"
     "@emotion/react" "^11.10.4"
@@ -2849,10 +2849,10 @@
     pathe "^0.3.8"
     react "^18.2.0"
 
-"@xmark/theme-arcblock@^2.4.61":
-  version "2.4.61"
-  resolved "https://registry.yarnpkg.com/@xmark/theme-arcblock/-/theme-arcblock-2.4.61.tgz#ca87af8ee4a449e21c83fe219ac3ab256e533aff"
-  integrity sha512-k25bWCg65TejyzFqnCLfhdBC3rDi3TuIb/Wlaqm0wFmqNBeOigthpzqSaChTuN0/Q0wRhcNZLjuth5v0yFXDjw==
+"@xmark/theme-arcblock@^2.4.62":
+  version "2.4.62"
+  resolved "https://registry.yarnpkg.com/@xmark/theme-arcblock/-/theme-arcblock-2.4.62.tgz#3f3e363936f5543e55f0b187ce6eefd2b137789d"
+  integrity sha512-V5tKrZ7rEpQDvt4f7Gaox7zpz9bytWqfilx+58HO7ir/mGh9J2MENV62UQ8bfwI5MtVfsBPvCoc5Q19OcdO1fA==
   dependencies:
     "@arcblock/did-connect" "^2.4.32"
     "@arcblock/ux" "^2.4.32"
@@ -2862,8 +2862,8 @@
     "@iconify-json/uim" "^1.1.2"
     "@mui/material" "^5.10.6"
     "@popperjs/core" "^2.11.6"
-    "@xmark/client" "2.4.61"
-    "@xmark/utils" "2.4.61"
+    "@xmark/client" "2.4.62"
+    "@xmark/utils" "2.4.62"
     ahooks "^3.7.1"
     clsx "^1.2.1"
     pathe "^0.3.8"
@@ -2873,17 +2873,17 @@
     react-router-dom "^6.4.1"
     ufo "^0.8.5"
 
-"@xmark/theme-docs@^2.4.61":
-  version "2.4.61"
-  resolved "https://registry.yarnpkg.com/@xmark/theme-docs/-/theme-docs-2.4.61.tgz#fe7dc236eef81aaeb29f03a53d1d254654652412"
-  integrity sha512-b8sXPnDLH4s7qny1QYAkS6wZgQTSdPRZTuMxHhJSC9i7Fu9f6/3n0lnVfz2hBDPUckShWz8IqccBs5GxeUZf5Q==
+"@xmark/theme-docs@^2.4.62":
+  version "2.4.62"
+  resolved "https://registry.yarnpkg.com/@xmark/theme-docs/-/theme-docs-2.4.62.tgz#7652f5123a7973a3b96d600401a427c00ffc0715"
+  integrity sha512-vNPOBlajZUn8iynIZMMQub+Uk41/g/mG/M+eQurtSyVlnAXTkKXnTJQtBCi/LO6MCTkkArutTBCCtM1Ue3RTXQ==
   dependencies:
     "@arcblock/ux" "^2.4.32"
     "@emotion/react" "^11.10.4"
     "@emotion/styled" "^11.10.4"
     "@fontsource/lato" "^4.5.9"
     "@mui/material" "^5.10.6"
-    "@xmark/client" "2.4.61"
+    "@xmark/client" "2.4.62"
     ahooks "^3.7.1"
     clsx "^1.2.1"
     is-uri "^1.2.4"
@@ -2894,10 +2894,10 @@
     react-router-dom "^6.4.1"
     zx "7.0.8"
 
-"@xmark/utils@2.4.61":
-  version "2.4.61"
-  resolved "https://registry.yarnpkg.com/@xmark/utils/-/utils-2.4.61.tgz#9cc6e0968de536442331af1103f75f956f71e17b"
-  integrity sha512-D9llMo2Q3qkQa6mH3kqU/amtJSoKpwj5dMXM/FZS3/pQc5pqS/WOM9WbvKxc3hIzjmBsn3LQdNS1YUAgNpHdEQ==
+"@xmark/utils@2.4.62":
+  version "2.4.62"
+  resolved "https://registry.yarnpkg.com/@xmark/utils/-/utils-2.4.62.tgz#da4cf27e70ac9c006166937cb526bde1f183a15d"
+  integrity sha512-O8mbeJ++Ff0yx6ORre+y6nwdAaGBbJMIacYmcwzRCbAqYCKmW2YINFSYhzHiKUVwE66X8eMltpQSnjvTYGD1gw==
   dependencies:
     base-x "^4.0.0"
     hast-util-from-html "^1.0.0"
