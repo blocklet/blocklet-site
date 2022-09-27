@@ -4,128 +4,91 @@ description: 'Setup Local Blocklet Server'
 layout: 'documentation'
 ---
 
-Blocklet Server 是 Blocklet 的运行环境，开发 Blocklet 前你需要在本机启动 Blocklet Server。
+:::Alert{type="warning"}
+Currently, only Linux (Ubuntu) and macOS are supported by Blocklet Server, users on Windows should wait for the new version.
+:::
 
-## 支持平台
+Blocklet CLI is a command line tool that can be used to manage both blocklet server and blocklets, while Blocklet Server provides the runtime environment for blocklets, you need to run blocklet server locally when developing Blocklet.
 
-目前只能在 _Linux(Ubuntu)_ 或 _macOS_ 安装 Blocklet Server。
+## Install Blocklet CLI
 
-## 第一步：安装 Node.js
-
-**Node.js 最低版本要求: v14**
-
-### 使用 nvm 安装 Node.js
-
-我们推荐使用 [nvm] 安装 Node.js, 执行下面命令，即可安装 [nvm]
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh)"
-```
-
-```bash
-nvm install --lts
-```
-
-### 从官方文档安装 Node.js
-
-你也可以从官网 https://nodejs.org/ 安装 Node.js
-
-**检测是否安装成功：**
-
-```bash
-node -v
-v16.15.0
-```
-
-## 第二步：安装 Blocklet CLI
-
-### NPM
+You can install the Blocklet CLI with your preferred package manager:
 
 ```bash
 npm install -g @blocklet/cli
+# yarn global add @blocklet/cli
+# pnpm add -g @blocklet/cli
 ```
 
-### YARN
-
-```bash
-yarn global add @blocklet/cli
-```
-
-### PNPM
-
-```bash
-pnpm add -g @blocklet/cli
-```
-
-**检测是否安装成功：**
+**Check if installation is successful:**
 
 ```bash
 blocklet -V
 
                  Powered By
-     _             ____  _            _
-    / \   _ __ ___| __ )| | ___   ___| | __
-   / _ \ | '__/ __|  _ \| |/ _ \ / __| |/ /
-  / ___ \| | | (__| |_) | | (_) | (__|   <
- /_/   \_\_|  \___|____/|_|\___/ \___|_|\_\
+     ____ _ _ _
+    / \ _ __ ___| __ )| | ___ ___| | __
+   / _ \ | '__/ __| _ \| |/ _ \ / __| |/ /
+  / ___ \| | | (__| |_) | (_) | (__| <
+ /_/ \_\_| \___|____/|_|\___/ \___|_|\_\\
 
-            Blocklet CLI v1.8.22
+            Blocklet CLI v1.8.25
 
-1.8.22
+1.8.25
 ```
 
-## 第三步：安装 Nginx
+## Installing Nginx
 
-我们推荐使用 Nginx 作为 Blocklet Server 的网关
+We recommend using Nginx as the routing engine for Blocklet Server for better performance.
 
-> 如果你无法安装 Nginx, 可以跳过此步骤，使用 Blocklet Server 的内置网关
+> If you cannot install Nginx, you can skip this step and use Blocklet Server's built-in routing engine.
 
-**Nginx 版本: >= 1.18.0**
+**Nginx version: >= 1.18.0**
 
-**在 Mac 上安装 (使用 Homebrew)**
+**Install on a Mac (using Homebrew)**
 
 - `brew install nginx`
-- 参考: https://formulae.brew.sh/formula/nginx
+- Reference: https://formulae.brew.sh/formula/nginx
 
-**在 Linux 上安装**
+**Install on Linux**
 
-- 参考: https://www.nginx.com/resources/wiki/start/topics/tutorials/install/
+- Reference: https://www.nginx.com/resources/wiki/start/topics/tutorials/install/
 
-**检测是否安装成功：**
+**Check if the installation is successful:**
 
 ```bash
 nginx -v
 nginx version: nginx/1.21.6
 ```
 
-## 第四步：安装并初始化 DID 钱包
+## Setup DID wallet
 
-见 [获取 DID 钱包](/quick-start/wallet)
+See [Setup DID wallet](/quick-start/did-wallet)
 
-## 第五步：创建并启动 Blocklet Server
+## Start Blocklet Server
 
-安装 Blocklet CLI 后，您可以使用一个空目录存储配置并初始化 Blocklet Server。
+After installing the Blocklet CLI, you can use an empty directory to store the configuration and initialize the Blocklet Server.
 
-1. 运行 `mkdir -p ~/blocklet-server-data && cd ~/blocklet-server-data` 命令进入目录。 可以将 `~/blocklet-server-data` 替换为任何其他目录
+1. Run the `mkdir -p ~/blocklet-server-data && cd ~/blocklet-server-data` command to enter the directory. You can replace `~/blocklet-server-data` with any other directory
 
-2. 运行 `blocklet server init` 命令初始化 Blocklet Server
+2. Run the `blocklet server init` command to initialize Blocklet Server
 
-- > 执行初始化命令后，系统将确认您要存储配置的目录。确认后，系统将自动生成您的 Blocklet Server 配置。
+- After executing the `init` command, the system will confirm the directory where you want to store your configuration. After confirmation, the system will automatically generate your Blocklet Server configuration.
 
-3. 执行 `blocklet server start` 启动 Blocklet Server
+3.  Execute `blocklet server start` to start Blocklet Server
 
 <details>
-<summary>输出示例</summary>
+<summary>Example output</summary>
 
-```
-linchen@LinkdeMacBook-Pro demo % blocklet server init
-blocklet server v1.8.8
-? Are you sure to initialize a Blocklet Server instance in the current directory(/Users/linchen/code/arcblock/ad/demo) Yes
+```text
+linchen@arcblock demo % blocklet server init
+blocklet server v1.8.25
+Are you sure to initialize a Blocklet server? Are you sure to initialize a Blocklet Server instance in the current directory(/Users/linchen/code/arcblock/ad/demo) Yes
 ✔ Blocklet Server configuration is successfully generated /Users/linchen/code/arcblock/ad/demo/.abtnode/abtnode.yml
 ℹ blocklet server start
 
-linchen@LinkdeMacBook-Pro demo % bn server start
-bn server v1.8.8
+linchen@arcblock demo % bn server start
+bn server v1.8.25
 ✔ Blocklet Server DB Proxy ready on port 40404
 ℹ Node DID from config zNKqGAvUzcCowxtNA5r5gKQYUm2hR4X2SE2o
 ℹ Node config from /Users/linchen/code/arcblock/ad/.abtnode/abtnode.yml
@@ -151,11 +114,11 @@ Secure URLs (Recommended):
 
 </details>
 
-## 访问 Blocklet Server
+## Access Blocklet Server
 
-Blocklet Server 启动成功后。 您会在 terminal 中看到 Blocklet Server 的 URL
+After Blocklet Server starts successfully. You will see the URL of Blocklet Server in the terminal
 
-```
+```text
 HTTP URLs:
 
 - http://192.168.3.28/admin/
@@ -166,16 +129,16 @@ Secure URLs (Recommended):
 - https://192-168-3-28.ip.abtnet.io/admin/
 ```
 
-- **(推荐)** `http://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.did.abtnet.io/admin/`: 通过 DID Domain 访问
-- **(推荐)** `https://192-168-3-28.ip.abtnet.io/admin/`: 通过 IP Echo Domain 访问
-- (不推荐) `http://192.168.3.28/admin/` 通过 IP 访问
+- **(Recommended)** `http://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.did.abtnet.io/admin/`: Accessed via DID Domain
+- **(Recommended)** `https://192-168-3-28.ip.abtnet.io/admin/`: Accessed via IP Echo Domain
+- (Not recommended) `http://192.168.3.28/admin/` Accessed via IP
 
-> 注意：请将替换 `192.168.3.28` 为您的本地网络 IP
->
-> 注意：请不要使用 localhost 或 127.0.0.1 地址访问 Blocklet 服务器。 您将无法使用 DID 钱包连接它。
+> Note: Please replace `192.168.3.28` with your local network IP
 
-## 停止 Blocklet Server
+:::Alert{type="warning"}
+Note: Please do not use localhost or 127.0.0.1 address to access the Blocklet server. You will not be able to connect to it using the DID wallet.
+:::
 
-您可以通过执行 `blocklet server stop` 命令来停止 blocklet 服务器。
+## Stop Blocklet Server
 
-[nvm]: https://github.com/nvm-sh/nvm
+You can stop the blocklet server by executing the `blocklet server stop` command.

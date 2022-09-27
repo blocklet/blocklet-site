@@ -22,7 +22,7 @@ themeConfig:
             link: /quick-start/nodejs
           - text: Setup DID Wallet
             link: /quick-start/did-wallet
-          - text: Install Blocklet Server
+          - text: Install Blocklet CLI
             link: /quick-start/blocklet-server
           - text: Create your first blocklet
             link: /quick-start/create-blocklet
@@ -128,7 +128,7 @@ themeConfig:
             link: /quick-start/nodejs
           - text: 设置 DID Wallet
             link: /quick-start/did-wallet
-          - text: 安装 Blocklet Server
+          - text: 安装 Blocklet CLI
             link: /quick-start/blocklet-server
           - text: 创建第一个应用
             link: /quick-start/create-blocklet

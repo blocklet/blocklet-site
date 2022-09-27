@@ -1,60 +1,23 @@
 ---
-title: '在本机启动 Blocklet Server '
-description: '在本机启动 Blocklet Server'
+title: '安装 Blocklet CLI'
+description: '在本机安装 Blocklet CLI 并启动 Blocklet Server'
 layout: 'documentation'
 ---
 
-Blocklet Server 是 Blocklet 的运行环境，开发 Blocklet 前你需要在本机启动 Blocklet Server。
+:::Alert{type="warning"}
+目前只能在 Linux(Ubuntu) 或 macOS 上安装和运行 Blocklet Server，Windows 平台下的用户请等待新版。
+:::
 
-## 支持平台
+Blocklet CLI 是能够同时用来管理 Blocklet Server 和 Blocklet 的命令行工具，而 Blocklet Server 是 Blocklet 的运行环境，开发 Blocklet 时需要在本机运行 Blocklet Server。
 
-目前只能在 _Linux(Ubuntu)_ 或 _macOS_ 安装 Blocklet Server。
+## 安装 Blocklet CLI
 
-## 第一步：安装 Node.js
-
-**Node.js 最低版本要求: v14**
-
-### 使用 nvm 安装 Node.js
-
-我们推荐使用 [nvm] 安装 Node.js, 执行下面命令，即可安装 [nvm]
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh)"
-```
-
-```bash
-nvm install --lts
-```
-
-### 从官方文档安装 Node.js
-
-你也可以从官网 https://nodejs.org/ 安装 Node.js
-
-**检测是否安装成功：**
-
-```bash
-node -v
-v16.15.0
-```
-
-## 第二步：安装 Blocklet CLI
-
-### NPM
+你可以用你偏好的包管理器来安装 Blocklet CLI：
 
 ```bash
 npm install -g @blocklet/cli
-```
-
-### YARN
-
-```bash
-yarn global add @blocklet/cli
-```
-
-### PNPM
-
-```bash
-pnpm add -g @blocklet/cli
+# yarn global add @blocklet/cli
+# pnpm add -g @blocklet/cli
 ```
 
 **检测是否安装成功：**
@@ -69,12 +32,12 @@ blocklet -V
   / ___ \| | | (__| |_) | | (_) | (__|   <
  /_/   \_\_|  \___|____/|_|\___/ \___|_|\_\
 
-            Blocklet CLI v1.8.22
+            Blocklet CLI v1.8.25
 
-1.8.22
+1.8.25
 ```
 
-## 第三步：安装 Nginx
+## 安装 Nginx
 
 我们推荐使用 Nginx 作为 Blocklet Server 的网关
 
@@ -98,11 +61,11 @@ nginx -v
 nginx version: nginx/1.21.6
 ```
 
-## 第四步：安装并初始化 DID 钱包
+## 设置 DID 钱包
 
-见 [获取 DID 钱包](/quick-start/wallet)
+见 [设置 DID 钱包](/quick-start/did-wallet)
 
-## 第五步：创建并启动 Blocklet Server
+## 启动 Blocklet Server
 
 安装 Blocklet CLI 后，您可以使用一个空目录存储配置并初始化 Blocklet Server。
 
@@ -117,15 +80,15 @@ nginx version: nginx/1.21.6
 <details>
 <summary>输出示例</summary>
 
-```
-linchen@LinkdeMacBook-Pro demo % blocklet server init
-blocklet server v1.8.8
+```text
+linchen@arcblock demo % blocklet server init
+blocklet server v1.8.25
 ? Are you sure to initialize a Blocklet Server instance in the current directory(/Users/linchen/code/arcblock/ad/demo) Yes
 ✔ Blocklet Server configuration is successfully generated /Users/linchen/code/arcblock/ad/demo/.abtnode/abtnode.yml
 ℹ blocklet server start
 
-linchen@LinkdeMacBook-Pro demo % bn server start
-bn server v1.8.8
+linchen@arcblock demo % bn server start
+bn server v1.8.25
 ✔ Blocklet Server DB Proxy ready on port 40404
 ℹ Node DID from config zNKqGAvUzcCowxtNA5r5gKQYUm2hR4X2SE2o
 ℹ Node config from /Users/linchen/code/arcblock/ad/.abtnode/abtnode.yml
@@ -155,7 +118,7 @@ Secure URLs (Recommended):
 
 Blocklet Server 启动成功后。 您会在 terminal 中看到 Blocklet Server 的 URL
 
-```
+```text
 HTTP URLs:
 
 - http://192.168.3.28/admin/
@@ -177,5 +140,3 @@ Secure URLs (Recommended):
 ## 停止 Blocklet Server
 
 您可以通过执行 `blocklet server stop` 命令来停止 blocklet 服务器。
-
-[nvm]: https://github.com/nvm-sh/nvm
