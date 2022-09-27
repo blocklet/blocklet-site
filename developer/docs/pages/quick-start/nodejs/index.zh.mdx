@@ -3,6 +3,29 @@ layout: 'documentation'
 title: 安装 Node.js
 ---
 
-:::Alert
-this page is a draft and need to be updated
+:::Alert{type="success"}
+如果你的开发环境中已经安装了 Node.js v14+，你可以安全地跳过这一步。
 :::
+
+## 为什么是 Node.js?
+
+Blocklet 工具箱中的大部分组件都是用 Node.js 构建的，所以需要安装 Node.js 才能使用，大部分组件只能在 Node.js v14 及以上版本中工作。
+
+要想知道你是否已经安装了 Node.js 并检查已安装的版本，请运行以下命令。
+
+```bash
+node -v
+```
+
+## 安装 Node.js
+
+Node.js 版本管理器是安装 Node.js 的推荐方式，因为它允许你在系统上安装和切换多个版本的 Node.js，所以你可以在多个版本的 Node.js 上测试你的程序，以确保它们对不同版本的用户有效。
+
+对于 MACOS 或 Linux 用户，请参考以下版本管理器的文档，了解如何安装 Node.js。
+
+- [nvm](https://github.com/creationix/nvm)
+- [n](https://github.com/tj/n)
+
+对于更多可用的 Node.js 版本管理器，请查看[这个比较帖子](https://www.honeybadger.io/blog/node-environment-managers/)。
+
+对于 Windows 用户，请继续关注，我们正在测试和完善对 Windows 平台上 Blocklet 工具箱的支持。

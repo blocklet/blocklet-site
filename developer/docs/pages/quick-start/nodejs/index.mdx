@@ -3,25 +3,29 @@ layout: 'documentation'
 title: Setup Node.js
 ---
 
+:::Alert{type="success"}
+You can safely skip this step if you have already Node.js v14+ installed on your development environment.
+:::
+
 ## Why Node.js?
 
-To run any code samples in this documentation, you need to have Node.js and npm installed first. To see if you already have Node.js and npm installed and check the installed version, run the following commands:
+Most of the components in the blocklet toolkit are built with Node.js, so Node.js is required, most of the components work only on Node.js v14 and above versions.
+
+To see if you already have Node.js installed and check the installed version, run the following commands:
 
 ```bash
 node -v
-npm -v
 ```
 
 ## Install Node.js
 
-Node version managers allow you to install and switch between multiple versions of Node.js and npm on your system so you can test your applications on multiple versions of npm to ensure they work for users on different versions.
+Node version managers are recommended way to install Node.js because they allow you to install and switch between multiple versions of Node.js on your system, so you can test your blocklets on multiple versions of Node.js to ensure they work for users on different versions.
 
-### OSX or Linux
+For MACOS or Linux users, please refer to the documentation of the following version managers for instructions on how to install Node.js:
 
 - [nvm](https://github.com/creationix/nvm)
 - [n](https://github.com/tj/n)
 
-### Windows
+For more available node version managers please checkout [this comparison post](https://www.honeybadger.io/blog/node-environment-managers/).
 
-- [nodist](https://github.com/marcelklehr/nodist)
-- [nvm-windows](https://github.com/coreybutler/nvm-windows)
+For Windows users, please stay tuned well we are testing support of the blocklet toolkit on Windows platform.
