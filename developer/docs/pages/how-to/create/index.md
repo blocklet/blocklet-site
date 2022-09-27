@@ -61,7 +61,7 @@ Next select `[static] react` as an example
 
 The program will automatically create the directory structure of the corresponding template, and you can install the dependencies according to its prompts to enter the development mode of the project.
 
-For more information about `create-blocklet`, please refer to [create-blocklet](http://www.createblocklet.dev/zh)
+For more information about `create-blocklet`, please refer to [create-blocklet](http://www.createblocklet.dev)
 
 ## Creating a Blocklet project based on an existing project
 
