@@ -27,7 +27,7 @@ layout: documentation
 执行命令后，组件信息会被添加到 `blocklet.yml` 中
 
 ```yml
-children:
+components:
   - name: xxxx
     mountPoint: /xxxx
     source:
@@ -38,7 +38,7 @@ children:
 
 示例：[https://github.com/blocklet/component-demo/blob/main/blocklet.yml](https://github.com/blocklet/component-demo/blob/main/blocklet.yml)
 
-详见 [Blocklet Meta: Children](/reference/blocklet-spec#Children)
+详见 [Blocklet Meta: Components](/reference/blocklet-spec#Components)
 
 ## 删除组件
 
@@ -87,11 +87,11 @@ navigation:
 ```yml
 # app/blocklet.yml
 
-children:
-  - name: child1
+components:
+  - name: component1
 navigation:
   - title: xxx
-    child: child1
+    component: component1
 ```
 
 ```yml

@@ -13,7 +13,7 @@ repository:
   type: git
   url: git+https://github.com/blocklet/blocklet-site.git
 specVersion: 1.2.7
-version: 0.1.70
+version: 0.1.71
 logo: logo.png
 files: []
 interfaces:
@@ -43,14 +43,6 @@ capabilities:
   clusterMode: false
   component: true
 screenshots: []
-children:
-  - name: meilisearch
-    mountPoint: /meilisearch
-    source:
-      store:
-        - https://test.store.blocklet.dev
-      name: meilisearch
-      version: latest
 navigation:
   - title:
       en: Guides
@@ -118,3 +110,11 @@ navigation:
         link: https://github.com/orgs/blocklet/discussions
       - title: Report a Bug
         link: https://github.com/blocklet/support/issues
+components:
+  - name: meilisearch
+    mountPoint: /meilisearch
+    source:
+      store:
+        - https://test.store.blocklet.dev
+      name: meilisearch
+      version: latest

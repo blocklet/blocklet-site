@@ -14,7 +14,7 @@ repository:
   type: git
   url: git+https://github.com/blocklet/blocklet-site.git
 specVersion: 1.2.7
-version: 0.1.70
+version: 0.1.71
 logo: logo.png
 files:
   - hooks/post-start.js
@@ -46,7 +46,6 @@ capabilities:
   clusterMode: false
   component: true
 screenshots: []
-children: []
 navigation:
   - title:
       en: Docs
@@ -54,3 +53,4 @@ navigation:
     link:
       en: /en
       zh: /zh
+components: []

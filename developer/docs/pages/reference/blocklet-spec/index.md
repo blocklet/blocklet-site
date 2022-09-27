@@ -260,12 +260,12 @@ capabilities:
   component: true # Can blocklet become a component and be composed by other blocklets
 ```
 
-## Children
+## Components
 
 Demo: [Component Demo](https://github.com/blocklet/component-demo/blob/main/blocklet.yml)
 
 ```yml
-children: # Usually no manual maintenance is required, it can be maintained through `blocklet add/remove`
+components: # Usually no manual maintenance is required, it can be maintained through `blocklet add/remove`
   - name: xxx # Human readable ID (required)
     source: # installation source
       # install via url
@@ -282,7 +282,7 @@ children: # Usually no manual maintenance is required, it can be maintained thro
 #### Config Source
 
 ```yml
-children:
+components:
   - name: c1
     mountPoint: /c1
 
@@ -327,8 +327,8 @@ navigation: # navigation information (app map)
   - title: xxx name
     # link to a url
     link: xxx
-    # link to child component
-    child: xxx # child name or child did
+    # link to component
+    component: xxx # component name or did
     section: # where I want to show
       - header
       - footer
@@ -449,7 +449,7 @@ timeout:
 
 ## Config Services
 
-The service configuration of Parent blocklet and Child blocklet are independent, not unified.
+The service configuration of Parent blocklet and Component blocklet are independent, not unified.
 
 > For the specific configuration method of services, see [https://github.com/blocklet/blocklet-specification/blob/main/docs/meta.md](https://github.com/blocklet/blocklet-specification/blob/main/docs/meta.md)
 
@@ -457,10 +457,10 @@ The service configuration of Parent blocklet and Child blocklet are independent,
 
 - Parent blocklet services are configured in `interface.services` in parent blocklet.yml
 
-### Child blocklet services
+### Component blocklet services
 
-- Child blocklet services are configured in `interface.services` in child blocklet.yml
-- When `children.mountPoints.services` is configured in parent blocklet.yml, it will be merged with child blocklet.yml `interface.services`
+- Component blocklet services are configured in `interface.services` in component blocklet.yml
+- When `components[].services` is configured in parent blocklet.yml, it will be merged with component blocklet.yml `interface.services`
 
 Examples of merger strategies:
 
@@ -469,34 +469,30 @@ parent blocklet.yml:
 ```yml
 name: parent-blocklet
 interfaces:
-  - name: parentInterfaceName
-children:
-  - name: child-blocklet
-    resolved: 'xxxx'
-    mountPoints:
-      - root:
-          interfaceName: parentInterfaceName
-          prefix: '/path/to/xx'
-      - child:
-          interfaceName: childInterfaceName
-      - services:
-          - name: s1
-          - name: s2
+  - name: publicUrl
+    type: web
+components:
+  - name: component-blocklet
+    mountPooint: /path/to/xx
+    services:
+      name: s1
+      name: s2
 ```
 
-child blocklet.yml:
+component blocklet.yml:
 
 ```yml
-name: child-blocklet
+name: component-blocklet
 interfaces:
-  - name: childInterfaceName
+  - name: publicUrl
+    type: web
     services:
       - name: s2
       - name: s3
 ```
 
-Then the services of child blocklet are:
+Then the services of component blocklet are:
 
-- s1 (from parent `children.mountPoints.services`)
-- s2 (from parent `children.mountPoints.services`)
-- s3 (from child `interface.services`)
+- s1 (from parent `components[].services`)
+- s2 (from parent `components[].services`)
+- s3 (from component `interface.services`)

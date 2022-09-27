@@ -1,3 +1,7 @@
+## 0.1.71 (September 27, 2022)
+
+- docs: rename children to components in meta
+
 ## 0.1.70 (September 27, 2022)
 
 - chore: update xmark

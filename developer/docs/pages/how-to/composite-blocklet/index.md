@@ -27,7 +27,7 @@ You can see the command to add a component in the component details page of any 
 After executing the command, component information will be added to `blocklet.yml`
 
 ```yml
-children:
+components:
   - name: xxxx
     mountPoint: /xxxx
     source:
@@ -38,7 +38,7 @@ children:
 
 Example: [https://github.com/blocklet/component-demo/blob/main/blocklet.yml](https://github.com/blocklet/component-demo/blob/main/blocklet.yml)
 
-See [Blocklet Meta: Children](/reference/blocklet-spec#Children)
+See [Blocklet Meta: Components](/reference/blocklet-spec#Components)
 
 ## Remove component
 
@@ -87,11 +87,11 @@ navigation:
 ```yml
 # app/blocklet.yml
 
-children:
-  - name: child1
+components:
+  - name: component1
 navigation:
   - title: xxx
-    child: child1
+    component: component1
 ```
 
 ```yml

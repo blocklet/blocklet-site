@@ -70,7 +70,7 @@ This is an informational command which prints meta information for a Blocklet.
 $ blocklet meta
 ```
 
-## Manage children in blocklet.yml
+## Manage components in blocklet.yml
 
 ### Add
 

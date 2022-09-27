@@ -457,7 +457,7 @@ import { Component } from '@blocklet/sdk';
   If blocklet.yml is
 
   ```
-  children
+  components
     - name: component-1
       source:
         store: xxx
@@ -540,7 +540,7 @@ e.g.
 parent:
 
 ```yml
-children:
+components:
   - name: component1
     source:
       store: xxx

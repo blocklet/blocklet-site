@@ -260,12 +260,12 @@ capabilities:
   component: true # Can blocklet become a component and be composed by other blocklets
 ```
 
-## Children
+## Components
 
 Demo: [Component Demo](https://github.com/blocklet/component-demo/blob/main/blocklet.yml)
 
 ```yml
-children: # 通常不需要手动维护，通过 `blocklet add/remove` 维护即可
+components: # 通常不需要手动维护，通过 `blocklet add/remove` 维护即可
   - name: xxx # 人类可读的 ID (必填)
     source: # 安装源
       # 通过 url 安装
@@ -282,7 +282,7 @@ children: # 通常不需要手动维护，通过 `blocklet add/remove` 维护即
 #### 配置 Source
 
 ```yml
-children:
+components:
   - name: c1
     mountPoint: /c1
 
@@ -327,8 +327,8 @@ navigation: # 导航信息（ 应用地图 ）
   - title: xxx 名称
     # 链接到某个 url
     link: xxx
-    # 链接到子组件
-    child: xxx # child name or child did
+    # 链接到组件
+    components: xxx # components name or did
     section: # 希望在哪里展示
       - header
       - footer
@@ -449,7 +449,7 @@ timeout:
 
 ## 配置 Services
 
-Parent blocklet 和 Child blocklet 的 service 配置是独立的，不是统一的。
+Parent blocklet 和 Component blocklet 的 service 配置是独立的，不是统一的。
 
 > services 的具体配置方式见 [https://github.com/blocklet/blocklet-specification/blob/main/docs/meta.md](https://github.com/blocklet/blocklet-specification/blob/main/docs/meta.md)
 
@@ -457,10 +457,10 @@ Parent blocklet 和 Child blocklet 的 service 配置是独立的，不是统一
 
 - Parent blocklet services 在 parent blocklet.yml 中 `interface.services` 配置
 
-### Child blocklet services
+### Component blocklet services
 
-- Child blocklet services 在 child blocklet.yml 中 `interface.services` 配置
-- 当 parent blocklet.yml 中配置了 `children.mountPoints.services` 时，会和 child blocklet.yml `interface.services` 合并
+- Component blocklet services 在 component blocklet.yml 中 `interface.services` 配置
+- 当 parent blocklet.yml 中配置了 `components[].services` 时，会和 component blocklet.yml `interface.services` 合并
 
 合并策略举例:
 
@@ -469,34 +469,30 @@ parent blocklet.yml:
 ```yml
 name: parent-blocklet
 interfaces:
-  - name: parentInterfaceName
-children:
-  - name: child-blocklet
-    resolved: 'xxxx'
-    mountPoints:
-      - root:
-          interfaceName: parentInterfaceName
-          prefix: '/path/to/xxx'
-      - child:
-          interfaceName: childInterfaceName
-      - services:
-          - name: s1
-          - name: s2
+  - name: publicUrl
+    type: web
+components:
+  - name: component-blocklet
+    mountPooint: /path/to/xx
+    services:
+      name: s1
+      name: s2
 ```
 
-child blocklet.yml:
+component blocklet.yml:
 
 ```yml
-name: child-blocklet
+name: component-blocklet
 interfaces:
-  - name: childInterfaceName
+  - name: publicUrl
+    type: web
     services:
       - name: s2
       - name: s3
 ```
 
-则 child blocklet 的 services 为:
+则 component blocklet 的 services 为:
 
-- s1 (from parent `children.mountPoints.services`)
-- s2 (from parent `children.mountPoints.services`)
-- s3 (from child `interface.services`)
+- s1 (from parent `components[].services`)
+- s2 (from parent `components[].services`)
+- s3 (from component `interface.services`)
