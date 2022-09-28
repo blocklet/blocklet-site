@@ -59,6 +59,8 @@ themeConfig:
         items:
           - text: blocklet.yml
             link: /reference/blocklet-spec
+          - text: meta.js
+            link: /reference/meta-js
           - text: Blocklet SDK
             link: /reference/blocklet-sdk
           - text: Blocklet CLI
@@ -166,6 +168,8 @@ themeConfig:
         items:
           - text: blocklet.yml
             link: /reference/blocklet-spec
+          - text: meta.js
+            link: /reference/meta-js
           - text: Blocklet 开发套件
             link: /reference/blocklet-sdk
           - text: Blocklet 命令行

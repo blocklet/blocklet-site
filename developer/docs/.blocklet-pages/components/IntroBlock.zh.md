@@ -45,7 +45,7 @@ list:
     description: !md |
       关于 Blocklet 如何工作的琐碎的技术描述。当你需要关于 Blocklet 工具包中的组件的 API 的详细信息时，它最有用。
 
-      - [在 blocklet.yml 中定义 Blocklet](/reference/blocklet-spec)
+      - [blocklet.yml](/reference/blocklet-spec) 和 [meta.js](/reference/meta-js)
       - [Blocklet SDK](/reference/blocklet-sdk)
       - [Blocklet UI](/reference/blocklet-ui)
       - [Blocklet CLI](/reference/blocklet-cli) 和 [Server CLI](/reference/blocklet-server-cli)

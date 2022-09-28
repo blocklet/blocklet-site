@@ -45,7 +45,7 @@ list:
     description: !md |
       Nitty-gritty technical descriptions of how blocklet works. Most useful when you need detailed information about APIs of components in the blocklet toolkit.
 
-      - [Define blocklet in blocklet.yml](/reference/blocklet-spec)
+      - [blocklet.yml](/reference/blocklet-spec) and [meta.js](/reference/meta-js)
       - [Blocklet SDK](/reference/blocklet-sdk)
       - [Blocklet UI](/reference/blocklet-ui)
       - [Blocklet CLI](/reference/blocklet-cli) and [Server CLI](/reference/blocklet-server-cli)
