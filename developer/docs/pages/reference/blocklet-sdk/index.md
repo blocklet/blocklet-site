@@ -397,7 +397,7 @@ Supply full-promise and typescript support.
 ```javascript
 import { Database } from '@blocklet/sdk';
 
-// Quick start
+// Getting Started
 (async () => {
   const db = new Database('demo.db');
   const inserted = await db.insert({ key: 'value' });

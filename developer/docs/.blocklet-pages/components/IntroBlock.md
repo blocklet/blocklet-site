@@ -9,7 +9,7 @@ gap: 2
 align: left
 list:
   - icon: i-mdi:gesture-two-double-tap
-    title: Quick Start
+    title: Getting Started
     description: !md |
       Environment setup and get your first blocklet project up and running within minutes
 

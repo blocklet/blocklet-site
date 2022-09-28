@@ -16,7 +16,8 @@ themeConfig:
     en:
       - text: Welcome
         link: /
-      - text: Quick Start
+      - text: Getting Started
+        link: /quick-start
         items:
           - text: Setup Node.js
             link: /quick-start/nodejs
@@ -122,7 +123,8 @@ themeConfig:
     zh:
       - text: 欢迎
         link: /
-      - text: 快速开始
+      - text: 入门指南
+        link: /quick-start
         items:
           - text: 安装 Node.js
             link: /quick-start/nodejs
