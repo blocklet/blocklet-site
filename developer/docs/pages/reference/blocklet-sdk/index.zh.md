@@ -640,3 +640,23 @@ app.post('/component-private-api', middlewares.component.verifySig, (req, res) =
   // will return 401 if verify sig failed
 });
 ```
+
+## Security
+
+当 Blocklet 需要对敏感信息进行加密和解密时，Security 模块可直接使用。
+
+```javascript
+const assert = require('assert');
+const { Security } = require('@blocklet/sdk');
+
+const message = 'some sensitive info';
+const encrypted = Security.encrypt(message);
+const decrypted = Security.decrypt(encrypted);
+assert.notEqual(encrypted, message);
+assert.notEqual(encrypted, decrypted);
+assert.equal(decrypted, message);
+```
+
+:::Alert
+Security 模块在内部使用了 AES 加密，所有的参数都是使用确定的算法从 Blocklet Server 私钥计算得到。
+:::

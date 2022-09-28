@@ -640,3 +640,23 @@ app.post('/component-private-api', middlewares.component.verifySig, (req, res) =
   // will return 401 if verify sig failed
 });
 ```
+
+## Security
+
+When blocklet needs to encrypt and decrypt sensitive information, the security module comes to help:
+
+```javascript
+const assert = require('assert');
+const { Security } = require('@blocklet/sdk');
+
+const message = 'some sensitive info';
+const encrypted = Security.encrypt(message);
+const decrypted = Security.decrypt(encrypted);
+assert.notEqual(encrypted, message);
+assert.notEqual(encrypted, decrypted);
+assert.equal(decrypted, message);
+```
+
+:::Alert
+The security module uses AES encryption internally, all encryption params are derived from blocklet server secret key using a deterministic algorithm.
+:::
