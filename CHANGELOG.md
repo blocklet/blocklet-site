@@ -1,3 +1,7 @@
+## 0.1.75 (September 28, 2022)
+
+- fix: doc search not working
+
 ## 0.1.74 (September 28, 2022)
 
 - chore: polish quick start index
