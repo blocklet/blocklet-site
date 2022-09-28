@@ -26,7 +26,7 @@ list:
       - [Platform overview](/conceptual/overview)
       - [Core blocklet concepts](/conceptual/blocklet)
       - [Blocklet lifecycle](/conceptual/lifecycle)
-      - [Blocklet composition](/conceptual/composition)
+      - [Blocklet composition](/conceptual/composition) and [payment](/conceptual/paid-blocklet)
       - [Blocklet server architecture](/conceptual/server-architecture)
       - [Blocklet routing layer](/conceptual/server-routing) and [access control model](/conceptual/access-control)
   - icon: i-mdi:television-guide

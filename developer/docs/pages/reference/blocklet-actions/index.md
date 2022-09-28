@@ -1,24 +1,25 @@
 ---
-title: Github Actions
-description: For a modern application, we should spend more time on the development project rather than dealing with the packaging process of each release instead. This article will make it easier for you to use Github Actions to improve your productivity.
+title: GitHub Actions
+description: For a modern application, we should spend more time on the development project rather than dealing with the packaging process of each release instead. This article will make it easier for you to use GitHub Actions to improve your productivity.
 layout: documentation
 ---
 
-If you are using Github Actions to manage the process of packaging, publishing, and deploying Blocklet applications, then you will more efficient Blocklet application deployment guide in this article.
-
+If you are using GitHub Actions to manage the process of packaging, publishing, and deploying Blocklet applications, then you will more efficient Blocklet application deployment guide in this article.
 
 ## What is action workflow?
+
 [action-workflow](https://github.com/blocklet/action-workflow) is a quick release process that we have learned from our extensive Blocklet application development practice.
 
 With action-workflow, we can quickly configure the flow in CI for each Blocklet application, saving development time and debugging time cost in CI.
 
 ## How to use action workflow?
 
-First your project needs to create a `.github` folder to enable the [Github Actions](https://docs.github.com/en/actions) feature
+First your project needs to create a `.github` folder to enable the [GitHub Actions](https://docs.github.com/en/actions) feature
 
 Then create a `workflows/main.yml` file in `.github` and configure some necessary initialization processes. Such as `git checkout`, `dependencies install`, etc.
 
 Once everything is in place, add the following to access the Blocklet action-workflow functionality.
+
 ```yaml
 - name: Deploy Blocklet Site
   uses: blocklet/action-workflow@v1

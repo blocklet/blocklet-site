@@ -26,7 +26,7 @@ list:
       - [平台概述](/conceptual/overview)
       - [核心 Blocklet 概念](/conceptual/blocklet)
       - [Blocklet 生命周期](/conceptual/lifecycle)
-      - [组合型 Blocklet](/conceptual/composition)
+      - [组合型 Blocklet](/conceptual/composition) 和 [付费 Blocklet](/conceptual/paid-blocklet)
       - [Blocklet Server 架构](/conceptual/server-architecture)
       - [Blocklet 路由引擎](/conceptual/server-routing)和[访问控制模型](/conceptual/access-control)
   - icon: i-mdi:television-guide
