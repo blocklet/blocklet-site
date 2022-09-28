@@ -1,3 +1,8 @@
+## 0.1.73 (September 28, 2022)
+
+- chore: doc for security module in blocklet sdk
+- chore: doc for environments in blocklet.yml
+
 ## 0.1.72 (September 27, 2022)
 
 - chore: update deps

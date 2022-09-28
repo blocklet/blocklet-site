@@ -182,7 +182,7 @@ interfaces:
 
 ## Environment
 
-runtime environment variables
+Blocklet runtime environment variables are defined with `environments`:
 
 ```yml
 environments:
@@ -193,6 +193,16 @@ environments:
     secure: false # Whether it is sensitive information
     shared: true # Is it public. Defaults to true, shared must be false when secure is true
 ```
+
+Following rules applies to environments:
+
+- They can have default values
+- They can be changed in blocklet dashboard and during blocklet launch process.
+- Shared environment variables are merged in [blocklet composition](/conceptual/composition)
+- Variable names can not start with `ABT_NODE_` or `BLOCKLET_` except a few exceptions:
+  - `BLOCKLET_PASSPORT_COLOR` blocklet passport color, can be any valid hex encoded color string
+  - `BLOCKLET_WALLET_TYPE` can be `eth` or `default`, if your blocklet works on ethereum, should set this to `eth`
+  - `BLOCKLET_APP_LOGO` URL or path to the running blocklet instance logo, defaults to blocklet logo
 
 ## Scripts
 

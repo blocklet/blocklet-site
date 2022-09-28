@@ -182,7 +182,7 @@ interfaces:
 
 ## Environments
 
-运行时环境变量
+Blocklet 的运行环境变量是用 `environments` 定义的：
 
 ```yml
 environments:
@@ -193,6 +193,16 @@ environments:
     secure: false # 是否是敏感信息
     shared: true # 是否公开。默认为 true, 当 secure 为 true 时 shared 必为 false
 ```
+
+以下规则适用于环境。
+
+- 它们可以有默认值
+- 它们可以在 Blocklet dashboard 和 Blocklet 启动过程中被改变。
+- 共享的环境变量在[blocklet composition](/conceptual/composition)中被合并。
+- 变量名称不能以`ABT_NODE_`或`BLOCKLET_`开头，少数例外。
+  - `BLOCKLET_PASSPORT_COLOR` 小区护照颜色，可以是任何有效的十六进制编码的颜色字符串。
+  - `BLOCKLET_WALLET_TYPE`可以是`eth`或`default`，如果你的区块链在以太坊上工作，应该设置为`eth`。
+  - `BLOCKLET_APP_LOGO` 运行中的区块链实例标识的 URL 或路径，默认为区块链标识
 
 ## Scripts
 
