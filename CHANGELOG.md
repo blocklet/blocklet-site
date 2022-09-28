@@ -1,3 +1,7 @@
+## 0.1.77 (September 29, 2022)
+
+- chore: add paid blocklet skeleton
+
 ## 0.1.76 (September 28, 2022)
 
 - chore: add meta.js doc skeleton
