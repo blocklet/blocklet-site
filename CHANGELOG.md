@@ -1,3 +1,7 @@
+## 0.1.74 (September 28, 2022)
+
+- chore: polish quick start index
+
 ## 0.1.73 (September 28, 2022)
 
 - chore: doc for security module in blocklet sdk

@@ -13,7 +13,7 @@ repository:
   type: git
   url: git+https://github.com/blocklet/blocklet-site.git
 specVersion: 1.2.7
-version: 0.1.73
+version: 0.1.74
 logo: logo.png
 files: []
 interfaces:
@@ -110,4 +110,4 @@ navigation:
         link: https://github.com/orgs/blocklet/discussions
       - title: Report a Bug
         link: https://github.com/blocklet/support/issues
-children: []
+components: []
