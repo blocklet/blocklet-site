@@ -4,4 +4,8 @@ description: Blocklet Server Architecture
 layout: documentation
 ---
 
-TBD: Blocklet server architecture 几大模块
+:::Alert
+this page is a draft and need to be updated
+:::
+
+![](./images/blocklet-server.png)
