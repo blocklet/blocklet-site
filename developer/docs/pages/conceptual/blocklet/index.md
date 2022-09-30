@@ -1,34 +1,34 @@
 ---
-title: Blocklet 核心概念
-description: 了解什么是 Blocklet，Blocklet 实例，Blocklet DID
+title: Blocklet Concepts
+description: Understand core blocklet concepts, such as component, bundle, app, instance
 layout: documentation
 ---
 
 ## What is Blocklet?
 
-- Blocklet 是应用开发、交付、运行的基本单位
-- Blocklet 遵循相同的[协议](/reference/blocklet-spec)，享受相同的服务，组合在一起时能完成非常强大的功能
-- Blocklet 是可以组合的，组合方式非常类似乐高积木
-- Blocklet 的唯一标识是 Blocklet DID，每个 [Blocklet Store](https://store.blocklet.dev) 里面的 DID 是不可重复的
+- Blocklets are the basic unit of application development, delivery, and operation
+- Blocklets follow the same [protocol](/reference/blocklet-spec), enjoy the same services, and when combined together can perform very powerful functions
+- Blocklets are combinable, in a way very similar to Lego blocks
+- Blocklets are uniquely identified by a Blocklet DID, and the DIDs in each [Blocklet Store](https://store.blocklet.dev) are non-repeatable
 
 ## What is Blocklet Component?
 
-- Blocklet Component 专门指那些能够被组合使用的 Blocklet，能否被组合可以在 [blocklet.yml](/reference/blocklet-spec#Capabilities) 中声明
-- Blocklet Component 通常既能独立运行，也能被组合使用，两种模式下表现可以不同
-- Blocklet Component 可以[包含其他的 Blocklet Component](/reference/blocklet-spec#Components)，这种包含关系是可以嵌套的，就好比发布在 NPM 的代码库可以依赖其他发布的 NPM 上的代码库。不过从性能的角度出发，Blocklet Component 嵌套的深度是有限制的。
+- A Blocklet Component is specifically a Blocklet that can be used in combination, or not, as declared in [blocklet.yml](/reference/blocklet-spec#Capabilities)
+- Blocklet Components can usually be used both independently and in combination, and can behave differently in both modes
+- Blocklet Components can [contain other Blocklet Components](/reference/blocklet-spec#Components), and this containment relationship can be nested, just as a codebase published in an NPM can depend on other codebases published on the NPM. However, from a performance point of view, there is a limit to the depth of nesting of Blocklet Components.
 
 ## What is Blocklet Server?
 
-- Blocklet Server 是为 Blocklet 提供完整运行环境、基础服务、管理功能的软件
-- Blocklet Server 运行时产生的数据只属于 Blocklet Server 的所有者
-- Blocklet Server 的唯一标识是在 Blocklet Server 创建是产生的在其后不可更改的 DID，显示在 Blocklet Server 控制台中
-- 任何人可无需许可、无需付费在自己的电脑上运行自己的 Blocklet Server
+- Blocklet Server is the software that provides the complete runtime environment, basic services, and management functions for Blocklet
+- The data generated when Blocklet Server is running belongs to the owner of Blocklet Server only.
+- Blocklet Server is uniquely identified by an immutable DID generated at the time of Blocklet Server creation and displayed in the Blocklet Server Console
+- Anyone can run their own Blocklet Server on their own computer without license and without payment
 
 ## What is Blocklet Bundle?
 
-- Blocklet Bundle 是使用 [blocklet bundle](/reference/blocklet-cli#Bundle) 构建得到的，能够被 Blocklet Server 消费的软件包
-- Blocklet Bundle 通常会被开发者上传并托管在 [Blocklet Store](https://store.blocklet.dev) 中，也可以托管在任何可以被访问的网络上。
-- Blocklet Bundle 通常包含下面两个文件：
+- A Blocklet Bundle is a package built using [blocklet bundle](/reference/blocklet-cli#Bundle) that can be consumed by Blocklet Server
+- Blocklet Bundles are usually uploaded and hosted by developers in the [Blocklet Store](https://store.blocklet.dev), and can be hosted on any accessible network.
+- A Blocklet Bundle typically contains the following two files.
 
 ```text
 .blocklet/release
@@ -36,19 +36,21 @@ layout: documentation
 └── static-demo-blocklet-1.4.0.tgz
 ```
 
-- `blocklet.json` 根据 [blocklet.yml](/reference/blocklet-spec) 计算出来的 Blocklet 描述文件
-- `{name}-{version}.tgz` 包含了 blocklet 运行时需要的各种文件包括构建后的源代码、外部依赖
-- 理论上这两个文件可以托管在不同的地方，只要 `blocklet.json` 里面正确包含了压缩包的地址
+- `blocklet.json` Blocklet description file calculated from [blocklet.yml](/reference/blocklet-spec)
+- `{name}-{version}.tgz` contains the various files needed for the blocklet runtime, including the source code after the build, external dependencies
+- Theoretically, the two files could be hosted in different places, as long as `blocklet.json` contains the correct zip address
 
 ## What is Blocklet App?
 
-- Blocklet App 是安装、运行在 Blocklet Server 中，且能对外提供服务的实体
-- Blocklet App 背后的服务可以由单个或者多个 Blocklet Instance 组成
-- Blocklet App 的唯一标识是 appId，通过 [Blocklet SDK](/reference/blocklet-sdk#Environment) 和 [blocklet.js](/reference/blocklet-js) 可以获取
-- 运行在不同的 Blocklet Server 中的相同 Blocklet Bundle 属于不同的 Blocklet App
-- 运行在相同 Blocklet Server 的相同 Blocklet Bundle 也属于不同的 Blocklet App
+- A Blocklet App is an entity that is installed, runs in the Blocklet Server, and can provide services to the public.
+- The service behind a Blocklet App can consist of a single or multiple Blocklet Instances
+- The unique identifier of a Blocklet App is the appId, which can be obtained from [Blocklet SDK](/reference/blocklet-sdk#Environment) and [blocklet.js](/reference/blocklet-js)
+- The same Blocklet Bundle running in a different Blocklet Server belongs to a different Blocklet App
+- The same Blocklet Bundle running in the same Blocklet Server also belongs to a different Blocklet App
 
 ## What is Blocklet Instance?
 
-- 运行中的 Blocklet App 中的每个部件都是 Blocklet Instance，就好像根据某个类生成的实例
-- 每个 Blocklet Instance 都运行在自己独立的进程中，都有独立的进程标识、环境变量、数据目录
+- Each component of a running Blocklet App is a Blocklet Instance, which is like an instance generated from a class
+- Each Blocklet Instance runs in its own separate process, with its own process identity, environment variables, and data directory
+
+Translated with www.DeepL.com/Translator (free version)
