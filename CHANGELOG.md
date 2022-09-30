@@ -1,3 +1,7 @@
+## 0.1.78 (September 30, 2022)
+
+- chore: overview, concept, blocklet.js docs
+
 ## 0.1.77 (September 29, 2022)
 
 - chore: add paid blocklet skeleton
