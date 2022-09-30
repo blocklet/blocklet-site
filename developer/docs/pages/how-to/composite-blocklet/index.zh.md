@@ -59,7 +59,7 @@ components:
 为了统一组合 blocklet 中每一个组件的 UI，你需要做两件事
 
 1. 配置: 在 各个组件的 `blocklet.yml` 中配置组合信息
-2. 在各个组件的页面中使用统一组件：`@blocklet/ui`
+2. 在各个组件的页面中使用统一组件：`@blocklet/ui-react`
 
 示例：Component Demo
 

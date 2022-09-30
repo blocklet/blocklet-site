@@ -59,7 +59,7 @@ The selling price of the component can be viewed on the component details page.
 To uniformly compose the UI of each component in the blocklet, you need to do two things
 
 1. Configuration: Configure the combination information in the `blocklet.yml` of each component
-2. Use the unified component in the page of each component: `@blocklet/ui`
+2. Use the unified component in the page of each component: `@blocklet/ui-react`
 
 Example: Component Demo
 
