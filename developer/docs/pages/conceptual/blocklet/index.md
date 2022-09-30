@@ -4,6 +4,10 @@ description: Understand core blocklet concepts, such as component, bundle, app, 
 layout: documentation
 ---
 
+The core concepts in the Blocklet ecosystem and the relationships between the concepts are shown in the following diagram.
+
+![](./images/blocklet-concepts.png)
+
 ## What is Blocklet?
 
 - Blocklets are the basic unit of application development, delivery, and operation
@@ -30,15 +34,15 @@ layout: documentation
 - Blocklet Bundles are usually uploaded and hosted by developers in the [Blocklet Store](https://store.blocklet.dev), and can be hosted on any accessible network.
 - A Blocklet Bundle typically contains the following two files.
 
-```text
-.blocklet/release
-├── blocklet.json
-└── static-demo-blocklet-1.4.0.tgz
-```
+  ```text
+  .blocklet/release
+  ├── blocklet.json
+  └── static-demo-blocklet-1.4.0.tgz
+  ```
 
-- `blocklet.json` Blocklet description file calculated from [blocklet.yml](/reference/blocklet-spec)
-- `{name}-{version}.tgz` contains the various files needed for the blocklet runtime, including the source code after the build, external dependencies
-- Theoretically, the two files could be hosted in different places, as long as `blocklet.json` contains the correct zip address
+  - `blocklet.json` Blocklet description file calculated from [blocklet.yml](/reference/blocklet-spec)
+  - `{name}-{version}.tgz` contains the various files needed for the blocklet runtime, including the source code after the build, external dependencies
+  - Theoretically, the two files could be hosted in different places, as long as `blocklet.json` contains the correct zip address
 
 ## What is Blocklet App?
 
@@ -47,6 +51,8 @@ layout: documentation
 - The unique identifier of a Blocklet App is the appId, which can be obtained from [Blocklet SDK](/reference/blocklet-sdk#Environment) and [blocklet.js](/reference/blocklet-js)
 - The same Blocklet Bundle running in a different Blocklet Server belongs to a different Blocklet App
 - The same Blocklet Bundle running in the same Blocklet Server also belongs to a different Blocklet App
+- A Blocklet App can have any number of users depending on the use case
+- A Blocklet App can have only one blocklet owner, but can have multiple administrators
 
 ## What is Blocklet Instance?
 

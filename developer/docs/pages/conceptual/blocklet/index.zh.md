@@ -4,6 +4,10 @@ description: 理解 Blocklet 核心概念，比如 component, bundle, app, insta
 layout: documentation
 ---
 
+Blocklet 生态系统中的核心概念及概念之间的关系如下图所示：
+
+![](./images/blocklet-concepts.png)
+
 ## 什么是 Blocklet?
 
 - Blocklet 是应用开发、交付、运行的基本单位
@@ -30,15 +34,15 @@ layout: documentation
 - Blocklet Bundle 通常会被开发者上传并托管在 [Blocklet Store](https://store.blocklet.dev) 中，也可以托管在任何可以被访问的网络上。
 - Blocklet Bundle 通常包含下面两个文件：
 
-```text
-.blocklet/release
-├── blocklet.json
-└── static-demo-blocklet-1.4.0.tgz
-```
+  ```text
+  .blocklet/release
+  ├── blocklet.json
+  └── static-demo-blocklet-1.4.0.tgz
+  ```
 
-- `blocklet.json` 根据 [blocklet.yml](/reference/blocklet-spec) 计算出来的 Blocklet 描述文件
-- `{name}-{version}.tgz` 包含了 blocklet 运行时需要的各种文件包括构建后的源代码、外部依赖
-- 理论上这两个文件可以托管在不同的地方，只要 `blocklet.json` 里面正确包含了压缩包的地址
+  - `blocklet.json` 根据 [blocklet.yml](/reference/blocklet-spec) 计算出来的 Blocklet 描述文件
+  - `{name}-{version}.tgz` 包含了 blocklet 运行时需要的各种文件包括构建后的源代码、外部依赖
+  - 理论上这两个文件可以托管在不同的地方，只要 `blocklet.json` 里面正确包含了压缩包的地址
 
 ## 什么是 Blocklet App?
 
@@ -47,6 +51,8 @@ layout: documentation
 - Blocklet App 的唯一标识是 appId，通过 [Blocklet SDK](/reference/blocklet-sdk#Environment) 和 [blocklet.js](/reference/blocklet-js) 可以获取
 - 运行在不同的 Blocklet Server 中的相同 Blocklet Bundle 属于不同的 Blocklet App
 - 运行在相同 Blocklet Server 的相同 Blocklet Bundle 也属于不同的 Blocklet App
+- 一个 Blocklet App 可以有任何数量的用户，根据使用场景而不同
+- 一个 Blocklet App 只能有一个 Blocklet Owner，但可以有多个管理员
 
 ## 什么是 Blocklet Instance?
 
