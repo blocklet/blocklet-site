@@ -3,6 +3,89 @@ layout: 'documentation'
 title: blocklet.js
 ---
 
-:::Alert
-this page is a draft and need to be updated
-:::
+## 什么是 blocklet.js？
+
+- `blocklet.js` 是用来**加载 Blocklet 运行时信息的**，可以在浏览器环境中使用
+- `blocklet.js` 是一个 **由 Blocklet Server 提供**的 API
+- `blocklet.js` 可以**从任何路径**请求，响应会略有不同
+  - https://developer.blocklet.io/__blocklet__.js
+  - https://developer.blocklet.io/docs/__blocklet__.js
+- `blocklet.js` 可以**javascript 或 json 格式返回信息**。
+  - 当以 javascript 方式请求时会注入全局变量，也是默认模式，你可以使用 `window.blocklet`
+  - 当以 json 格式请求时会得到一段数据，你必须在查询字符串中明确指定 `type=json`
+- `blocklet.js` **内容是自适应的**对任何 blocklet 的组成都是，包括静态和动态组成
+- `blocklet.js` **内容可能会随着 blocklet 组合的更新而改变**
+
+## blocklet.js 是如何组成的？
+
+下图描述了`blocklet.js`是如何在 blocklet 服务器中创建的。
+
+![](./images/blocklet-js.png)
+
+## 如何使用 blocklet.js？
+
+要使用 `blocklet.js`，你必须在你的 html 文件中包含以下`script`标签，**在任何其他 script 标签之前**。
+
+```html
+<script src="__blocklet__.js"></script>
+```
+
+请<strong className="color-red">不要</strong>在脚本`src`属性中添加开头的斜线，因为`blocklet.js`可以从任何端点加载。
+
+然后你就可以在你的 javascript 代码中访问`window.blocklet`了， 来自 `https://developer.blocklet.io/__blocklet__.js` 的响应就像下面这样。
+
+```javascript
+window.blocklet = {
+  // basic app info, appName, appDescription, appUrl, appLogo can be configured in blocklet server
+  appId: 'zNKh7m9JccKmZY8vCSbkdYVoXem5CceAiYD1',
+  appName: 'Blocklet Developer',
+  appDescription: 'Blocklet Developer portal and documentation',
+  appUrl: 'https://developer.blocklet.io',
+  appLogo: '/.well-known/service/blocklet/logo/',
+
+  // whether current blocklet is a component, differs when requesting from different path
+  isComponent: false,
+
+  // the blocklet app version === the version of the root blocklet
+  version: '0.1.77',
+  did: 'z8iZrq2YrLLWUz6X77bfFL4wBfZuEfXuj1R2m',
+
+  // the blocklet group mountPoint
+  prefix: '/',
+  groupPrefix: '/',
+
+  webWalletUrl: 'https://web.abtwallet.io',
+
+  // the navigation of the composed service
+  // it's parsed and merged from all components
+  navigation: [
+    { title: { en: 'Guides', zh: '指南' }, link: { en: '/docs/en/', zh: '/docs/zh/' } },
+    {
+      title: { en: 'ToolKit', zh: '工具箱' },
+      link: '',
+      items: [
+        {
+          title: 'Blocklet SDK',
+          link: { en: '/docs/en/reference/blocklet-sdk/', zh: '/docs/zh/reference/blocklet-sdk/' },
+        },
+      ],
+    },
+  ],
+
+  // component blocklet mounted in this app
+  componentMountPoints: [
+    {
+      title: 'Meilisearch',
+      name: 'meilisearch',
+      did: 'z8iZorY6mvb5tZrxXTqhBmwu89xjEEazrgT3t', // the component blocklet did
+      mountPoint: '/meilisearch', // the component path
+    },
+    {
+      title: 'Blocklet Developer Docs',
+      name: 'blocklet-developer-docs',
+      did: 'z8iZwU5C5Y5SfSqC7LqKAbY9NiqFNjUjcJfPK',
+      mountPoint: 'docs',
+    },
+  ],
+};
+```
