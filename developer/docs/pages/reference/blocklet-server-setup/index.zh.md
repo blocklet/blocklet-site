@@ -12,7 +12,7 @@ layout: documentation
 
 **相关教程**
 
-- 如果你希望在自己的电脑上运行 Blocklet Server 可以参考这篇教程: [在本机启动 Blocklet Server](/prerequisites/server)
+- 如果你希望在自己的电脑上运行 Blocklet Server 可以参考这篇教程: [在本机启动 Blocklet Server](/zh/quick-start/blocklet-server)
 
 ## 使用 Docker 启动节点
 
