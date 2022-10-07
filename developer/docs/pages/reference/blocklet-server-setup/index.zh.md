@@ -77,7 +77,7 @@ IP Echo 是一个映射 URL 中 IP 的 DNS, IP Echo 的服务域名是 `ip.abtne
 1. 在筛选条件中选择`公有镜像`
 1. 输入`Blocklet Server`进行搜索
 1. 选中当前最新版本镜像, 如下图的最新版本是 blocklet-server-1.8.26:
-   ![select ami](./images/select-ami.png)
+   ![select ami](./images/select-ami-zh.png)
 
    **!!!注意：不要选择 blocklet-server-bare-xxx 镜像**，
 
@@ -105,7 +105,7 @@ ArcBlock Launcher 是一个可以通过 ABT, 信用卡等支付方式购买 Bloc
 ### 第一步：购买 NFT
 
 1. 选择合适的 NFT 类型
-   ![select nft](./images/launcher-select-plan.png)
+   ![select nft](./images/launcher-select-plan-zh.png)
 1. 选择支付类型：ABT
 1. 点击"购买"支付，支付成功后会自动跳转到启动页面
 
@@ -116,6 +116,6 @@ ArcBlock Launcher 是一个可以通过 ABT, 信用卡等支付方式购买 Bloc
 
 ## 后续步骤
 
-在运行一个节点好，可能还需要做一些事情:
+在运行一个节点后，可能还需要做一些事情:
 
-- 给节点设置一个域名: [应用管理和维护](/guide/operation)
+- 给节点设置一个域名: [应用管理和维护](/how-to/operation)

@@ -1,41 +1,41 @@
 ---
-title: 通过 Docker, AWS EC2, ArcBlock Launcher 获取 Blocklet Server
-description: 启动 Blocklet Server
+title: Setup Blocklet Server via Docker, AWS EC2, ArcBlock Launcher
+description: Setup Blocklet Server
 layout: documentation
 ---
 
-通过本文档您可以了解到在不同的环境中运行一个 Blocklet Server 节点，包括:
+This document allows you to learn about running a Blocklet Server instance in different environments, including:
 
-- 在 Docker 中运行
-- 在 AWS 中启动 EC2 时使用 AMI 镜像运行
-- 在 ArcBlock Launcher 服务购买一个节点
+- Running in Docker
+- Running with an AMI image when launching EC2 in AWS
+- Purchasing a Blocklet Server from the ArcBlock Launcher service
 
-**相关教程**
+**Related Tutorials**
 
-- 如果你希望在自己的电脑上运行 Blocklet Server 可以参考这篇教程: [在本机启动 Blocklet Server](/en/quick-start/blocklet-server)
+- If you wish to run Blocklet Server on your own computer you can refer to this tutorial: [Setup Local Blocklet Server](/quick-start/blocklet-server)
 
-## 使用 Docker 启动节点
+## Starting a server with Docker
 
-### 第一步: 拉取镜像
+### Step 1: Pull the mirror
 
 ```bash
 $ docker pull arcblock/blocklet-server:latest
 ```
 
-### 第二步: 启动容器
+### Step 2: Start the container
 
 ```bash
 $ docker run --name test-server -d -p 80:80 -p 443:443 -v /tmp/test:/data arcblock/blocklet-server
 ```
 
-参数解释:
+Parameter explanation:
 
-- `--name` 指定容器的名称。
-- `-d` 让容器在后台运行。
-- `-p` 指定容器暴露的端口，Blocklet Server 会运行在 80 和 443 端口，所以需要容器暴露这来这两个端口。
-- `-v` 挂载磁盘目录。Blocklet Server 中的数据会存储在 `/data` 目录中，为了防止数据丢失，所以最佳实践是将 Docker 中的数据目录挂载到主机的一个目录中。
+- `--name` Specify the name of the container.
+- `-d` Let the container run in the background.
+- `-p` Specify the ports exposed by the container. Blocklet Server will run on ports 80 and 443, so the container needs to be exposed to these two ports.
+- `-v` Mount the disk directory. data in Blocklet Server will be stored in the `/data` directory, to prevent data loss, so the best practice is to mount the data directory in Docker to a directory on the host.
 
-如果一切正常，Blocklet Server 会在一分钟内启动成功，在启动的过程中可以使用 `docker logs {容器名称}` 命令查看容器内的启动信息:
+If everything is fine, Blocklet Server will start successfully within a minute, and you can use the `docker logs {container name}` command to view the startup information in the container during the startup process:
 
 ```bash
 $ docker logs test-server
@@ -47,10 +47,10 @@ $ docker logs test-server
  /_/   \_\_|  \___|____/|_|\___/ \___|_|\_\
             Blocklet CLI v1.8.22
 blocklet server v1.8.22
-Blocklet Server instance already exists in /data/abtnode, now starting...
+Blocklet Server instance already exists in /data, now starting...
 ✔ Blocklet Server DB Proxy ready on port 40404
 ℹ Node DID from config zNKZ5v8AqMfNrZoTrdComvjZdGKkjrDqALPx
-ℹ Node config from /data/abtnode/.blocklet-server/config.yml
+ℹ Node config from /data/.blocklet-server/config.yml
 ✔ Blocklet Server Event Hub ready on port 40407
 ✔ Blocklet Server Updater ready on port 40405
 ✔ Fetch wildcard certificates successfully
@@ -60,62 +60,62 @@ Blocklet Server instance already exists in /data/abtnode, now starting...
 ✔ Starting Blocklet Server Daemon... Done in 29.49s
 ```
 
-### 第三步: 通过 IP Echo 地址访问节点
+### Step 3: Access the server via IP Echo address
 
-IP Echo 是一个映射 URL 中 IP 的 DNS, IP Echo 的服务域名是 `ip.abtnet.io`. 比如 `https://192-168-1-1.ip.abtnet.io` DNS 解析后的 IP 是 `192.168.1.1`.
+IP Echo is a DNS that maps IPs in URLs, and the domain name served by IP Echo is `ip.abtnet.io`. For example, `https://192-168-1-1.ip.abtnet.io` DNS resolves the IP to `192.168.1.1`.
 
-节点启动成功后可以通过 IP Echo 地址访问该节点。比如，如果本机 IP 是 `192.168.0.10`, 那么 IP Echo 地址就是 `https://192-168-0-10.ip.abtnet.io/`.
+The server can be accessed through the IP Echo address after the server is successfully started. For example, if the local IP is `192.168.0.10`, then the IP Echo address is `https://192-168-0-10.ip.abtnet.io/`.
 
-## 在 AWS 中启动节点
+## Running in AWS
 
-我们提供了一个 Blocklet Server AMI 镜像，在创建 EC2 时可以基于我们的 AMI 镜像快速启用一个节点。
+We provide a Blocklet Server AMI image to quickly run a server based on our AMI image when creating EC2.
 
-### 第一步: 查找 Blocklet Server AMI
+### Step 1: Find Blocklet Server AMI
 
-1. 打开 Amazon EC2 控制台页面 https://console.aws.amazon.com/ec2/
-1. 在侧边栏选择`影像 -> AMI` 页面
-1. 在筛选条件中选择`公有镜像`
-1. 输入`Blocklet Server`进行搜索
-1. 选中当前最新版本镜像, 如下图的最新版本是 blocklet-server-1.8.26:
-   ![select ami](./images/select-ami.png)
+1. Open the Amazon EC2 console page at https://console.aws.amazon.com/ec2/
+1. Select the `Images -> AMI` page in the sidebar
+1. Select `Public Mirror` in the filter criteria
+1. Enter `Blocklet Server` to search
+1. Select the latest version of the mirror, the latest version is blocklet-server-1.8.26 as shown below:
+   ![select ami](./images/select-ami-en.png)
 
-   **!!!注意：不要选择 blocklet-server-bare-xxx 镜像**，
+   **!!!Note: Do not select the blocklet-server-bare-xxx image**，
 
-1. 点击”从 AMI 启动实例“
+1. Click on "Launch instance from AMI"
 
-### 第二步：设置安全组和其它基本信息
+### Step 2: Set up security groups and other basic information
 
-1. 填写实例名称
-1. 选择实例类型， Blocklet Server 要求的最低内存要求是 1G
-1. 选择秘钥对
-1. 配置网络安全组, Blocklet Server 要求打开 80 和 443 端口
-1. 配置存储，建议最小的存储是 20G
-1. 其它配置根据实际情况设置即可
-1. 点击"启动实例", 等待实例启动成功即可
+1. Fill in the instance name
+1. Select the instance type, the minimum memory requirement for Blocklet Server is 1G
+1. Select the secret key pair
+1. Configure the network security group, Blocklet Server requires open ports 80 and 443
+1. Configure storage, the recommended minimum storage is 20G
+1. Other configurations can be set according to the actual situation
+1. Click "Launch Instance", wait for the instance to start successfully
 
-### 第三步: 通过 IP Echo 地址访问节点
+### Step 3: Access the server via IP Echo address
 
-EC2 实例启动后可以通过其公网 IP Echo 地址访问。比如，如果公网 IP 是 `192.168.0.10`, 那么 IP Echo 地址就是 `https://192-168-0-10.ip.abtnet.io/`.
+EC2 instances can be accessed through their public IP Echo addresses after they are started. For example, if the public IP is `192.168.0.10`, then the IP Echo address is `https://192-168-0-10.ip.abtnet.io/`.
 
-## 通过 ArcBlock Launcher 启动节点
+## Launching a server via ArcBlock Launcher
 
-ArcBlock Launcher 是一个可以通过 ABT, 信用卡等支付方式购买 Blocklet Server 节点的服务。通过该服务可以省去 Node.js/Blocklet CLI/Nginx 等环境或依赖的安装，只需要填写简单的配置信息就可以得到一个运行的节点。
-服务地址: https://launcher.arcblock.io/
+ArcBlock Launcher is a service that allows you to purchase Blocklet Server servers via ABT, credit card and other payment methods. This service eliminates the need to install environments or dependencies such as Node.js/Blocklet CLI/Nginx, and allows you to fill in simple configuration information to get a running server.
+Service Address: https://launcher.arcblock.io/
 
-### 第一步：购买 NFT
+### Step 1: Purchase NFT
 
-1. 选择合适的 NFT 类型
-   ![select nft](./images/launcher-select-plan.png)
-1. 选择支付类型：ABT
-1. 点击"购买"支付，支付成功后会自动跳转到启动页面
+1. Selecting the right type of NFT
+   ![select nft](./images/launcher-select-plan-en.png)
+1. Select payment type: ABT
+1. Click "Buy" to pay, after successful payment, it will automatically jump to the start page
 
-### 第二步：启动节点
+### Step 2: Start the server
 
-1. 填写服务器信息后点击"同意协议并继续"
-1. 等待启动成功。 启动过程大概需要三分钟, 启动成功后会自动跳转到新启动的节点
+1. Fill in the server information and click "Agree to the EULA and continue"
+1. Wait for a successful startup. The startup process takes about three minutes, and will automatically jump to the newly started server after a successful startup.
 
-## 后续步骤
+## Next steps
 
-在运行一个节点好，可能还需要做一些事情:
+After running a server, there may be a few more things that need to be done:
 
-- 给节点设置一个域名: [应用管理和维护](/guide/operation)
+- Set a domain name for the server: [Operation and maintenance your blocklet](/how-to/operation)
