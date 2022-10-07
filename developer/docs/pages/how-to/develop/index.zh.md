@@ -35,6 +35,12 @@ scripts:
 
 启动开发后，在终端中按下 `CTRL + C` 停止开发
 
+## 获取运行模式
+
+通过 Blocklet SDK 获取 Blocklet 当前的运行模式
+
+见 [Blocklet SDK: Environment](/reference/blocklet-sdk#mode)
+
 ## 清空数据
 
 停止开发 blocklet 后，blocklet 的持久化数据并不会被自动清空。

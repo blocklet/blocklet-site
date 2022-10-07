@@ -1,3 +1,7 @@
+## 0.1.79 (October 07, 2022)
+
+- docs: Blocklet SDK: Environment.mode
+
 ## 0.1.78 (September 30, 2022)
 
 - chore: overview, concept, blocklet.js docs

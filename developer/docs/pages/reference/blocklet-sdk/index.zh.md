@@ -426,14 +426,24 @@ import { Database } from '@blocklet/sdk';
 import { env } from '@blocklet/sdk';
 
 const {
-  appId, // the id of the app
-  appName, // the title of the app, used to display to user
-  appDescription, // the description of the app
-  appUrl, // the web url of the app
-  isComponent, // the blocklet is running as an app or a component
-  dataDir, // the data dir of the blocklet
-  cacheDir, // the cache dir of the blocklet
+  appId, // 应用 ID
+  appName, // 应用名称，用于显示给用户
+  appDescription, // 应用描述，用于显示给用户
+  appUrl, // 应用的的访问地址
+  isComponent, // Blocklet 当前作为应用运行还是作为组件运行
+  dataDir, // Blocklet 数据存放目录
+  cacheDir, // Blocklet 缓存数据路径
+  mode, // Blocklet 以什么模式运行
 } = env;
+```
+
+### mode
+
+Blocklet 以什么模式运行
+
+```js
+env.mode === 'development'; // Blocklet 以开发模式运行
+env.mode === 'production'; // Blocklet 以正式模式运行
 ```
 
 ## Component

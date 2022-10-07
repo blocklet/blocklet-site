@@ -35,6 +35,12 @@ Example:
 
 After starting development, stop development by pressing `CTRL + C` in the terminal
 
+## Get running mode
+
+Get the current running mode through Blocklet SDK
+
+See [Blocklet SDK: Environment](/reference/blocklet-sdk#mode)
+
 ## Clear data
 
 After you stop developing a blocklet, the persistent data of the blocklet will not be automatically cleared.

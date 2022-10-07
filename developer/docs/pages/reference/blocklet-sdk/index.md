@@ -433,7 +433,17 @@ const {
   isComponent, // the blocklet is running as an app or a component
   dataDir, // the data dir of the blocklet
   cacheDir, // the cache dir of the blocklet
+  mode, // in which mode the blocklet is running
 } = env;
+```
+
+### mode
+
+In which mode the blocklet is running
+
+```js
+env.mode === 'development'; // The blocklet is running in the development mode
+env.mode === 'production'; // The blocklet is running in the production mode
 ```
 
 ## Component
