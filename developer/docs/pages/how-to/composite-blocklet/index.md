@@ -54,6 +54,10 @@ If you add paid component, the price of the blocklet cannot be less than the sum
 
 The selling price of the component can be viewed on the component details page.
 
+:::Alert
+Blocklet development with paid components is not yet supported
+:::
+
 ## Blocklet UI
 
 To uniformly compose the UI of each component in the blocklet, you need to do two things

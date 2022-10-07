@@ -330,7 +330,7 @@ components:
       version: latest
 ```
 
-## Navigation, Theme, Copyright
+## Navigation
 
 ```yml
 navigation: # 导航信息（ 应用地图 ）
@@ -343,19 +343,13 @@ navigation: # 导航信息（ 应用地图 ）
       - header
       - footer
     icon: mdi:home # 图标
-theme: # 主题
-  background: '#f5f5f5' # 背景色
-copyright: # 版权信息
-  owner: Arcblock # 所有者
-  year: 2022 # 如不写则取当前年份
 ```
 
-比较完整的例子：[Component Demo](https://github.com/blocklet/component-demo/blob/main/blocklet.yml)
-
-#### 支持 i18n
+### i18n
 
 ```yml
 title: xxx
+link: xxx
 ```
 
 或
@@ -364,9 +358,12 @@ title: xxx
 title:
 	zh: xxx
 	en: xxx
+link:
+	zh: xxx
+	en: xxx
 ```
 
-#### header 和 footer 展示不同信息
+### Header and Footer
 
 ```yml
 navigation:
@@ -383,7 +380,7 @@ navigation:
 	  section: bottom # 在 footer 的最下方
 ```
 
-#### 展示 icon
+### Icon
 
 ```yml
 navigation:
@@ -392,18 +389,21 @@ navigation:
 	- title: a
 	   icon: 'https://xxx' # url
 	- title: b
-	   icon: '/path/to/xxx' # icon serve 在 app 中
+	   icon: '/path/to/xxx' # icon 在 app 中
 ```
 
-#### 展示 copyright
+:::Alert
+展示 iconify 风格的 icon 需要前端需要引入 [iconify](https://www.npmjs.com/package/@iconify/iconify)
+:::
+
+## Theme
 
 ```yml
-copyright:
-	owner: xxx
-	year: xxx # 如不写则取当前年份
+theme: # 主题
+  background: '#f5f5f5' # 背景色
 ```
 
-#### 不同的 background
+### Background
 
 ```yml
 background: xxx
@@ -413,33 +413,47 @@ background: xxx
 
 ```yml
 background:
-	header: xxx
-	footer: xxx
-	default: xxx
+  header: xxx
+  footer: xxx
+  default: xxx
+```
+
+## Copyright
+
+```yml
+copyright: # 版权信息
+  owner: xxx # 所有者
+  year: 2022 # 如不写则取当前年份
 ```
 
 ## Types
 
-通过 `group` 和 `main` 配置 Blocklet 的类型和启动入口
+通过 `group` 指定 Blocklet 类型，通过 `main` 指定 Blocklet 启动入口
 
 Blocklet 有三种类型
 
-### Type: Dapp
-
-包含后端服务的 Blocklet
-
-```yml
-group: dapp
-main: api/index.js # 启动文件
-```
-
 ### Type: Static
 
-只包含静态 Web 资源的 Blocklet
+只包含静态资源。启动时，纯静态的 Blocklet 将被 Blocklet Server 内置的静态资源服务托管
 
 ```yml
 group: static
-main: dist # 静态资源的路径，需要确保 dist/index.html 存在
+main: www # 静态资源的路径，需要确保 dist/index.html 存在
+```
+
+### Type: Dapp
+
+这类 Blocklet 本身包含后端服务（也可以同时包含静态资源），启动时，DAPP 类型的 Blocklet 将在 Blocklet Server 分配的端口号启动服务
+
+:::Alert
+DAPP 类型的 Blocklet 需要通过 `scripts.dev` 指定 Blocklet 开发环境启动入口
+:::
+
+```yml
+group: dapp
+main: index.js # 启动文件
+scripts:
+  dev: npm run dev
 ```
 
 ### Type: Gateway

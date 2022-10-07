@@ -1,3 +1,7 @@
+## 0.1.80 (October 07, 2022)
+
+- docs: polish blocklet.yml
+
 ## 0.1.79 (October 07, 2022)
 
 - docs: Blocklet SDK: Environment.mode

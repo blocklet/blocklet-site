@@ -4,7 +4,7 @@ description: Known Issues or Limitations
 layout: documentation
 ---
 
-## Service worker
+## Cluster Mode
 
 你可以在 `blocklet.yml` 中声明 blocklet 以 Cluster 模式运行，提升性能。
 

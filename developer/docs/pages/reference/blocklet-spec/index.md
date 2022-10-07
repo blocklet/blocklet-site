@@ -330,7 +330,7 @@ components:
       version: latest
 ```
 
-## Navigation, Theme, Copyright
+## Navigation
 
 ```yml
 navigation: # navigation information (app map)
@@ -343,19 +343,13 @@ navigation: # navigation information (app map)
       - header
       - footer
     icon: mdi:home # icon
-theme: # theme
-  background: '#f5f5f5' # background color
-copyright: # Copyright information
-  owner: Arcblock # owner
-  year: 2022 # If not written, take the current year
 ```
 
-A more complete example: [Component Demo](https://github.com/blocklet/component-demo/blob/main/blocklet.yml)
-
-#### i18n support
+### i18n
 
 ```yml
 title: xxx
+link: xxx
 ```
 
 or
@@ -364,9 +358,12 @@ or
 title:
 	zh: xxx
 	en: xxx
+link:
+	zh: xxx
+	en: xxx
 ```
 
-#### header and footer show different information
+### Header and Footer
 
 ```yml
 navigation:
@@ -383,7 +380,7 @@ navigation:
     section: bottom # at the bottom of the footer
 ```
 
-#### Show Icon
+### Icon
 
 ```yml
 navigation:
@@ -395,15 +392,18 @@ navigation:
     icon: '/path/to/xxx' # icon serve in app
 ```
 
-#### Show Copyright
+:::Alert
+To display iconify style icons, the front end needs to import [iconify](https://www.npmjs.com/package/@iconify/iconify)
+:::
+
+## Theme
 
 ```yml
-copyright:
-  owner: xxx
-  year: xxx # If not written, take the current year
+theme: # theme
+  background: '#f5f5f5' # background color
 ```
 
-#### Different backgrounds
+### Background
 
 ```yml
 background: xxx
@@ -418,28 +418,42 @@ background:
   default: xxx
 ```
 
+## Copyright
+
+```yml
+copyright: # Copyright information
+  owner: xxx # owner
+  year: 2022 # If not written, take the current year
+```
+
 ## Types
 
-Configure blocklet type and startup entry through `group` and `main`
+Specify the Blocklet type through `group`, and specify the Blocklet startup entry through `main`
 
 There are three types of Blocklets
 
-### Type: Dapp
-
-Blocklet containing backend services
-
-```yml
-group: dapps
-main: api/index.js # startup file
-```
-
 ### Type: Static
 
-Blocklets that contain only static web resources
+Contains only static resources. At startup, the purely static Blocklet will be hosted by the static resource service built into the Blocklet Server
 
 ```yml
 group: static
-main: dist # The path of static resources, you need to ensure that dist/index.html exists
+main: www # path of static resources, you need to ensure that dist/index.html exists
+```
+
+### Type: Dapp
+
+This type of Blocklet itself contains back-end services (it can also contain static resources at the same time). At startup, the DAPP-type Blocklet will start the service at the port number assigned by the Blocklet Server.
+
+:::Alert
+Blocklets of DAPP type need to specify the blocklet development environment startup entry through `scripts.dev`
+:::
+
+```yml
+group: dapps
+main: index.js # startup file
+scripts:
+  dev: npm run dev
 ```
 
 ### Type: Gateway

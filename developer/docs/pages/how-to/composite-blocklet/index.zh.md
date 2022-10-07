@@ -54,6 +54,10 @@ components:
 
 组件的售价可以在组件详情页中查看。
 
+:::Alert
+尚未支持开发带有付费组件的 Blocklet
+:::
+
 ## Blocklet UI
 
 为了统一组合 blocklet 中每一个组件的 UI，你需要做两件事
