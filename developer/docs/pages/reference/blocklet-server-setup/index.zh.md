@@ -73,7 +73,7 @@ IP Echo 是一个映射 URL 中 IP 的 DNS, IP Echo 的服务域名是 `ip.abtne
 ### 第一步: 查找 Blocklet Server AMI
 
 1. 打开 Amazon EC2 控制台页面 https://console.aws.amazon.com/ec2/
-1. 在侧边栏选择`影像 -> AMI` 页面
+1. 在侧边栏选择`镜像 -> AMI` 页面
 1. 在筛选条件中选择`公有镜像`
 1. 输入`Blocklet Server`进行搜索
 1. 选中当前最新版本镜像, 如下图的最新版本是 blocklet-server-1.8.26:
