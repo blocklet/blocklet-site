@@ -1,3 +1,7 @@
+## 0.1.81 (October 08, 2022)
+
+- docs: add setup blocklet server
+
 ## 0.1.80 (October 07, 2022)
 
 - docs: polish blocklet.yml
