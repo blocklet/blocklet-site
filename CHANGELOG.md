@@ -1,3 +1,7 @@
+## 0.1.82 (October 09, 2022)
+
+- docs: update create-first-blocklet
+
 ## 0.1.81 (October 08, 2022)
 
 - docs: add setup blocklet server
