@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Box from '@mui/material/Box';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Button from '@arcblock/ux/lib/Button';
 import { styled } from '@arcblock/ux/lib/Theme';
@@ -28,7 +29,9 @@ function GalleryItem({ info, ...rest }) {
         </div>
         <div className="gallery-content">
           <span className="gallery-title">{displayName}</span>
-          <p className="gallery-desc">{desc[locale]}</p>
+          <Box height={44}>
+            <p className="gallery-desc">{desc[locale]}</p>
+          </Box>
           <div className="gallery-actions">
             <Button
               size="small"
@@ -88,7 +91,6 @@ const GalleryItemRoot = styled('li')`
       font-weight: bold;
     }
     .gallery-desc {
-      height: 44px;
       margin: 4px 0 0 0;
       font-size: 13px;
       color: ${(props) => props.theme.palette.grey[600]};

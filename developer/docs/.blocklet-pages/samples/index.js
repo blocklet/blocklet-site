@@ -1,26 +1,10 @@
 const samplesData = [
   {
-    name: 'minimalist-html-demo',
-    displayName: 'Simple HTML Demo',
-    desc: {
-      en: 'This is a blocklet demo of the 2048 game used to demonstrate how to install and run a blocklet on your Blocklet Server.',
-      zh: '这是一个 2048 游戏的 blocklet 示例，用于演示如何在你的 Blocklet Server 上安装和运行 blocklet。',
-    },
-    blockletType: 'static',
-    composable: true,
-    framework: 'N/A',
-    languages: 'JavaScript',
-    useCase: 'Static webapp wrapper',
-    author: 'mave99a',
-    repo: 'https://github.com/blocklet/minimalist-html-demo',
-    store: 'https://dev.store.blocklet.dev/blocklets/z8iZjejYpy7TeJbTq6oXLbVgXemAMbpqwM17Q',
-  },
-  {
     name: 'html-2048-sample',
     displayName: 'Static Demo',
     desc: {
-      en: 'The most basic blocklet, with only one HTML page',
-      zh: '只包含一个 HTML 页面的最简单的 blocklet',
+      en: 'The most basic Blocklet, with only one HTML page',
+      zh: '只包含一个 HTML 页面的最简单的 Blocklet',
     },
     blockletType: 'static',
     composable: true,
@@ -30,6 +14,22 @@ const samplesData = [
     author: 'linchen1987',
     repo: 'https://github.com/blocklet/html-2048-sample',
     store: 'https://test.store.blocklet.dev/blocklets/z8iZwyBfqwNcGbLCiUnFAQLEzT8sJd2TSjbM2',
+  },
+  {
+    name: 'minimalist-html-demo',
+    displayName: 'Simple HTML Demo',
+    desc: {
+      en: 'This is a Blocklet demo of the 2048 game used to demonstrate how to install and run a Blocklet on your Blocklet Server.',
+      zh: '这是一个 2048 游戏的 Blocklet 示例，用于演示如何在你的 Blocklet Server 上安装和运行 Blocklet。',
+    },
+    blockletType: 'static',
+    composable: true,
+    framework: 'N/A',
+    languages: 'JavaScript',
+    useCase: 'Static webapp wrapper',
+    author: 'mave99a',
+    repo: 'https://github.com/blocklet/minimalist-html-demo',
+    store: 'https://dev.store.blocklet.dev/blocklets/z8iZjejYpy7TeJbTq6oXLbVgXemAMbpqwM17Q',
   },
   {
     name: 'react-demo',
