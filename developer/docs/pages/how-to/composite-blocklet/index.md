@@ -114,15 +114,15 @@ The navigation section specifies where the navigation appears
 - footer: appear in footer
 - dashboard: Appears in the management background
 
-You can also add icon, i18n, etc. to each navigation, see [Blocklet Meta: Navigation](/reference/blocklet-spec#Navigation,%20Theme,%20Copyright)
+You can also add icon, i18n, etc. to each navigation, see [Blocklet Meta: Navigation](/reference/blocklet-spec#Navigation)
 
 ### Configure Theme
 
-See [Blocklet Meta: Theme](/reference/blocklet-spec#Navigation,%20Theme,%20Copyright)
+See [Blocklet Meta: Theme](/reference/blocklet-spec#Theme)
 
 ### Configuration Copyright
 
-See [Blocklet Meta: Copyright](/reference/blocklet-spec#Navigation,%20Theme,%20Copyright)
+See [Blocklet Meta: Copyright](/reference/blocklet-spec#Copyright)
 
 ### Use unified components in each component's page
 

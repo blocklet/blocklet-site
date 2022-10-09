@@ -11,7 +11,7 @@ See [Blocklet SDK: Wallet](/reference/blocklet-sdk#Wallet)
 
 ## DID Connect
 
-See [Blocklet SDK: DID Connect](/reference/blocklet-sdk#DID%20Connect)
+See [Blocklet SDK: DID Connect](/reference/blocklet-sdk#DID-Connect)
 
 ## User and Permissions
 

@@ -11,7 +11,7 @@ Blocklet SDK 为开发者提供 Blocklet 与 Blocklet Service 之间的接口，
 
 ## DID Connect
 
-见 [Blocklet SDK: DID Connect](/reference/blocklet-sdk#DID%20Connect)
+见 [Blocklet SDK: DID Connect](/reference/blocklet-sdk#DID-Connect)
 
 ## 用户和权限
 
