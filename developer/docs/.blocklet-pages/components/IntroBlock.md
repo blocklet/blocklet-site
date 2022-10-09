@@ -47,6 +47,7 @@ list:
 
       - [blocklet.yml](/reference/blocklet-spec) and [blocklet.js](/reference/blocklet-js)
       - [Blocklet SDK](/reference/blocklet-sdk)
+      - [Blocklet Service](/reference/blocklet-service)
       - [Blocklet UI](/reference/blocklet-ui)
       - [Blocklet CLI](/reference/blocklet-cli) and [Server CLI](/reference/blocklet-server-cli)
       - [Automate with Blocklet Actions](/reference/blocklet-actions)

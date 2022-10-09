@@ -16,7 +16,7 @@ list:
       - [设置 Node.js](/quick-start/nodejs)
       - [设置 DID钱包](/quick-start/did-wallet)
       - [设置 Blocklet CLI](/quick-start/blocklet-server)
-      - [创建第一个 Blocklet](/quick-start/creat-blocklet)
+      - [创建第一个 Blocklet](/quick-start/create-blocklet)
       - [常见问题](/faq)
   - icon: i-mdi:chart-tree
     title: 概念解惑
@@ -47,6 +47,7 @@ list:
 
       - [blocklet.yml](/reference/blocklet-spec) 和 [blocklet.js](/reference/blocklet-js)
       - [Blocklet SDK](/reference/blocklet-sdk)
+      - [Blocklet Service](/reference/blocklet-service)
       - [Blocklet UI](/reference/blocklet-ui)
       - [Blocklet CLI](/reference/blocklet-cli) 和 [Server CLI](/reference/blocklet-server-cli)
       - [使用 Blocklet Actions 实现自动化](/reference/blocklet-actions)

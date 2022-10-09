@@ -1,3 +1,7 @@
+## 0.1.83 (October 09, 2022)
+
+- docs: add blocklet-service
+
 ## 0.1.82 (October 09, 2022)
 
 - docs: update create-first-blocklet
