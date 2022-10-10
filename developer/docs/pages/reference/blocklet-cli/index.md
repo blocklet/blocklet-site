@@ -23,7 +23,7 @@ $ blocklet -V
 
 ## Create Blocklet Project
 
-Bootstraps an Blocklet project. The command use [create-blocklet](https://www.createblocklet.dev/docs/intro) to generate a project.
+Bootstraps an Blocklet project. The command use [create-blocklet](https://www.createblocklet.dev/docs) to generate a project.
 
 ```bash
 $ blocklet create
