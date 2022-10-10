@@ -50,7 +50,7 @@ In create-blocklet tool, the following full-stack project templates are provided
 
 ## Create a Blocklet project with the create-blocklet tool
 
-The `blocklet create` command allows you to invoke the above tools to quickly create a Blocklet application (provided that the [blocklet-server](/prerequisites/server) environment is installed locally)
+The `blocklet create` command allows you to invoke the above tools to quickly create a Blocklet application (provided that the [blocklet-server](/docs/quick-start/blocklet-server) environment is installed locally)
 
 ![Step 1](./images/step-1.jpg)
 
@@ -76,7 +76,7 @@ Then sometimes we are faced with the need to convert a project into a Blocklet w
 
 ### Dependency preparation
 
-Have the [blocklet-server](/prerequisites/server) environment installed on the local machine
+Have the [blocklet-server](/docs/quick-start/blocklet-server) environment installed on the local machine
 
 ### Generate `blocklet.yml` file
 
