@@ -8,10 +8,10 @@ layout: 'documentation'
 
 Blocklet 有很多的文档。对它的组织方式的高层次概述将帮助你知道在哪里寻找某些东西。
 
-- [快速入门](/docs/quick-start) 带领你通过一系列的步骤来创建一个网站。如果你是 Blocklet 的新手，从这里开始。
-- [概念解惑](/docs/conceptual/overview) 在一个相当高的水平上讨论关键概念，并提供有用的背景信息和解释。
-- [参考指南](/docs/reference/blocklet-spec) 包含 Blocklet 工作原理各方面的技术参考。它们描述了它是如何工作的以及如何使用它，但假定你对关键概念有基本的了解。
-- [操作手册](/docs/how-to/create) 就像菜谱，它们指导你完成解决关键问题和用例的步骤。它们比快速入门更高级，并假定你对 Blocklet 的工作原理有一定了解。
+- [快速入门](/docs/zh/quick-start) 带领你通过一系列的步骤来创建一个网站。如果你是 Blocklet 的新手，从这里开始。
+- [概念解惑](/docs/zh/conceptual/overview) 在一个相当高的水平上讨论关键概念，并提供有用的背景信息和解释。
+- [参考指南](/docs/zh/reference/blocklet-spec) 包含 Blocklet 工作原理各方面的技术参考。它们描述了它是如何工作的以及如何使用它，但假定你对关键概念有基本的了解。
+- [操作手册](/docs/zh/how-to/create) 就像菜谱，它们指导你完成解决关键问题和用例的步骤。它们比快速入门更高级，并假定你对 Blocklet 的工作原理有一定了解。
 
 ## Blocklet 是什么？
 

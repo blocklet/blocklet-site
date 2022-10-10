@@ -1,6 +1,10 @@
+## 0.1.85 (October 10, 2022)
+
+- chore: update dependency module
+
 ## 0.1.84 (October 10, 2022)
 
-feat: update xmark framework and anchor links
+- feat: update xmark framework and anchor links
 
 ## 0.1.83 (October 09, 2022)
 
