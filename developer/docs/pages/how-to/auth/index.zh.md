@@ -78,9 +78,9 @@ export default function App() {
 
 开发者可通过 Blocklet SDK 查询用户信息
 
-- [getUser()](/reference/blocklet-sdk#getUser)
-- [getUsers()](/reference/blocklet-sdk#getUsers)
-- [getOwner()](/reference/blocklet-sdk#getOwner)
+- [getUser()](/reference/blocklet-sdk#getuser)
+- [getUsers()](/reference/blocklet-sdk#getusers)
+- [getOwner()](/reference/blocklet-sdk#getowner)
 
 ## 用户权限和通行证
 
@@ -90,7 +90,7 @@ Blocklet Auth Service 采用基于角色的权限控制 [RBAC](https://en.wikipe
 
 Blocklet 授予用户角色的方式是为用户颁发通行证，通行证中记录了用户的角色。用户在登录时提供对应的通行证以获得操作资源的权利。
 
-开发者可通过 [Blocklet SDK](/reference/blocklet-sdk#Auth) 创建角色，管理角色的权限。
+开发者可通过 [Blocklet SDK](/reference/blocklet-sdk#auth) 创建角色，管理角色的权限。
 
 创建角色即创建通行证。
 
@@ -119,16 +119,16 @@ Blocklet 有 4 个默认的通行证 (开发者无需通过 API 创建即可使�
 
 方法一：设置 `blockUnauthenticated` 为 `true` 时，未登录的请求将会自动被拦截至默认的登录页
 
-方法二：在代码中实现，见 [Middleware](/reference/blocklet-sdk#Middlewares)
+方法二：在代码中实现，见 [Middleware](/reference/blocklet-sdk#middlewares)
 
 ### 拦截无权限的请求
 
 #### 只允许指定角色访问
 
-在代码中实现，见 [Middleware](/reference/blocklet-sdk#Middlewares)
+在代码中实现，见 [Middleware](/reference/blocklet-sdk#middlewares)
 
 #### 只允许指定权限访问
 
 方法一：设置 `blockUnauthorized` 为 `true` 时，无权限的请求将会自动被拦截
 
-方法二：在代码中实现，见 [Middleware](/reference/blocklet-sdk#Middlewares)
+方法二：在代码中实现，见 [Middleware](/reference/blocklet-sdk#middlewares)

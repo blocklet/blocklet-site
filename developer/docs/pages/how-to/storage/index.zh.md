@@ -21,7 +21,7 @@ fs.writeFileSync(path.join(env.dataDir, 'data.txt'), 'blocklet data');
 
 Blocklet SDK 为 blocklet 提供一个基于文件的数据库
 
-见 [Blocklet SDK: Database](/reference/blocklet-sdk#Database)
+见 [Blocklet SDK: Database](/reference/blocklet-sdk#database)
 
 <!-- ## Using browser database -->
 

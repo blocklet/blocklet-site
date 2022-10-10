@@ -10,11 +10,13 @@ Based on common development patterns, all applications can be broadly classified
 What are some characteristics of each type of application?
 
 ### Static site projects
+
 Static site projects usually only contain some front-end project files, and the project itself can be deployed through a static resource server. Common applications that fall into this category are `React`, `Vue`, `Svelte`, `Solidjs`, etc.
 
 [create-blocklet](http://www.createblocklet.dev/) is an official command line tool maintained by the Blocklet platform and is mainly used to quickly create a Blocklet application.
 
 In create-blocklet tool, the following static site project templates are provided for quick creation.
+
 - [static] html
 - [static] react
 - [static] vue3 + vite
@@ -29,12 +31,15 @@ In create-blocklet tool, the following static site project templates are provide
 Backend API service projects are usually used as a service to provide API calls and are commonly used to provide data for static site projects, mobile APP clients, etc.
 
 In create-blocklet tool, the following backend API service project templates are provided for quick creation.
+
 - [api] express.js
 
 ### Full-stack project
+
 Full-stack projects combine the sum of a static site project and a back-end API service project, merging the two together to provide a more complete service in a single project. Often, when you need a fully functional site, then the full-stack project is the right choice.
 
 In create-blocklet tool, the following full-stack project templates are provided for quick creation.
+
 - [dapp] react + express.js
 - [dapp] vue3 + express.js
 - [dapp] vue2 + express.js
@@ -89,12 +94,12 @@ Then follow the subsequent steps and confirm in order to generate the `blocklet.
 
 In the above steps, we have got a `blocklet.yml` file that can be used for Blocklet Server. Next, we configure some script commands to make it faster to develop and deploy with Blocklet Server.
 
-
 1. **Configure the development commands in `blocklet.yml`**
 
    Starting a Blocklet application development environment requires the `blocklet dev` command, which relies on the configuration in `blocklet.yml`.
 
    The following configuration needs to be added to `blocklet.yml`.
+
    ```yaml
    scripts:
      dev: npm run start
@@ -102,22 +107,24 @@ In the above steps, we have got a `blocklet.yml` file that can be used for Block
 
    To invoke development commands in a more familiar way, you can also add the command `"dev": "blocklet dev"` to `scripts` in the `package.json` file, and then you can use `npm run dev` to enter the Blocklet application development environment.
 
-   For more information on `blocklet dev`, see [blocklet dev](/reference/blocklet-cli#Develop)
+   For more information on `blocklet dev`, see [blocklet dev](/reference/blocklet-cli#develop)
+
 2. **Configure package command**
 
    We can use the `blocklet bundle` command to package the Blocklet application, but we need to use the project's original command to package it once before executing the command.
 
    Assuming the project's original package command is `npm run build`, we can add `"bundle": "npm run build && blocklet bundle --create-release"` to the `scripts` in the `package.json` file, and then we can use the ` npm run bundle` to quickly package Blocklet applications
 
-   For more information about `blocklet bundle`, please refer to [blocklet bundle](/reference/blocklet-cli#Bundle)
+   For more information about `blocklet bundle`, please refer to [blocklet bundle](/reference/blocklet-cli#bundle)
+
 3. **Configure deployment commands**
 
    Add `"deploy": "npm run bundle && blocklet deploy"` to `scripts` in `package.json` file, then you can use `npm run deploy` command to package and deploy with one click.
 
-   For more information about `blocklet deploy`, you can refer to [blocklet deploy](/reference/blocklet-cli#Deploy)
+   For more information about `blocklet deploy`, you can refer to [blocklet deploy](/reference/blocklet-cli#deploy)
+
 4. **Configure the deploy command**
 
    Add a `"upload": "npm run bundle && blocklet upload"` to `scripts` in `package.json` file, then you can use `npm run upload` command to package and publish with one click.
 
-   For more information about `blocklet upload`, see [blocklet upload](/reference/blocklet-cli#Upload)
-
+   For more information about `blocklet upload`, see [blocklet upload](/reference/blocklet-cli#upload)
