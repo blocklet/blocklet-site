@@ -8,10 +8,10 @@ layout: 'documentation'
 
 Blocklet has a lot of documentation. A high-level overview of how it’s organized will help you know where to look for certain things:
 
-- [Getting Started](./quick-start) take you by the hand through a series of steps to create a website. Start here if you’re new to Blocklet.
-- [Conceptual guides](./conceptual) discuss key concepts at a fairly high level and provide useful background information and explanation.
-- [Reference guides](./reference) contain technical reference various aspects of Blocklet machinery. They describe how it works and how to use it but assume that you have a basic understanding of key concepts.
-- [How-to guides](./how-to) are recipes. They guide you through the steps involved in addressing key problems and use-cases. They are more advanced than Getting Started and assume some knowledge of how Blocklet works.
+- [Getting Started](/docs/quick-start) take you by the hand through a series of steps to create a website. Start here if you’re new to Blocklet.
+- [Conceptual guides](/docs/conceptual/overview) discuss key concepts at a fairly high level and provide useful background information and explanation.
+- [Reference guides](/docs/reference/blocklet-spec) contain technical reference various aspects of Blocklet machinery. They describe how it works and how to use it but assume that you have a basic understanding of key concepts.
+- [How-to guides](/docs/how-to/create) are recipes. They guide you through the steps involved in addressing key problems and use-cases. They are more advanced than Getting Started and assume some knowledge of how Blocklet works.
 
 ## What is a Blocklet?
 

@@ -270,7 +270,7 @@ await Notification.sendToUser([userDid, anotherUserDid], notification);
 await Notification.sendToUser([userDid, anotherUserDid], [notification, anotherNotification]);
 ```
 
-- **notification** [Notification](#Notification%20Type)
+- **notification** [Notification](#notification-type)
 - **receiver** `string | array<string>` required
 
 ### broadcast
@@ -289,7 +289,7 @@ await Notification.broadcast(notification);
 await Notification.broadcast(notification, { socketDid: 'did' });
 ```
 
-- **notification** [Notification](#Notification%20Type)
+- **notification** [Notification](#notification-type)
 - **options**
   - **socketDid**: `String` send notification to a specific socket by socketDid
   - **socketId**: `String` send notification to a specific socket by socketId

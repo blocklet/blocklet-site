@@ -17,9 +17,9 @@ Blocklet 生态系统中的核心概念及概念之间的关系如下图所示�
 
 ## 什么是 Blocklet Component?
 
-- Blocklet Component 专门指那些能够被组合使用的 Blocklet，能否被组合可以在 [blocklet.yml](/reference/blocklet-spec#Capabilities) 中声明
+- Blocklet Component 专门指那些能够被组合使用的 Blocklet，能否被组合可以在 [blocklet.yml](/reference/blocklet-spec#capabilities) 中声明
 - Blocklet Component 通常既能独立运行，也能被组合使用，两种模式下表现可以不同
-- Blocklet Component 可以[包含其他的 Blocklet Component](/reference/blocklet-spec#Components)，这种包含关系是可以嵌套的，就好比发布在 NPM 的代码库可以依赖其他发布的 NPM 上的代码库。不过从性能的角度出发，Blocklet Component 嵌套的深度是有限制的。
+- Blocklet Component 可以[包含其他的 Blocklet Component](/reference/blocklet-spec#components)，这种包含关系是可以嵌套的，就好比发布在 NPM 的代码库可以依赖其他发布的 NPM 上的代码库。不过从性能的角度出发，Blocklet Component 嵌套的深度是有限制的。
 
 ## 什么是 Blocklet Server?
 
@@ -30,7 +30,7 @@ Blocklet 生态系统中的核心概念及概念之间的关系如下图所示�
 
 ## 什么是 Blocklet Bundle?
 
-- Blocklet Bundle 是使用 [blocklet bundle](/reference/blocklet-cli#Bundle) 构建得到的，能够被 Blocklet Server 消费的软件包
+- Blocklet Bundle 是使用 [blocklet bundle](/reference/blocklet-cli#bundle) 构建得到的，能够被 Blocklet Server 消费的软件包
 - Blocklet Bundle 通常会被开发者上传并托管在 [Blocklet Store](https://store.blocklet.dev) 中，也可以托管在任何可以被访问的网络上。
 - Blocklet Bundle 通常包含下面两个文件：
 
@@ -48,7 +48,7 @@ Blocklet 生态系统中的核心概念及概念之间的关系如下图所示�
 
 - Blocklet App 是安装、运行在 Blocklet Server 中，且能对外提供服务的实体
 - Blocklet App 背后的服务可以由单个或者多个 Blocklet Instance 组成
-- Blocklet App 的唯一标识是 appId，通过 [Blocklet SDK](/reference/blocklet-sdk#Environment) 和 [blocklet.js](/reference/blocklet-js) 可以获取
+- Blocklet App 的唯一标识是 appId，通过 [Blocklet SDK](/reference/blocklet-sdk#environment) 和 [blocklet.js](/reference/blocklet-js) 可以获取
 - 运行在不同的 Blocklet Server 中的相同 Blocklet Bundle 属于不同的 Blocklet App
 - 运行在相同 Blocklet Server 的相同 Blocklet Bundle 也属于不同的 Blocklet App
 - 一个 Blocklet App 可以有任何数量的用户，根据使用场景而不同

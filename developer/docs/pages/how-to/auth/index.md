@@ -78,9 +78,9 @@ After a user logs into the Blocklet, Blocklet Auth Service records the user's id
 
 Developers can query user information through Blocklet SDK
 
-- [getUser()](/reference/blocklet-sdk#getUser)
-- [getUsers()](/reference/blocklet-sdk#getUsers)
-- [getOwner()](/reference/blocklet-sdk#getOwner)
+- [getUser()](/reference/blocklet-sdk#getuser)
+- [getUsers()](/reference/blocklet-sdk#getusers)
+- [getOwner()](/reference/blocklet-sdk#getowner)
 
 ## User Permissions and Passports
 
@@ -90,7 +90,7 @@ Different from the traditional permission control system, the user's role is not
 
 The way Blocklet grants user roles is by issuing a passport to the user, which records the user's role. The user provides the corresponding passport when logging in to obtain the right to operate the resource.
 
-Developers can create roles and manage their permissions through [Blocklet SDK](/reference/blocklet-sdk#Auth).
+Developers can create roles and manage their permissions through [Blocklet SDK](/reference/blocklet-sdk#auth).
 
 Creating a role creates a passport.
 
@@ -119,16 +119,16 @@ Developers specify who can access by `whoCanAccess` in `blocklet.yml`
 
 Method 1: When `blockUnauthenticated` is set to `true`, unlogged requests will be automatically intercepted to the default login page
 
-Method 2: Implement in code, see [Middleware](/reference/blocklet-sdk#Middlewares)
+Method 2: Implement in code, see [Middleware](/reference/blocklet-sdk#middlewares)
 
 ### Forbid unauthorised requests
 
 #### Only allow specified roles to access
 
-Implemented in code, see [Middleware](/reference/blocklet-sdk#Middlewares)
+Implemented in code, see [Middleware](/reference/blocklet-sdk#middlewares)
 
 #### Only allow access with specified permissions
 
 Method 1: When `blockUnauthorized` is set to `true`, unauthorised requests will be automatically blocked
 
-Method 2: Implement in code, see [Middleware](/reference/blocklet-sdk#Middlewares)
+Method 2: Implement in code, see [Middleware](/reference/blocklet-sdk#middlewares)

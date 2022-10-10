@@ -117,7 +117,7 @@ window.blocklet.<shared env>
 
 Blocklet Server 提供了 hook 功能用来在执行生命周期的过程中做一些事情。目前包含 `pre-install, post-install, pre-start, post-start, pre-stop, pre-uninstall, pre-config` 这几个 Hook.
 
-见 (blocklet.yml)(/reference/blocklet-spec/#Scripts)
+见 (blocklet.yml)(/reference/blocklet-spec/#scripts)
 
 ## 在 blocklet 环境中运行脚本
 

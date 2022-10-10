@@ -17,9 +17,9 @@ The core concepts in the Blocklet ecosystem and the relationships between the co
 
 ## What is Blocklet Component?
 
-- A Blocklet Component is specifically a Blocklet that can be used in combination, or not, as declared in [blocklet.yml](/reference/blocklet-spec#Capabilities)
+- A Blocklet Component is specifically a Blocklet that can be used in combination, or not, as declared in [blocklet.yml](/reference/blocklet-spec#capabilities)
 - Blocklet Components can usually be used both independently and in combination, and can behave differently in both modes
-- Blocklet Components can [contain other Blocklet Components](/reference/blocklet-spec#Components), and this containment relationship can be nested, just as a codebase published in an NPM can depend on other codebases published on the NPM. However, from a performance point of view, there is a limit to the depth of nesting of Blocklet Components.
+- Blocklet Components can [contain other Blocklet Components](/reference/blocklet-spec#components), and this containment relationship can be nested, just as a codebase published in an NPM can depend on other codebases published on the NPM. However, from a performance point of view, there is a limit to the depth of nesting of Blocklet Components.
 
 ## What is Blocklet Server?
 
@@ -30,7 +30,7 @@ The core concepts in the Blocklet ecosystem and the relationships between the co
 
 ## What is Blocklet Bundle?
 
-- A Blocklet Bundle is a package built using [blocklet bundle](/reference/blocklet-cli#Bundle) that can be consumed by Blocklet Server
+- A Blocklet Bundle is a package built using [blocklet bundle](/reference/blocklet-cli#bundle) that can be consumed by Blocklet Server
 - Blocklet Bundles are usually uploaded and hosted by developers in the [Blocklet Store](https://store.blocklet.dev), and can be hosted on any accessible network.
 - A Blocklet Bundle typically contains the following two files.
 
@@ -48,7 +48,7 @@ The core concepts in the Blocklet ecosystem and the relationships between the co
 
 - A Blocklet App is an entity that is installed, runs in the Blocklet Server, and can provide services to the public.
 - The service behind a Blocklet App can consist of a single or multiple Blocklet Instances
-- The unique identifier of a Blocklet App is the appId, which can be obtained from [Blocklet SDK](/reference/blocklet-sdk#Environment) and [blocklet.js](/reference/blocklet-js)
+- The unique identifier of a Blocklet App is the appId, which can be obtained from [Blocklet SDK](/reference/blocklet-sdk#environment) and [blocklet.js](/reference/blocklet-js)
 - The same Blocklet Bundle running in a different Blocklet Server belongs to a different Blocklet App
 - The same Blocklet Bundle running in the same Blocklet Server also belongs to a different Blocklet App
 - A Blocklet App can have any number of users depending on the use case

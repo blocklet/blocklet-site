@@ -8,7 +8,7 @@ layout: documentation
 
 在 blocklet.yml:payment.price 中为 blocklet 设置价格。
 
-见 [blocklet.yml: price](/reference/blocklet-spec#Price)
+见 [blocklet.yml: price](/reference/blocklet-spec#price)
 
 ## 价格分成
 
@@ -16,7 +16,7 @@ blocklet 售卖所得收入默认会按照 7:3 的比例分给商店和开发者
 
 你也可以在 blocklet.yml:payment.share 中自定义 blocklet 分成方式（商店分成比例不能小于商店要求的最小分成比例）
 
-见 [blocklet.yml: price](/reference/blocklet-spec#Price)
+见 [blocklet.yml: price](/reference/blocklet-spec#price)
 
 ## 付费 Blocklet 发布过程
 
@@ -32,7 +32,7 @@ blocklet 售卖所得收入默认会按照 7:3 的比例分给商店和开发者
 
 组件可根据应用的价格区间分别设置不同的价格。比如 “当应用售价小于 10 ABT 时，价格为 2 ABT，当应用售价大于 10 ABT 时，价格为 20%”
 
-见 [blocklet.yml: component price](/reference/blocklet-spec#Price)
+见 [blocklet.yml: component price](/reference/blocklet-spec#price)
 
 ## 为组合 Blocklet 设置价格
 

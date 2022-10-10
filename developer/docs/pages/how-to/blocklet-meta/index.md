@@ -50,7 +50,7 @@ Blocklet names and descriptions are represented by `title` and `description`.
 
 `title` and `description` will be rendered in the page and visible to the user.
 
-For more configuration see [Blocklet Meta: Infomation](/reference/blocklet-spec#Infomation)
+For more configuration see [Blocklet Meta: Infomation](/reference/blocklet-spec#infomation)
 
 ## access entry
 
@@ -70,7 +70,7 @@ The access entry provided by Blocklet externally is declared in `interfaces`
 
 Each blocklet must declare and only one Web access entry.
 
-`interfaces` For more configuration see [Blocklet Meta: Interfaces](/reference/blocklet-spec#Interfaces)
+`interfaces` For more configuration see [Blocklet Meta: Interfaces](/reference/blocklet-spec#interfaces)
 
 ## Blocklet types
 
@@ -99,4 +99,4 @@ scripts:
   dev: npm run dev
 ```
 
-For more types see [Blocklet Meta: Type](/reference/blocklet-spec#Types)
+For more types see [Blocklet Meta: Type](/reference/blocklet-spec#types)

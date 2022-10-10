@@ -38,7 +38,7 @@ components:
 
 示例：[https://github.com/blocklet/component-demo/blob/main/blocklet.yml](https://github.com/blocklet/component-demo/blob/main/blocklet.yml)
 
-详见 [Blocklet Meta: Components](/reference/blocklet-spec#Components)
+详见 [Blocklet Meta: Components](/reference/blocklet-spec#components)
 
 ## 删除组件
 
@@ -114,15 +114,15 @@ navigation section 指定 navigation 出现在哪里
 - footer: 出现在 footer 中
 - dashboard: 出现在管理后台中
 
-你还可以为每一个导航添加 icon, i18n 等，详见 [Blocklet Meta: Navigation](/reference/blocklet-spec#Navigation,%20Theme,%20Copyright)
+你还可以为每一个导航添加 icon, i18n 等，详见 [Blocklet Meta: Navigation](/reference/blocklet-spec#navigation)
 
 ### 配置 Theme
 
-见 [Blocklet Meta: Theme](/reference/blocklet-spec#Navigation,%20Theme,%20Copyright)
+见 [Blocklet Meta: Theme](/reference/blocklet-spec#theme)
 
 ### 配置 Copyright
 
-见 [Blocklet Meta: Copyright](/reference/blocklet-spec#Navigation,%20Theme,%20Copyright)
+见 [Blocklet Meta: Copyright](/reference/blocklet-spec#copyright)
 
 ### 在各个组件的页面中使用统一组件
 
