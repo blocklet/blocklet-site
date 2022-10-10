@@ -50,7 +50,7 @@ layout: documentation
 
 ## 使用 create-blocklet 工具创建一个 Blocklet 项目
 
-通过 `blocklet create` 命令来可以调用以上工具来快速创建一个 Blocklet 应用（前提在本机中有安装 [blocklet-server](/docs/quick-start/blocklet-server) 环境）
+通过 `blocklet create` 命令来可以调用以上工具来快速创建一个 Blocklet 应用（前提在本机中有安装 [blocklet-server](/docs/zh/quick-start/blocklet-server) 环境）
 
 ![Step 1](./images/step-1.jpg)
 
@@ -76,7 +76,7 @@ layout: documentation
 
 ### 依赖准备
 
-在本机中有安装 [blocklet-server](/docs/quick-start/blocklet-server) 环境
+在本机中有安装 [blocklet-server](/docs/zh/quick-start/blocklet-server) 环境
 
 ### 生成 `blocklet.yml` 文件
 
