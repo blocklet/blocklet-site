@@ -1,6 +1,10 @@
+## 0.1.87 (October 11, 2022)
+
+- fix: link in how-to/develop
+
 ## 0.1.86 (October 11, 2022)
 
-docs: update how-to/develop
+- docs: update how-to/develop
 
 ## 0.1.85 (October 10, 2022)
 

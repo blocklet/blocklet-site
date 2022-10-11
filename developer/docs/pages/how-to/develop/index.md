@@ -49,7 +49,7 @@ You can clear all blocklet data with `blocklet dev clear`
 
 ## Blocklet Types
 
-See [blocklet.yml: Types](/reference/blocklet-spec/#types)
+See [blocklet.yml: Types](/reference/blocklet-spec#types)
 
 ## Define environment variables
 
@@ -121,7 +121,7 @@ window.blocklet.<shared env>
 
 Blocklet Server provides hook functionality to do something during the execution life cycle. Currently includes `pre-install, post-install, pre-start, post-start, pre-stop, pre-uninstall, pre-config` these Hooks.
 
-See [blocklet.yml: Scripts](/reference/blocklet-spec/#scripts)
+See [blocklet.yml: Scripts](/reference/blocklet-spec#scripts)
 
 ## Running scripts in blocklet runtime
 
