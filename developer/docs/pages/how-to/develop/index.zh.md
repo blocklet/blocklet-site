@@ -47,7 +47,11 @@ scripts:
 
 你可以通过 `blocklet dev clear` 清空 blocklet 的所有数据
 
-## 在 blocklet.yml 声明环境变量
+## Blocklet Types
+
+见 [blocklet.yml: Types](/reference/blocklet-spec/#types)
+
+## 配置环境变量
 
 blocklet 启动后可以通过 process.env.XXX 获取在 blocklet.yml 中声明的环境变量
 
@@ -89,7 +93,7 @@ KEY_1=value1
 
 ## 在页面中获取 blocklet 信息
 
-你可以通过请求 blocklet 的 `__meta__.js` 接口获取 blocklet 信息
+你可以通过请求 blocklet 的 `__blocklet__.js` 接口获取 blocklet 信息
 
 > 通过 Create Blocklet 创建的 blocklet 项目提供开箱即用的环境，你可以通过 window.blocklet 获取应用信息
 
@@ -117,7 +121,7 @@ window.blocklet.<shared env>
 
 Blocklet Server 提供了 hook 功能用来在执行生命周期的过程中做一些事情。目前包含 `pre-install, post-install, pre-start, post-start, pre-stop, pre-uninstall, pre-config` 这几个 Hook.
 
-见 (blocklet.yml)(/reference/blocklet-spec/#scripts)
+见 [blocklet.yml: Scripts](/reference/blocklet-spec/#scripts)
 
 ## 在 blocklet 环境中运行脚本
 

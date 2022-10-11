@@ -47,7 +47,11 @@ After you stop developing a blocklet, the persistent data of the blocklet will n
 
 You can clear all blocklet data with `blocklet dev clear`
 
-## Define environment variables in blocklet.yml
+## Blocklet Types
+
+See [blocklet.yml: Types](/reference/blocklet-spec/#types)
+
+## Define environment variables
 
 The environment variables declared in blocklet.yml can be obtained through process.env.XXX after blocklet is started
 
@@ -89,7 +93,7 @@ KEY_1=value1
 
 ## Get blocklet information in the page
 
-You can get blocklet information by requesting the blocklet's `__meta__.js` interface
+You can get blocklet information by requesting the blocklet's `__blocklet__.js` interface
 
 > The blocklet project created by Create Blocklet provides an out-of-the-box environment, and you can get application information through window.blocklet
 
@@ -117,7 +121,7 @@ window.blocklet.<shared env>
 
 Blocklet Server provides hook functionality to do something during the execution life cycle. Currently includes `pre-install, post-install, pre-start, post-start, pre-stop, pre-uninstall, pre-config` these Hooks.
 
-See (blocklet.yml)(/reference/blocklet-spec/#scripts)
+See [blocklet.yml: Scripts](/reference/blocklet-spec/#scripts)
 
 ## Running scripts in blocklet runtime
 
