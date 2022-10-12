@@ -5,4 +5,5 @@ layout: documentation
 ---
 
 - ArcBlock chain: @ocap/client
-- Ethereum chain: web3.js
+- Ethereum chain: web3.js, ethers.js
+- Standard chain info for DID Connect: blocklet sdk and development
