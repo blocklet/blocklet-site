@@ -1,3 +1,7 @@
+## 0.1.88 (October 12, 2022)
+
+- chore: delete unused blocklet-sdk-usage
+
 ## 0.1.87 (October 11, 2022)
 
 - fix: link in how-to/develop
