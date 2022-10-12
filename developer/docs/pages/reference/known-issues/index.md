@@ -4,6 +4,10 @@ description: Known Issues or Limitations
 layout: documentation
 ---
 
+:::Alert
+this page is in draft mode and need to be updated
+:::
+
 ## Cluster Mode
 
 你可以在 `blocklet.yml` 中声明 blocklet 以 Cluster 模式运行，提升性能。
@@ -21,8 +25,10 @@ blocklet 安装后，使用者可以在 blocklet 管理页面中设置以 Cluste
 
 ## Memory and CPU
 
-TBD
+- 最大可以运行的 blocklet 数量？
+- 最低的硬件要求？
 
 ## Develop react blocklet as a component
 
-TBD
+我们推荐使用 vite 而不是 react-scripts 来作为基础的构建工具，因为后者不容易扩展。介绍下 vite 插件的使用
+
