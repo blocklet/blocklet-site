@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Button from '@arcblock/ux/lib/Button';
@@ -23,7 +22,7 @@ function GalleryItem({ info, ...rest }) {
 
   return (
     <GalleryItemRoot>
-      <Link className="gallery-inner" to={`/docs/samples/${name}`}>
+      <a className="gallery-inner" href={`/docs/samples/${name}`}>
         <div className="gallery-cover-image" style={{ backgroundImage: `url(${coverImage})` }}>
           <div className="gallery-cover-overlay" />
         </div>
@@ -43,7 +42,7 @@ function GalleryItem({ info, ...rest }) {
             </Button>
           </div>
         </div>
-      </Link>
+      </a>
     </GalleryItemRoot>
   );
 }

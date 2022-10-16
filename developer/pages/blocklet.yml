@@ -51,6 +51,12 @@ navigation:
       en: /docs/en
       zh: /docs/zh
   - title:
+      en: Samples
+      zh: 示例
+    link:
+      en: /en/samples
+      zh: /zh/samples
+  - title:
       en: ToolKit
       zh: 工具箱
     items:
