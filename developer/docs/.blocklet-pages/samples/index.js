@@ -4,7 +4,7 @@ const samplesData = [
     displayName: 'Auth Demo',
     desc: {
       en: 'Blocklet that use auth by Blocklet Server Auth Service',
-      zh: 'Blocklet that use auth by Blocklet Server Auth Service',
+      zh: '演示如何使用 Blocklet Server Auth Service 实现认证功能的 Blocklet',
     },
     blockletType: 'dapp',
     composable: true,
@@ -20,7 +20,7 @@ const samplesData = [
     displayName: 'Component Demo',
     desc: {
       en: 'Combining multiple blocklets together',
-      zh: 'Combining multiple blocklets together',
+      zh: '一个组合了多个子 Blocklet 的组合式 Blocklet',
     },
     blockletType: 'static',
     composable: true,
