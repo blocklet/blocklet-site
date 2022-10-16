@@ -1,7 +1,9 @@
 ---
 title: Auth Demo
-description: Auth Demo
+description: Blocklet that use auth by Blocklet Server Auth Service
 layout: documentation
 ---
+
+<SampleInfo sampleName="auth-demo" />
 
 https://github.com/blocklet/auth-demo
