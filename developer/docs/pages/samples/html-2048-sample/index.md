@@ -1,6 +1,6 @@
 ---
 title: Static Demo
-description: The most basic Blocklet, with only one HTML page
+description: This is a Blocklet demo of the 2048 game used to demonstrate how to install and run a Blocklet on your Blocklet Server.
 layout: documentation
 ---
 

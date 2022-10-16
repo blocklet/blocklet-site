@@ -51,8 +51,8 @@ const samplesData = [
     name: 'html-2048-sample',
     displayName: 'Static Demo',
     desc: {
-      en: 'The most basic Blocklet, with only one HTML page',
-      zh: '只包含一个 HTML 页面的最简单的 Blocklet',
+      en: 'This is a Blocklet demo of the 2048 game used to demonstrate how to install and run a Blocklet on your Blocklet Server.',
+      zh: '一个 2048 游戏的 Blocklet 示例，用于演示如何在你的 Blocklet Server 上安装和运行 Blocklet。',
     },
     blockletType: 'static',
     composable: true,
@@ -67,8 +67,8 @@ const samplesData = [
     name: 'minimalist-html-demo',
     displayName: 'Simple HTML Demo',
     desc: {
-      en: 'This is a Blocklet demo of the 2048 game used to demonstrate how to install and run a Blocklet on your Blocklet Server.',
-      zh: '一个 2048 游戏的 Blocklet 示例，用于演示如何在你的 Blocklet Server 上安装和运行 Blocklet。',
+      en: 'The most basic Blocklet, with only one HTML page',
+      zh: '只包含一个 HTML 页面的最简单的 Blocklet',
     },
     blockletType: 'static',
     composable: true,

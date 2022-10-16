@@ -107,23 +107,26 @@ themeConfig:
             link: /conceptual/access-control
       - text: Samples
         link: /samples
+        hide: true
         items:
-          - text: Simple HTML Demo
-            link: /samples/simple-html-demo
-          - text: 2048 Demo
-            link: /samples/2048-demo
-          - text: React Demo
-            link: /samples/react-demo
-          - text: Blocklet Page Demo
-            link: /samples/blocklet-page-demo
           - text: Auth Demo
             link: /samples/auth-demo
-          - text: Notification Demo
-            link: /samples/notification-demo
           - text: Component Demo
             link: /samples/component-demo
-          - text: DID Connect Demo
-            link: /samples/did-connect-demo
+          - text: DID Connect Demo (v1)
+            link: /samples/did-connect-v1-demo
+          - text: Static Demo
+            link: /samples/html-2048-sample
+          - text: Simple HTML Demo
+            link: /samples/minimalist-html-demo
+          - text: Notification Demo
+            link: /samples/notification-demo
+          - text: Payment Demo
+            link: /samples/payment-demo
+          - text: Profile Demo
+            link: /samples/profile-demo
+          - text: React Demo
+            link: /samples/react-demo
       - text: Frequently Asked Questions
         link: /faq
     zh:
@@ -221,21 +224,23 @@ themeConfig:
       - text: 示例
         link: /samples
         items:
-          - text: Simple HTML Demo
-            link: /samples/simple-html-demo
-          - text: 2048 Demo
-            link: /samples/2048-demo
-          - text: React Demo
-            link: /samples/react-demo
-          - text: Blocklet Page Demo
-            link: /samples/blocklet-page-demo
           - text: Auth Demo
             link: /samples/auth-demo
-          - text: Notification Demo
-            link: /samples/notification-demo
           - text: Component Demo
             link: /samples/component-demo
-          - text: DID Connect Demo
-            link: /samples/did-connect-demo
+          - text: DID Connect Demo (v1)
+            link: /samples/did-connect-v1-demo
+          - text: Static Demo
+            link: /samples/html-2048-sample
+          - text: Simple HTML Demo
+            link: /samples/minimalist-html-demo
+          - text: Notification Demo
+            link: /samples/notification-demo
+          - text: Payment Demo
+            link: /samples/payment-demo
+          - text: Profile Demo
+            link: /samples/profile-demo
+          - text: React Demo
+            link: /samples/react-demo
       - text: 常见问题
         link: /faq
