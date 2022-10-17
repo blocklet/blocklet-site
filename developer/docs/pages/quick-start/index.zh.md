@@ -11,4 +11,4 @@ description: 如何配置你的开发和调试环境
 - [设置 Node.js](/quick-start/nodejs)
 - [设置 DID 钱包](/quick-start/did-wallet)
 - [设置 Blocklet 服务器](/quick-start/blocklet-server)
-- [创建第一个网站](/quick-start/create-blocklet)
+- [创建第一个应用](/quick-start/create-blocklet)
