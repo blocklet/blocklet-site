@@ -76,6 +76,6 @@ npm run deploy
 
 ## 进一步阅读
 
-- [Develop Blocklet](/how-to/develop)
-- [Publish your blocklet to the world](/how-to/publish)
-- [Operation and maintenance your blocklet](/how-to/operation)
+- [应用开发指南](/how-to/develop)
+- [应用发布指南](/how-to/publish)
+- [应用运行指南](/how-to/operation)
