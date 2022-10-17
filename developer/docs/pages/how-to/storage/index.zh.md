@@ -29,7 +29,7 @@ Blocklet SDK 为 blocklet 提供一个基于文件的数据库
 
 <!-- ## Using decentralized data store -->
 
-## Using ORM 
+## 使用 ORM 
 
 ### Prisma + SQLite 
 
