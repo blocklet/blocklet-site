@@ -6,7 +6,7 @@ layout: documentation
 
 ## 定义需要打包的文件
 
-### Logo(必选)
+### Logo（必要）
 
 对于每一个被 `bundle` 的 `blocklet` 而言，logo 文件是必要的。
 
@@ -16,16 +16,18 @@ layout: documentation
 - logo 的像素不能小于 256px \* 256px
 - logo 的文件大小不得超过 100KB
 
-### 在 blocklet.yml 声明 logo 字段
+### 定义 logo 字段
+
+你需要在 `blocklet.yml` 定义的 logo 字段，设置 logo 存放的路径。
 
 ```yml
+// blocklet.yml
 logo: logo.png
 ```
 
-### 编写 blocklet 使用文档
+### 自诉文件（必要）
 
 ### 先决条件
-
 
 ```yml
 
