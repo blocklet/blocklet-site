@@ -31,7 +31,7 @@ Blocklet SDK 为 blocklet 提供一个基于文件的数据库
 
 ## Using ORM 
 
-### Prisma + sqlite
+### Prisma + SQLite 
 
 #### 先决条件
 
@@ -65,6 +65,7 @@ npx prisma init --datasource-provider sqlite
 
 generator client {
   provider = "prisma-client-js"
+  // 注意，请不要自定义 generator 的 output 参数，目前有bug，详见：https://github.com/prisma/prisma/issues/13233
 }
 
 datasource db {
@@ -83,6 +84,10 @@ model User {
 如果你使用的开发工具是 vscode，你可以安装 [prisma 插件](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma) 以在建模的时候获得更好的编码体验。
 
 你可以使用 `npx prisma format` 命令帮助你格式化 `schema.prisma` 文件，并校验出发生错误的位置。
+
+:::Alert{type='warning' icon="true" title="警告"}
+注意，请不要自定义 generator 的 [output](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#generator) 参数，目前有bug，详见：https://github.com/prisma/prisma/issues/13233
+:::
 
 #### 3. 创建数据库和数据表
 
