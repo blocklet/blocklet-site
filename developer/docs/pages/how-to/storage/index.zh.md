@@ -212,4 +212,39 @@ npx prisma generate // 生成 @prisma/client 客户端，建议在 pre-install h
 npx prisma migrate deploy // 会在正式环境应用所有的迁移脚本，建议在 pre-install hook下完成
 ```
 
+`pre-install.js` 文件的代码可以参考以下示例:
+
+```typescript
+require('dotenv-flow').config();
+const { name } = require('../../package.json');
+const urljoin = require('url-join');
+const exec = require('shelljs.exec');
+const { logger } = require('../../libs/logger');
+
+async function createSqliteDatabase() {
+  const schemaUrl = urljoin(process.cwd(), 'prisma/schema.prisma');
+  exec(`npx prisma generate --schema ${schemaUrl}`);
+
+  if (process.env.DATABASE_URL) {
+    return;
+  }
+
+  process.env.DATABASE_URL = `file:${urljoin(process.env.BLOCKLET_DATA_DIR, 'db/did-storage.db')}`;
+
+  // @see: https://www.prisma.io/docs/concepts/components/prisma-migrate/db-push#can-i-use-prisma-migrate-and-db-push-together
+  exec(`npx prisma migrate deploy --schema ${schemaUrl}`);
+}
+
+(async () => {
+  try {
+    await createSqliteDatabase();
+  } catch (err) {
+    logger.error(`${name} pre-start error`, err.message);
+    process.exit(1);
+  }
+})();
+```
+
 至此，在正式环境部署 prisma 和 SQLite 的工作就大功告成了!
+
+
