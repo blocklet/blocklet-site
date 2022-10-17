@@ -8,16 +8,18 @@ layout: documentation
 
 ### Logo(必选)
 
+对于每一个被 `bundle` 的 `blocklet` 而言，logo 文件是必要的。
+
 ### 先决条件
 
-
-- 宽高必须相同，尺寸不能小于 256px \* 256px
-- 大小不能超过 100KB
+- logo 的宽高必须相同
+- logo 的像素不能小于 256px \* 256px
+- logo 的文件大小不得超过 100KB
 
 ### 在 blocklet.yml 声明 logo 字段
 
 ```yml
-blocklet.yml => logo
+logo: logo.png
 ```
 
 ### 编写 blocklet 使用文档
