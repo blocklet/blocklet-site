@@ -220,6 +220,7 @@ const { name } = require('../../package.json');
 const urljoin = require('url-join');
 const exec = require('shelljs.exec');
 const { logger } = require('../../libs/logger');
+const env = require('@blocklet/sdk/lib/env');
 
 async function createSqliteDatabase() {
   const schemaUrl = urljoin(process.cwd(), 'prisma/schema.prisma');
@@ -229,7 +230,7 @@ async function createSqliteDatabase() {
     return;
   }
 
-  process.env.DATABASE_URL = `file:${urljoin(process.env.BLOCKLET_DATA_DIR, 'db/did-storage.db')}`;
+  process.env.DATABASE_URL = `file:${urljoin(env.dataDir, 'db/prd.db')}`;
 
   // @see: https://www.prisma.io/docs/concepts/components/prisma-migrate/db-push#can-i-use-prisma-migrate-and-db-push-together
   exec(`npx prisma migrate deploy --schema ${schemaUrl}`);
