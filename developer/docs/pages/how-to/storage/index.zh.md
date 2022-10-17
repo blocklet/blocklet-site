@@ -206,7 +206,7 @@ Prisma Studio is up on http://localhost:5556
 npx prisma generate // 生成 @prisma/client 客户端，建议在 pre-install hook下完成
 ```
 
-接下来，我们需要在终端执行以下命令，以完成
+接下来，我们需要在终端执行以下命令，以完成生成环境数据库的迁移:
 
 ```shell
 npx prisma migrate deploy // 会在正式环境应用所有的迁移脚本，建议在 pre-install hook下完成
