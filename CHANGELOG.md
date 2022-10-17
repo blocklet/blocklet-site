@@ -1,3 +1,7 @@
+## 0.1.89 (October 17, 2022)
+
+- docs: use prisma + sqlite as storage engine
+
 ## 0.1.88 (October 12, 2022)
 
 - chore: delete unused blocklet-sdk-usage
