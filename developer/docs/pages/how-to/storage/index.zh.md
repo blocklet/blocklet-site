@@ -39,13 +39,13 @@ Blocklet SDK 为 blocklet 提供一个基于文件的数据库
 
 #### 1. 初始化 prisma 
 
-第一步，在你的项目安装 `prisma` 依赖
+第一步，在你的项目安装 `prisma` 依赖:
 
 ```shell
 yarn add prisma -D
 ```
 
-执行以下命令初始化 `prisma`，并使用 SQLite 作为你的数据库
+执行以下命令初始化 `prisma`，并使用 SQLite 作为你的数据库:
 
 ```
 npx prisma init --datasource-provider sqlite
@@ -101,21 +101,110 @@ npx prisma migrate dev --name init // 只在本地环境执行
 
 恭喜，您现在已创建好数据库和数据表。现在让我们开始学习如何使用 `Prisma Client` 操纵数据。
 
-#### 4. 使用 Prisma Client 操纵数据
+#### 4. 使用 Prisma Client 对数据增删改查
+
+要操纵数据库你可以导入 `@prisma/client` 来完成,创建 `test.js` 文件并添加以下代码到文件中:
 
 ```typescript
-app
+const { PrismaClient } = require("@prisma/client");
+const prismaClient = new PrismaClient();
+
+async function main() {
+  // 删除记录
+  const batchPayload = await prismaClient.user.deleteMany();
+  console.log("delete", batchPayload.count);
+
+  // 创建记录
+  const user = await prismaClient.user.create({
+    data: {
+      email: "2565978507@qq.com",
+      name: "skypesky",
+    },
+  });
+  console.log("create", user);
+
+  // 更新记录
+  const updatedUser = await prismaClient.user.update({
+    where: {
+      email: "2565978507@qq.com",
+    },
+    data: {
+      name: "skypesky666",
+    },
+  });
+  console.log("update", updatedUser);
+
+  // 查询记录
+  const users = await prismaClient.user.findMany();
+  console.log("find", users);
+}
+
+main();
 ```
 
+然后，使用以下命令执行脚本:
+
+```shell
+node test.js
+```
+
+你可以在终端看到以下输出:
+
+```shell
+delete 0
+create {
+  id: '1736c1c1-7560-4d7d-9b04-dcc6dd1dd1fb',
+  email: '2565978507@qq.com',
+  name: 'skypesky'
+}
+update {
+  id: '1736c1c1-7560-4d7d-9b04-dcc6dd1dd1fb',
+  email: '2565978507@qq.com',
+  name: 'skypesky666'
+}
+find [
+  {
+    id: '1736c1c1-7560-4d7d-9b04-dcc6dd1dd1fb',
+    email: '2565978507@qq.com',
+    name: 'skypesky666'
+  }
+]
+```
+
+如果你想了解更多关于 `CRUD` 的用法，请参考: https://www.prisma.io/docs/concepts/components/prisma-client/crud
+
 #### 5. 可视化查看 Prisma 中的数据
+
+Prisma 带有一个内置的 GUI，用于查看和编辑数据库中的数据。您可以使用以下命令打开它：
 
 ```shell
 npx prisma studio
 ```
 
-#### 6. 部署到正式环境
+此时，终端会输出 prisma studio 的地址
 
 ```shell
-npx prisma migrate deploy // pre-install hooks
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Prisma Studio is up on http://localhost:5556
 ```
 
+使用浏览器访问 `prisma studio`，你应该可以看到 `user` 数据表下所有的记录:
+
+![](./images/view-user-model.prisma-studio.png)
+
+#### 6. 部署到正式环境
+
+首先我们需要使用以下命令生成 Prisma Client:
+
+```shell
+npx prisma generate // 生成 @prisma/client 客户端，建议在 pre-install hook下完成
+```
+
+接下来，我们需要在终端执行以下命令，以完成
+
+```shell
+npx prisma migrate deploy // 会在正式环境应用所有的迁移脚本，建议在 pre-install hook下完成
+```
+
+至此，在正式环境部署 prisma 和 SQLite 的工作就大功告成了!
