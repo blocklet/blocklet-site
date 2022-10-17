@@ -33,11 +33,6 @@ logo: logo.png
 
 ```
 
-### changelog.md
-
-```
-
-```
 
 ### 截图
 
@@ -45,6 +40,11 @@ logo: logo.png
 
 ```
 
+### changelog.md
+
+```
+
+```
 
 ## 打包你的应用
 <!--- Bunding mode: zip, webpack
