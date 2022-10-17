@@ -13,12 +13,13 @@ layout: documentation
 #### 先决条件
 
 - logo 的宽高必须相同
-- logo 的像素不能小于 256px \* 256px
+- logo 的像素不能小于 256px \* 256px（svg 文件除外）
 - logo 的文件大小不得超过 100KB
+- logo 的格式必须是主流的图片格式（支持 svg, jpg, png等）
 
 #### 定义 logo 字段
 
-你需要在 `blocklet.yml` 定义的 logo 字段，设置 logo 存放的路径。
+你需要在 `blocklet.yml` 文件中定义 logo 字段，并设置 logo 存放的路径。
 
 ```yml
 // blocklet.yml
