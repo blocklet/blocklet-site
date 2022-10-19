@@ -45,7 +45,7 @@ Welcome to my blocklet
 ```
 
 另外，如果项目根目录下不存在 `blocklet.md` 文件，系统会有序地在项目根目录下继续匹配 `blocklet.en.md`，`README.md` 文件。
-如果系统最终查找失败，会在打包时抛出错误，打包会被终止。
+如果系统最终查找失败，会在打包时抛出错误并中断当前的打包行为。
 
 ### 截图（可选）
 
@@ -63,4 +63,25 @@ Welcome to my blocklet
 
 <!-- @see： https://github.com/blocklet/blocklet-site/pull/60#issuecomment-1281723839 -->
 
+### 默认的打包模式
+
+如果 blocklet 是通过 `blocklet create` 或 `create-blocklet` 创建的，那么可以直接通过以下命令完成打包行为:
+
+```
+yarn bundle
+```
+
+### 自定义打包模式
+
+#### 基于 zip 打包
+
+#### 基于 webpack 打包
+
+
+### 打包单应用和 monorepo 应用
+
+
+#### 打包单个应用
+
+#### 基于 monorepo 打包
 
