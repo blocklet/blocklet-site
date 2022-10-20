@@ -4,13 +4,13 @@ description: Bundle your blocklet
 layout: documentation
 ---
 
-在发布 blocklet 之前，你必须打包你的 blocklet。在本文中你将学会如何打包一个blocklet。
+你必须打包你的 `blocklet`，才能将 `blocklet` 发布到 `blocklet store`。在本文中你将学会如何打包一个blocklet。
 
 ## 准备工作
 
 ### Logo（必要）
 
-对于每一个被 `bundle` 的 `blocklet` 而言，logo 文件是必要的。
+一个设计精美的 logo 可以提高应用的辨识度，而对于每一个被 `bundle` 的 `blocklet` 而言，logo 文件同样是必要的。
 
 #### 先决条件
 
@@ -21,7 +21,7 @@ layout: documentation
 
 #### 定义 logo 字段
 
-你需要在 `blocklet.yml` 文件中定义 logo 文件存放的路径。
+你可以在 `blocklet.yml` 文件中定义 logo 文件存放的路径。
 
 ```yml
 logo: logo.png
@@ -32,7 +32,6 @@ logo: logo.png
 #### 先决条件
 
 每个 blocklet 都应该有自己的使用文档，简单易上手的使用文档更能吸引用户去下载安装它。
-
 
 #### 编写文档
 
@@ -49,9 +48,22 @@ Welcome to my blocklet
 
 ### 截图（可选）
 
-```yml
+在向用户介绍 `blocklet` 时，只有文字可能还是不够的，这时候你还可以使用屏幕截图向用户展示你的 `blocklet`。
 
+
+### 定义 scrr 字段
+
+你可以在 `blocklet.yml` 文件中定义 screenshots 字段:
+
+```yml
+screenshots:
+  - screenshot-0.png
+  - screenshot-1.png
+  - screenshot-2.png
+  - screenshot-3.png
 ```
+
+打包发布到 `blocklet store` 之后，你可以在 `blocklet` 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa)）面看到你的屏幕截图，默认是按照文件名的字典序升序，以轮播图的方式展示的。
 
 ### changelog.md
 
@@ -74,6 +86,10 @@ yarn bundle
 ### 自定义打包模式
 
 #### 基于 zip 打包
+
+```
+
+```
 
 #### 基于 webpack 打包
 
