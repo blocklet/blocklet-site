@@ -51,7 +51,7 @@ Welcome to my blocklet
 在向用户介绍 `blocklet` 时，只有文字可能还是不够的，这时候你还可以使用屏幕截图向用户展示你的 `blocklet`。
 
 
-### 定义 scrr 字段
+### 定义 screenshots 字段
 
 你可以在 `blocklet.yml` 文件中定义 screenshots 字段:
 
