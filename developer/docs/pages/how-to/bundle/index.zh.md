@@ -1,16 +1,22 @@
 ---
-title: Bundle your blocklet
-description: Bundle your blocklet
+title: 打包你的 blocklet
+description: 
 layout: documentation
 ---
 
-你必须打包你的 `blocklet`，才能将 `blocklet` 发布到 `blocklet store`。在本文中你将学会如何打包一个blocklet。
+## 简介
+
+你需要打包你的 blocklet，才能将 blocklet 发布到 `blocklet store`, 才能在 `blocklet server` 中去部署它。
+
+打包成功后，系统将会在项目根目录下生成一个 .blocklet 目录
+
+在本文中你将学会如何打包一个 blocklet。
 
 ## 准备工作
 
 ### 1. Logo（必要）
 
-一个设计精美的 logo 可以提高应用的辨识度，而对于每一个被 `bundle` 的 `blocklet` 而言，logo 文件同样是必要的。
+一个设计精美的 logo 可以提高应用的辨识度，而对于每一个被 `bundle` 的 blocklet 而言，logo 文件同样是必要的。
 
 #### 先决条件
 
@@ -48,8 +54,8 @@ Welcome to my blocklet
 
 ### 3. 截图（可选）
 
-在向用户介绍 `blocklet` 时，只有文字可能还是不够的。
-为了更好的呈现产品运行的效果，这时候你还可以使用屏幕截图向用户展示你的 `blocklet`。
+在向用户介绍 blocklet 时，只有文字可能还是不够的。
+为了更好的呈现产品运行的效果，这时候你还可以使用屏幕截图向用户展示你的 blocklet。
 
 
 #### 定义 screenshots 字段
@@ -64,11 +70,11 @@ screenshots:
   - screenshot-3.png
 ```
 
-打包发布到 `blocklet store` 之后，你可以在 `blocklet` 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa)）面看到你的屏幕截图，默认是按照文件名的字典序升序，以轮播图的方式展示的。
+打包发布到 `blocklet store` 之后，你可以在 blocklet 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa)）面看到你的屏幕截图，默认是按照文件名的字典序升序，以轮播图的方式展示的。
 
 ### 4. Change log
 
-每次更新 `blocklet` 的时候，我们可能需要记录变更的日志。
+每次更新 blocklet 的时候，我们可能需要记录变更的日志。
 对于开发者而言，通常是通过更新 `CHANGELOG.md` 文件来记录项目的变更。
 
 #### 编写 `CHANGELOG.md`
@@ -86,7 +92,7 @@ screenshots:
 - chore: update @nft-store/react lib and change the primary-color / logo
 ```
 
-打包发布到 `blocklet store` 之后，你可以在 `blocklet` 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa?tab=version)）面看到你的变更记录。
+打包发布到 `blocklet store` 之后，你可以在 blocklet 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa?tab=version)）面看到你的变更记录。
 
 
 ### 5. 自定义 bundle 内容
