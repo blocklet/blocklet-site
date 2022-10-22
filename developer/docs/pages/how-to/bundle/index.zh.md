@@ -6,26 +6,7 @@ layout: documentation
 
 ## 简介
 
-### 0. 程序的入口
-
 我们只有需要知道程序的启动入口在哪，才能启动这个 `blocklet`。
-
-#### 定义程序的入口文件
-
-你需要在 `blocklet.yml` 文件中定义 `main` 字段，以声明程序的入口，例如：
-
-```yml
-main: api/index.js
-```
-
-#### 定义程序运行所需的文件
-
-你需要在 `blocklet.yml` 文件中定义 `files` 字段，以声明程序运行所需的文件，例如：
-
-```yml
-files
-  - dist 
-```
 
 ### 1. 打包是什么?
 
@@ -70,7 +51,25 @@ blocklet 打包成功后，系统将会在项目根目录下生成一个 `.block
 
 ## 准备工作
 
-### 1. Logo（必要）
+### 1. 程序的入口
+#### 1. 定义程序的入口文件
+
+你需要在 `blocklet.yml` 文件中定义 `main` 字段，以声明程序的入口，例如：
+
+```yml
+main: api/index.js
+```
+
+#### 2. 定义程序运行所需的文件
+
+你需要在 `blocklet.yml` 文件中定义 `files` 字段，以声明程序运行所需的文件，例如：
+
+```yml
+files
+  - dist 
+```
+
+### 2. Logo（必要）
 
 一个设计精美的 logo 可以提高应用的辨识度，而对于每一个被 `bundle` 的 blocklet 而言，logo 文件同样是必要的。
 
@@ -89,7 +88,7 @@ blocklet 打包成功后，系统将会在项目根目录下生成一个 `.block
 logo: logo.png
 ```
 
-### 2. 使用文档（必要）
+### 3. 使用文档（必要）
 
 #### 先决条件
 
@@ -108,7 +107,7 @@ Welcome to my blocklet
 另外，如果项目根目录下不存在 `blocklet.md` 文件，系统会有序地在项目根目录下继续匹配 `blocklet.en.md`，`README.md` 文件。
 如果系统最终查找失败，会在打包时抛出错误并中断当前的打包行为。
 
-### 3. 截图（可选）
+### 4. 截图（可选）
 
 在向用户介绍 blocklet 时，只有文字可能还是不够的。
 为了更好的呈现产品运行的效果，这时候你还可以使用屏幕截图向用户展示你的 blocklet。
@@ -127,7 +126,7 @@ screenshots:
 
 打包发布到 `blocklet store` 之后，你可以在 blocklet 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa)）面看到你的屏幕截图，默认是按照文件名的字典序升序，以轮播图的方式展示的。
 
-### 4. Change log
+### 5. Change log
 
 每次更新 blocklet 的时候，我们可能需要记录变更的日志。
 对于开发者而言，通常是通过更新 `CHANGELOG.md` 文件来记录项目的变更。
@@ -150,8 +149,7 @@ screenshots:
 打包发布到 `blocklet store` 之后，你可以在 blocklet 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa?tab=version)）面看到你的变更记录。
 
 
-### 5. 自定义 bundle 内容
-
+### 6. 自定义 bundle 内容
 
 ```
 
@@ -179,6 +177,10 @@ yarn bundle
 blocklet bundle --zip --create-release
 ```
 
+上面的命令主要做了 2 件事:
+1. 以 zip 模式打包 blocklet
+2. 将打包后的文件放在 `.blocklet/release` 下
+
 #### 2. 基于 webpack 打包（弃用）
 
 通过 webpack 模式打包，会从程序入口开始分析程序的依赖，并将依赖打包到单个文件（blocklet.js）中。
@@ -188,8 +190,6 @@ blocklet bundle --create-release
 ```
 
 ### 打包 monorepo 应用（自定义） 
-
-// TODO
 
 ```shell
 blocklet bundle --create-release --monorepo
