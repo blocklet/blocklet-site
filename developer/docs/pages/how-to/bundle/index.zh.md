@@ -133,7 +133,7 @@ screenshots:
 
 #### 编写 `CHANGELOG.md`
 
-你可以在项目根目录下创建 `CHANGELOG.md` 文件，内容如下:
+你可以在项目根目录下创建 `CHANGELOG.md` 文件，例如:
 
 ```md
 
@@ -190,6 +190,8 @@ blocklet bundle --create-release
 ```
 
 ### 打包 monorepo 应用（自定义） 
+
+<!-- TODO -->
 
 ```shell
 blocklet bundle --create-release --monorepo
