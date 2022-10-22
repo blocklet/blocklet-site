@@ -6,6 +6,27 @@ layout: documentation
 
 ## 简介
 
+### 0. 程序的入口
+
+我们只有需要知道程序的启动入口在哪，才能启动这个 `blocklet`。
+
+#### 定义程序的入口文件
+
+你需要在 `blocklet.yml` 文件中定义 `main` 字段，以声明程序的入口，例如：
+
+```yml
+main: api/index.js
+```
+
+#### 定义程序运行所需的文件
+
+你需要在 `blocklet.yml` 文件中定义 `files` 字段，以声明程序运行所需的文件，例如：
+
+```yml
+files
+  - dist 
+```
+
 ### 1. 打包是什么?
 
 打包的本质就是将现有项目结构转化为另一种项目结构。
@@ -152,17 +173,23 @@ yarn bundle
 
 #### 1. 基于 zip 打包（推荐）
 
+与 webpack 的打包方式不同的是，zip 打包模式不会将项目打包成单个文件，而是会从程序入口开始分析程序的依赖，并将全部依赖按照原有的项目接口压缩到一个 zip 文件中。
+
 ```
 blocklet bundle --zip --create-release
 ```
 
 #### 2. 基于 webpack 打包（弃用）
 
+通过 webpack 模式打包，会从程序入口开始分析程序的依赖，并将依赖打包到单个文件（blocklet.js）中。
+
 ```shell
 blocklet bundle --create-release
 ```
 
 ### 打包 monorepo 应用（自定义） 
+
+// TODO
 
 ```shell
 blocklet bundle --create-release --monorepo
