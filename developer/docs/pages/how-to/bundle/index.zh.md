@@ -176,7 +176,7 @@ blocklet bundle --zip --create-release
 ```
 
 上面的命令主要做了 2 件事:
-1. 以 zip 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录
+1. 以 zip 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录，并会生成一个 `blocklet.zip` 文件
 2. 将打包后的文件放在项目根目录下 `.blocklet/release` 目录
 
 #### 2. 基于 webpack 打包（弃用）
@@ -193,9 +193,10 @@ blocklet bundle --create-release
 
 ### 打包 monorepo 应用（自定义） 
 
-<!-- TODO -->
-
 ```shell
 blocklet bundle --create-release --monorepo
 ```
 
+上面的命令主要做了 2 件事:
+1. 以 monorepo 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录
+2. 将打包后的文件放在项目根目录下 `.blocklet/release` 目录
