@@ -51,7 +51,7 @@ blocklet 打包成功后，系统将会在项目根目录下生成一个 `.block
 
 ## 准备工作
 
-### 1. 程序的入口
+### 1. 程序的入口（必要）
 #### 1. 定义程序的入口文件
 
 你需要在 `blocklet.yml` 文件中定义 `main` 字段，以声明程序的入口，例如：
@@ -128,7 +128,7 @@ screenshots:
 
 打包发布到 `blocklet store` 之后，你可以在 blocklet 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa)）面看到你的屏幕截图，默认是按照文件名的字典序升序，以轮播图的方式展示的。
 
-### 5. Change log
+### 5. Change log（可选）
 
 每次更新 blocklet 的时候，我们可能需要记录变更的日志。
 对于开发者而言，通常是通过更新 `CHANGELOG.md` 文件来记录项目的变更。
@@ -157,11 +157,13 @@ screenshots:
 
 ### 默认的打包模式
 
-如果 blocklet 是通过 `blocklet create` 或 `create-blocklet` 创建的，那么可以直接通过以下命令完成打包行为:
+如果 blocklet 是通过 `blocklet create` 或 `create-blocklet` 创建的，那么可以在终端执行内置的打包命令:
 
-```
+```shell
 yarn bundle
 ```
+
+打包命令执行成功后，应该可以在项目根目录下看到生成的 `.blocklet/bundle` 目录。
 
 ### 打包单个应用（自定义）
 
@@ -174,8 +176,8 @@ blocklet bundle --zip --create-release
 ```
 
 上面的命令主要做了 2 件事:
-1. 以 zip 模式打包 blocklet
-2. 将打包后的文件放在 `.blocklet/release` 下
+1. 以 zip 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录
+2. 将打包后的文件放在项目根目录下 `.blocklet/release` 目录
 
 #### 2. 基于 webpack 打包（弃用）
 
@@ -184,6 +186,10 @@ blocklet bundle --zip --create-release
 ```shell
 blocklet bundle --create-release
 ```
+
+上面的命令主要做了 2 件事:
+1. 以 webpack 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录
+2. 将打包后的文件放在项目根目录下 `.blocklet/release` 目录
 
 ### 打包 monorepo 应用（自定义） 
 
