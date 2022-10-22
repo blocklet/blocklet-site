@@ -75,13 +75,13 @@ screenshots:
 
 你可以在项目根目录下创建 `CHANGELOG.md` 文件，内容如下:
 
-```shell
+```md
 
-## 0.7.10 (October 18, 2022)
+# 0.7.10 (October 18, 2022)
 
 - chore: update deps to latest
 
-## 0.7.9 (October 17, 2022)
+# 0.7.9 (October 17, 2022)
 
 - chore: update @nft-store/react lib and change the primary-color / logo
 ```
@@ -108,21 +108,23 @@ screenshots:
 yarn bundle
 ```
 
-### 自定义打包模式
+### 打包单个应用（自定义）
 
-#### 基于 zip 打包
-
-```
+#### 1. 基于 zip 打包（推荐）
 
 ```
+blocklet bundle --zip --create-release
+```
 
-#### 基于 webpack 打包
+#### 2. 基于 webpack 打包（弃用）
 
+```shell
+blocklet bundle --create-release
+```
 
-### 打包单应用和 monorepo 应用
+### 打包 monorepo 应用（自定义） 
 
-
-#### 打包单个应用
-
-#### 基于 monorepo 打包
+```shell
+blocklet bundle --create-release --monorepo
+```
 
