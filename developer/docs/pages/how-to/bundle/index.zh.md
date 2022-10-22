@@ -65,9 +65,11 @@ main: api/index.js
 你需要在 `blocklet.yml` 文件中定义 `files` 字段，以声明程序运行所需的文件，例如：
 
 ```yml
-files
+files:
   - dist 
 ```
+
+上面的配置意味着，在 bundle 的时候，会简单地把 dist 目录复制到 `.blocklet/bundle` 目录下。
 
 ### 2. Logo（必要）
 
@@ -149,12 +151,6 @@ screenshots:
 打包发布到 `blocklet store` 之后，你可以在 blocklet 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa?tab=version)）面看到你的变更记录。
 
 
-### 6. 自定义 bundle 内容
-
-```
-
-```
-
 ## 打包应用
 
 <!-- @see： https://github.com/blocklet/blocklet-site/pull/60#issuecomment-1281723839 -->
@@ -173,7 +169,7 @@ yarn bundle
 
 与 webpack 的打包方式不同的是，zip 打包模式不会将项目打包成单个文件，而是会从程序入口开始分析程序的依赖，并将全部依赖按照原有的项目接口压缩到一个 zip 文件中。
 
-```
+```shell
 blocklet bundle --zip --create-release
 ```
 
