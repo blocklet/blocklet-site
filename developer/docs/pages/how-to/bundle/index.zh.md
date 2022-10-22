@@ -8,7 +8,7 @@ layout: documentation
 
 ## 准备工作
 
-### Logo（必要）
+### 1. Logo（必要）
 
 一个设计精美的 logo 可以提高应用的辨识度，而对于每一个被 `bundle` 的 `blocklet` 而言，logo 文件同样是必要的。
 
@@ -27,13 +27,13 @@ layout: documentation
 logo: logo.png
 ```
 
-### 使用文档（必要）
+### 2. 使用文档（必要）
 
 #### 先决条件
 
 每个 blocklet 都应该有自己的使用文档，简单易上手的使用文档更能吸引用户去使用它。
 
-#### 编写文档
+#### 编写使用文档
 
 现在，你只需要使用 markdown 语法在项目根目录下创建一个 `blocklet.md` 文件，无需在 `blocklet.yml` 声明这个文件，打包的时候会系统会自动识别这个文件。
 
@@ -46,13 +46,13 @@ Welcome to my blocklet
 另外，如果项目根目录下不存在 `blocklet.md` 文件，系统会有序地在项目根目录下继续匹配 `blocklet.en.md`，`README.md` 文件。
 如果系统最终查找失败，会在打包时抛出错误并中断当前的打包行为。
 
-### 截图（可选）
+### 3. 截图（可选）
 
 在向用户介绍 `blocklet` 时，只有文字可能还是不够的。
 为了更好的呈现产品运行的效果，这时候你还可以使用屏幕截图向用户展示你的 `blocklet`。
 
 
-### 定义 screenshots 字段
+#### 定义 screenshots 字段
 
 你可以在 `blocklet.yml` 文件中定义 screenshots 字段:
 
@@ -66,7 +66,31 @@ screenshots:
 
 打包发布到 `blocklet store` 之后，你可以在 `blocklet` 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa)）面看到你的屏幕截图，默认是按照文件名的字典序升序，以轮播图的方式展示的。
 
-### changelog.md
+### 4. Change log
+
+每次更新 `blocklet` 的时候，我们可能需要记录变更的日志。
+对于开发者而言，通常是通过更新 `CHANGELOG.md` 文件来记录项目的变更。
+
+#### 编写 `CHANGELOG.md`
+
+你可以在项目根目录下创建 `CHANGELOG.md` 文件，内容如下:
+
+```shell
+
+## 0.7.10 (October 18, 2022)
+
+- chore: update deps to latest
+
+## 0.7.9 (October 17, 2022)
+
+- chore: update @nft-store/react lib and change the primary-color / logo
+```
+
+打包发布到 `blocklet store` 之后，你可以在 `blocklet` 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa?tab=version)）面看到你的变更记录。
+
+
+### 5. 自定义 bundle 内容
+
 
 ```
 
