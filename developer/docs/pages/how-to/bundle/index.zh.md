@@ -191,3 +191,7 @@ blocklet bundle --create-release --monorepo
 上面的命令主要做了 2 件事:
 1. 以 monorepo 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录
 2. 将打包后的文件放在项目根目录下 `.blocklet/release` 目录
+
+至此，我们已经顺利地打包好了我们的 blocklet。
+接下来，你可以将打包好的 blocklet [发布](/zh/how-to/publish)到 `blocklet store` 或者[部署](/zh/how-to/deploy)到 `blocklet server`。
+
