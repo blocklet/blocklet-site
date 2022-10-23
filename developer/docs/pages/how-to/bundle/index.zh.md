@@ -120,7 +120,9 @@ screenshots:
 ### 5. Change log（可选）
 
 每次更新 blocklet 的时候，我们可能需要记录变更的日志。
-对于开发者而言，通常是通过更新 `CHANGELOG.md` 文件来记录项目的变更。
+对于开发者而言，通常是通过更新 `CHANGELOG.md` 文件来记录项目的变更，在 `blocklet store` 的展示效果如下图所示:
+
+![changelog preview](./images/changelog-preview.png)
 
 #### 编写 `CHANGELOG.md`
 
