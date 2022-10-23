@@ -84,6 +84,7 @@ logo: logo.png
 #### 先决条件
 
 每个 blocklet 都应该有自己的使用文档，简单易上手的使用文档更能吸引用户去使用它。
+与 markdown 一样，我们可以在使用文档上放置[文字](https://test.store.blocklet.dev/blocklets/z8iZwyBfqwNcGbLCiUnFAQLEzT8sJd2TSjbM2)，[图片](https://test.store.blocklet.dev/blocklets/z8iZwyBfqwNcGbLCiUnFAQLEzT8sJd2TSjbM2)，视频等。
 
 #### 编写使用文档
 
