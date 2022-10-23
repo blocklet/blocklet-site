@@ -35,8 +35,7 @@ blocklet 打包成功后，系统将会在项目根目录下生成一个 `.block
 
 ### 2. 为什么要打包？
 
-你需要打包你的 blocklet，才能将 blocklet 发布到 `blocklet store` 和 部署到 `blocklet server`。
-
+你需要打包你的 blocklet（就像苹果开发者打包苹果应用一样），才能将 blocklet 发布到 `blocklet store`（就像发布苹果应用到 app store 一样） 和 部署到 `blocklet server`（就像将苹果应用安装到苹果手机一样）。
 
 ## 准备工作
 
