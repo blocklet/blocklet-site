@@ -1,3 +1,7 @@
+## 0.1.90 (October 23, 2022)
+
+- feat: improve blocklet bundle docs
+
 ## 0.1.89 (October 17, 2022)
 
 - docs: use prisma + sqlite as storage engine
