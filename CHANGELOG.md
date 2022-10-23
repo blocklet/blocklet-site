@@ -1,6 +1,6 @@
-## 0.1.90 (October 23, 2022)
+## 0.1.90 (October 18, 2022)
 
-- feat: improve blocklet bundle docs
+- feat: update dependency module
 
 ## 0.1.89 (October 17, 2022)
 
