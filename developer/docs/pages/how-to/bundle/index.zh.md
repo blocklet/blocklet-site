@@ -19,24 +19,13 @@ blocklet 打包成功后，系统将会在项目根目录下生成一个 `.block
 │   ├── LICENSE
 │   ├── README.md
 │   ├── api
-│   │   └── hooks
-│   │       └── pre-start.js
 │   ├── blocklet.js
 │   ├── blocklet.md
 │   ├── blocklet.yml
 │   ├── blocklet.zip
 │   ├── dist
-│   │   ├── assets
-│   │   │   ├── index.4ce4d4a8.js
-│   │   │   ├── index.f9fc7772.css
-│   │   │   └── logo.6995c82e.svg
-│   │   ├── favicon.ico
-│   │   ├── index.html
-│   │   └── robots.txt
 │   ├── logo.png
 │   ├── media
-│   │   └── d1
-│   │       └── adb4d364405b8233534dcdf60bb70b
 │   ├── package.json
 │   └── screenshots
 └── release
