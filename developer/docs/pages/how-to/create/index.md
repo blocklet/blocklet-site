@@ -84,7 +84,7 @@ Go to the project directory, execute the `blocklet init` command in the terminal
 
 ![Step 1](./images/add-step-1.jpg)
 
-In the step of selecting the project type, select `static` if the current project is a `static site project`, or `daily` if the current project is a `backend API service project` or a `full-stack project ", then select `dapp`
+In the step of selecting the project type, select `static` if the current project is a `static site project`, or `daily` if the current project is a `backend API service project` or a `full-stack project`, then select `dapp`
 
 ![Step 2](./images/add-step-2.jpg)
 
