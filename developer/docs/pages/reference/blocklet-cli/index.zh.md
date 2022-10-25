@@ -162,7 +162,7 @@ $ blocklet bundle
 
 ### Deploy
 
-Deploys a blocklet from the local folder to remote Blocklet Server.
+**将 Blocklet 从本目录部署到远程 Blocklet Server**
 
 ```bash
 $ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx --access-secret xxxxxx
@@ -173,13 +173,13 @@ $ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx
 - `--access-key`: 在 Blocklet Server 创建的 Access Key
 - `--access-secret`: 在 Blocklet Server 创建的 Access Secret
 
-Deploys a blocklet from the local folder to local Blocklet Server.
+**将 Blocklet 从本目录部署到本地 Blocklet Server**
 
 ```bash
 $ blocklet deploy <blocklet-bundle-folder>
 ```
 
-Deploys a component from the local folder to Blocklet Server.
+**将组件从本地目录部署到 Blocklet Server**
 
 ```bash
 $ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx --access-secret xxxxxx --app-id <blocklet-app-id> --mount-point /xxx`
@@ -187,6 +187,14 @@ $ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx
 
 - `--app-id`: 应用的 AppID, 可在 blocklet 详情页中查看
 - `--mount-point`: 组件的挂载点
+
+**部署组件时将组件添加到导航中**
+
+通过 `blocklet deploy` 部署组件时，组件不会被自动添加到导航中。你可以添加 `--navigation` 参数将组件添加到导航中。
+
+```bash
+$ blocklet deploy <blocklet-bundle-folder> --app-id xxx --navigation
+```
 
 ### Upload
 

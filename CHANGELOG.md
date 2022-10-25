@@ -1,3 +1,7 @@
+## 0.1.92 (October 25, 2022)
+
+- docs(cli): update blocklet-cli page
+
 ## 0.1.91 (October 23, 2022)
 
 - feat: improve blocklet bundle docs

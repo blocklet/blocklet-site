@@ -162,7 +162,7 @@ $ blocklet bundle
 
 ### Deploy
 
-Deploys a blocklet from the local folder to remote Blocklet Server.
+**Deploys a blocklet from the local folder to remote Blocklet Server.**
 
 ```bash
 $ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx --access-secret xxxxxx
@@ -173,13 +173,13 @@ $ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx
 - `--access-key`: 在 Blocklet Server 创建的 Access Key
 - `--access-secret`: 在 Blocklet Server 创建的 Access Secret
 
-Deploys a blocklet from the local folder to local Blocklet Server.
+**Deploys a blocklet from the local folder to local Blocklet Server.**
 
 ```bash
 $ blocklet deploy <blocklet-bundle-folder>
 ```
 
-Deploys a component from the local folder to Blocklet Server.
+**Deploys a component from the local folder to Blocklet Server.**
 
 ```bash
 $ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx --access-secret xxxxxx --app-id <blocklet-app-id> --mount-point /xxx`
@@ -187,6 +187,14 @@ $ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx
 
 - `--app-id`: 应用的 AppID, 可在 blocklet 详情页中查看
 - `--mount-point`: 组件的挂载点
+
+**Add component to navigation when component is deployed**
+
+Components are not automatically added to the navigation when they are deployed via `blocklet deploy`. You can add the `--navigation` parameter to add component to the navigation.
+
+```bash
+$ blocklet deploy <blocklet-bundle-folder> --app-id xxx --navigation
+```
 
 ### Upload
 
