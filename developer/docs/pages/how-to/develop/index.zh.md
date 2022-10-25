@@ -158,3 +158,12 @@ console.log(getWallet().address);
 migration 目录中有 `1.0.0.js`, `1.0.1.js`, `1.1.0.js` 3 个文件
 
 当 blocklet 从 1.0.0 升级至 1.2.0 时，会执行 `1.0.1.js`, `1.1.0.js` 这两个 migration scripts
+
+:::Alert{type=warning}
+警告：需要将 migration 文件夹添加到 `blocklet.yml` 文件中的 `files` 字段中，如下所示：
+:::
+```yml
+files:
+  - ...
+  - migration
+```
