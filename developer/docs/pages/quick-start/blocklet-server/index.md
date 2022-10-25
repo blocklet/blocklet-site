@@ -73,46 +73,46 @@ After installing the Blocklet CLI, you can use an empty directory to store the c
 
 2. Run the `blocklet server init` command to initialize Blocklet Server
 
-- After executing the `init` command, the system will confirm the directory where you want to store your configuration. After confirmation, the system will automatically generate your Blocklet Server configuration.
+   > After executing the `init` command, the system will confirm the directory where you want to store your configuration. After confirmation, the system will automatically generate your Blocklet Server configuration.
 
-3.  Execute `blocklet server start` to start Blocklet Server
+3. Execute `blocklet server start` to start Blocklet Server
 
-<details>
-<summary>Example output</summary>
+    <details>
+    <summary>Example output</summary>
 
-```text
-linchen@arcblock demo % blocklet server init
-blocklet server v1.8.25
-Are you sure to initialize a Blocklet server? Are you sure to initialize a Blocklet Server instance in the current directory(/Users/linchen/code/arcblock/ad/demo) Yes
-✔ Blocklet Server configuration is successfully generated /Users/linchen/code/arcblock/ad/demo/.abtnode/abtnode.yml
-ℹ blocklet server start
+    ```text
+    linchen@arcblock demo % blocklet server init
+    blocklet server v1.8.25
+    Are you sure to initialize a Blocklet server? Are you sure to initialize a Blocklet Server instance in the current directory(/Users/linchen/code/arcblock/ad/demo) Yes
+    ✔ Blocklet Server configuration is successfully generated /Users/linchen/code/arcblock/ad/demo/.abtnode/abtnode.yml
+    ℹ blocklet server start
 
-linchen@arcblock demo % bn server start
-bn server v1.8.25
-✔ Blocklet Server DB Proxy ready on port 40404
-ℹ Node DID from config zNKqGAvUzcCowxtNA5r5gKQYUm2hR4X2SE2o
-ℹ Node config from /Users/linchen/code/arcblock/ad/.abtnode/abtnode.yml
-✔ Blocklet Server Event Hub ready on port 40407
-✔ Blocklet Server Updater already running
-✔ Update blocklet environments success
-✔ Fetch wildcard certificates successfully
-✔ Starting Blocklet Service... Done in 5.065s
-✔ Starting Blocklet Server Daemon... Done in 18.077s
-✔ Fetching accessible IPs... Done in 5.037s
-✔ Updating DID Domain... Done in 0.832s
-✔ You can access your Blocklet Server with either of the following URLs
+    linchen@arcblock demo % bn server start
+    bn server v1.8.25
+    ✔ Blocklet Server DB Proxy ready on port 40404
+    ℹ Node DID from config zNKqGAvUzcCowxtNA5r5gKQYUm2hR4X2SE2o
+    ℹ Node config from /Users/linchen/code/arcblock/ad/.abtnode/abtnode.yml
+    ✔ Blocklet Server Event Hub ready on port 40407
+    ✔ Blocklet Server Updater already running
+    ✔ Update blocklet environments success
+    ✔ Fetch wildcard certificates successfully
+    ✔ Starting Blocklet Service... Done in 5.065s
+    ✔ Starting Blocklet Server Daemon... Done in 18.077s
+    ✔ Fetching accessible IPs... Done in 5.037s
+    ✔ Updating DID Domain... Done in 0.832s
+    ✔ You can access your Blocklet Server with either of the following URLs
 
-HTTP URLs:
+    HTTP URLs:
 
-- http://192.168.3.28/admin/
-- http://znkqgavuzccowxtna5r5gkqyum2hr4x2se2o.did.abtnet.io/admin/
+    - http://192.168.3.28/admin/
+    - http://znkqgavuzccowxtna5r5gkqyum2hr4x2se2o.did.abtnet.io/admin/
 
-Secure URLs (Recommended):
+    Secure URLs (Recommended):
 
-- https://192-168-3-28.ip.abtnet.io/admin/
-```
+    - https://192-168-3-28.ip.abtnet.io/admin/
+    ```
 
-</details>
+    </details>
 
 ## Access Blocklet Server
 
