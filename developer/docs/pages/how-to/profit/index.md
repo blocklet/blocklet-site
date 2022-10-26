@@ -6,7 +6,7 @@ layout: documentation
 
 ## 设置价格
 
-在 blocklet.yml:payment.price 中为 blocklet 设置价格。
+在 `blocklet.yml:payment.price` 中为 blocklet 设置价格。
 
 见 [blocklet.yml: price](/reference/blocklet-spec#price)
 
@@ -14,7 +14,7 @@ layout: documentation
 
 blocklet 售卖所得收入默认会按照 7:3 的比例分给商店和开发者。
 
-你也可以在 blocklet.yml:payment.share 中自定义 blocklet 分成方式（商店分成比例不能小于商店要求的最小分成比例）
+你也可以在 `blocklet.yml:payment.share` 中自定义 blocklet 分成方式（商店分成比例不能小于商店要求的最小分成比例）
 
 见 [blocklet.yml: price](/reference/blocklet-spec#price)
 
@@ -26,7 +26,7 @@ blocklet 售卖所得收入默认会按照 7:3 的比例分给商店和开发者
 
 ## 设置组件价格
 
-在 blocklet.yml:payment.componentPrice 设置组件销售价格。
+在 `blocklet.yml:payment.componentPrice` 设置组件销售价格。
 
 组件销售价格可设置为 "固定价格" 和 "按比例分成"。
 
