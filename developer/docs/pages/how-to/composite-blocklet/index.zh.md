@@ -15,7 +15,7 @@ layout: documentation
 
 ## 添加组件
 
-在项目根目录下执行 `blocklet add --store <store-url> --title xxx --mount-point /xxx` 命令添加组件
+在项目根目录下执行 `blocklet add <name> --store <store-url> --title xxx --mount-point /xxx` 命令添加组件
 
 你可以在任意商店的组件详情页中看到添加组件的命令，比如，如果你想添加 DID Comments, 可以在它的 [详情页](https://store.blocklet.dev/blocklets/z8ia1WEiBZ7hxURf6LwH21Wpg99vophFwSJdu) 中找到命令 `blocklet add did-comments --store=https://store.blocklet.dev`
 
@@ -62,7 +62,7 @@ components:
 
 为了统一组合 blocklet 中每一个组件的 UI，你需要做两件事
 
-1. 配置: 在 各个组件的 `blocklet.yml` 中配置组合信息
+1. 配置: 在各个组件的 `blocklet.yml` 中配置组合信息
 2. 在各个组件的页面中使用统一组件：`@blocklet/ui-react`
 
 示例：Component Demo

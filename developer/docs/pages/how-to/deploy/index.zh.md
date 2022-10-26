@@ -1,6 +1,6 @@
 ---
-title: Deploy blocklet directly to the server
-description: Deploy blocklet directly to the server
+title: 部署应用到节点
+description: 部署应用到节点
 layout: documentation
 ---
 

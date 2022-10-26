@@ -11,7 +11,7 @@ list:
   - icon: i-mdi:gesture-two-double-tap
     title: 快速入门
     description: !md |
-      环境设置并在几分钟内启动和运行你的第一个 Blocklet 项目
+      设置环境并在几分钟内启动和运行你的第一个 Blocklet 项目
 
       - [设置 Node.js](/quick-start/nodejs)
       - [设置 DID钱包](/quick-start/did-wallet)

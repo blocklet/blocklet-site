@@ -46,9 +46,8 @@ Users can login to Blocklet without registration
 ### Add the login component to the page
 
 ```js
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import React from 'react';
-
+import { ThemeProvider, createTheme } from '@arcblock/ux/lib/Theme';
 import { createAuthServiceSessionContext } from '@arcblock/did-connect/lib/Session';
 import Header from '@blocklet/ui-react/lib/Header';
 
@@ -100,7 +99,7 @@ Blocklet has 4 default passports (developer does not need to create via API to u
 
 - `owner`: Only Blocklet owners will get this passport. The Blocklet owner is the one who installed and started the Blocklet for the first time.
 - `admin`: It is recommended to issue this passport to the administrator of the Blocklet
-- `member`: It is recommended to issue secondary passports to internal members of the Blocklet
+- `member`: It is recommended to issue this passport to internal members of the Blocklet
 - `guest`: Usually no passport is required for the guest, this passport can be issued if required
 
 ## Access control

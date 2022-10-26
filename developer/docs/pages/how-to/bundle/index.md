@@ -4,6 +4,8 @@ description: Bundle your blocklet
 layout: documentation
 ---
 
+:DraftInfo
+
 - Bundling and building?
 - Bunding mode: zip, webpack
 - Bundling under mono-repo mode

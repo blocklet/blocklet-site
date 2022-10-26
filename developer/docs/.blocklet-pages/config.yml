@@ -132,7 +132,7 @@ themeConfig:
       - text: 入门指南
         link: /quick-start
         items:
-          - text: 安装 Node.js
+          - text: 设置 Node.js
             link: /quick-start/nodejs
           - text: 设置 DID Wallet
             link: /quick-start/did-wallet

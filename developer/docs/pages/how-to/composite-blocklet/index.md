@@ -15,7 +15,7 @@ In a blocklet grouped together, each component is a separate service that, throu
 
 ## Add component
 
-Execute the `blocklet add --store <store-url> --title xxx --mount-point /xxx` command in the project root directory to add components
+Execute the `blocklet add <name> --store <store-url> --title xxx --mount-point /xxx` command in the project root directory to add components
 
 You can see the command to add a component in the component details page of any store. For example, if you want to add DID Comments, you can go to its [details page](https://store.blocklet.dev/blocklets/z8ia1WEiBZ7hxURf6LwH21Wpg99vophFwSJdu) Find the command `blocklet add did-comments --store=https://store.blocklet.dev`
 

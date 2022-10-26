@@ -158,3 +158,12 @@ Create a migration file in the `migration` directory with the file name semver v
 There are 3 files `1.0.0.js`, `1.0.1.js`, `1.1.0.js` in the migration directory
 
 When the blocklet is upgraded from 1.0.0 to 1.2.0, the two migration scripts `1.0.1.js`, `1.1.0.js` will be executed
+
+:::Alert{type=warning}
+Warning: The migration folder needs to be added to the `files` field in the `blocklet.yml` file, as follows:
+:::
+```yml
+files:
+  - ...
+  - migration
+```

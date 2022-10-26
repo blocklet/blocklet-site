@@ -46,9 +46,8 @@ interfaces:
 ### 在页面中添加登录组件
 
 ```js
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import React from 'react';
-
+import { ThemeProvider, createTheme } from '@arcblock/ux/lib/Theme';
 import { createAuthServiceSessionContext } from '@arcblock/did-connect/lib/Session';
 import Header from '@blocklet/ui-react/lib/Header';
 
@@ -100,7 +99,7 @@ Blocklet 有 4 个默认的通行证 (开发者无需通过 API 创建即可使�
 
 - `owner`: 只有 Blocklet 所有者会获得此通行证。Blocklet 所有者是安装并首次启动 Blocklet 的那个人。
 - `admin`: 建议将此通行证颁发给 Blocklet 的管理者
-- `member`: 建议将次通行证颁发给 Blocklet 的内部成员
+- `member`: 建议将此通行证颁发给 Blocklet 的内部成员
 - `guest`: 通常不需要为访客颁发通行证，如果需要可以颁发此通行证
 
 ## 访问控制
