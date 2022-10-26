@@ -1,3 +1,18 @@
+## 0.1.93 (October 26, 2022)
+
+- chore: add translation for how-to/publish
+- chore: fix typo in how-to/deploy
+- chore: complete how-to/bundle
+- chore: add DraftInfo in how-to/bundle
+- chore: fix typo in how-to/profit
+- chore: fix typo in how-to/composite-blocklet
+- chore: fix typo in how-to/auth
+- chore: add migration folder setting
+- fix: typo
+- fix: warning Alert in zh page fixes #66
+- fix: link error in zh page fixes #64
+- fix: sidebar menu mismatch with page next button close #65
+
 ## 0.1.92 (October 25, 2022)
 
 - docs(cli): update blocklet-cli page
