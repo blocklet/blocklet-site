@@ -87,8 +87,8 @@ nginx version: nginx/1.21.6
     ✔ Blocklet Server configuration is successfully generated /Users/linchen/code/arcblock/ad/demo/.abtnode/abtnode.yml
     ℹ blocklet server start
 
-    linchen@arcblock demo % bn server start
-    bn server v1.8.25
+    linchen@arcblock demo % blocklet server start
+    blocklet server v1.8.25
     ✔ Blocklet Server DB Proxy ready on port 40404
     ℹ Node DID from config zNKqGAvUzcCowxtNA5r5gKQYUm2hR4X2SE2o
     ℹ Node config from /Users/linchen/code/arcblock/ad/.abtnode/abtnode.yml
