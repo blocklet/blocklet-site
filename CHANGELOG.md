@@ -1,3 +1,7 @@
+## 0.1.94 (October 27, 2022)
+
+- docs(faq): how to check the componrnt service port in blocklet
+
 ## 0.1.93 (October 26, 2022)
 
 - chore: add translation for how-to/publish

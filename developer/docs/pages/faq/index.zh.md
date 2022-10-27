@@ -53,3 +53,13 @@ ArcBlock 官方提供了 2 个 Blocklet 商店：
 2. [https://dev.store.blocklet.dev](https://dev.store.blocklet.dev)：提供样本/演示 Blocklet，用于学习和体验
 
 **Blocklet 商店是去中心化的，你可以在自己的 Blocklet Server 部署你自己的 Blocklet 商店！**
+
+## 如何查看 Blocklet 中各组件的服务端口？
+
+开发者 **不应该** 在代码中直接使用 Blocklet 组件的服务端口。
+
+如果开发者需要和内部组件通信，请使用 [Blocklet SDK: Component](/reference/blocklet-sdk#component)
+
+如果有其他原因（比如排查问题）需要查看，可以在浏览器中打开开发者工具，访问 Server Dashboard -> Blocklet 详情页，在 getBlocklet GQL 接口 中查看
+
+![](./images/view-port.png)

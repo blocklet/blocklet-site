@@ -53,3 +53,13 @@ ArcBlock officially provides 2 Blocklet Store:
 2. [https://dev.store.blocklet.dev](https://dev.store.blocklet.dev): Provide sample/demo Blocklets for learning and experience
 
 **Blocklet store is decentralized, you can deploy your own Blocklet store on your own Blocklet Server!**
+
+## How to check the componrnt service port in Blocklet?
+
+Developers should **NOT** use the service port of Blocklet components directly in their code.
+
+If developers need to communicate with internal components, please use [Blocklet SDK: Component](/reference/blocklet-sdk#component)
+
+If you need to check for other reasons (such as troubleshooting), you can open the developer tools in your browser, visit the Server Dashboard -> Blocklet details page, and view it in the getBlocklet GQL interface
+
+![](./images/view-port.png)
