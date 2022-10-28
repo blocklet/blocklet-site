@@ -1,3 +1,10 @@
+## 0.1.98 (October 28, 2022)
+
+- chore: update "how-to/deploy" docs
+- chore: update "reference/blocklet-actions" docs
+- fix: correct links "Blocklet UI"
+- fix: `./blocklet/bundle` -> `.blocklet/bundle`
+
 ## 0.1.97 (October 28, 2022)
 
 - docs: update blocklet.yml: requirements
