@@ -58,13 +58,22 @@ Get owner of the app
 
 ### getUsers
 
-`client.getUsers()`
+Get users of the app
 
-Get all users of the app
+#### By Default
+
+```
+client.getUsers();
+client.getUsers({ paging: { page: 2 } });
+client.getUsers({ query: { role: 'admin' } });
+client.getUsers({ query: { approved: true } });
+client.getUsers({ sort: { updatedAt: -1 } });
+```
 
 - _@param_ **paging** `Object`
   - **paging.pageSize** ``
-  - **paging.page** ``
+  - **paging.page** `
+  - > The value of pageSize cannot exceed 100
 - _@param_ **query** `Object`
   - **query.role** `String` Match users by role name
     - `$none`: Match users which does not have a role
@@ -75,6 +84,7 @@ Get all users of the app
   - **sort.updatedAt** `Number`
   - **sort.lastLoginAt** `Number`
   - > `-1`: The latest time is at first. `1`: The latest time is at last.
+  - > default sort is `{ createdAt: -1 }`
 - _@return_ `{ code, users, paging }`
 
 ```
@@ -85,6 +95,24 @@ Paging {
   page: current page number
 }
 ```
+
+#### By User DID
+
+```
+client.getUsers({ dids: ['did1', 'did2', ...] });
+client.getUsers({ dids: ['did1', 'did2', ...], query: { approved: true } });
+```
+
+- _@param_ **Array\<string\>** `dids` The user did list
+  - > The length of dids cannot exceed 100
+- _@param_ **query** `Object`
+  - **query.approved** `Boolean` Match users by approved
+- _@return_ `{ code, users }`
+
+Tips:
+
+- If you don't pass the `dids` parameter, the API will run by default
+- If you pass in a non-existing DID, the API **will not** report an error
 
 ### getPermissionsByRole
 

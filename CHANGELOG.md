@@ -1,3 +1,7 @@
+## 0.1.96 (October 28, 2022)
+
+- docs: update Blocklet SDK: getUsers
+
 ## 0.1.95 (October 28, 2022)
 
 - docs: update User and Passport
