@@ -1,3 +1,7 @@
+## 0.1.97 (October 28, 2022)
+
+- docs: update blocklet.yml: requirements
+
 ## 0.1.96 (October 28, 2022)
 
 - docs: update Blocklet SDK: getUsers

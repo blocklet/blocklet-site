@@ -237,6 +237,7 @@ requirements:
   server: '>=1.8.0' # server version constraints
   os: '*'
   cpu: '*'
+  nodejs: '*'
   fuels: # Fuel needed before starting (token)
     endpoint: xxx # The address of the chain
     address: xxx # token address
@@ -260,6 +261,13 @@ requirements:
 ```yml
 requirements:
   server: '>=1.8.0' # server version must be greater than or equal to 1.8.0
+```
+
+#### Specify the minimum Nodejs version number
+
+```yml
+requirements:
+  nodejs: '>=18.0.0' # Nodejs version must be greater than or equal to 18.0.0
 ```
 
 ## Capabilities

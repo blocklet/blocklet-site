@@ -237,6 +237,7 @@ requirements:
   server: '>=1.8.0' # server 版本约束
   os: '*'
   cpu: '*'
+  nodejs: '*'
   fuels: # 启动前需要的燃料 (token)
     endpoint: xxx # 链的地址
     adress: xxx # token address
@@ -260,6 +261,13 @@ requirements:
 ```yml
 requirements:
   server: '>=1.8.0' # server 版本必须大于等于 1.8.0
+```
+
+#### 指定最低的 Nodejs 版本号
+
+```yml
+requirements:
+  nodejs: '>=18.0.0' # Nodejs 版本必须大于等于 18.0.0
 ```
 
 ## Capabilities
