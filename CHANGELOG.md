@@ -1,3 +1,7 @@
+## 0.1.95 (October 28, 2022)
+
+- docs: update User and Passport
+
 ## 0.1.94 (October 27, 2022)
 
 - docs(faq): how to check the componrnt service port in blocklet

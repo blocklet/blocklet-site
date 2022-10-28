@@ -37,6 +37,12 @@ interfaces:
             - email
             - avatar
           ignoreUrls: [] # Which interfaces allow any request to access
+    # The following properties has nothing to do with auth
+    protocol: http
+    name: publicUrl
+    port: BLOCKLET_PORT
+    path: /
+    prefix: '*'
 ```
 
 ## Login

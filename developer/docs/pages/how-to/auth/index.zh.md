@@ -37,6 +37,12 @@ interfaces:
             - email
             - avatar
           ignoreUrls: [] # 哪些接口允许任何请求访问
+    # 以下配置和 auth 无关
+    protocol: http
+    name: publicUrl
+    port: BLOCKLET_PORT
+    path: /
+    prefix: '*'
 ```
 
 ## 登录
