@@ -71,7 +71,7 @@ export default function App() {
 }
 ```
 
-更多：[Blocklet UI](/development/blocklet-ui-usage)
+更多：[Blocklet UI](/reference/blocklet-ui)
 
 ### 使用默认的登录页
 

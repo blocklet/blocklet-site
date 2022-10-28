@@ -71,7 +71,7 @@ export default function App() {
 }
 ```
 
-More: [Blocklet UI](/development/blocklet-ui-usage)
+More: [Blocklet UI](/reference/blocklet-ui)
 
 ### Use default login page
 
