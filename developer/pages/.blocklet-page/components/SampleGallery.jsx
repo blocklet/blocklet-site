@@ -4,7 +4,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Button from '@arcblock/ux/lib/Button';
 import { styled } from '@arcblock/ux/lib/Theme';
 import { useInjectContext } from 'virtual:context';
-import { samples } from 'blocklet-developer-docs/.blocklet-pages/samples';
+import { samples } from '../samples';
 
 const translations = {
   en: {
@@ -22,7 +22,7 @@ function GalleryItem({ info, ...rest }) {
 
   return (
     <GalleryItemRoot>
-      <a className="gallery-inner" href={`/docs/samples/${name}`}>
+      <a className="gallery-inner" href={`/samples/${name}`}>
         <div className="gallery-cover-image" style={{ backgroundImage: `url(${coverImage})` }}>
           <div className="gallery-cover-overlay" />
         </div>
