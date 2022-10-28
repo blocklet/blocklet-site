@@ -4,7 +4,9 @@ description: 部署应用到节点
 layout: documentation
 ---
 
-如果你是 blocklet 的开发者，或者你有 blocklet 的 release bundle, 你可以将 blocklet 直接部署到你的 Blocklet Server 中
+在进行部署操作前，你需要确保你拥有可用于部署的 release bundle 文件。通常来说 release bundle 文件可以通过从项目的源码中打包获得，打包步骤可以参考这里：[Bundle](/how-to/bundle)，也可以是其他人将已经打包好的 release bundle 分享给你。
+
+在拥有了 release bundle 文件后，你可以将 blocklet 直接部署到你的 Blocklet Server 中
 
 ## 将 Blocklet 部署到 Blocklet Server
 
