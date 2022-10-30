@@ -24,7 +24,7 @@ function GalleryPage(props) {
   return (
     <Container {...props}>
       <Box my={8}>
-        <Box mb={4} textAlign="center">
+        <Box mb={8} textAlign="center">
           <Typography variant="h3">{t(locale, 'title')}</Typography>
         </Box>
         <SampleGallery />

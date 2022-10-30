@@ -18,6 +18,23 @@ const translations = {
   },
 };
 
+function BackToGallery({ locale, ...rest }) {
+  return (
+    <Box
+      component={Link}
+      to="/samples"
+      display="flex"
+      alignItems="center"
+      gap={0.5}
+      fontSize={14}
+      color="grey.600"
+      {...rest}>
+      <ArrowBackIcon sx={{ fontSize: 14 }} />
+      <span>{translations[locale]?.backToGallery || translations.en.backToGallery}</span>
+    </Box>
+  );
+}
+
 export default function SamplePage({ children, ...rest }) {
   const injectContextValue = useInjectContext();
   const { page, useLocaleContext } = injectContextValue;
@@ -30,20 +47,13 @@ export default function SamplePage({ children, ...rest }) {
         <Container>
           <div className="sample-layout">
             <div className="sample-layout-aside">
-              <Box
-                component={Link}
-                to="/samples"
-                display="flex"
-                alignItems="center"
-                gap={0.5}
-                fontSize={13}
-                color="grey.600">
-                <ArrowBackIcon sx={{ fontSize: 13 }} />
-                <span>{translations[locale]?.backToGallery || translations.en.backToGallery}</span>
-              </Box>
-              <SampleInfo sampleName="auth-demo" />
+              <BackToGallery locale={locale} />
+              <SampleInfo sampleName="auth-demo" style={{ marginTop: 32 }} />
             </div>
             <div className="sample-layout-main">
+              <Box sx={{ display: { xs: 'block', md: 'none' }, mb: 3 }}>
+                <BackToGallery locale={locale} />
+              </Box>
               <div className="sample-info-img">
                 <img src={sample.coverImage} alt={sample.displayName} className="max-w-full max-h-full" />
               </div>
