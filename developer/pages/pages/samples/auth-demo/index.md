@@ -5,4 +5,4 @@ layout: sample-page-layout
 
 ## Auth Demo
 
-https://github.com/blocklet/auth-demo
+Blocklet that use auth by Blocklet Server Auth Service

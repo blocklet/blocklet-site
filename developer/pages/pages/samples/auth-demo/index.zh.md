@@ -5,4 +5,4 @@ layout: sample-page-layout
 
 ## Auth Demo
 
-https://github.com/blocklet/auth-demo
+演示如何使用 Blocklet Server Auth Service 实现认证功能的 Blocklet

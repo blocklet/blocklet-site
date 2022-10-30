@@ -48,7 +48,7 @@ export default function SamplePage({ children, ...rest }) {
           <div className="sample-layout">
             <div className="sample-layout-aside">
               <BackToGallery locale={locale} />
-              <SampleInfo sampleName="auth-demo" style={{ marginTop: 32 }} />
+              <SampleInfo sampleName={sample.name} style={{ marginTop: 32 }} />
             </div>
             <div className="sample-layout-main">
               <Box sx={{ display: { xs: 'block', md: 'none' }, mb: 3 }}>
@@ -58,7 +58,7 @@ export default function SamplePage({ children, ...rest }) {
                 <img src={sample.coverImage} alt={sample.displayName} className="max-w-full max-h-full" />
               </div>
               <div className="sample-info">
-                <SampleInfo sampleName="auth-demo" />
+                <SampleInfo sampleName={sample.name} />
               </div>
               <div>{children}</div>
             </div>
