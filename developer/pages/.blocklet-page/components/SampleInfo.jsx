@@ -48,10 +48,9 @@ function SampleInfo({ sampleName, ...rest }) {
 
   return (
     <Root {...rest}>
-      <div className="sample-info-img">
-        <img src={sample.coverImage} alt={sample.displayName} className="max-w-full max-h-full" />
-      </div>
       <div className="sample-info-content">
+        <h2>{sample.displayName}</h2>
+        <p>{sample.desc[locale]}</p>
         <ul>
           {items.map((item) => {
             const { key, label, ignoreEmptyValue, renderer } = item;
@@ -104,22 +103,12 @@ SampleInfo.propTypes = {
 SampleInfo.defaultProps = {};
 
 const Root = styled('div')`
-  display: flex;
+  /* display: flex;
   align-items: start;
   flex-wrap: wrap;
   gap: 44px;
-  margin: 32px 0;
+  margin: 32px 0; */
   font-size: 14px;
-  .sample-info-img {
-    flex: 1 0 440px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    img {
-      display: block;
-    }
-    ${(props) => props.theme.breakpoints.down('sm')} {
-      flex-shrink: 1;
-    }
-  }
   .sample-info-content {
     flex: 1 0 280px;
   }
