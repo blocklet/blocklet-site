@@ -1,3 +1,7 @@
+## 0.1.98 (October 31, 2022)
+
+- chore: add samples gallery page
+
 ## 0.1.97 (October 28, 2022)
 
 - docs: update blocklet.yml: requirements
