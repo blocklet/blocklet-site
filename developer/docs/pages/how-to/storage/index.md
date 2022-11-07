@@ -248,3 +248,11 @@ async function createSqliteDatabase() {
 ```
 
 This completes the deployment of prisma and SQLite in the official environment!
+
+## FAQ
+
+- Error: ENOENT: no such file or directory, open 'xxx/schema.prisma'` when using prisma `Prisma only supports Node.js >= 14.7` and `Error: ENOENT: no such file or directory, open 'xxx/schema.prisma'`
+
+:::Alert{type='success' icon="true" title="Solution"}
+This is because the node.js version is too low, just upgrade the node.js version to `14.17` or higher and restart the blocklet server to fix the problem.
+:::

@@ -252,7 +252,7 @@ async function createSqliteDatabase() {
 
 ## FAQ
 
-- 使用 prisma 时报错 `Prisma only supports Node.js >= 14.17` 和 `Prisma only supports Node.js >= 14.7` 和 `Error: ENOENT: no such file or directory, open 'xxx/schema.prisma'`
+- 使用 prisma 时报错 `Prisma only supports Node.js >= 14.7` 和 `Error: ENOENT: no such file or directory, open 'xxx/schema.prisma'`
 
 :::Alert{type='success' icon="true" title="解决方案"}
 这是因为 node.js 的版本太低了，只需要升级 node.js 的版本至 `14.17` 或更高的版本，并重启 blocklet server 即可解决问题。
