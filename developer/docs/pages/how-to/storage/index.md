@@ -36,7 +36,7 @@ Blocklet SDK 为 blocklet 提供一个基于文件的数据库
 
 #### Prerequisites 
 
-You need Node.js v14.17.0 or higher for this guide (learn more about [system requirements](https://www.prisma.io/docs/reference/system-requirements)).
+You need Node.js `v14.17.0` or higher for this guide (learn more about [system requirements](https://www.prisma.io/docs/reference/system-requirements)).
 
 #### 1. Initialization prisma
 
