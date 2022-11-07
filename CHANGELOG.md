@@ -1,3 +1,7 @@
+## 0.1.99 (November 07, 2022)
+
+- feat: added FAQ for storage chapter
+
 ## 0.1.98 (October 31, 2022)
 
 - chore: add samples gallery page

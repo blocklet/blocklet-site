@@ -36,7 +36,7 @@ Blocklet SDK 为 blocklet 提供一个基于文件的数据库
 
 #### Prerequisites 
 
-You need Node.js v14.17.0 or higher for this guide (learn more about [system requirements](https://www.prisma.io/docs/reference/system-requirements)).
+You need Node.js `v14.17.0` or higher for this guide (learn more about [system requirements](https://www.prisma.io/docs/reference/system-requirements)).
 
 #### 1. Initialization prisma
 
@@ -248,3 +248,11 @@ async function createSqliteDatabase() {
 ```
 
 This completes the deployment of prisma and SQLite in the official environment!
+
+## FAQ
+
+- Error when using prisma `Prisma only supports Node.js >= 14.7` and `Error: ENOENT: no such file or directory, open 'xxx/schema.prisma'`
+
+:::Alert{type='success' icon="true" title="Solution"}
+This is because the node.js version is too low, just upgrade the node.js version to `14.17` or higher and restart the blocklet server to fix the problem.
+:::
