@@ -42,9 +42,187 @@ For details, see [Blocklet SDK](/reference/blocklet-sdk#notification)
 
 Message are in a similar format to emails, including text, attachments, and actions.
 
-- Text: Contains title and body text. You can also send just the body, which is a simple text message.
-- Attachment: Attachment types include Asset(NFT), VC, Token.
-- Operation: You can attach an operation to the message (such as clicking to jump to a link), and the operation will be displayed in the wallet as a button.
+#### Text: Contains title and body text
+
+You can also send just the body, which is a simple text message.
+
+```javascript
+// Send Text
+
+await Notification.sendToUser(userDid, {
+  title: "I'm the message title",
+  body: 'I am the message content, the message content can be short text, long text, etc',
+});
+```
+
+The wallet can receive notifications on the message page
+
+![Send Text](./images/send-text.png)
+
+#### Attachment: Send different types of attachments
+
+The types include Asset(NFT), VC, and Token
+
+```javascript
+// Send Token
+
+await Notification.sendToUser(userDid, {
+  title: 'I am the title that sent the Token',
+  body: 'I will send TBA to the user, and the user can check whether it is received in the balance part',
+  attachments: [
+    {
+      type: 'token',
+      data: {
+        address: 'z35n6UoHSi9MED4uaQy6ozFgKPaZj2UKrurBG',
+        amount: '1000000000000000000',
+        symbol: 'TBA',
+        senderDid: senderDid,
+        chainHost: chainHost,
+        decimal: 18,
+      },
+    },
+  ],
+});
+```
+
+The wallet can receive notifications on the message page
+
+![Send Token](./images/send-token.png)
+
+```javascript
+// Send NFT
+
+await Notification.sendToUser(userDid, {
+  title: 'I am sending the title of the NFT',
+  body: 'The application will send two NFT to the user. The user can check whether the corresponding NFT is received in the asset list',
+  attachments: [
+    {
+      type,
+      data: {
+        did: asset.address,
+        chainHost: env.chainHost,
+      },
+    },
+    {
+      type,
+      data: {
+        did: asset2.address,
+        chainHost: env.chainHost,
+      },
+    },
+  ],
+});
+```
+
+The wallet can receive notifications on the message page
+
+![Send Asset](./images/send-asset.png)
+
+```javascript
+// Send VC
+
+const { create } = require('@arcblock/vc');
+
+const vc = create({
+  type: 'EmailVerificationCredential',
+  issuer: {
+    wallet: w,
+    name: 'ArcBlock.KYC.Email',
+  },
+  subject: {
+    id: userDid,
+    emailDigest: toBase64(emailDigest),
+    method: 'SHA3',
+  },
+});
+
+await Notification.sendToUser(userDid, {
+  title: 'I am sending the title of the VC',
+  body: 'The application will send two vc to the user. The user can check whether the corresponding vc is received in the asset list',
+  attachments: [
+    {
+      type,
+      data: {
+        credential: vc,
+        tag: vt.email,
+      },
+    },
+    {
+      type,
+      data: {
+        credential: vc,
+        tag: passport.title,
+      },
+    },
+  ],
+});
+```
+
+The wallet can receive notifications on the message page
+
+![Send Vc](./images/send-vc.png)
+
+```javascript
+// send feed message
+const feedTitles = [
+  'Playground 又又又有新功能上新啦，还不快来体验',
+  '更多新奇好玩的功能就在这里...',
+  '这里有关于 DID Connect 的一切，快来体验吧...',
+  '不知道什么是 DID Connect？那就点进来试试吧...',
+  '新增 Feed 流功能，赶快进来看看吧...',
+  '叮咚，叮咚，新年上新，进来看看吧...',
+];
+const feedCovers = [
+  'https://www.arcblock.io/blog/static/e764f965cad5b051eea9616da31e87ce/11382/cover.jpg',
+  'https://www.arcblock.io/blog/static/0cad6ff5c9f6da9ba3e6bda5754e80d4/b17e2/cover.png',
+  'https://www.arcblock.io/blog/static/1a80aecdfe20302d590426a0264f4001/1eba9/cover.jpg',
+  'https://www.arcblock.io/blog/static/601502c3b49551c102668fbd85828478/11382/cover.jpg',
+  'https://www.arcblock.io/blog/static/edc8c8c6590ed34ab81dcae62962813f/832a6/cover.jpg',
+  'https://www.arcblock.io/blog/static/3de65fca3c03276c9700f067af17e621/11382/cover.jpg',
+];
+const randomIndex = Math.floor(Math.random() * feedTitles.length);
+await Notification.sendToUser(userDid, {
+  type: 'feed',
+  feedType: 'graphic',
+  data: {
+    cardTitle: 'Playground Promotion',
+    items: [
+      {
+        title: feedTitles[randomIndex],
+        cover: feedCovers[randomIndex],
+        link: 'https://www.arcblock.io',
+      },
+    ],
+  },
+});
+```
+
+Wallets can be received on the Explore page
+
+![Send Fee](./images/send-feed.png)
+
+#### Operation: Send operation
+
+You can attach actions to a message (such as clicking to jump to a connection) that will be displayed as buttons in the wallet.
+
+```javascript
+// Send with operations
+
+await Notification.sendToUser(userDid, {
+  title: "I'm the message title",
+  body: 'You can receive a lot of notification actions, which can be links or buttons that can be manipulated',
+  actions={[
+    { name: 'launch', title: 'Launch', link: 'https://arcblock.io' },
+    { name: 'Set', title: 'ABT', link: 'https://arcblock.io' },
+    { name: 'Do What', title: 'Node', link: 'https://arcblock.io' },
+    { name: 'More', title: 'More Action', link: 'https://arcblock.io' },
+  ]}
+});
+```
+
+The wallet can receive notifications on the message page
+
+![Send With Action](./images/send-with-action.png)
 
 For details, see [Blocklet SDK](/reference/blocklet-sdk#notification)
 
