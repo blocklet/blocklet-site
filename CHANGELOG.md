@@ -1,3 +1,7 @@
+## 0.1.100 (November 10, 2022)
+
+- docs: Part send notification document content, add code and screenshots
+
 ## 0.1.99 (November 07, 2022)
 
 - feat: added FAQ for storage chapter
