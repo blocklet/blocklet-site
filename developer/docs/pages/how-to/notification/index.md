@@ -164,6 +164,7 @@ The wallet can receive notifications on the message page
 
 ```javascript
 // send feed message
+
 const feedTitles = ['Playground is new and functional, so come and play it'];
 const feedCovers = ['https://www.arcblock.io/blog/static/e764f965cad5b051eea9616da31e87ce/11382/cover.jpg'];
 await Notification.sendToUser(userDid, {
