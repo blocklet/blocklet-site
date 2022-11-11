@@ -4,137 +4,152 @@ description: Blocklet CLI
 layout: documentation
 ---
 
-Blocklet CLI provides `blocklet` command-line tool for controlling and administering Blocklets. Use the following syntax to run `blocklet` commands from your terminal:
+Blocklet CLI 提供了用于控制和管理 Blocklet 的 `blocklet` 命令行工具。 使用以下语法从终端运行 `blocklet` 命令：
 
 ```bash
-blocklet [options] [command]
+$ blocklet [options] [command]
 ```
 
-You can use the `-h` or `--help` to determine the full list of supported commands.
+您可以使用 `-h` 或 `--help` 来确定支持的命令的完整列表。
 
-## Version
+## 版本
 
-Shows the current Blocklet CLI version.
+显示当前的 Blocklet CLI 版本。
 
 ```bash
 $ blocklet -V
 1.4.4
 ```
 
-## Create Blocklet Project
+## 创建 Blocklet 项目
 
-Bootstraps an Blocklet project. The command use [create-blocklet](https://www.createblocklet.dev/docs) to generate a project.
+创建一个 Blocklet 项目。 该命令使用 [create-blocklet](https://www.createblocklet.dev/docs) 生成项目。详见 [Create Blocklet](https://www.createblocklet.dev/docs)
 
 ```bash
 $ blocklet create
 ```
 
-## Development a blocklet
+## 开发 blocklet
 
-### Develop
+### 开发
 
-Develop blocklet from current directory
-
-```bash
-blocklet dev
-```
-
-Open the browser after blocklet had been started
+从当前目录开发 Blocklet
 
 ```bash
-blocklet dev --open
+$ blocklet dev
+
+ℹ Try to dev blocklet from xxxxxxxx
+
+ℹ Node DID from config xxxxxx
+ℹ Node config from xxxxxx
+✔ Installing blocklet-developer-docs@0.1.0... Done in 0.31s
+✔ Blocklet blocklet-developer-docs@0.1.0 was successfully installed
+
+...
+
+✔ Blocklet blocklet-developer-docs@0.1.0 was successfully started
+
+ℹ You can access with the following URL
+
+- http://xxxxxx-xxxxxxxxxxxxxxxxxxxx.did.abtnet.io
 ```
 
-Develop blocklet as a component
+在 Blocklet 启动后打开浏览器
 
 ```bash
-blocklet dev --app-id <blocklet-app-id> --mount-point /xxx
+$ blocklet dev --open
 ```
 
-- `blocklet-app-id` can be viewed in the blocklet details page
-- `mount-point` the mount point of the component
-
-### Exec script
-
-Execute script in blocklet running context
+开发 Blocklet 组件
 
 ```bash
-blocklet exec <script>
+$ blocklet dev --app-id <blocklet-app-id> --mount-point /xxx
 ```
 
-## Meta
+- `blocklet-app-id` 可以在 blocklet 详情页面查看
+- `mount-point` 组件的挂载点
 
-This is an informational command which prints meta information for a Blocklet.
+### 执行脚本
+
+在 blocklet 运行上下文中执行脚本
+
+```bash
+$ blocklet exec <script>
+```
+
+## 元信息
+
+这是一个信息命令，用于打印 Blocklet 的元信息。
 
 ```bash
 $ blocklet meta
 ```
 
-## Manage components in blocklet.yml
+## 管理 blocklet.yml 中的组件
 
-### Add
+### 添加
 
-Add component to blocklet.yml
+将组件添加到 blocklet.yml
 
 ```bash
-Usage: blocklet add <name> --store <store> --title <title> --mount-point <mount-point>
+$ blocklet add <name> --store <store> --title <title> --mount-point <mount-point>
 ```
 
-- `name`: the id of the component in the store
-- `--store`: which store the component is in
-- `--title`: you can customize different names for components
-- `--mount-point`: the mount point of the component. If you fill in '/my-prefix', then all requests prefixed with it will be forwarded to the configured component
+- `name`：商店中组件的 id
+- `--store`：组件在哪个商店
+- `--title`：可以为组件自定义不同的名称
+- `--mount-point`：组件的挂载点。 如果填写'/my-prefix'，那么所有以它为前缀的请求都会被转发到配置的组件
 
-You can see the command to add a component in the component details page of any store. For example, if you want to add DID Comments, you can go to its [details page](https://store.blocklet.dev/blocklets/z8ia1WEiBZ7hxURf6LwH21Wpg99vophFwSJdu) Find the command `blocklet add did-comments --store=https://store.blocklet.dev`
+您可以在任何商店的组件详细信息页面中看到添加组件的命令。 比如要添加 DID Comments，可以到它的 [详情页](https://store.blocklet.dev/blocklets/z8ia1WEiBZ7hxURf6LwH21Wpg99vophFwSJdu) 找到命令 `blocklet add did-comments --store=https://store.blocklet.dev`
 
-### Remove
+### 删除
 
-Remove component from blocklet.yml
+从 blocklet.yml 中移除组件
 
 ```bash
-blocklet remove <name>
+$ blocklet remove <name>
 ```
 
-## Config Blocklet CLI
+执行命令后，组件信息将从 `blocklet.yml` 中删除。
 
-### Config
+## 配置 Blocklet CLI
 
-Manage the configuration for Blocklet CLI
+### 配置
+
+管理 Blocklet CLI 的配置
 
 ```bash
-blocklet config set [key] [value]    # Set config value
-blocklet config get [key]            # Get config value
-blocklet config delete [key]         # Delete config value
-blocklet config list              # List config value
+$ blocklet config set [key] [value]    # Set config value
+$ blocklet config get [key]            # Get config value
+$ blocklet config delete [key]         # Delete config value
+$ blocklet config list              # List config value
 ```
 
 你可为配置项设置不同的 profile
 
 ```bash
-blocklet config set key value # set key in default profile
-blocklet config set key value1  --profile profile1 # set key in profile1
-blocklet config set key value2  --profile profile2 # set key in profile2
+$ blocklet config set key value # set key in default profile
+$ blocklet config set key value1  --profile profile1 # set key in profile1
+$ blocklet config set key value2  --profile profile2 # set key in profile2
 
-blocklet config get key # get key in default prifle
-blocklet config get key --profile profile1 # get key in default prifle1
-blocklet config get key --profile profile2 # get key in default prifle2
+$ blocklet config get key # get key in default prifle
+$ blocklet config get key --profile profile1 # get key in default prifle1
+$ blocklet config get key --profile profile2 # get key in default prifle2
 ```
 
-### Connect
+### 连接
 
-Connect to blocklet store. This command will set store configuration by `blocklet config`
+连接到 Blocklet 商店。 此命令将通过 `blocklet config` 设置存储配置
 
 ```bash
-blocklet connect <store-url>
+$ blocklet connect <store-url>
 ```
 
-Set store configuration to specific profile
+在指定的 profile 中设置商店
 
 ```bash
-blocklet connect <store-url> --profile <profile>
+$ blocklet connect <store-url> --profile <profile>
 ```
-
-After executing the command, the component information will be removed from `blocklet.yml`.
 
 ## Build and Publish your blocklet
 
@@ -149,7 +164,7 @@ $ blocklet version  1.1.0
 
 ### Bundle
 
-Packages the Blocklet.
+将 Blocklet 打包。详见 [Blocklet Bundle](/how-to/bundle)
 
 ```bash
 $ blocklet bundle
@@ -196,17 +211,17 @@ $ blocklet deploy <blocklet-bundle-folder> --endpoint xxxxxx --access-key xxxxxx
 $ blocklet deploy <blocklet-bundle-folder> --app-id xxx --navigation
 ```
 
-### Upload
+### 上传到商店
 
-Upload the blocklet release to store, see the detail in [publish blocklet](../publish)
+上传 Blocklet 到商店，详见 [Publish Blocklet](../publish)
 
 ```bash
-blocklet upload [options] [metafile]
+$ blocklet upload [options] [metafile]
 ```
 
-## Help
+## 帮助
 
-The help command is useful to determine information for a particular command. Optionally you can also pass the `-h` option to the sub-command for the same purpose.
+help 命令用于获取指定命令的帮助信息。 您也可以将 `-h` 选项传递给子命令以获得帮助信息。
 
 ```bash
 $ blocklet help meta

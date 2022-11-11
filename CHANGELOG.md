@@ -1,3 +1,7 @@
+## 0.1.100 (November 11, 2022)
+
+- docs: polish blocklet cli
+
 ## 0.1.99 (November 07, 2022)
 
 - feat: added FAQ for storage chapter
