@@ -162,31 +162,6 @@ The wallet can receive notifications on the message page
 
 ![Send Vc](./images/send-vc.png)
 
-```javascript
-// send feed message
-
-const feedTitles = ['Playground is new and functional, so come and play it'];
-const feedCovers = ['https://www.arcblock.io/blog/static/e764f965cad5b051eea9616da31e87ce/11382/cover.jpg'];
-await Notification.sendToUser(userDid, {
-  type: 'feed',
-  feedType: 'graphic',
-  data: {
-    cardTitle: 'Playground Promotion',
-    items: [
-      {
-        title: feedTitles[0],
-        cover: feedCovers[0],
-        link: 'https://www.arcblock.io',
-      },
-    ],
-  },
-});
-```
-
-Wallets can be received on the Explore page
-
-![Send Fee](./images/send-feed.png)
-
 #### Operation: Send operation
 
 You can attach actions to a message (such as clicking to jump to a connection) that will be displayed as buttons in the wallet.

@@ -162,30 +162,6 @@ await Notification.sendToUser(userDid, {
 
 ![Send Vc](./images/send-vc.png)
 
-```javascript
-// 发送 feed 信息
-const feedTitles = ['Playground is new and functional, so come and play it'];
-const feedCovers = ['https://www.arcblock.io/blog/static/e764f965cad5b051eea9616da31e87ce/11382/cover.jpg'];
-await Notification.sendToUser(userDid, {
-  type: 'feed',
-  feedType: 'graphic',
-  data: {
-    cardTitle: 'Playground Promotion',
-    items: [
-      {
-        title: feedTitles[0],
-        cover: feedCovers[0],
-        link: 'https://www.arcblock.io',
-      },
-    ],
-  },
-});
-```
-
-钱包在探索页面可以收到
-
-![Send Feed](./images/send-feed.png)
-
 #### 操作：发送操作
 
 你可以为消息附加操作（比如点击跳转到某连接），操作将以按钮形式展示在钱包中。
