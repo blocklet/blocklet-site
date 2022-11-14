@@ -1,3 +1,7 @@
+## 0.1.101 (November 14, 2022)
+
+- docs: polish blocklet cli
+
 ## 0.1.100 (November 10, 2022)
 
 - docs: Part send notification document content, add code and screenshots

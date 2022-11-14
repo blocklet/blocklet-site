@@ -7,7 +7,7 @@ layout: documentation
 Blocklet CLI provides `blocklet` command-line tool for controlling and administering Blocklets. Use the following syntax to run `blocklet` commands from your terminal:
 
 ```bash
-blocklet [options] [command]
+$ blocklet [options] [command]
 ```
 
 You can use the `-h` or `--help` to determine the full list of supported commands.
@@ -36,19 +36,34 @@ $ blocklet create
 Develop blocklet from current directory
 
 ```bash
-blocklet dev
+$ blocklet dev
+
+ℹ Try to dev blocklet from xxxxxxxx
+
+ℹ Node DID from config xxxxxx
+ℹ Node config from xxxxxx
+✔ Installing blocklet-developer-docs@0.1.0... Done in 0.31s
+✔ Blocklet blocklet-developer-docs@0.1.0 was successfully installed
+
+...
+
+✔ Blocklet blocklet-developer-docs@0.1.0 was successfully started
+
+ℹ You can access with the following URL
+
+- http://xxxxxx-xxxxxxxxxxxxxxxxxxxx.did.abtnet.io
 ```
 
 Open the browser after blocklet had been started
 
 ```bash
-blocklet dev --open
+$ blocklet dev --open
 ```
 
 Develop blocklet as a component
 
 ```bash
-blocklet dev --app-id <blocklet-app-id> --mount-point /xxx
+$ blocklet dev --app-id <blocklet-app-id> --mount-point /xxx
 ```
 
 - `blocklet-app-id` can be viewed in the blocklet details page
@@ -59,7 +74,7 @@ blocklet dev --app-id <blocklet-app-id> --mount-point /xxx
 Execute script in blocklet running context
 
 ```bash
-blocklet exec <script>
+$ blocklet exec <script>
 ```
 
 ## Meta
@@ -77,7 +92,7 @@ $ blocklet meta
 Add component to blocklet.yml
 
 ```bash
-Usage: blocklet add <name> --store <store> --title <title> --mount-point <mount-point>
+$ blocklet add <name> --store <store> --title <title> --mount-point <mount-point>
 ```
 
 - `name`: the id of the component in the store
@@ -92,7 +107,7 @@ You can see the command to add a component in the component details page of any 
 Remove component from blocklet.yml
 
 ```bash
-blocklet remove <name>
+$ blocklet remove <name>
 ```
 
 ## Config Blocklet CLI
@@ -102,22 +117,22 @@ blocklet remove <name>
 Manage the configuration for Blocklet CLI
 
 ```bash
-blocklet config set [key] [value]    # Set config value
-blocklet config get [key]            # Get config value
-blocklet config delete [key]         # Delete config value
-blocklet config list              # List config value
+$ blocklet config set [key] [value]    # Set config value
+$ blocklet config get [key]            # Get config value
+$ blocklet config delete [key]         # Delete config value
+$ blocklet config list              # List config value
 ```
 
 你可为配置项设置不同的 profile
 
 ```bash
-blocklet config set key value # set key in default profile
-blocklet config set key value1  --profile profile1 # set key in profile1
-blocklet config set key value2  --profile profile2 # set key in profile2
+$ blocklet config set key value # set key in default profile
+$ blocklet config set key value1  --profile profile1 # set key in profile1
+$ blocklet config set key value2  --profile profile2 # set key in profile2
 
-blocklet config get key # get key in default prifle
-blocklet config get key --profile profile1 # get key in default prifle1
-blocklet config get key --profile profile2 # get key in default prifle2
+$ blocklet config get key # get key in default prifle
+$ blocklet config get key --profile profile1 # get key in default prifle1
+$ blocklet config get key --profile profile2 # get key in default prifle2
 ```
 
 ### Connect
@@ -125,13 +140,13 @@ blocklet config get key --profile profile2 # get key in default prifle2
 Connect to blocklet store. This command will set store configuration by `blocklet config`
 
 ```bash
-blocklet connect <store-url>
+$ blocklet connect <store-url>
 ```
 
 Set store configuration to specific profile
 
 ```bash
-blocklet connect <store-url> --profile <profile>
+$ blocklet connect <store-url> --profile <profile>
 ```
 
 After executing the command, the component information will be removed from `blocklet.yml`.
@@ -149,7 +164,7 @@ $ blocklet version  1.1.0
 
 ### Bundle
 
-Packages the Blocklet.
+Packages the Blocklet. See the detail in [Blocklet Bundle](/how-to/bundle)
 
 ```bash
 $ blocklet bundle
@@ -196,12 +211,12 @@ Components are not automatically added to the navigation when they are deployed 
 $ blocklet deploy <blocklet-bundle-folder> --app-id xxx --navigation
 ```
 
-### Upload
+### Upload to Store
 
-Upload the blocklet release to store, see the detail in [publish blocklet](../publish)
+Upload the blocklet release to store. See the detail in [Publish Blocklet](../publish)
 
 ```bash
-blocklet upload [options] [metafile]
+$ blocklet upload [options] [metafile]
 ```
 
 ## Help
