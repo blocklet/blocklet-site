@@ -35,6 +35,7 @@ list:
       实用的分步指南，帮助你实现特定的目标。当你试图完成某件事情时，最有用。
 
       - [创建](/how-to/create)和[开发](/how-to/develop) Blocklet
+      - [设计并使用应用偏好](/how-to/preferences)
       - [管理用户](/how-to/auth)、[与 DID Wallet 通信](/how-to/notification)
       - [创建组件](/how-to/component)、[创建组合型 Blocklet](/how-to/composit-blocklet)
       - [打包](/how-to/bundle)和[部署](/how-to/deploy) Blocklet。

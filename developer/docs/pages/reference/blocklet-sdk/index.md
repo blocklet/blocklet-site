@@ -462,8 +462,11 @@ const {
   dataDir, // the data dir of the blocklet
   cacheDir, // the cache dir of the blocklet
   mode, // in which mode the blocklet is running
+  preferences, // blocklet preferences
 } = env;
 ```
+
+Please reference [Blocklet Preferences](/how-to/preferences) for how to change the structure and value in `env.preferences`.
 
 ### mode
 
