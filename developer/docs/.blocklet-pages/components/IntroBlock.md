@@ -35,6 +35,7 @@ list:
       Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.
 
       - [Create](/how-to/create) and [develop](/how-to/develop) your blocklet
+      - [Setup and use blocklet preferences](/how-to/preferences)
       - [Manage users](/how-to/auth) and [talk with DID Wallet](/how-to/notification)
       - [Create component](/how-to/component) and [compose blocklets together](/how-to/composite-blocklet)
       - [Bundle](/how-to/bundle) and [deploy](/how-to/deploy) your blocklet

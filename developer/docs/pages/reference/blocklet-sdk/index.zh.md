@@ -462,8 +462,11 @@ const {
   dataDir, // Blocklet 数据存放目录
   cacheDir, // Blocklet 缓存数据路径
   mode, // Blocklet 以什么模式运行
+  preferences, // Blocklet 的偏好设置
 } = env;
 ```
+
+请参照 [应用偏好](/how-to/preferences) 来了解如何修改 `env.preferences` 的结构和数据。
 
 ### mode
 

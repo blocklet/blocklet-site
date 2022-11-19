@@ -4,14 +4,14 @@ description: This is Blocklet Developer Docs Site, powered by Blocklet Page
 theme: docs
 github: https://github.com/blocklet/blocklet-site
 plugins:
-  - resolve: '@xmark/plugin-docs-indexer'
+  - resolve: "@xmark/plugin-docs-indexer"
 optimizeDeps:
   include:
     - docs-searchbar.js
 themeConfig:
   colors:
-    primary: '#1DC1C7'
-    secondary: '#F0FDFF'
+    primary: "#1DC1C7"
+    secondary: "#F0FDFF"
   sidebar:
     en:
       - text: Welcome
@@ -39,6 +39,8 @@ themeConfig:
             link: /how-to/notification
           - text: Blocklet Storage
             link: /how-to/storage
+          - text: Using Blocklet Preferences
+            link: /how-to/preferences
           - text: Create Composite Blocklet
             link: /how-to/composite-blocklet
           - text: Blocklet Component
@@ -133,6 +135,8 @@ themeConfig:
             link: /how-to/notification
           - text: 存储应用状态
             link: /how-to/storage
+          - text: 设计和使用应用偏好
+            link: /how-to/preferences
           - text: 创建组合型应用
             link: /how-to/composite-blocklet
           - text: 开发组件

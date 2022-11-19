@@ -1,3 +1,7 @@
+## 0.1.102 (November 19, 2022)
+
+- chore: add blocklet preferences docs
+
 ## 0.1.101 (November 14, 2022)
 
 - docs: polish blocklet cli
