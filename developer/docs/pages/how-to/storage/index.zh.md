@@ -226,7 +226,8 @@ const env = require('@blocklet/sdk/lib/env');
 
 async function createSqliteDatabase() {
   const schemaUrl = urljoin(process.cwd(), 'prisma/schema.prisma');
-  exec(`npx prisma generate --schema ${schemaUrl}`);
+  // 注意: npx 可能会运行一个被缓存的旧版本的 prisma, 所以建议在这里为 prisma 指定 "latest" 或一个特定版本号
+  exec(`npx prisma@latest generate --schema ${schemaUrl}`);
 
   if (process.env.DATABASE_URL) {
     return;
@@ -235,7 +236,7 @@ async function createSqliteDatabase() {
   process.env.DATABASE_URL = `file:${urljoin(env.dataDir, 'db/prd.db')}`;
 
   // @see: https://www.prisma.io/docs/concepts/components/prisma-migrate/db-push#can-i-use-prisma-migrate-and-db-push-together
-  exec(`npx prisma migrate deploy --schema ${schemaUrl}`);
+  exec(`npx prisma@latest migrate deploy --schema ${schemaUrl}`);
 }
 
 (async () => {

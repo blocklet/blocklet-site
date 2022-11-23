@@ -1,3 +1,7 @@
+## 0.1.103 (November 23, 2022)
+
+- docs: update "prisma + sqlite" doc
+
 ## 0.1.102 (November 19, 2022)
 
 - chore: add blocklet preferences docs
