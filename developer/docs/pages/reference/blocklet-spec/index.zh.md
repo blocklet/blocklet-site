@@ -172,7 +172,9 @@ interfaces:
             - fullName
             - email
             - avatar
-          ignoreUrls: [] # 哪些接口允许任何请求访问
+          ignoreUrls: # 哪些接口允许公开访问
+            - /public/** # /public 下的任何接口允许公开访问
+            - /api/xxx # /api/xxx 允许公开访问
     protocol: http # 访问接口类型
     name: publicUrl # 通常不需要修改
     port: BLOCKLET_PORT # 接收端口的环境变量 (端口号由 Blocklet Server 生成)

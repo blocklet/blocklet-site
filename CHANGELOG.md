@@ -1,3 +1,7 @@
+## 0.1.105 (November 28, 2022)
+
+- docs: update ignoreUrls
+
 ## 0.1.104 (November 28, 2022)
 
 - docs: polish Blocklet SDK: middleware

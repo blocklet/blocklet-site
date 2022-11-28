@@ -120,6 +120,26 @@ Blocklet 有 4 个默认的通行证 (开发者无需通过 API 创建即可使�
 
 > 此配置可以被应用所有者修改
 
+### 设置指定的 URL 为公开访问
+
+如果你将应用设置为非公开访问，但是希望将某些 URL 设置为公开访问，你可在 `blocklet.yml` 中通过 `ignoreUrls` 来设置：
+
+```yml
+ignoreUrls:
+  - /api/** # 所有 /api 路径下的 url 可公开访问
+  - /public/** # 所有 /public 路径下的 url 可公开访问
+  - /path/to # # 设置指定的 url 公开访问
+```
+
+**为 DID Connect URLs 设置公开访问**
+
+如果你 Blocklet 服务端中有 DID Connect API, 你需要把 DID Connect API 设置为公开访问。因为钱包在于 Blocklet 通信时不会携带认证信息。
+
+```yml
+ignoreUrls:
+  - /api/did/** # 如果你的 Blocklet 中的 DID Connect API 挂载在 /api/did 下
+```
+
 ### 拦截未登录的请求
 
 方法一：设置 `blockUnauthenticated` 为 `true` 时，未登录的请求将会自动被拦截至默认的登录页

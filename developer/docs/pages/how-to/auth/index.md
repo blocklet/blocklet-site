@@ -120,6 +120,26 @@ Developers specify who can access by `whoCanAccess` in `blocklet.yml`
 
 > This configuration can be modified by the application owner
 
+### Set specified URLs to public access
+
+If you set your application to private, but want to make specified URLs public, you can set it via `ignoreUrls` in `blocklet.yml`:
+
+```yml
+ignoreUrls:
+  - /api/** # All urls under the /api path are public
+  - /public/** # All urls under the /public path are public
+  - /path/to # # Set the specified url for public
+```
+
+**Set public access for DID Connect URLs**
+
+If you have DID Connect API in your Blocklet server, you need to set DID Connect API as public access. Because the wallet does not carry authentication information when communicating with Blocklet.
+
+```yml
+ignoreUrls:
+  - /api/did/** # If the DID Connect API in your Blocklet is mounted under /api/did
+```
+
 ### Forbid unlogin requests
 
 Method 1: When `blockUnauthenticated` is set to `true`, unlogged requests will be automatically intercepted to the default login page
