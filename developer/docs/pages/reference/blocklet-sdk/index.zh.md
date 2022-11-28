@@ -642,6 +642,8 @@ const { data } = await Component.call({
 
 ## Middlewares
 
+### User
+
 ```javascript
 import express from 'express';
 import { middlewares } from '@blocklet/sdk';
@@ -651,6 +653,15 @@ const app = express();
 app.get('/', middlewares.user(), (req, res) => {
   const { did, fullName, role } = req.user;
 });
+```
+
+### Auth
+
+```javascript
+import express from 'express';
+import { middlewares } from '@blocklet/sdk';
+
+const app = express();
 
 app.get('/auth1', middlewares.auth(), (req, res) => {
   // will return 401 if user is not connected
@@ -661,13 +672,13 @@ app.get('/auth2', middlewares.auth({ roles: ['admin', 'owner'] }), (req, res) =>
   // will return 403 if user role is neither owner nor admin
 });
 
-app.get('/auth2', middlewares.auth({ permissions: ['mutate_data', 'query_data'] }), (req, res) => {
+app.get('/auth3', middlewares.auth({ permissions: ['mutate_data', 'query_data'] }), (req, res) => {
   // will return 401 if user is not connected
   // will return 403 if neither 'mutate_data' nor 'query data' in user permissions
 });
 
 app.get(
-  '/auth3',
+  '/auth4',
   middlewares.auth({ roles: ['admin', 'owner'], permissions: ['mutate_data', 'query_data'] }),
   (req, res) => {
     // will return 401 if user is not connected
@@ -675,6 +686,15 @@ app.get(
     // will return 403 if neither 'mutate_data' nor 'query data' in user permissions
   }
 );
+```
+
+### Secure communication between components
+
+```javascript
+import express from 'express';
+import { middlewares } from '@blocklet/sdk';
+
+const app = express();
 
 app.post('/component-private-api', middlewares.component.verifySig, (req, res) => {
   // will return 400 if sig not found in req

@@ -1,3 +1,7 @@
+## 0.1.104 (November 28, 2022)
+
+- docs: polish Blocklet SDK: middleware
+
 ## 0.1.103 (November 23, 2022)
 
 - docs: update "prisma + sqlite" doc
