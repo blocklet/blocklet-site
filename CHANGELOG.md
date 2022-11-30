@@ -1,3 +1,7 @@
+## 0.1.106 (November 30, 2022)
+
+- docs: fix
+
 ## 0.1.105 (November 28, 2022)
 
 - docs: update ignoreUrls

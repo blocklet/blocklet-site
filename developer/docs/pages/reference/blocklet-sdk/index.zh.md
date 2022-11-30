@@ -255,7 +255,7 @@ Get all permissions of the app
 ## Notification
 
 ```javascript
-const { Notification: Notification } = require('@blocklet/sdk');
+const { Notification } = require('@blocklet/sdk');
 ```
 
 ### sendToUser
