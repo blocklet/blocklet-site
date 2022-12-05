@@ -462,7 +462,7 @@ const {
   dataDir, // Blocklet 数据存放目录
   cacheDir, // Blocklet 缓存数据路径
   mode, // Blocklet 以什么模式运行
-  preferences, // Blocklet 的偏好设置
+  preferences, // Blocklet 的偏好设置。默认值: {}
 } = env;
 ```
 
