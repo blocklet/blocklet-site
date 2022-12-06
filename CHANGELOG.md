@@ -1,3 +1,7 @@
+## 0.1.109 (December 06, 2022)
+
+- docs(capabilities): added parameter description for didSpace
+
 ## 0.1.108 (December 06, 2022)
 
 - fix: navigation

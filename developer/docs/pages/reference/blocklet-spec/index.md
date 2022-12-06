@@ -278,6 +278,7 @@ requirements:
 capabilities:
   clusterMode: false # Can blocklet be started in cluster mode
   component: true # Can blocklet become a component and be composed by other blocklets
+  didSpace: "optional" # This option is optional and indicates whether the data needs to be stored in the did space or not, the range is: ["optional", "required"]. To learn more, please refer to: https://github.com/ArcBlock/did-spaces/blob/master/docs/blocklet-integration-did-spaces.md 
 ```
 
 ## Components
