@@ -1,3 +1,7 @@
+## 0.1.108 (December 06, 2022)
+
+- fix: navigation
+
 ## 0.1.107 (December 05, 2022)
 
 - docs: default value of Blocklet SDK: env.preferences
