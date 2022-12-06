@@ -20,22 +20,22 @@ interfaces:
   - type: web
     name: publicUrl
     path: /
-    prefix: '*'
+    prefix: "*"
     port: BLOCKLET_PORT
     protocol: http
-community: ''
-documentation: ''
-homepage: ''
-license: ''
+community: ""
+documentation: ""
+homepage: ""
+license: ""
 payment:
   price: []
   share: []
 timeout:
   start: 60
 requirements:
-  server: '>=1.8.0'
-  os: '*'
-  cpu: '*'
+  server: ">=1.8.0"
+  os: "*"
+  cpu: "*"
 scripts:
   dev: npm run start
 environments: []
@@ -45,7 +45,8 @@ capabilities:
   navigation: true
 screenshots: []
 navigation:
-  - title:
+  - id: services
+    title:
       en: Services
       zh: 服务
     items:
@@ -53,13 +54,15 @@ navigation:
         link: https://store.blocklet.dev
       - title: Blocklet Launcher
         link: https://launcher.arcblock.io
-  - title:
+  - id: developers
+    title:
       en: Developers
       zh: 开发者
     link:
       en: https://developer.blocklet.io/en
       zh: https://developer.blocklet.io/zh
-  - title:
+  - id: support
+    title:
       en: Support
       zh: 支持
     link:

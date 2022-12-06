@@ -20,22 +20,22 @@ interfaces:
   - type: web
     name: publicUrl
     path: /
-    prefix: '*'
+    prefix: "*"
     port: BLOCKLET_PORT
     protocol: http
-community: ''
-documentation: ''
-homepage: ''
-license: ''
+community: ""
+documentation: ""
+homepage: ""
+license: ""
 payment:
   price: []
   share: []
 timeout:
   start: 60
 requirements:
-  server: '>=1.8.0'
-  os: '*'
-  cpu: '*'
+  server: ">=1.8.0"
+  os: "*"
+  cpu: "*"
 scripts:
   dev: npm run start
 environments: []
@@ -45,19 +45,22 @@ capabilities:
   navigation: true
 screenshots: []
 navigation:
-  - title:
+  - id: guides
+    title:
       en: Guides
       zh: 指南
     link:
       en: /docs/en
       zh: /docs/zh
-  - title:
+  - id: samples
+    title:
       en: Samples
       zh: 示例
     link:
       en: /en/samples
       zh: /zh/samples
-  - title:
+  - id: tools
+    title:
       en: ToolKit
       zh: 工具箱
     items:
@@ -85,7 +88,8 @@ navigation:
         link: https://pages.blocklet.io
       - title: Create Blocklet
         link: https://createblocklet.dev
-  - title:
+  - id: references
+    title:
       en: Reference
       zh: 参考
     items:
@@ -97,7 +101,8 @@ navigation:
         link:
           en: /docs/en/reference/blocklet-bundle
           zh: /docs/zh/reference/blocklet-bundle
-  - title:
+  - id: services
+    title:
       en: Services
       zh: 服务
     items:
@@ -109,7 +114,8 @@ navigation:
           en: Blocklet Launcher
           zh: 应用启动器
         link: https://launcher.arcblock.io
-  - title:
+  - id: support
+    title:
       en: Support
       zh: 支持
     items:
