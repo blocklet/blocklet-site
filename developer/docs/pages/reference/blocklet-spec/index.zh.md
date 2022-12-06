@@ -276,8 +276,9 @@ requirements:
 
 ```yml
 capabilities:
-  clusterMode: false # Can blocklet be started in cluster mode
-  component: true # Can blocklet become a component and be composed by other blocklets
+  clusterMode: false # 是否可以在集群模式下启动blocklet
+  component: true # blocklet能否被组合
+  didSpace: "optional" # 该选项可选，表示数据是否需要存储到 did space 当中，取值范围为: ["optional", "required"]。想要了解更多，请参考: https://github.com/ArcBlock/did-spaces/blob/master/docs/blocklet-integration-did-spaces.md
 ```
 
 ## Components
