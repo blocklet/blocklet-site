@@ -62,7 +62,7 @@ Get users of the app
 
 #### By Default
 
-```
+```js
 client.getUsers();
 client.getUsers({ paging: { page: 2 } });
 client.getUsers({ query: { role: 'admin' } });
@@ -113,6 +113,19 @@ client.getUsers({ dids: ['did1', 'did2', ...], query: { approved: true } });
 
 - 如果你不传入 `dids` 参数, 将会通过默认方式获取
 - 如果你传入了不存在的 DID, 接口 **不会** 报错
+
+### updateUserApproval
+
+禁用或者起用某个用户，被禁用的用户无法再使用你的应用。
+
+- _@param_ **did** `string`
+- _@param_ **approved** `boolean`
+- _@return_ `{ code, user }`
+
+```js
+client.updateUserApproval(did, true); // enable the user
+client.updateUserApproval(did, false); // disable the user
+```
 
 ### getPermissionsByRole
 

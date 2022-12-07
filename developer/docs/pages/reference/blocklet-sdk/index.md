@@ -114,6 +114,19 @@ Tips:
 - If you don't pass the `dids` parameter, the API will run by default
 - If you pass in a non-existing DID, the API **will not** report an error
 
+### updateUserApproval
+
+Enable or disable a user by DID. A disabled user will not login to the blocklet again.
+
+- _@param_ **did** `string`
+- _@param_ **approved** `boolean`
+- _@return_ `{ code, user }`
+
+```js
+client.updateUserApproval(did, true); // enable the user
+client.updateUserApproval(did, false); // disable the user
+```
+
 ### getPermissionsByRole
 
 `client.getPermissionsByRole(role)`
