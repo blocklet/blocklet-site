@@ -20,22 +20,22 @@ interfaces:
   - type: web
     name: publicUrl
     path: /
-    prefix: '*'
+    prefix: "*"
     port: BLOCKLET_PORT
     protocol: http
-community: ''
-documentation: ''
-homepage: ''
-license: ''
+community: ""
+documentation: ""
+homepage: ""
+license: ""
 payment:
   price: []
   share: []
 timeout:
   start: 60
 requirements:
-  server: '>=1.8.0'
-  os: '*'
-  cpu: '*'
+  server: ">=1.8.0"
+  os: "*"
+  cpu: "*"
 scripts:
   dev: npm run start
 environments: []
@@ -64,40 +64,49 @@ navigation:
       en: ToolKit
       zh: 工具箱
     items:
-      - title: Blocklet SDK
+      - id: sdk
+        title: Blocklet SDK
         link:
           en: /docs/en/reference/blocklet-sdk
           zh: /docs/zh/reference/blocklet-sdk
-      - title: Blocklet CLI
+      - id: blockletCli
+        title: Blocklet CLI
         link:
           en: /docs/en/reference/blocklet-cli
           zh: /docs/zh/reference/blocklet-cli
-      - title: Server CLI
+      - id: serverCli
+        title: Server CLI
         link:
           en: /docs/en/reference/blocklet-server-cli
           zh: /docs/zh/reference/blocklet-server-cli
-      - title: Blocklet UI
+      - id: blockletUi
+        title: Blocklet UI
         link:
           en: /docs/en/reference/blocklet-ui
           zh: /docs/zh/reference/blocklet-ui
-      - title: GitHub Actions
+      - id: blockletActions
+        title: GitHub Actions
         link:
           en: /docs/en/reference/blocklet-actions
           zh: /docs/zh/reference/blocklet-actions
-      - title: Blocklet Pages
+      - id: blockletPages
+        title: Blocklet Pages
         link: https://pages.blocklet.io
-      - title: Create Blocklet
+      - id: createBlocklet
+        title: Create Blocklet
         link: https://createblocklet.dev
   - id: references
     title:
       en: Reference
       zh: 参考
     items:
-      - title: Blocklet Spec
+      - id: spec
+        title: Blocklet Spec
         link:
           en: /docs/en/reference/blocklet-spec
           zh: /docs/zh/reference/blocklet-spec
-      - title: Blocklet Bundle
+      - id: bundle
+        title: Blocklet Bundle
         link:
           en: /docs/en/reference/blocklet-bundle
           zh: /docs/zh/reference/blocklet-bundle
@@ -106,11 +115,13 @@ navigation:
       en: Services
       zh: 服务
     items:
-      - title:
+      - id: serviceStore
+        title:
           en: Blocklet Store
           zh: 应用商店
         link: https://store.blocklet.dev
-      - title:
+      - id: serviceLauncher
+        title:
           en: Blocklet Launcher
           zh: 应用启动器
         link: https://launcher.arcblock.io
@@ -119,9 +130,11 @@ navigation:
       en: Support
       zh: 支持
     items:
-      - title: Join the Discussion
+      - id: joinDiscussion
+        title: Join the Discussion
         link: https://github.com/orgs/blocklet/discussions
-      - title: Report a Bug
+      - id: reportBug
+        title: Report a Bug
         link: https://github.com/blocklet/support/issues
 components:
   - name: meilisearch
