@@ -1,3 +1,10 @@
+## 0.1.110 (December 07, 2022)
+
+
+- fix: navigation id
+- docs: add updateUserApproval
+
+
 ## 0.1.109 (December 06, 2022)
 
 - docs(capabilities): added parameter description for didSpace
