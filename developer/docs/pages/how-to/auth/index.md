@@ -110,19 +110,35 @@ Blocklet has 4 default passports (developer does not need to create via API to u
 
 ## Access control
 
-### Set who can access
+- A request goes through the Blocklet Service before reaching the blocklet
+- Developers can declare the default configuration in Blocklet Service in blocklet.yml, and users can also modify the default configuration in Blocklet Dashboard after installing the blocklet
+- Developers can also implement access control in code
+- If a blocklet contains multiple components, access control can be configured for each component separately
 
-Developers specify who can access by `whoCanAccess` in `blocklet.yml`
+![](./images/access-control.svg)
 
-- `all`: Accessible to everyone
-- `owner`: Only blocklet owner can access
-- `invited`: Only invited people (internal members) can access
+### Access Control Type
 
-> This configuration can be modified by the application owner
+- Public Access
+- Non-public Access
+  - Accessible after login
+  - Invited people (internal members) can access
+  - Accessible with specefic passports
+  - Only the owner can access
+
+### Set access control in Blocklet Service
+
+| Permissions                                  | Developers configure in blocklet.yml | Whether users can configure |
+| -------------------------------------------- | ------------------------------------ | --------------------------- |
+| Public Access                                | set `whoCanAccess` to `all`          | yes                         |
+| Accessible after login                       | Set `blockUnauthenticated` to `true` | No                          |
+| Invited people (internal members) can access | set `whoCanAccess` to `invited`      | yes                         |
+| Accessible with specefic passports           | /                                    | Yes                         |
+| Only the owner can access                    | set `whoCanAccess` to `owner`        | yes                         |
 
 ### Set specified URLs to public access
 
-If you set your application to private, but want to make specified URLs public, you can set it via `ignoreUrls` in `blocklet.yml`:
+If the Blocklet is set to private access, but the developer wants to set some URLs to public access, he can set it in `blocklet.yml` via `ignoreUrls`:
 
 ```yml
 ignoreUrls:
@@ -133,27 +149,13 @@ ignoreUrls:
 
 **Set public access for DID Connect URLs**
 
-If you have DID Connect API in your Blocklet server, you need to set DID Connect API as public access. Because the wallet does not carry authentication information when communicating with Blocklet.
+If there is a DID Connect API in the Blocklet server, the developer needs to set the DID Connect API to public access. Because the wallet does not carry authentication information when communicating with Blocklet.
 
 ```yml
 ignoreUrls:
-  - /api/did/** # If the DID Connect API in your Blocklet is mounted under /api/did
+  - /api/did/** # If the DID Connect API in the Blocklet is mounted under /api/did
 ```
 
-### Forbid unlogin requests
+### Implement access control in code
 
-Method 1: When `blockUnauthenticated` is set to `true`, unlogged requests will be automatically intercepted to the default login page
-
-Method 2: Implement in code, see [Middleware](/reference/blocklet-sdk#middlewares)
-
-### Forbid unauthorised requests
-
-#### Only allow specified roles to access
-
-Implemented in code, see [Middleware](/reference/blocklet-sdk#middlewares)
-
-#### Only allow access with specified permissions
-
-Method 1: When `blockUnauthorized` is set to `true`, unauthorised requests will be automatically blocked
-
-Method 2: Implement in code, see [Middleware](/reference/blocklet-sdk#middlewares)
+Developers can use the middleware provided in the Blocklet SDK to implement access control in code, see [Middleware](/reference/blocklet-sdk#access) for details

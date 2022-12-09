@@ -110,19 +110,35 @@ Blocklet 有 4 个默认的通行证 (开发者无需通过 API 创建即可使�
 
 ## 访问控制
 
-### 设置谁可以访问
+- 一个请求到达 blocklet 前会经过 Blocklet Service
+- 开发者可以在 blocklet.yml 中声明 Blocklet Service 中的默认配置，使用者在安装 blocklet 后，也可以在 Blocklet Dashboard 中修改默认配置
+- 开发者也可以在代码中实现对 Blocklet 的访问控制
+- 如果一个 blocklet 包含多个组件，可以分别为每个组件配置访问控制
 
-开发者通过 在 `blocklet.yml` 中 `whoCanAccess` 指定谁可以访问
+![](./images/access-control.svg)
 
-- `all`: 所有人可访问
-- `owner`: 只有 Blocklet 所有者可以访问
-- `invited`: 只有被邀请的人(内部成员)可以访问
+### 访问控制类型
 
-> 此配置可以被应用所有者修改
+- 公开访问
+- 非公开访问
+  - 登录后可访问
+  - 被邀请的人(内部成员)可访问
+  - 指定通行证可访问
+  - 只有所有者可访问
+
+### 设置 Blocklet Service 中的访问控制
+
+| 权限                       | 开发者在 blocklet.yml 中配置          | 使用者是否可配置 |
+| -------------------------- | ------------------------------------- | ---------------- |
+| 公开访问                   | 设置 `whoCanAccess` 为 `all`          | 是               |
+| 登录后可访问               | 设置 `blockUnauthenticated` 为 `true` | 否               |
+| 被邀请的人(内部成员)可访问 | 设置 `whoCanAccess` 为 `invited`      | 是               |
+| 指定通行证可访问           | /                                     | 是               |
+| 只有所有者可访问           | 设置 `whoCanAccess` 为 `owner`        | 是               |
 
 ### 设置指定的 URL 为公开访问
 
-如果你将应用设置为非公开访问，但是希望将某些 URL 设置为公开访问，你可在 `blocklet.yml` 中通过 `ignoreUrls` 来设置：
+如果 Blocklet 被设置为非公开访问，但是开发者希望将某些 URL 设置为公开访问，可在 `blocklet.yml` 中通过 `ignoreUrls` 来设置：
 
 ```yml
 ignoreUrls:
@@ -133,27 +149,13 @@ ignoreUrls:
 
 **为 DID Connect URLs 设置公开访问**
 
-如果你 Blocklet 服务端中有 DID Connect API, 你需要把 DID Connect API 设置为公开访问。因为钱包在于 Blocklet 通信时不会携带认证信息。
+如果 Blocklet 服务端中有 DID Connect API, 开发者需要把 DID Connect API 设置为公开访问。因为钱包在于 Blocklet 通信时不会携带认证信息。
 
 ```yml
 ignoreUrls:
-  - /api/did/** # 如果你的 Blocklet 中的 DID Connect API 挂载在 /api/did 下
+  - /api/did/** # 如果 Blocklet 中的 DID Connect API 挂载在 /api/did 下
 ```
 
-### 拦截未登录的请求
+### 在代码中实现访问控制
 
-方法一：设置 `blockUnauthenticated` 为 `true` 时，未登录的请求将会自动被拦截至默认的登录页
-
-方法二：在代码中实现，见 [Middleware](/reference/blocklet-sdk#middlewares)
-
-### 拦截无权限的请求
-
-#### 只允许指定角色访问
-
-在代码中实现，见 [Middleware](/reference/blocklet-sdk#middlewares)
-
-#### 只允许指定权限访问
-
-方法一：设置 `blockUnauthorized` 为 `true` 时，无权限的请求将会自动被拦截
-
-方法二：在代码中实现，见 [Middleware](/reference/blocklet-sdk#middlewares)
+开发者可使用 Blocklet SDK 中提供的中间件在代码中实现访问控制，详见 [Middleware](/reference/blocklet-sdk#access)

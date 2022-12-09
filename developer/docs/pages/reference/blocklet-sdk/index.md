@@ -668,7 +668,7 @@ app.get('/', middlewares.user(), (req, res) => {
 });
 ```
 
-### Auth
+### Access
 
 ```javascript
 import express from 'express';

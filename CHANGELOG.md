@@ -1,9 +1,11 @@
-## 0.1.110 (December 07, 2022)
+## 0.1.111 (December 09, 2022)
 
+- docs: update access-control in how-to/auth
+
+## 0.1.110 (December 07, 2022)
 
 - fix: navigation id
 - docs: add updateUserApproval
-
 
 ## 0.1.109 (December 06, 2022)
 
