@@ -1,3 +1,7 @@
+## 0.1.112 (December 26, 2022)
+
+- docs: update operation: config logo
+
 ## 0.1.111 (December 09, 2022)
 
 - docs: update access-control in how-to/auth
