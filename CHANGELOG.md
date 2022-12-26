@@ -1,3 +1,7 @@
+## 0.1.115 (December 26, 2022)
+
+- fix: build error with html comment
+
 ## 0.1.114 (December 26, 2022)
 
 - docs: dynamically get componenttmount point
