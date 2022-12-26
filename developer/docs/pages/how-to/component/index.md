@@ -32,7 +32,7 @@ server.use((req, res) => {
 });
 ```
 
-### Component API
+## Component API
 
 The component does not need to add a mount point prefix to the API, because the client's request will go through the Blocklet Service first, and when the component receives the request, the prefix of the request has been removed
 
@@ -44,7 +44,7 @@ Example:
 4. The Blocklet Service forwards the request to the component and removes the prefix `/child`
 5. The component receives the request `/api/foo`
 
-### Load front-end static resources
+## Load front-end static resources
 
 Because the front-end page of the component will be loaded in a relative path (such as `/child1/index.html`), we need to support loading front-end static resources in a relative path.
 
@@ -58,7 +58,7 @@ PUBLIC_URL='/.blocklet/proxy/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' npm run
 
 > You usually do not need to configure manually. When you create a Blocklet project with Create Blocklet, everything is already configured for you.
 
-### Redirect
+## Redirect
 
 We need to support redirection of backend under relative path to work properly
 

@@ -32,7 +32,7 @@ server.use((req, res) => {
 });
 ```
 
-### 组件 API
+## 组件 API
 
 组件 **不需要** 为 API 添加挂载点前缀，因为客户端的请求会先经过 Blocklet Service, 当组件收到请求时，已经去掉了请求的前缀
 
@@ -44,7 +44,7 @@ server.use((req, res) => {
 4. Blocklet Service 将请求转发给组件，并去掉前缀 `/child`
 5. 组件收到请求 `/api/foo`
 
-### 加载前端静态资源
+## 加载前端静态资源
 
 因为组件的前端页面会在相对路径下被加载（比如 `/child1/index.html`），所以我们需要支持在相对路径下加载前端静态资源。
 
@@ -58,7 +58,7 @@ PUBLIC_URL='/.blocklet/proxy/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' npm run build
 
 > 你通常不需要手动配置。当你使用 Create Blocklet 创建一个 Blocklet 项目时，已经为你配置好了一切。
 
-### 重定向
+## 重定向
 
 我们需要支持在相对路径下后端的重定向可以正常工作
 

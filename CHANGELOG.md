@@ -1,3 +1,7 @@
+## 0.1.116 (December 26, 2022)
+
+- fix: blocklet component doc
+
 ## 0.1.115 (December 26, 2022)
 
 - fix: build error with html comment
