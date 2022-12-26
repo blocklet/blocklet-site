@@ -16,9 +16,3 @@ Blocklet Logo 有 3 中类型：
 
 ![](./images/config-logo.jpg)
 
-<!--
-  - How to enable terminate protection for blocklet?
-  - How to write logs in blocklet? where to view logs?
-  - How to add custom domain for blocklet?
-  - How to update CORS setting for blocklet?
- -->
