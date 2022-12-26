@@ -1,3 +1,7 @@
+## 0.1.113 (December 26, 2022)
+
+- chore: bump deps to latest
+
 ## 0.1.112 (December 26, 2022)
 
 - docs: update operation: config logo
