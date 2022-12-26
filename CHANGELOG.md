@@ -1,3 +1,7 @@
+## 0.1.114 (December 26, 2022)
+
+- docs: dynamically get componenttmount point
+
 ## 0.1.113 (December 26, 2022)
 
 - chore: bump deps to latest

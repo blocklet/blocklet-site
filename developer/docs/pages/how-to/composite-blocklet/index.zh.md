@@ -144,10 +144,10 @@ const { component } = require('@blocklet/sdk');
 
 ## 开发组合型应用
 
-开发组合型应用和开发单体应用相同，见 [Develop Blocklet](guide/develop)
+开发组合型应用和开发单体应用相同，见 [Develop Blocklet](/how-to/develop)
 
 ## 开发组件
 
-见 [Blocklet Component](guide/component)
+见 [Blocklet Component](/how-to/component)
 
 <!-- ## 同时开发应用和组件 -->

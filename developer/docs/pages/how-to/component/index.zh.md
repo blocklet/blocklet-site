@@ -20,6 +20,18 @@ layout: documentation
 
 组件需要支持在任意挂载点下工作。
 
+**动态获取组件的挂载点**
+
+前端：引入 [blocklet 运行时信息](/reference/blocklet-js) 后, 通过 `window.blocklet.prefix` 获取组件的挂载点
+
+后端：在一次请求中, 通过请求 header 中的 `x-path-prefix` 获取组件的挂载点.
+
+```js
+server.use((req, res) => {
+  const mountPoint = req.headers['x-path-prefix'];
+});
+```
+
 ### 组件 API
 
 组件 **不需要** 为 API 添加挂载点前缀，因为客户端的请求会先经过 Blocklet Service, 当组件收到请求时，已经去掉了请求的前缀

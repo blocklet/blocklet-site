@@ -20,6 +20,18 @@ When a blocklet is composed, the blocklet will be mounted under the child path c
 
 Components need to support working under any mount point.
 
+**Dynamically get the mount point of the component**
+
+Front end: After importing [blocklet runtime information](/reference/blocklet-js), get the mount point of the component through `window.blocklet.prefix`
+
+Backend: In a request, get the mount point of the component through the `x-path-prefix` in the request header.
+
+```js
+server.use((req, res) => {
+  const mountPoint = req.headers['x-path-prefix'];
+});
+```
+
 ### Component API
 
 The component does not need to add a mount point prefix to the API, because the client's request will go through the Blocklet Service first, and when the component receives the request, the prefix of the request has been removed

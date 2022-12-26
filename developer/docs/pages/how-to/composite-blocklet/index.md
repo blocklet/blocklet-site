@@ -144,10 +144,10 @@ const { component } = require('@blocklet/sdk');
 
 ## Develop composable applications
 
-Developing a compositional application is the same as developing a monolithic application, see [Develop Blocklet](guide/develop)
+Developing a compositional application is the same as developing a monolithic application, see [Develop Blocklet](/how-to/develop)
 
 ##Development components
 
-See [Blocklet Component](guide/component)
+See [Blocklet Component](/how-to/component)
 
 <!-- ## Develop multiple blocklets in parralel -->
