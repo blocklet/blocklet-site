@@ -1,3 +1,7 @@
+## 0.1.117 (January 03, 2023)
+
+- docs: update blocklet sdk: getUsers()
+
 ## 0.1.116 (December 26, 2022)
 
 - fix: blocklet component doc

@@ -62,11 +62,12 @@ Get users of the app
 
 #### By Default
 
-```
+```js
 client.getUsers();
 client.getUsers({ paging: { page: 2 } });
 client.getUsers({ query: { role: 'admin' } });
 client.getUsers({ query: { approved: true } });
+client.getUsers({ query: { search: 'Bob' } });
 client.getUsers({ sort: { updatedAt: -1 } });
 ```
 
@@ -78,7 +79,9 @@ client.getUsers({ sort: { updatedAt: -1 } });
   - **query.role** `String` Match users by role name
     - `$none`: Match users which does not have a role
   - **query.approved** `Boolean` Match users by approved
-  - **query.search** `String` Match users by did or fullName
+  - **query.search** `String` Match users by did or name
+    - > Search results by name are fuzzy matches
+    - > Search results by did are exact matches
 - _@param_ **sort** `Object`
   - **sort.createdAt** `Number`
   - **sort.updatedAt** `Number`

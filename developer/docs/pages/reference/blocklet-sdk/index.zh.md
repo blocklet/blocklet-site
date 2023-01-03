@@ -67,32 +67,35 @@ client.getUsers();
 client.getUsers({ paging: { page: 2 } });
 client.getUsers({ query: { role: 'admin' } });
 client.getUsers({ query: { approved: true } });
+client.getUsers({ query: { search: 'Bob' } });
 client.getUsers({ sort: { updatedAt: -1 } });
 ```
 
 - _@param_ **paging** `Object`
   - **paging.pageSize** ``
   - **paging.page** `
-  - > The value of pageSize cannot exceed 100
+  - > pageSize 的值不能超过 100
 - _@param_ **query** `Object`
-  - **query.role** `String` Match users by role name
-    - `$none`: Match users which does not have a role
-  - **query.approved** `Boolean` Match users by approved
-  - **query.search** `String` Match users by did or fullName
+  - **query.role** `String` 通过角色名称匹配
+    - `$none`: 匹配没有角色的用户
+  - **query.approved** `Boolean` 通过 approved 搜索
+  - **query.search** `String` 通过 DID 或 用户名搜索
+    - > 通过用户名的搜索结果是模糊匹配
+    - > 通过 DID 的搜索结果是精确匹配
 - _@param_ **sort** `Object`
   - **sort.createdAt** `Number`
   - **sort.updatedAt** `Number`
   - **sort.lastLoginAt** `Number`
-  - > `-1`: The latest time is at first. `1`: The latest time is at last.
-  - > default sort is `{ createdAt: -1 }`
+  - > `-1`: 最近的时间是排在第一个。 `1`：最近的时间排在最后一个。
+  - > 默认排序是`{ createdAt: -1 }`
 - _@return_ `{ code, users, paging }`
 
 ```
 Paging {
-  total: number of users
-  pageSize: number of users per page
-  pageCount: number of page
-  page: current page number
+  total: 用户总数
+  pageSize: 每页用户数
+  pageCount: 页数
+  page: 当前是第几页
 }
 ```
 
