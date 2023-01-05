@@ -4,14 +4,14 @@ description: Bundle your blocklet
 layout: documentation
 ---
 
-## 简介
+## Introduction
 
-我们只有需要知道程序的启动入口在哪，才能启动这个 `blocklet`。
+We only need to know where the program's startup entry is to start this `blocklet`.
 
-### 1. 打包是什么?
+### 1. What is bundle
 
-打包的本质就是将现有项目结构转化为另一种项目结构。
-blocklet 打包成功后，系统将会在项目根目录下生成一个 `.blocklet` 目录，目录结构如下:
+The essence of packaging is to transform an existing project structure into another project structure.
+After the blocklet is packaged successfully, the system will generate a `.blocklet` directory under the project root directory. The directory structure is as follows:
 
 ```md
 .blocklet
@@ -29,84 +29,83 @@ blocklet 打包成功后，系统将会在项目根目录下生成一个 `.block
 │   ├── package.json
 │   └── screenshots
 └── release
-├── blocklet.json
-└── demo1-0.1.0.tgz
+    ├── blocklet.json
+    └── demo1-0.1.0.tgz
 ```
 
-### 2. 为什么要打包？
+### 2. Why do we need bundle
 
-你需要打包你的 blocklet（就像苹果开发者打包苹果应用一样），才能将 blocklet 发布到 `blocklet store`（就像发布苹果应用到 app store 一样） 和 部署到 `blocklet server`（就像将苹果应用安装到苹果手机一样）。
+You need to package your blocklet (just like Apple developers package Apple apps), to publish blocklets to the `blocklet store` (just like publishing Apple apps to the app store) and to deploy to the `blocklet server` (just like Apple Apps are installed on Apple phones).
 
-## 准备工作
+## Preparation
 
-### 1. 程序的入口（必要）
+### 1. Program entry (required)
 
-#### 1. 定义程序的入口文件
+#### 1. Define the entry file of the program
 
-你需要在 `blocklet.yml` 文件中定义 `main` 字段，以声明程序的入口，例如：
+You need to define the `main` field in the `blocklet.yml` file to declare the entry point of the program, for example:
 
 ```yml
 main: api/index.js
 ```
 
-#### 2. 定义程序运行所需的文件
+#### 2. Define the files required for the program to run
 
-你需要在 `blocklet.yml` 文件中定义 `files` 字段，以声明程序运行所需的文件，例如：
+You need to define the `files` field in the `blocklet.yml` file to declare the files required for the program to run, for example:
 
 ```yml
-files:
-  - dist
+files: -dist
 ```
 
-上面的配置意味着，在 bundle 的时候，会简单地把 dist 目录复制到 `.blocklet/bundle` 目录下。
+The above configuration means that when bundling, the dist directory will simply be copied to the `.blocklet/bundle` directory.
 
-### 2. Logo（必要）
+### 2. Logo (required)
 
-一个设计精美的 logo 可以提高应用的辨识度，而对于每一个被 `bundle` 的 blocklet 而言，logo 文件同样是必要的。
+A well-designed logo can improve the recognition of the application, and for each blocklet that is `bundled`, the logo file is also necessary.
 
-#### 先决条件
+#### prerequisites
 
-- logo 的宽高必须相同
-- logo 的像素不能小于 256px \* 256px（svg 文件除外）
-- logo 的文件大小不得超过 100KB
-- logo 的格式必须是主流的图片格式（支持 svg, jpg, png 等）
+- The width and height of the logo must be the same
+- The pixel of the logo cannot be smaller than 256px \* 256px (except for svg files)
+- The file size of the logo must not exceed 100KB
+- The format of the logo must be a mainstream image format (support svg, jpg, png, etc.)
 
-#### 定义 logo 字段
+#### Define the logo field
 
-你可以在 `blocklet.yml` 文件中定义 logo 文件存放的路径。
+You can define the path where the logo file is stored in the `blocklet.yml` file.
 
 ```yml
 logo: logo.png
 ```
 
-### 3. 使用文档（必要）
+### 3. Use documentation (required)
 
-#### 先决条件
+#### prerequisites
 
-每个 blocklet 都应该有自己的使用文档，简单易上手的使用文档更能吸引用户去使用它。
-与 markdown 一样，我们可以在使用文档上放置[文字](https://test.store.blocklet.dev/blocklets/z8iZwyBfqwNcGbLCiUnFAQLEzT8sJd2TSjbM2)，[图片](https://test.store.blocklet.dev/blocklets/z8iZwyBfqwNcGbLCiUnFAQLEzT8sJd2TSjbM2)，视频等。
+Each blocklet should have its own documentation, and an easy-to-use documentation can attract users to use it.
+Like markdown, we can place [text](https://test.store.blocklet.dev/blocklets/z8iZwyBfqwNcGbLCiUnFAQLEzT8sJd2TSjbM2), [image](https://test.store.blocklet.dev/blocklets/ z8iZwyBfqwNcGbLCiUnFAQLEzT8sJd2TSjbM2), videos, etc.
 
-#### 编写使用文档
+#### Write usage documentation
 
-现在，你只需要使用 markdown 语法在项目根目录下创建一个 `blocklet.md` 文件，无需在 `blocklet.yml` 声明这个文件，打包的时候会系统会自动识别这个文件。
+Now, you only need to use markdown syntax to create a `blocklet.md` file in the project root directory, no need to declare this file in `blocklet.yml`, the system will automatically recognize this file when packaging.
 
 ```markdown
-# My Blocklet
+#My Blocklet
 
 Welcome to my blocklet
 ```
 
-另外，如果项目根目录下不存在 `blocklet.md` 文件，系统会有序地在项目根目录下继续匹配 `blocklet.en.md`，`README.md` 文件。
-如果系统最终查找失败，会在打包时抛出错误并中断当前的打包行为。
+In addition, if there is no `blocklet.md` file in the project root directory, the system will continue to match `blocklet.en.md`, `README.md` files in the project root directory in an orderly manner.
+If the system finally fails to find it, it will throw an error during packaging and interrupt the current packaging behavior.
 
-### 4. 截图（可选）
+### 4. Screenshot (optional)
 
-在向用户介绍 blocklet 时，只有文字可能还是不够的。
-为了更好的呈现产品运行的效果，这时候你还可以使用屏幕截图向用户展示你的 blocklet。
+Text may not be enough when introducing blocklets to users.
+In order to better show the effect of the product running, you can also use screenshots to show users your blocklet at this time.
 
-#### 定义 screenshots 字段
+#### Define the screenshots field
 
-你可以在 `blocklet.yml` 文件中定义 screenshots 字段:
+You can define screenshots field in `blocklet.yml` file:
 
 ```yml
 screenshots:
@@ -116,18 +115,18 @@ screenshots:
   - screenshot-3.png
 ```
 
-打包发布到 `blocklet store` 之后，你可以在 blocklet 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa)）面看到你的屏幕截图，默认是按照文件名的字典序升序，以轮播图的方式展示的。
+After packaging and publishing to the `blocklet store`, you can see your screenshot on the blocklet details page ([view example](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa)), the default is to follow the file The lexicographical order of the names is in ascending order, displayed in the form of a carousel.
 
-### 5. Change log（可选）
+### 5. Change log (optional)
 
-每次更新 blocklet 的时候，我们可能需要记录变更的日志。
-对于开发者而言，通常是通过更新 `CHANGELOG.md` 文件来记录项目的变更，在 `blocklet store` 的展示效果如下图所示:
+Every time a blocklet is updated, we may need to log changes.
+For developers, usually by updating the `CHANGELOG.md` file to record the changes of the project, the display effect in the `blocklet store` is shown in the following figure:
 
 ![changelog preview](./images/changelog-preview.png)
 
-#### 编写 `CHANGELOG.md`
+#### Writing `CHANGELOG.md`
 
-你可以在项目根目录下创建 `CHANGELOG.md` 文件，例如:
+You can create a `CHANGELOG.md` file in the project root directory, for example:
 
 ```md
 # 0.7.10 (October 18, 2022)
@@ -139,60 +138,119 @@ screenshots:
 - chore: update @nft-store/react lib and change the primary-color / logo
 ```
 
-打包发布到 `blocklet store` 之后，你可以在 blocklet 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa?tab=version)）面看到你的变更记录。
+After packaging and publishing to `blocklet store`, you can see your change record on the blocklet details page ([view example](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa?tab=version)).
 
-## 打包应用
+## Package the application
 
-<!-- @see： https://github.com/blocklet/blocklet-site/pull/60#issuecomment-1281723839 -->
+<!-- @see: https://github.com/blocklet/blocklet-site/pull/60#issuecomment-1281723839 -->
 
-### 默认的打包模式
+### Default packaging mode
 
-如果 blocklet 是通过 `blocklet create` 或 `create-blocklet` 创建的，那么可以在终端执行内置的打包命令:
+If the blocklet is created via `blocklet create` or `create-blocklet`, then the built-in packaging command can be executed in the terminal:
 
 ```shell
 yarn bundle
 ```
 
-打包命令执行成功后，应该可以在项目根目录下看到生成的 `.blocklet/bundle` 目录。
+After the packaging command is executed successfully, you should be able to see the generated `.blocklet/bundle` directory in the project root directory.
 
-### 打包单个应用（自定义）
+### Package a single application (custom)
 
-#### 1. 基于 zip 打包（推荐）
+#### 1. Based on zip packaging (recommended)
 
-与 webpack 的打包方式不同的是，zip 打包模式不会将项目打包成单个文件，而是会从程序入口开始分析程序的依赖，并将全部依赖按照原有的项目接口压缩到一个 zip 文件中。
+Different from the packaging method of webpack, the zip packaging mode does not package the project into a single file, but analyzes the dependencies of the program from the program entry, and compresses all dependencies into a zip file according to the original project interface.
 
 ```shell
 blocklet bundle --zip --create-release
 ```
 
-上面的命令主要做了 2 件事:
+The above command mainly does 2 things:
 
-1. 以 zip 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录，并会生成一个 `blocklet.zip` 文件
-2. 将打包后的文件放在项目根目录下 `.blocklet/release` 目录
+1. Package the blocklet in zip mode, generate a `.blocklet/bundle` directory under the project root directory, and generate a `blocklet.zip` file
+2. Put the packaged files in the `.blocklet/release` directory under the project root directory
 
-#### 2. 基于 webpack 打包（弃用）
+#### 2. Packaging based on webpack (deprecated)
 
-通过 webpack 模式打包，会从程序入口开始分析程序的依赖，并将依赖打包到单个文件（blocklet.js）中。
+Packing through the webpack mode will analyze the dependencies of the program from the program entry and package the dependencies into a single file (blocklet.js).
 
 ```shell
 blocklet bundle --create-release
 ```
 
-上面的命令主要做了 2 件事:
+The above command mainly does 2 things:
 
-1. 以 webpack 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录
-2. 将打包后的文件放在项目根目录下 `.blocklet/release` 目录
+1. Package the blocklet in webpack mode, and generate a `.blocklet/bundle` directory under the project root directory
+2. Put the packaged files in the `.blocklet/release` directory under the project root directory
 
-### 打包 monorepo 应用（自定义）
+### Package monorepo application (custom)
 
 ```shell
 blocklet bundle --create-release --monorepo
 ```
 
-上面的命令主要做了 2 件事:
+The above command mainly does 2 things:
 
-1. 以 monorepo 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录
-2. 将打包后的文件放在项目根目录下 `.blocklet/release` 目录
+1. Package the blocklet in monorepo mode, and generate a `.blocklet/bundle` directory under the project root directory
+2. Put the packaged files in the `.blocklet/release` directory under the project root directory
 
-至此，我们已经顺利地打包好了我们的 blocklet。
-接下来，你可以将打包好的 blocklet [发布](/zh/how-to/publish)到 `blocklet store` 或者[部署](/zh/how-to/deploy)到 `blocklet server`。
+So far, we have successfully packaged our blocklet.
+Next, you can [publish](/zh/how-to/publish) the packaged blocklet to `blocklet store` or [deploy](/zh/how-to/deploy) to `blocklet server`.
+
+### Dynamically set the Source Store of the component when packaging
+
+Before your blocklet is officially released, you can publish the blocklet to the test store first, and then publish it to the official store after the test is completed.
+
+If you want the blocklet in the test store to depend on the components in the test store, and the blocklet in the official store to depend on the components in the official store, you can leave the source store in blocklet.yml and pass it in dynamically when packaging.
+
+```yml
+components:
+  - name: component-a
+    mountPoint: /component-a
+    source:
+      name: component-a
+      version: latest
+  - name: component-b
+    mountPoint: /component-b
+    source:
+      store: https://store.blocklet.dev # After the source store is declared, it will not be overwritten when packaging
+      name: component-b
+      version: latest
+```
+
+Execute `blocklet bundle --store-url "https://your-test-store.com"`, the packaged blocklet.yml is
+
+```yml
+components:
+  - name: component-a
+    mountPoint: /component-a
+    source:
+      store: https://your-test-store.com
+      name: component-a
+      version: latest
+  - name: component-b
+    mountPoint: /component-b
+    source:
+      store: https://store.blocklet.dev
+      name: component-b
+      version: latest
+```
+
+Execute `blocklet bundle --store-url "https://your-prod-store.com"`, the packaged blocklet.yml is
+
+```yml
+components:
+  - name: component-a
+    mountPoint: /component-a
+    source:
+      store: https://your-prod-store.com
+      name: component-a
+      version: latest
+  - name: component-b
+    mountPoint: /component-b
+    source:
+      store: https://store.blocklet.dev
+      name: component-b
+      version: latest
+```
+
+You can also set source store via environment variable: `COMPONENT_STORE_URL=https://your-prod-store.com blocklet bundle`

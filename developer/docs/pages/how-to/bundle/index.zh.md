@@ -40,6 +40,7 @@ blocklet 打包成功后，系统将会在项目根目录下生成一个 `.block
 ## 准备工作
 
 ### 1. 程序的入口（必要）
+
 #### 1. 定义程序的入口文件
 
 你需要在 `blocklet.yml` 文件中定义 `main` 字段，以声明程序的入口，例如：
@@ -54,7 +55,7 @@ main: api/index.js
 
 ```yml
 files:
-  - dist 
+  - dist
 ```
 
 上面的配置意味着，在 bundle 的时候，会简单地把 dist 目录复制到 `.blocklet/bundle` 目录下。
@@ -68,7 +69,7 @@ files:
 - logo 的宽高必须相同
 - logo 的像素不能小于 256px \* 256px（svg 文件除外）
 - logo 的文件大小不得超过 100KB
-- logo 的格式必须是主流的图片格式（支持 svg, jpg, png等）
+- logo 的格式必须是主流的图片格式（支持 svg, jpg, png 等）
 
 #### 定义 logo 字段
 
@@ -129,7 +130,6 @@ screenshots:
 你可以在项目根目录下创建 `CHANGELOG.md` 文件，例如:
 
 ```md
-
 # 0.7.10 (October 18, 2022)
 
 - chore: update deps to latest
@@ -140,7 +140,6 @@ screenshots:
 ```
 
 打包发布到 `blocklet store` 之后，你可以在 blocklet 详情页（[查看示例](https://test.store.blocklet.dev/blocklets/z8iZqkCjLP6TZpR12tT3jESWxB8SGzNsx8nZa?tab=version)）面看到你的变更记录。
-
 
 ## 打包应用
 
@@ -167,6 +166,7 @@ blocklet bundle --zip --create-release
 ```
 
 上面的命令主要做了 2 件事:
+
 1. 以 zip 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录，并会生成一个 `blocklet.zip` 文件
 2. 将打包后的文件放在项目根目录下 `.blocklet/release` 目录
 
@@ -179,19 +179,79 @@ blocklet bundle --create-release
 ```
 
 上面的命令主要做了 2 件事:
+
 1. 以 webpack 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录
 2. 将打包后的文件放在项目根目录下 `.blocklet/release` 目录
 
-### 打包 monorepo 应用（自定义） 
+### 打包 monorepo 应用（自定义）
 
 ```shell
 blocklet bundle --create-release --monorepo
 ```
 
 上面的命令主要做了 2 件事:
+
 1. 以 monorepo 模式打包 blocklet，在项目根目录下生成 `.blocklet/bundle` 目录
 2. 将打包后的文件放在项目根目录下 `.blocklet/release` 目录
 
 至此，我们已经顺利地打包好了我们的 blocklet。
 接下来，你可以将打包好的 blocklet [发布](/zh/how-to/publish)到 `blocklet store` 或者[部署](/zh/how-to/deploy)到 `blocklet server`。
 
+### 打包时动态设置组件的 Source Store
+
+你的 blocklet 正式发布前，你可以先将 blocklet 发布到测试商店, 测试完成后再发布到正式商店.
+
+如果你希望测试商店中的 blocklet 依赖测试商店中的组件，正式商店 中的 blocklet 依赖正式商店中的组件，你可以在 blocklet.yml 中不填写 source store, 在打包时动态传入.
+
+```yml
+components:
+  - name: component-a
+    mountPoint: /component-a
+    source:
+      name: component-a
+      version: latest
+  - name: component-b
+    mountPoint: /component-b
+    source:
+      store: https://store.blocklet.dev # 声明了 source store 后，打包时不会被覆盖
+      name: component-b
+      version: latest
+```
+
+执行 `blocklet bundle --store-url "https://your-test-store.com"`, 打包后的 blocklet.yml 为
+
+```yml
+components:
+  - name: component-a
+    mountPoint: /component-a
+    source:
+      store: https://your-test-store.com
+      name: component-a
+      version: latest
+  - name: component-b
+    mountPoint: /component-b
+    source:
+      store: https://store.blocklet.dev
+      name: component-b
+      version: latest
+```
+
+执行 `blocklet bundle --store-url "https://your-prod-store.com"`, 打包后的 blocklet.yml 为
+
+```yml
+components:
+  - name: component-a
+    mountPoint: /component-a
+    source:
+      store: https://your-prod-store.com
+      name: component-a
+      version: latest
+  - name: component-b
+    mountPoint: /component-b
+    source:
+      store: https://store.blocklet.dev
+      name: component-b
+      version: latest
+```
+
+你也可以通过环境变量设置 source store: `COMPONENT_STORE_URL=https://your-prod-store.com blocklet bundle`

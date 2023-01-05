@@ -1,3 +1,7 @@
+## 0.1.118 (January 05, 2023)
+
+- docs: update how-to: bundle your blocklet
+
 ## 0.1.117 (January 03, 2023)
 
 - docs: update blocklet sdk: getUsers()
