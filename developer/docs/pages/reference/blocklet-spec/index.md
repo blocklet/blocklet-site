@@ -278,7 +278,8 @@ requirements:
 capabilities:
   clusterMode: false # Can blocklet be started in cluster mode
   component: true # Can blocklet become a component and be composed by other blocklets
-  didSpace: "optional" # This option is optional and indicates whether the data needs to be stored in the did space or not, the range is: ["optional", "required"]. To learn more, please refer to: https://github.com/ArcBlock/did-spaces/blob/master/docs/blocklet-integration-did-spaces.md 
+  didSpace: "optional" # This option is optional and indicates whether the data needs to be stored in the did space or not, the range is: ["optional", "required"]. To learn more, please refer to: https://github.com/ArcBlock/did-spaces/blob/master/docs/blocklet-integration-did-spaces.md
+  navigation: true # can blocklet inject menu into navigation
 ```
 
 ## Components
@@ -345,7 +346,8 @@ components:
 
 ```yml
 navigation: # navigation information (app map)
-  - title: xxx name
+  - id: xxx # navigation id, must be unique, use javascript varable named rules: https://www.npmjs.com/package/is-var-name
+    title: xxx name
     # link to a url
     link: xxx
     # link to component
@@ -359,6 +361,7 @@ navigation: # navigation information (app map)
 ### i18n
 
 ```yml
+id: xxx
 title: xxx
 link: xxx
 ```
@@ -366,6 +369,7 @@ link: xxx
 or
 
 ```yml
+id: xxx
 title:
 	zh: xxx
 	en: xxx
@@ -378,16 +382,21 @@ link:
 
 ```yml
 navigation:
-  - title: a # appears in the header (default)
-  - title: c
+  - id: a
+    title: a # appears in the header (default)
+  - id: c
+    title: c
     section: footer # only in footer
-  - title: d
+  - id: d
+    title: d
     section: # both in header and footer
       - header
       - footer
-  - title: e
+  - id: e
+    title: e
     section: social # in footer's social media
-  - title: f
+  - id: f
+    title: f
     section: bottom # at the bottom of the footer
 ```
 
@@ -395,11 +404,14 @@ navigation:
 
 ```yml
 navigation:
-  - title: a
+  - id: a
+    title: a
     icon: mdi:home # iconify style
-  - title: a
+  - id: aa
+    title: a
     icon: 'https://xxx' # url
-  - title: b
+  - id: b
+    title: b
     icon: '/path/to/xxx' # icon serve in app
 ```
 

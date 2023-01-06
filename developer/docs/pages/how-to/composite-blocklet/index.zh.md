@@ -82,7 +82,8 @@ navigation 有 2 中配置方式
 # app/blocklet.yml
 
 navigation:
-  - title: xxx
+  - id: xxx
+    title: xxx
     link: xxx
 ```
 
@@ -94,7 +95,8 @@ navigation:
 components:
   - name: component1
 navigation:
-  - title: xxx
+  - id: xxx
+    title: xxx
     component: component1
 ```
 
@@ -102,7 +104,8 @@ navigation:
 # component/blocklet.yml
 
 navigation:
-  - title: xxx
+  - id: xxx
+    title: xxx
     link: xxx
 ```
 
