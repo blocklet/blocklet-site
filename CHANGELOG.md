@@ -1,3 +1,7 @@
+## 0.1.119 (January 07, 2023)
+
+- docs: update how-to: operation
+
 ## 0.1.118 (January 05, 2023)
 
 - docs: update how-to: bundle your blocklet
