@@ -279,6 +279,7 @@ capabilities:
   clusterMode: false # 是否可以在集群模式下启动blocklet
   component: true # blocklet能否被组合
   didSpace: "optional" # 该选项可选，表示数据是否需要存储到 did space 当中，取值范围为: ["optional", "required"]。想要了解更多，请参考: https://github.com/ArcBlock/did-spaces/blob/master/docs/blocklet-integration-did-spaces.md
+  navigation: true # blocklet 是否开启向导航中注入菜单功能
 ```
 
 ## Components
@@ -345,7 +346,8 @@ components:
 
 ```yml
 navigation: # 导航信息（ 应用地图 ）
-  - title: xxx 名称
+  - id: xxx # 导航的id，必须是唯一的，使用 javascript 变量命名规则 https://www.npmjs.com/package/is-var-name
+    title: xxx 名称
     # 链接到某个 url
     link: xxx
     # 链接到组件
@@ -359,6 +361,7 @@ navigation: # 导航信息（ 应用地图 ）
 ### i18n
 
 ```yml
+id: xxx
 title: xxx
 link: xxx
 ```
@@ -366,6 +369,7 @@ link: xxx
 或
 
 ```yml
+id: xxx
 title:
 	zh: xxx
 	en: xxx
@@ -378,16 +382,21 @@ link:
 
 ```yml
 navigation:
-	- title: a # 出现在 header 中（默认）
-	- title: c
+	- id: a
+    title: a # 出现在 header 中（默认）
+	- id: c
+    title: c
 	  section: footer # 只在 footter 中
-	- title: d
+	- id: d
+    title: d
 	  section: # 既在 header 也在 footer 中
       - header
       - footer
-	- title: e
+	- id: e
+    title: e
 	  section: social # 在 footer 的 social media 中
-	- title: f
+	- id: f
+    title: f
 	  section: bottom # 在 footer 的最下方
 ```
 
@@ -395,11 +404,14 @@ navigation:
 
 ```yml
 navigation:
-	- title: a
+	- id: a
+    title: a
 	   icon: mdi:home # iconify 风格
-	- title: a
+	- id: aa
+    title: a
 	   icon: 'https://xxx' # url
-	- title: b
+	- id: b
+    title: b
 	   icon: '/path/to/xxx' # icon 在 app 中
 ```
 
