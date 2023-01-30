@@ -1,3 +1,7 @@
+## 0.1.120 (January 30, 2023)
+
+- docs: update how-to: operation - favicon
+
 ## 0.1.119 (January 07, 2023)
 
 - docs: update how-to: operation

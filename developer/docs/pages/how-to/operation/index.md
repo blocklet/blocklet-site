@@ -16,6 +16,12 @@ There are 3 types of Blocklet Logos:
 
 ![](./images/config-logo.jpg)
 
+> Tips:
+>
+> When the Blocklet developer does not set the favicon in index.html, or sets the standard favicon (`<link rel="shortcut icon" href="/favicon.ico">`), the user can customize the favicon from Dashboard.
+>
+> When the Blocklet developer sets a non-standard favicon (`<link rel="shortcut icon" href="/custom-path/xxx/favicon.ico">`), the user cannot customize the favicon
+
 ## How to setup a better blocklet navigation
 Blocklet Server provides a default navigation generation policy that ensures users get a good out-of-the-box result. When the default generated navigation does not meet the needs, the navigation can be configured to enable custom navigation.
 

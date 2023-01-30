@@ -16,6 +16,12 @@ Blocklet Logo 有 3 中类型：
 
 ![](./images/config-logo.jpg)
 
+> 提示:
+> 
+> 当 Blocklet 开发者没有在 index.html 中设置 favicon, 或设置了标准 favicon (`<link rel="shortcut icon" href="/favicon.ico">`) 时, 使用者可以在 Dashboard 中自定义 favicon.
+>
+> 当 Blocklet 开发者设置了非标准 favicon (`<link rel="shortcut icon" href="/custom-path/xxx/favicon.ico">`) 时, 使用者无法自定义 favicon 
+
 ## 如何更好的设置 Blocklet 导航
 Blocklet Server 提供了一个默认的导航生成策略，能够确保用户获得良好的开箱即用的效果。当默认生成的导航不满足需求时，可以通过配置来实现自定义导航的导航。
 
