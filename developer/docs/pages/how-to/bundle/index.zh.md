@@ -6,7 +6,7 @@ layout: documentation
 
 ## 简介
 
-我们只有需要知道程序的启动入口在哪，才能启动这个 `blocklet`。
+我们只有需要知道应用的启动入口在哪，才能启动这个 `blocklet`。
 
 ### 1. 打包是什么?
 
@@ -39,26 +39,51 @@ blocklet 打包成功后，系统将会在项目根目录下生成一个 `.block
 
 ## 准备工作
 
-### 1. 程序的入口（必要）
+### 1. 应用的入口（必要）
 
-#### 1. 定义程序的入口文件
+#### 定义应用的入口文件
 
-你需要在 `blocklet.yml` 文件中定义 `main` 字段，以声明程序的入口，例如：
+你需要在 `blocklet.yml` 文件中定义 `main` 字段，以声明应用的入口，例如：
 
 ```yml
 main: api/index.js
 ```
 
-#### 2. 定义程序运行所需的文件
+#### 定义应用运行所需的文件
 
-你需要在 `blocklet.yml` 文件中定义 `files` 字段，以声明程序运行所需的文件，例如：
+你需要在 `blocklet.yml` 文件中定义 `files` 字段，以声明应用运行所需的文件，例如：
 
 ```yml
 files:
   - dist
 ```
 
-上面的配置意味着，在 bundle 的时候，会简单地把 dist 目录复制到 `.blocklet/bundle` 目录下。
+上面的配置意味着，在打包的时候，会把 dist 目录复制到 `.blocklet/bundle` 目录下。
+
+你也可以定义如下的模式来匹配部分文件：
+
+```yml
+files:
+  - migration/*.js
+```
+
+打包结果中会包含 `migration` 目录下的所有文件。
+
+你也可以定义如下的否定模式来把部分文件排除在外：
+
+```yml
+files:
+  - "!server/ignored.js"
+```
+
+应用打包时会强制包含的文件包括：
+
+- blocklet.yml
+- blocklet.md 或 README.md
+- CHANGELOG.md
+- LICENSE
+
+应用打包时默认忽略的文件参考：https://docs.npmjs.com/cli/v9/configuring-npm/package-json#files
 
 ### 2. Logo（必要）
 
@@ -159,7 +184,7 @@ yarn bundle
 
 #### 1. 基于 zip 打包（推荐）
 
-与 webpack 的打包方式不同的是，zip 打包模式不会将项目打包成单个文件，而是会从程序入口开始分析程序的依赖，并将全部依赖按照原有的项目接口压缩到一个 zip 文件中。
+与 webpack 的打包方式不同的是，zip 打包模式不会将项目打包成单个文件，而是会从应用入口开始分析应用的依赖，并将全部依赖按照原有的项目接口压缩到一个 zip 文件中。
 
 ```shell
 blocklet bundle --zip --create-release
@@ -172,7 +197,7 @@ blocklet bundle --zip --create-release
 
 #### 2. 基于 webpack 打包（弃用）
 
-通过 webpack 模式打包，会从程序入口开始分析程序的依赖，并将依赖打包到单个文件（blocklet.js）中。
+通过 webpack 模式打包，会从应用入口开始分析应用的依赖，并将依赖打包到单个文件（blocklet.js）中。
 
 ```shell
 blocklet bundle --create-release

@@ -59,6 +59,31 @@ files: -dist
 
 The above configuration means that when bundling, the dist directory will simply be copied to the `.blocklet/bundle` directory.
 
+You can also define the following pattern to include only a subset of files.
+
+```yml
+files:
+  - migration/*.js
+```
+
+The bundle result will include all files in the `migration` directory.
+
+You can also define the following negation pattern to exclude some files.
+
+```yml
+files:
+  - "!server/ignored.js"
+```
+
+Following files are always included in the blocklet bundle:
+
+- blocklet.yml
+- blocklet.md or README.md
+- CHANGELOG.md
+- LICENSE
+
+Files that are ignored by default when bundling is the same as: https://docs.npmjs.com/cli/v9/configuring-npm/package-json#files
+
 ### 2. Logo (required)
 
 A well-designed logo can improve the recognition of the application, and for each blocklet that is `bundled`, the logo file is also necessary.
