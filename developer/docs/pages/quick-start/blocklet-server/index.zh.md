@@ -37,6 +37,22 @@ blocklet -V
 1.8.25
 ```
 
+**如果提示 `command not found: blocklet`，需要额外配置全局环境变量 ：**
+
+```bash
+# 以 yarn 为例，其它包管理工具类似
+
+# 运行命令，查看 yarn 的全局 bin 目录。
+yarn global bin
+
+# 把这个目录添加到你的 PATH 环境变量中
+open ~/.bashrc
+export PATH="$PATH:$(yarn global bin)"
+
+# 保存文件，重新加载你的 shell 或者重启你的终端。
+source ~/.bashrc
+```
+
 ## 安装 Nginx
 
 我们推荐使用 Nginx 作为 Blocklet Server 的网关
@@ -77,42 +93,42 @@ nginx version: nginx/1.21.6
 
 3. 执行 `blocklet server start` 启动 Blocklet Server
 
-    <details>
-    <summary>输出示例</summary>
+   <details>
+   <summary>输出示例</summary>
 
-    ```text
-    linchen@arcblock demo % blocklet server init
-    blocklet server v1.8.25
-    ? Are you sure to initialize a Blocklet Server instance in the current directory(/Users/linchen/code/arcblock/ad/demo) Yes
-    ✔ Blocklet Server configuration is successfully generated /Users/linchen/code/arcblock/ad/demo/.abtnode/abtnode.yml
-    ℹ blocklet server start
+   ```text
+   linchen@arcblock demo % blocklet server init
+   blocklet server v1.8.25
+   ? Are you sure to initialize a Blocklet Server instance in the current directory(/Users/linchen/code/arcblock/ad/demo) Yes
+   ✔ Blocklet Server configuration is successfully generated /Users/linchen/code/arcblock/ad/demo/.abtnode/abtnode.yml
+   ℹ blocklet server start
 
-    linchen@arcblock demo % blocklet server start
-    blocklet server v1.8.25
-    ✔ Blocklet Server DB Proxy ready on port 40404
-    ℹ Node DID from config zNKqGAvUzcCowxtNA5r5gKQYUm2hR4X2SE2o
-    ℹ Node config from /Users/linchen/code/arcblock/ad/.abtnode/abtnode.yml
-    ✔ Blocklet Server Event Hub ready on port 40407
-    ✔ Blocklet Server Updater already running
-    ✔ Update blocklet environments success
-    ✔ Fetch wildcard certificates successfully
-    ✔ Starting Blocklet Service... Done in 5.065s
-    ✔ Starting Blocklet Server Daemon... Done in 18.077s
-    ✔ Fetching accessible IPs... Done in 5.037s
-    ✔ Updating DID Domain... Done in 0.832s
-    ✔ You can access your Blocklet Server with either of the following URLs
+   linchen@arcblock demo % blocklet server start
+   blocklet server v1.8.25
+   ✔ Blocklet Server DB Proxy ready on port 40404
+   ℹ Node DID from config zNKqGAvUzcCowxtNA5r5gKQYUm2hR4X2SE2o
+   ℹ Node config from /Users/linchen/code/arcblock/ad/.abtnode/abtnode.yml
+   ✔ Blocklet Server Event Hub ready on port 40407
+   ✔ Blocklet Server Updater already running
+   ✔ Update blocklet environments success
+   ✔ Fetch wildcard certificates successfully
+   ✔ Starting Blocklet Service... Done in 5.065s
+   ✔ Starting Blocklet Server Daemon... Done in 18.077s
+   ✔ Fetching accessible IPs... Done in 5.037s
+   ✔ Updating DID Domain... Done in 0.832s
+   ✔ You can access your Blocklet Server with either of the following URLs
 
-    HTTP URLs:
+   HTTP URLs:
 
-    - http://192.168.3.28/admin/
-    - http://znkqgavuzccowxtna5r5gkqyum2hr4x2se2o.did.abtnet.io/admin/
+   - http://192.168.3.28/admin/
+   - http://znkqgavuzccowxtna5r5gkqyum2hr4x2se2o.did.abtnet.io/admin/
 
-    Secure URLs (Recommended):
+   Secure URLs (Recommended):
 
-    - https://192-168-3-28.ip.abtnet.io/admin/
-    ```
+   - https://192-168-3-28.ip.abtnet.io/admin/
+   ```
 
-    </details>
+   </details>
 
 ## 访问 Blocklet Server
 
