@@ -1,6 +1,8 @@
+## 0.1.122 (March 02, 2023)
+
+- docs: update how to add global bin
+
 ## 0.1.121 (January 31, 2023)
-
-
 
 ## 0.1.120 (January 30, 2023)
 
