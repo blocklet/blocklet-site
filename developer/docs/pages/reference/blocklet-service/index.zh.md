@@ -16,6 +16,7 @@ Blocklet 安装后，可通过 `{blocklet domain}/{以下路径}` 访问
 - `/.well-known/service/login` 访问登录页
 - `/.well-known/service/admin` 访问管理后台
 - `/.well-known/service/blocklet/logo` 获取应用 Logo
+- `/favicon.ico` 获取应用的 favicon
 
 ## API
 
