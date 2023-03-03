@@ -13,8 +13,8 @@ author:
 repository:
   type: git
   url: git+https://github.com/blocklet/blocklet-site.git
-specVersion: 1.2.7
-version: 0.1.122
+specVersion: 1.2.8
+version: 0.1.123
 logo: logo.png
 files:
   - hooks/post-start.js

@@ -1,3 +1,7 @@
+## 0.1.123 (March 03, 2023)
+
+- docs: update blocklet services url
+
 ## 0.1.122 (March 02, 2023)
 
 - docs: update how to add global bin

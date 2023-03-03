@@ -16,6 +16,7 @@ e.g. https://developer.blocklet.io/.well-known/service/health
 - `/.well-known/service/login` Access the login page
 - `/.well-known/service/admin` Access the management background
 - `/.well-known/service/blocklet/logo` Get the app logo
+- `/favicon.ico` Get the app favicon
 
 ## API
 
