@@ -1,3 +1,7 @@
+## 0.1.124 (April 03, 2023)
+
+- ci: update ci to fit new app structure
+
 ## 0.1.123 (March 03, 2023)
 
 - docs: update blocklet services url
