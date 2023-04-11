@@ -1,3 +1,7 @@
+## 0.1.127 (April 11, 2023)
+
+- fix: link bug
+
 ## 0.1.126 (April 11, 2023)
 
 - docs: polish blog "blocklet 1.16.0 release"

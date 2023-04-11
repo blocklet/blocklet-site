@@ -34,7 +34,7 @@ We have also upgraded the application structure. The new application structure i
 
 ![](./images/5.png)
 
-> To take advantage of these improvements in your running application, you need to [migrate your application]((https://www.arcblock.io/blog/en/post/2023/04/04/migrate-blocklet-guide)).
+> To take advantage of these improvements in your running application, you need to [migrate your application](https://www.arcblock.io/blog/en/post/2023/04/04/migrate-blocklet-guide).
 
 ## Blocklet software DID management integrated into DID Wallet
 
