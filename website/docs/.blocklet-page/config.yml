@@ -7,3 +7,20 @@ themeConfig:
   colors:
     primary: '#1DC1C7'
     secondary: '#F0FDFF'
+  sidebar:
+    en:
+      - text: Blog
+        link: /blog
+        items:
+          - text: Blocklet Server 1.16.0 Release Blog
+            link: /blog/blocklet-server-1-16
+      - text: FAQ
+        link: /faq
+    zh:
+      - text: 博客
+        link: /blog
+        items:
+          - text: Blocklet Server 发布 1.16.0
+            link: /blog/blocklet-server-1-16
+      - text: 常见问题
+        link: /faq

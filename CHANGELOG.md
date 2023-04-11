@@ -1,3 +1,7 @@
+## 0.1.125 (April 11, 2023)
+
+- docs: add blog for blocklet site
+
 ## 0.1.124 (April 03, 2023)
 
 - ci: update ci to fit new app structure
@@ -119,7 +123,7 @@
 
 ## 0.1.94 (October 27, 2022)
 
-- docs(faq): how to check the componrnt service port in blocklet
+- docs(faq): how to check the component service port in blocklet
 
 ## 0.1.93 (October 26, 2022)
 

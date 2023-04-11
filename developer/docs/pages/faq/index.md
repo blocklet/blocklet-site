@@ -54,7 +54,7 @@ ArcBlock officially provides 2 Blocklet Store:
 
 **Blocklet store is decentralized, you can deploy your own Blocklet store on your own Blocklet Server!**
 
-## How to check the componrnt service port in Blocklet?
+## How to check the component service port in Blocklet?
 
 Developers should **NOT** use the service port of Blocklet components directly in their code.
 
