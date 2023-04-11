@@ -1,3 +1,7 @@
+## 0.1.128 (April 11, 2023)
+
+- docs: polish image
+
 ## 0.1.127 (April 11, 2023)
 
 - fix: link bug
