@@ -1,3 +1,7 @@
+## 0.1.126 (April 11, 2023)
+
+- docs: polish blog "blocklet 1.16.0 release"
+
 ## 0.1.125 (April 11, 2023)
 
 - docs: add blog for blocklet site
