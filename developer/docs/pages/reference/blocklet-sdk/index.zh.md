@@ -488,6 +488,15 @@ const {
 
 请参照 [应用偏好](/how-to/preferences) 来了解如何修改 `env.preferences` 的结构和数据。
 
+### mode
+
+Blocklet 以什么模式运行
+
+```js
+env.mode === 'development'; // Blocklet 以开发模式运行
+env.mode === 'production'; // Blocklet 以正式模式运行
+```
+
 ## Config
 
 和 Environment 不用的是 Config 中的信息会实时更新，应用无需重启
@@ -505,15 +514,6 @@ import { env, components } from '@blocklet/config'
   - `status` **import(@blocklet/constant).BlockletStatus**
   - `port` e.g. 5678
   - `webEndpoint` e.g. http://127.0.0.1:5678
-
-### mode
-
-Blocklet 以什么模式运行
-
-```js
-env.mode === 'development'; // Blocklet 以开发模式运行
-env.mode === 'production'; // Blocklet 以正式模式运行
-```
 
 ## Component
 

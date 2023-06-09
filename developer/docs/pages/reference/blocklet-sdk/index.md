@@ -488,6 +488,15 @@ const {
 
 Please reference [Blocklet Preferences](/how-to/preferences) for how to change the structure and value in `env.preferences`.
 
+### mode
+
+In which mode the blocklet is running
+
+```js
+env.mode === 'development'; // The blocklet is running in the development mode
+env.mode === 'production'; // The blocklet is running in the production mode
+```
+
 ## Config
 
 Unlike Environment, the information in Config will be updated in real time, and the application does not need to be restarted
@@ -505,15 +514,6 @@ import { env, components } from '@blocklet/config'
   - `status` **import(@blocklet/constant).BlockletStatus**
   - `port` e.g. 5678
   - `webEndpoint` e.g. http://127.0.0.1:5678
-
-### mode
-
-In which mode the blocklet is running
-
-```js
-env.mode === 'development'; // The blocklet is running in the development mode
-env.mode === 'production'; // The blocklet is running in the production mode
-```
 
 ## Component
 
