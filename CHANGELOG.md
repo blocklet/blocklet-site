@@ -1,3 +1,7 @@
+## 0.1.130 (June 09, 2023)
+
+- docs: update docs for blocklet sdk
+
 ## 0.1.129 (April 11, 2023)
 
 - docs: polish image

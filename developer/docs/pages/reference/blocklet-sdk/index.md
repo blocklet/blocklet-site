@@ -470,7 +470,9 @@ import { Database } from '@blocklet/sdk';
 import { env } from '@blocklet/sdk';
 
 const {
-  appId, // the id of the app
+  appId, // the did of the app
+  appPid, // the permenant did of the app
+  appIds, // all did's that the application has previously used
   appName, // the title of the app, used to display to user
   appDescription, // the description of the app
   appUrl, // the web url of the app
@@ -478,11 +480,31 @@ const {
   dataDir, // the data dir of the blocklet
   cacheDir, // the cache dir of the blocklet
   mode, // in which mode the blocklet is running
+  appStorageEndpoint // the endpoint of the DID Spaces of the app
+  serverVersion: // the version of the server where the app is running
   preferences, // blocklet preferences. default: {}
 } = env;
 ```
 
 Please reference [Blocklet Preferences](/how-to/preferences) for how to change the structure and value in `env.preferences`.
+
+## Config
+
+Unlike Environment, the information in Config will be updated in real time, and the application does not need to be restarted
+
+```javascript
+import { env, components } from '@blocklet/config'
+```
+
+- `env` same as env in Environment
+- `components` **Array\<object\>**
+  - `title` component title
+  - `did` component did
+  - `name` component name
+  - `mountPoint` e.g. '/', '/blog'
+  - `status` **import(@blocklet/constant).BlockletStatus**
+  - `port` e.g. 5678
+  - `webEndpoint` e.g. http://127.0.0.1:5678
 
 ### mode
 
@@ -499,38 +521,11 @@ env.mode === 'production'; // The blocklet is running in the production mode
 import { Component } from '@blocklet/sdk';
 ```
 
-### getParentWebEndpoint
-
-`Component.getParentWebEndpoint()`
-
-- _@return_ endpoint of parent component. e.g. `http://127.0.0.1:5678`
-
-### getChildWebEndpoint
-
-`Component.getChildWebEndpoint(name)`
-
-- _@param_ **name** `string` the name of **component instance** defined in parent's blocklet.yml
-
-  If blocklet.yml is
-
-  ```
-  components
-    - name: component-1
-      source:
-        store: xxx
-        name: xxx
-        version: xxx
-  ```
-
-  the blocklet should use like this: `Component.getChildWebEndpoint('component-1')`
-
-- _@return_ endpoint of child component. e.g. `http://127.0.0.1:5678`
-
 ### getComponentWebEndpoint
 
 `Component.getComponentWebEndpoint(name)`
 
-Get endpoint of first-level component of app
+Get endpoint of component of app
 
 - _@param_ **name** `string` the name or title or did of the **component bundle**
 
@@ -556,7 +551,7 @@ Get endpoint of first-level component of app
 
 `Component.getComponentMountPoint(name)`
 
-Get mount point of first-level component of app
+Get mount point of component of app
 
 - _@param_ **name** `string` the name or title or did of the **component bundle**
 
@@ -580,30 +575,20 @@ Get mount point of first-level component of app
 
 ### call
 
-Communicate with child component or parent component safely
+Communicate with component component safely
 
 `Component.call({ name, path, data })`
 
-- _@param_ **name** `string`
-  - parent call child by set `name` to **component instance** defined in parent's blocklet.yml
-  - parent call child by set `name` to empty
+- _@param_ **name** `string` the name or title or did of the **component bundle**
 - _@param_ **path** `string` the http api. e.g. `/api/xxx`
-  - blocklet must use **POST** for the api
 - _@param_ **data** `object` the payload
+- _@param_ **method** `object` http method
+- _@param_ **responseType** `undefined | 'stream'` response type
 - _@return_ `object` the response of axios https://github.com/axios/axios#response-schema
 
 e.g.
 
-parent:
-
-```yml
-components:
-  - name: component1
-    source:
-      store: xxx
-      name: bundle-component-1
-      version: xxx
-```
+component-1:
 
 ```js
 import { Component, middlewares } from '@blocklet/sdk';
@@ -611,48 +596,48 @@ import { Component, middlewares } from '@blocklet/sdk';
 const app = express();
 
 app.post(
-  '/api/parent',
+  '/api/component-2',
 
   // You should use verifySig middleware to prevent unknown request
   middlewares.component.verifySig,
 
   (req, res) => {
-    // req.body is { msg: "ping from child" } if the request is from component1
+    // req.body is { msg: "ping from component-2" } if the request is from component-2
 
-    res.json({ msg: 'pong from parent' });
+    res.json({ msg: 'pong from component-1' });
   }
 );
 
-// data: { msg: 'pong from child' }
+// data: { msg: 'pong from component-2' }
 const { data } = await Component.call({
-  name: 'component1',
-  path: '/api/child',
-  data: { msg: 'ping from parent' },
+  name: 'component-1',
+  path: '/api/component-2',
+  data: { msg: 'ping from component-1' },
 });
 ```
 
-bundle-component-1:
+component-2:
 
 ```js
 const app = express();
 
 app.post(
-  '/api/child',
+  '/api/component-2',
 
   // You should use verifySig middleware to prevent unknown request
   middlewares.component.verifySig,
 
   (req, res) => {
-    // req.body is { msg: "ping from parent" } if the request is from parent
+    // req.body is { msg: "ping from component-1" } if the request is from component-1
 
-    res.json({ msg: 'pong from child' });
+    res.json({ msg: 'pong from component-2' });
   }
 );
 
-// data: { msg: 'pong from parent' }
+// data: { msg: 'pong from component-1' }
 const { data } = await Component.call({
-  path: '/api/parent',
-  data: 'ping from child',
+  path: '/api/component-1',
+  data: 'ping from component-2',
 });
 ```
 

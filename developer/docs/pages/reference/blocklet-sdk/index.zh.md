@@ -470,7 +470,9 @@ import { Database } from '@blocklet/sdk';
 import { env } from '@blocklet/sdk';
 
 const {
-  appId, // 应用 ID
+  appId, // 应用 DID
+  appPid, // 应用永久 DID
+  appIds, // 应用曾使用过的所有 DID
   appName, // 应用名称，用于显示给用户
   appDescription, // 应用描述，用于显示给用户
   appUrl, // 应用的的访问地址
@@ -478,11 +480,31 @@ const {
   dataDir, // Blocklet 数据存放目录
   cacheDir, // Blocklet 缓存数据路径
   mode, // Blocklet 以什么模式运行
+  appStorageEndpoint // 应用运行所在server的版本
+  serverVersion: // 应用绑定的 DID Space 的 endpoint
   preferences, // Blocklet 的偏好设置。默认值: {}
 } = env;
 ```
 
 请参照 [应用偏好](/how-to/preferences) 来了解如何修改 `env.preferences` 的结构和数据。
+
+## Config
+
+和 Environment 不用的是 Config 中的信息会实时更新，应用无需重启
+
+```javascript
+import { env, components } from '@blocklet/config'
+```
+
+- `env` Environment 中的 env 相同
+- `components` **Array\<object\>**
+  - `title` 组件名称
+  - `did` 组件 DID
+  - `name` 组件 name
+  - `mountPoint` e.g. '/', '/blog'
+  - `status` **import(@blocklet/constant).BlockletStatus**
+  - `port` e.g. 5678
+  - `webEndpoint` e.g. http://127.0.0.1:5678
 
 ### mode
 
@@ -499,38 +521,11 @@ env.mode === 'production'; // Blocklet 以正式模式运行
 import { Component } from '@blocklet/sdk';
 ```
 
-### getParentWebEndpoint
-
-`Component.getParentWebEndpoint()`
-
-- _@return_ endpoint of parent component. e.g. `http://127.0.0.1:5678`
-
-### getChildWebEndpoint
-
-`Component.getChildWebEndpoint(name)`
-
-- _@param_ **name** `string` the name of **component instance** defined in parent's blocklet.yml
-
-  If blocklet.yml is
-
-  ```
-  components
-    - name: component-1
-      source:
-        store: xxx
-        name: xxx
-        version: xxx
-  ```
-
-  the blocklet should use like this: `Component.getChildWebEndpoint('component-1')`
-
-- _@return_ endpoint of child component. e.g. `http://127.0.0.1:5678`
-
 ### getComponentWebEndpoint
 
 `Component.getComponentWebEndpoint(name)`
 
-Get endpoint of first-level component of app
+Get endpoint of component of app
 
 - _@param_ **name** `string` the name or title or did of the **component bundle**
 
@@ -556,7 +551,7 @@ Get endpoint of first-level component of app
 
 `Component.getComponentMountPoint(name)`
 
-Get mount point of first-level component of app
+Get mount point of component of app
 
 - _@param_ **name** `string` the name or title or did of the **component bundle**
 
@@ -580,30 +575,20 @@ Get mount point of first-level component of app
 
 ### call
 
-Communicate with child component or parent component safely
+Communicate with other component safely
 
 `Component.call({ name, path, data })`
 
-- _@param_ **name** `string`
-  - parent call child by set `name` to **component instance** defined in parent's blocklet.yml
-  - parent call child by set `name` to empty
+- _@param_ **name** `string` the name or title or did of the **component bundle**
 - _@param_ **path** `string` the http api. e.g. `/api/xxx`
-  - blocklet must use **POST** for the api
 - _@param_ **data** `object` the payload
+- _@param_ **method** `object` http method
+- _@param_ **responseType** `undefined | 'stream'` response type
 - _@return_ `object` the response of axios https://github.com/axios/axios#response-schema
 
 e.g.
 
-parent:
-
-```yml
-components:
-  - name: component1
-    source:
-      store: xxx
-      name: bundle-component-1
-      version: xxx
-```
+component-1:
 
 ```js
 import { Component, middlewares } from '@blocklet/sdk';
@@ -611,48 +596,48 @@ import { Component, middlewares } from '@blocklet/sdk';
 const app = express();
 
 app.post(
-  '/api/parent',
+  '/api/component-2',
 
   // You should use verifySig middleware to prevent unknown request
   middlewares.component.verifySig,
 
   (req, res) => {
-    // req.body is { msg: "ping from child" } if the request is from component1
+    // req.body is { msg: "ping from component-2" } if the request is from component-2
 
-    res.json({ msg: 'pong from parent' });
+    res.json({ msg: 'pong from component-1' });
   }
 );
 
-// data: { msg: 'pong from child' }
+// data: { msg: 'pong from component-2' }
 const { data } = await Component.call({
-  name: 'component1',
-  path: '/api/child',
-  data: { msg: 'ping from parent' },
+  name: 'component-1',
+  path: '/api/component-2',
+  data: { msg: 'ping from component-1' },
 });
 ```
 
-bundle-component-1:
+component-2:
 
 ```js
 const app = express();
 
 app.post(
-  '/api/child',
+  '/api/component-2',
 
   // You should use verifySig middleware to prevent unknown request
   middlewares.component.verifySig,
 
   (req, res) => {
-    // req.body is { msg: "ping from parent" } if the request is from parent
+    // req.body is { msg: "ping from component-1" } if the request is from component-1
 
-    res.json({ msg: 'pong from child' });
+    res.json({ msg: 'pong from component-2' });
   }
 );
 
-// data: { msg: 'pong from parent' }
+// data: { msg: 'pong from component-1' }
 const { data } = await Component.call({
-  path: '/api/parent',
-  data: 'ping from child',
+  path: '/api/component-1',
+  data: 'ping from component-2',
 });
 ```
 
