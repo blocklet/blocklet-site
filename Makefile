@@ -44,8 +44,8 @@ install:
 
 dep:
 	@echo "Install dependencies required for this repo..."
-	@lerna bootstrap
-	@lerna link
+	@lerna clean -y
+	@yarn install --ignore-engines
 
 test:
 	@echo "Running test suites..."
