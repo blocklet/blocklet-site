@@ -268,6 +268,19 @@ Get all permissions of the app
 - _@param_ **name** `string` the key of the permission
 - _@return_ `{ code }`
 
+### login
+
+`client.login({ provider, did, pk, avatar, email, fullName, id, locale })`
+
+- _@return_ `{ user, token, refreshToken }`
+
+### refreshSession
+
+`client.refreshSession({ refreshToken })`
+
+- _@param_ **refreshToken** `string` the refresh token 
+- _@return_ `{ user, token, refreshToken }`
+
 ## Notification
 
 ```javascript
