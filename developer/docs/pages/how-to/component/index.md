@@ -8,11 +8,24 @@ This article describes how to develop a Blocklet component. For how to develop a
 
 ## Develop a component
 
-The way to develop a component is basically the same as [Develop an application](/how-to/develop), when developing a component, you need to add `--app-id` and optional `--mount-point` parameters to the `blocklet dev` command
+The way to develop a component is basically the same as [Develop an application](/how-to/develop), when developing a component, you need to add `--app-did` and optional `--mount-point` parameters to the `blocklet dev` command
 
-`blocklet dev --app-id <blocklet-app-id> --mount-point /xxx`
+`blocklet dev --app-did <blocklet-app-did> --mount-point /xxx`
 
-`blocklet-app-id` can be viewed in the blocklet details page
+or
+
+`BLOCKLET_DEV_APP_DID=<blocklet-app-did> BLOCKLET_DEV_MOUNT_POINT=/xxx blocklet dev`
+
+or
+
+1. config in `.env`
+```
+BLOCKLET_DEV_APP_DID=<blocklet-app-did>
+BLOCKLET_DEV_MOUNT_POINT=/xxx
+```
+2. `blocklet dev`
+
+> `blocklet-app-did` can be viewed in the blocklet details page
 
 ## Component Mount Point
 

@@ -1,3 +1,7 @@
+## 0.1.133 (June 29, 2023)
+
+- docs: update docs for "develop component"
+
 ## 0.1.132 (June 28, 2023)
 
 - docs: update docs for blocklet sdk

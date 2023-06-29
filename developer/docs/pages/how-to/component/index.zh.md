@@ -8,11 +8,24 @@ layout: documentation
 
 ## 开发组件
 
-开发组件和 [开发应用](/how-to/develop) 的方式基本相同，在开发组件时，需要为 `blocklet dev` 命令添加 `--app-id` 和 可选的 `--mount-point` 参数
+开发组件和 [开发应用](/how-to/develop) 的方式基本相同，在开发组件时，需要为 `blocklet dev` 命令添加 `--app-did` 和 可选的 `--mount-point` 参数
 
-`blocklet dev --app-id <blocklet-app-id> --mount-point /xxx`
+`blocklet dev --app-did <blocklet-app-did> --mount-point /xxx`
 
-`blocklet-app-id` 可在 blocklet 详情页中查看
+或
+
+`BLOCKLET_DEV_APP_DID=<blocklet-app-did> BLOCKLET_DEV_MOUNT_POINT=/xxx blocklet dev`
+
+或
+
+1. 在 `.env` 中配置
+```
+BLOCKLET_DEV_APP_DID=<blocklet-app-did>
+BLOCKLET_DEV_MOUNT_POINT=/xxx
+```
+2. `blocklet dev`
+
+> `blocklet-app-did` 可在 blocklet 详情页中查看
 
 ## 组件挂载点
 
