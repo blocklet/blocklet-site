@@ -489,7 +489,6 @@ const {
   appName, // the title of the app, used to display to user
   appDescription, // the description of the app
   appUrl, // the web url of the app
-  isComponent, // the blocklet is running as an app or a component
   dataDir, // the data dir of the blocklet
   cacheDir, // the cache dir of the blocklet
   mode, // in which mode the blocklet is running
@@ -519,6 +518,18 @@ import { env, components } from '@blocklet/config'
 ```
 
 - `env` same as env in Environment
+  - `appId` the did of the app
+  - `appPid` the permenant did of the app
+  - `appIds` all did's that the application has previously used
+  - `appName` the title of the app, used to display to user
+  - `appDescription` the description of the app
+  - `appUrl` the web url of the app
+  - `dataDir` the data dir of the blocklet
+  - `cacheDir` the cache dir of the blocklet
+  - `mode` in which mode the blocklet is running
+  - `appStorageEndpoint` the endpoint of the DID Spaces of the app
+  - `serverVersion` the version of the server where the app is running
+  - `preferences` blocklet preferences. default: {}
 - `components` **Array\<object\>**
   - `title` component title
   - `did` component did

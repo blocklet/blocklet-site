@@ -489,13 +489,12 @@ const {
   appName, // 应用名称，用于显示给用户
   appDescription, // 应用描述，用于显示给用户
   appUrl, // 应用的的访问地址
-  isComponent, // Blocklet 当前作为应用运行还是作为组件运行
-  dataDir, // Blocklet 数据存放目录
-  cacheDir, // Blocklet 缓存数据路径
-  mode, // Blocklet 以什么模式运行
-  appStorageEndpoint // 应用运行所在server的版本
-  serverVersion: // 应用绑定的 DID Space 的 endpoint
-  preferences, // Blocklet 的偏好设置。默认值: {}
+  dataDir, // 组件 数据存放目录
+  cacheDir, // 组件 缓存数据路径
+  mode, // 组件 以什么模式运行
+  appStorageEndpoint // 应用绑定的 DID Space 的 endpoint
+  serverVersion: // 应用运行所在server的版本
+  preferences, // 应用的偏好设置。默认值: {}
 } = env;
 ```
 
@@ -519,6 +518,18 @@ import { env, components } from '@blocklet/config'
 ```
 
 - `env` Environment 中的 env 相同
+  - `appId` 应用 DID
+  - `appPid` 应用永久 DID
+  - `appIds` 应用曾使用过的所有 DID
+  - `appName` 应用名称，用于显示给用户
+  - `appDescription` 应用描述，用于显示给用户
+  - `appUrl` 应用的的访问地址
+  - `dataDir` Blocklet 数据存放目录
+  - `cacheDir` Blocklet 缓存数据路径
+  - `mode` Blocklet 以什么模式运行
+  - `appStorageEndpoint` 应用绑定的 DID Space 的 endpoint
+  - `serverVersion` 应用运行所在server的版本
+  - `preferences` 应用 的偏好设置。默认值: {}
 - `components` **Array\<object\>**
   - `title` 组件名称
   - `did` 组件 DID
