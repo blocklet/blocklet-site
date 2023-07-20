@@ -27,6 +27,12 @@ BLOCKLET_DEV_MOUNT_POINT=/xxx
 
 > `blocklet-app-did` can be viewed in the blocklet details page
 
+### Automatically set access control for component
+
+When `whoCanAccess` in blocklet.yml is set to non-public access, access to this component will be blocked by the login page by default.
+
+When developing, you can automatically set the component to public access by setting `blocklet.settings.whoCanAccess="all"` in `.env` to improve development efficiency.
+
 ## Component Mount Point
 
 When a blocklet is composed, the blocklet will be mounted under the child path configured in the parent component.

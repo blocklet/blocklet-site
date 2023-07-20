@@ -27,6 +27,12 @@ BLOCKLET_DEV_MOUNT_POINT=/xxx
 
 > `blocklet-app-did` 可在 blocklet 详情页中查看
 
+### 自动设置组件的访问控制
+
+当 blocklet.yml 中的 `whoCanAccess` 设置为非公开访问时，访问该组件默认会被登录页面拦截。
+
+在开发时，你可以通过在 `.env` 中设置 `blocklet.settings.whoCanAccess="all"` 将该组件自动设置为公开访问，以提高开发效率。
+
 ## 组件挂载点
 
 当一个 blocklet 被组合时，这个 blocklet 会被挂载到在父组件中配置的子路径下。
