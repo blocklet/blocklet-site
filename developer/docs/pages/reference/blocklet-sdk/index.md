@@ -489,10 +489,11 @@ const {
   appName, // the title of the app, used to display to user
   appDescription, // the description of the app
   appUrl, // the web url of the app
+  appStorageEndpoint // the endpoint of the DID Spaces of the app
+  componentDid, // the did of the blocklet
   dataDir, // the data dir of the blocklet
   cacheDir, // the cache dir of the blocklet
   mode, // in which mode the blocklet is running
-  appStorageEndpoint // the endpoint of the DID Spaces of the app
   serverVersion: // the version of the server where the app is running
   preferences, // blocklet preferences. default: {}
 } = env;
@@ -511,10 +512,10 @@ env.mode === 'production'; // The blocklet is running in the production mode
 
 ## Config
 
-Unlike Environment, the information in Config will be updated in real time, and the application does not need to be restarted
+Unlike Environment, the information in Config will be updated in real time, the application does not need to be restarted, and events will be thrown when updating
 
 ```javascript
-import { env, components } from '@blocklet/config'
+import { env, components, events, Events } from '@blocklet/config'
 ```
 
 - `env` same as env in Environment
@@ -524,20 +525,33 @@ import { env, components } from '@blocklet/config'
   - `appName` the title of the app, used to display to user
   - `appDescription` the description of the app
   - `appUrl` the web url of the app
+  - `appStorageEndpoint` the endpoint of the DID Spaces of the app
+  - `componentDid` 组件 DID
   - `dataDir` the data dir of the blocklet
   - `cacheDir` the cache dir of the blocklet
   - `mode` in which mode the blocklet is running
-  - `appStorageEndpoint` the endpoint of the DID Spaces of the app
   - `serverVersion` the version of the server where the app is running
   - `preferences` blocklet preferences. default: {}
 - `components` **Array\<object\>**
   - `title` component title
   - `did` component did
   - `name` component name
+  - `version` component version
   - `mountPoint` e.g. '/', '/blog'
   - `status` **import(@blocklet/constant).BlockletStatus**
   - `port` e.g. 5678
   - `webEndpoint` e.g. http://127.0.0.1:5678
+  - `resources` **Array\<string\>** component resource path
+
+```typescript
+events.on(Events.componentAdded, (components) => {});
+events.on(Events.componentRemoved, (components) => {});
+events.on(Events.componentStarted, (components) => {});
+events.on(Events.componentStopped, (components) => {});
+events.on(Events.componentUpdated, (components) => {});
+
+events.on(Events.envUpdate, (envs: {key: string; value: string}[]) => {});
+```
 
 ## Component
 

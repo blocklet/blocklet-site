@@ -489,10 +489,11 @@ const {
   appName, // 应用名称，用于显示给用户
   appDescription, // 应用描述，用于显示给用户
   appUrl, // 应用的的访问地址
+  appStorageEndpoint // 应用绑定的 DID Space 的 endpoint
+  componentDid, // 组件 DID
   dataDir, // 组件 数据存放目录
   cacheDir, // 组件 缓存数据路径
   mode, // 组件 以什么模式运行
-  appStorageEndpoint // 应用绑定的 DID Space 的 endpoint
   serverVersion: // 应用运行所在server的版本
   preferences, // 应用的偏好设置。默认值: {}
 } = env;
@@ -511,7 +512,7 @@ env.mode === 'production'; // Blocklet 以正式模式运行
 
 ## Config
 
-和 Environment 不用的是 Config 中的信息会实时更新，应用无需重启
+和 Environment 不同的是 Config 中的信息会实时更新，应用无需重启，且更新时会抛出事件
 
 ```javascript
 import { env, components } from '@blocklet/config'
@@ -524,20 +525,33 @@ import { env, components } from '@blocklet/config'
   - `appName` 应用名称，用于显示给用户
   - `appDescription` 应用描述，用于显示给用户
   - `appUrl` 应用的的访问地址
+  - `appStorageEndpoint` 应用绑定的 DID Space 的 endpoint
+  - `componentDid` 组件 DID
   - `dataDir` Blocklet 数据存放目录
   - `cacheDir` Blocklet 缓存数据路径
   - `mode` Blocklet 以什么模式运行
-  - `appStorageEndpoint` 应用绑定的 DID Space 的 endpoint
   - `serverVersion` 应用运行所在server的版本
   - `preferences` 应用 的偏好设置。默认值: {}
 - `components` **Array\<object\>**
   - `title` 组件名称
   - `did` 组件 DID
   - `name` 组件 name
+  - `version` 组件版本
   - `mountPoint` e.g. '/', '/blog'
   - `status` **import(@blocklet/constant).BlockletStatus**
   - `port` e.g. 5678
   - `webEndpoint` e.g. http://127.0.0.1:5678
+  - `resources` **Array\<string\>** 组件的资源路径
+
+```typescript
+events.on(Events.componentAdded, (components) => {});
+events.on(Events.componentRemoved, (components) => {});
+events.on(Events.componentStarted, (components) => {});
+events.on(Events.componentStopped, (components) => {});
+events.on(Events.componentUpdated, (components) => {});
+
+events.on(Events.envUpdate, (envs: {key: string; value: string}[]) => {});
+```
 
 ## Component
 
